@@ -1,2 +1,5 @@
 # Documentation Sphinx
 sphinx>=1.8.2
+
+# Documentation Release Notes
+reno>=0.1.1
