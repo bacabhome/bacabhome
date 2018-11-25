@@ -3,3 +3,5 @@
 # Documentation Sphinx
 doc/build
 
+# Documentation Release Notes
+releasenotes/build
