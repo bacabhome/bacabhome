@@ -1,0 +1,29 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: home-assistant
+    image: homeassistant/home-assistant
+    volumes:
+      - ./homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+      - /dev/video0:/dev/video0
+    restart: always
+    network_mode: host
+  influxdb:
+    image: influxdb
+    volumes:
+      - influxdb-storage:/var/lib/influxdb
+    ports:
+      - 8086:8086
+      - 8083:8083
+  grafana:
+    image: grafana/grafana:5.2.4
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    ports:
+      - 3000:3000
+
+volumes:
+  influxdb-storage:
+  grafana-storage:
