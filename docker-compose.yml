@@ -1,11 +1,27 @@
 version: '3'
 services:
 
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 1883:1883
+    restart: on-failure
+    user: "1000:1000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - bacabhome-mosquitto-storage:/mosquitto/config:ro
+      - bacabhome-mosquitto-storage:/mosquitto/data:rw
+      - bacabhome-mosquitto-storage:/mosquitto/log:rw
+
   homeassistant:
     image: homeassistant/home-assistant
     container_name: bacabhome-homeassistant
     depends_on:
       - "influxdb"
+      - "mosquitto"
     network_mode: host
     ports:
       - 8123:8123
@@ -43,5 +59,6 @@ services:
 
 
 volumes:
+  bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
   bacabhome-grafana-storage:
