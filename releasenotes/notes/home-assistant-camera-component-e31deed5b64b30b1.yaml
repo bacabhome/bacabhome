@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The camera component allows you to use IP cameras with Home Assistant.
+    With a little additional work you could use USB cameras as well.
