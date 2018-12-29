@@ -1,29 +1,47 @@
 version: '3'
 services:
+
   homeassistant:
-    container_name: home-assistant
     image: homeassistant/home-assistant
+    container_name: bacabhome-homeassistant
+    depends_on:
+      - "influxdb"
+    network_mode: host
+    ports:
+      - 8123:8123
+    devices:
+      - /dev/urandom:/dev/urandom
+    restart: on-failure
     volumes:
       - ./homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
-    devices:
-      - /dev/video0:/dev/video0
-    restart: always
-    network_mode: host
+
   influxdb:
     image: influxdb
-    volumes:
-      - influxdb-storage:/var/lib/influxdb
+    container_name: bacabhome-influxdb
     ports:
-      - 8086:8086
       - 8083:8083
-  grafana:
-    image: grafana/grafana:5.2.4
+      - 8086:8086
+    environment:
+      - INFLUXDB_ADMIN_ENABLED='true'
+      - INFLUXDB_DB="home_assistant"
+    restart: on-failure
     volumes:
-      - grafana-storage:/var/lib/grafana
+      - bacabhome-influxdb-storage:/var/lib/influxdb
+
+  grafana:
+    image: grafana/grafana
+    container_name: bacabhome-grafana
+    depends_on:
+      - "influxdb"
+    network_mode: host
     ports:
       - 3000:3000
+    restart: on-failure
+    volumes:
+      - bacabhome-grafana-storage:/var/lib/grafana
+
 
 volumes:
-  influxdb-storage:
-  grafana-storage:
+  bacabhome-influxdb-storage:
+  bacabhome-grafana-storage:

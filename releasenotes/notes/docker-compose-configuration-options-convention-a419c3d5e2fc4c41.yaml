@@ -1,0 +1,6 @@
+---
+other:
+  - |
+    Define a convention on the initial configuration options under Docker
+    Compose file for the first set of services.
+
