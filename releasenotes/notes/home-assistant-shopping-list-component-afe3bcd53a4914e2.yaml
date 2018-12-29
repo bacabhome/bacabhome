@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    The shopping_list component allows you to keep track of shopping list
+    items. Includes the ability to add items via your voice using the sentence
+    “Add eggs to my shopping list”.
