@@ -72,8 +72,20 @@ services:
     volumes:
       - bacabhome-grafana-storage:/var/lib/grafana
 
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 9000:9000
+    restart: on-failure
+    volumes:
+      - bacabhome-portainer-storage:/data:rw
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
   bacabhome-grafana-storage:
+  bacabhome-portainer-storage:
