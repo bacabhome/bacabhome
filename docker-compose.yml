@@ -16,12 +16,27 @@ services:
       - bacabhome-mosquitto-storage:/mosquitto/data:rw
       - bacabhome-mosquitto-storage:/mosquitto/log:rw
 
+  glances:
+    image: docker.io/nicolargo/glances
+    container_name: bacabhome-glances
+    pid: host
+    network_mode: host
+    ports:
+      - 61208-61208
+      - 61209-61209
+    environment:
+      - "GLANCES_OPT=-w"
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
   homeassistant:
     image: homeassistant/home-assistant
     container_name: bacabhome-homeassistant
     depends_on:
       - "influxdb"
       - "mosquitto"
+      - "glances"
     network_mode: host
     ports:
       - 8123:8123
