@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    The glances sensor platform is consuming the system information provided
+    by the Glances API. This enables one to track remote host and display
+    their stats in Home Assistant.
