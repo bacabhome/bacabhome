@@ -1,0 +1,4 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/.
+
+platform: ffmpeg
+input: tcp://127.0.0.1:5000
