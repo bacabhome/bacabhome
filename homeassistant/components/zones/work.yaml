@@ -1,0 +1,6 @@
+name: Work
+latitude: !secret work_latitude
+longitude: !secret work_longitude
+radius: 200
+passive: false
+icon: mdi:desktop-classic
