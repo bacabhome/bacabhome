@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/components/image_processing.dlib_face_identify/
+
+platform: dlib_face_identify
+scan_interval: 5
+keep_known_faces: True
+keep_unknown_faces: True
+source:
+  - entity_id: camera.ffmpeg
+    name: dlib_face_identify_ffmpeg
+  - entity_id: camera.mjpeg_camera
+    name: dlib_face_identify_mjpeg_camera
+faces:
+  Balam: /config/pictures/am02.jpeg
