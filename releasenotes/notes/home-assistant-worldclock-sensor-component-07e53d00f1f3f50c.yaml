@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The worldclock sensor platform simply displays the current time in a
+    different time zone.
