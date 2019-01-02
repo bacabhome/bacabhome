@@ -1,0 +1,7 @@
+---
+features:
+  - |
+    The sun component will use your current location to track if the sun is
+    above or below the horizon. The sun can be used within automation as a
+    trigger with an optional offset to simulate dawn/dusk or as a condition
+    with an optional offset to test if the sun has already set or risen.

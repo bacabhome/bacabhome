@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The ffmpeg platform allows you to use any video feed with FFmpeg for
+    motion sensors in Home Assistant.

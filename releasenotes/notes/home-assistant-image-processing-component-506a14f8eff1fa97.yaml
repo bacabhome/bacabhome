@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Image processing enables Home Assistant to process images from cameras.
+    Only camera entities are supported as sources.

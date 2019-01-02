@@ -1,0 +1,6 @@
+name: Neighborhood
+latitude: !secret neighborhood_latitude
+longitude: !secret neighborhood_longitude
+radius: 2000
+passive: false
+icon: mdi:city

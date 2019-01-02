@@ -1,0 +1,6 @@
+name: Leon
+latitude: !secret leon_latitude
+longitude: !secret leon_longitude
+radius: 50
+passive: false
+icon: mdi:home-outline

@@ -1,0 +1,9 @@
+---
+features:
+  - |
+    List new features here, or remove this section.  All of the list items in
+    OwnTracks is a free and open source application for iOS and Android that
+    allow you to track your location and send it directly to Home Assistant.
+    By default the integration will listen for incoming messages from
+    OwnTracks via HTTP. It will also listen for MQTT messages if
+    Home Assistant is configured to use MQTT.
