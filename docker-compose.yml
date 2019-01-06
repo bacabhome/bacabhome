@@ -3,7 +3,7 @@ services:
 
   mosquitto:
     image: eclipse-mosquitto
-    container_name: mosquitto
+    container_name: bacab-home-mosquitto
     environment:
       - TZ=America/Mexico_City
     ports:
@@ -18,7 +18,7 @@ services:
 
   glances:
     image: docker.io/nicolargo/glances
-    container_name: bacabhome-glances
+    container_name: bacab-home-glances
     pid: host
     network_mode: host
     ports:
@@ -32,7 +32,7 @@ services:
 
   homeassistant:
     image: homeassistant/home-assistant
-    container_name: bacabhome-homeassistant
+    container_name: bacab-home-homeassistant
     depends_on:
       - "influxdb"
       - "mosquitto"
@@ -49,7 +49,7 @@ services:
 
   influxdb:
     image: influxdb
-    container_name: bacabhome-influxdb
+    container_name: bacab-home-influxdb
     ports:
       - 8083:8083
       - 8086:8086
@@ -62,7 +62,7 @@ services:
 
   grafana:
     image: grafana/grafana
-    container_name: bacabhome-grafana
+    container_name: bacab-home-grafana
     depends_on:
       - "influxdb"
     network_mode: host
@@ -74,7 +74,7 @@ services:
 
   portainer:
     image: portainer/portainer
-    container_name: portainer
+    container_name: bacab-home-portainer
     environment:
       - TZ=America/Mexico_City
     ports:
