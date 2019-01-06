@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    The ping binary sensor platform allows you to use ping to send ICMP echo
+    requests. This way you can check if a given host is online and determine
+    the round trip times from your Home Assistant instance to that system.
