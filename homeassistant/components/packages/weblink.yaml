@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/components/weblink/
+
+weblink:
+  entities:
+    - name: Home Assistant
+      url: https://www.home-assistant.io
+    - name: Grafana
+      url: http://127.0.0.1:3000
+    - name: Portainer
+      url: http://127.0.0.1:9000

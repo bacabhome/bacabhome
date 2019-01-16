@@ -1,0 +1,10 @@
+platform: bitcoin
+display_options:
+  - exchangerate
+  - trade_volume_btc
+  - miners_revenue_usd
+  - miners_revenue_btc
+  - btc_mined
+  - number_of_transactions
+  - estimated_transaction_volume_usd
+  - market_price_usd

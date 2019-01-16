@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The config component is designed to display panels in the frontend to
+    configure and manage parts of Home Assistant.

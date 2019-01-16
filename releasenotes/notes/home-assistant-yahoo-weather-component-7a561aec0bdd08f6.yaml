@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    The yweather platform uses Yahoo Weather as a source for current
+    meteorological data. This component will show you the condition and
+    temperatures for max. 10 days.

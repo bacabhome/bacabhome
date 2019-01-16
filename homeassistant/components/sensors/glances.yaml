@@ -1,0 +1,15 @@
+platform: glances
+version: 3
+resources:
+  - 'disk_use_percent'
+  - 'memory_use_percent'
+  - 'swap_use_percent'
+  - 'processor_load'
+  - 'process_running'
+  - 'process_total'
+  - 'process_thread'
+  - 'process_sleeping'
+  - 'cpu_temp'
+  - 'docker_active'
+  - 'docker_cpu_use'
+  - 'docker_memory_use'

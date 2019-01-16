@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/sensor.openexchangerates/
+
+platform: openexchangerates
+api_key: !secret openexchangerates_app_id
+quote: MXN

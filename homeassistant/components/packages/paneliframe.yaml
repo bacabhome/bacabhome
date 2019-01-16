@@ -1,0 +1,3 @@
+# https://www.home-assistant.io/components/panel_iframe/
+
+panel_iframe: !include_dir_merge_named ../paneliframes

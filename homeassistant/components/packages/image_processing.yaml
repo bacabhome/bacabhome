@@ -1,0 +1,3 @@
+# https://www.home-assistant.io/components/image_processing/
+
+image_processing: !include_dir_list ../image_processing

@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The launch_library sensor will provide you with information about the
+    next planned space launch.

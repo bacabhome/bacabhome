@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    The openexchangerates sensor will show you the current exchange rate from
+    Open Exchange Rates that provides realtime exchange rates for 170
+    currencies.

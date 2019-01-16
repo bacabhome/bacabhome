@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/influxdb/
+
+influxdb:
+  host: localhost
+  port: 8086
+  database: home_assistant

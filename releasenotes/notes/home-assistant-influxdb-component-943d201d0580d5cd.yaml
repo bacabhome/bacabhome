@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The influxdb component makes it possible to transfer all state changes to
+    an external InfluxDB database. 

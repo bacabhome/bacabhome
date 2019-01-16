@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The mqtt binary sensor platform uses an MQTT message payload to set the
+    binary sensor to one of two states: on or off.

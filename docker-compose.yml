@@ -1,0 +1,91 @@
+version: '3'
+services:
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: bacab-home-mosquitto
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 1883:1883
+    restart: on-failure
+    user: "1000:1000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - bacabhome-mosquitto-storage:/mosquitto/config:ro
+      - bacabhome-mosquitto-storage:/mosquitto/data:rw
+      - bacabhome-mosquitto-storage:/mosquitto/log:rw
+
+  glances:
+    image: docker.io/nicolargo/glances
+    container_name: bacab-home-glances
+    pid: host
+    network_mode: host
+    ports:
+      - 61208-61208
+      - 61209-61209
+    environment:
+      - "GLANCES_OPT=-w"
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  homeassistant:
+    image: homeassistant/home-assistant
+    container_name: bacab-home-homeassistant
+    depends_on:
+      - "influxdb"
+      - "mosquitto"
+      - "glances"
+    network_mode: host
+    ports:
+      - 8123:8123
+    devices:
+      - /dev/urandom:/dev/urandom
+    restart: on-failure
+    volumes:
+      - ./homeassistant:/config
+      - /etc/localtime:/etc/localtime:ro
+
+  influxdb:
+    image: influxdb
+    container_name: bacab-home-influxdb
+    ports:
+      - 8083:8083
+      - 8086:8086
+    environment:
+      - INFLUXDB_ADMIN_ENABLED='true'
+      - INFLUXDB_DB="home_assistant"
+    restart: on-failure
+    volumes:
+      - bacabhome-influxdb-storage:/var/lib/influxdb
+
+  grafana:
+    image: grafana/grafana
+    container_name: bacab-home-grafana
+    depends_on:
+      - "influxdb"
+    network_mode: host
+    ports:
+      - 3000:3000
+    restart: on-failure
+    volumes:
+      - bacabhome-grafana-storage:/var/lib/grafana
+
+  portainer:
+    image: portainer/portainer
+    container_name: bacab-home-portainer
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 9000:9000
+    restart: on-failure
+    volumes:
+      - bacabhome-portainer-storage:/data:rw
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  bacabhome-mosquitto-storage:
+  bacabhome-influxdb-storage:
+  bacabhome-grafana-storage:
+  bacabhome-portainer-storage:

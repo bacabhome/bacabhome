@@ -1,0 +1,11 @@
+# https://www.home-assistant.io/components/binary_sensor.workday/
+
+platform: workday
+name: workday
+country: MX
+workdays:
+  - mon
+  - tue
+  - wed
+  - thu
+  - fri

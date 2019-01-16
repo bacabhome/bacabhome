@@ -1,0 +1,5 @@
+---
+  - |
+    The dlib_face_detect image processing platform allows you to use the Dlib
+    through Home Assistant. This platform enables face detection from cameras,
+    and can fire events with attributes.
