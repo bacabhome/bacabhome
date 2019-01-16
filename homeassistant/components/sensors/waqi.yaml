@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/sensor.waqi/
+
+platform: waqi
+token: !secret aqicn_api_token
+locations:
+  - jalisco
+  - guadalajara
