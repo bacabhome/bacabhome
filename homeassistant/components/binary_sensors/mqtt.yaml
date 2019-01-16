@@ -1,0 +1,4 @@
+# https://www.home-assistant.io/components/binary_sensor.mqtt/
+
+platform: mqtt
+state_topic: "bacabhome/binarysensor/mqtt"
