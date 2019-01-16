@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/switch.mqtt/
+
+platform: mqtt
+state_topic: "bacabhome/switch/mqtt"
+command_topic: "bacabhome/switch/mqtt/set"
