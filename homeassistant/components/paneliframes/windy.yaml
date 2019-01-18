@@ -1,0 +1,5 @@
+# https://windy.com/
+
+windy:
+  title: 'Windy'
+  url: 'https://embed.windy.com/embed2.html?lat=23.564&lon=-102.305&zoom=5&level=surface&overlay=rain&menu=&message=true&marker=&calendar=12&pressure=&type=map&location=coordinates&detail=&detailLat=20.724&detailLon=-103.385&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1'
