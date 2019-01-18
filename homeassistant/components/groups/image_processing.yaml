@@ -1,0 +1,7 @@
+image_processing:
+  view: true
+  icon: mdi:image-filter
+  name: Image Processing
+  entities:
+    - image_processing.dlib_face_detect_ffmpeg
+    - image_processing.dlib_face_detect_mjpeg_camera

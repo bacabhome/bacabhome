@@ -1,0 +1,29 @@
+binary_sensors:
+  view: true
+  icon: mdi:toggle-switch
+  name: Binary Sensors
+  entities:
+    - group.binary_sensors_ffmpeg_motion
+    - group.binary_sensors_mqtt
+    - group.binary_sensors_ping
+    - group.binary_sensors_workday
+
+binary_sensors_ffmpeg_motion:
+  name: Ffmpeg Motion
+  entities:
+    - binary_sensor.ffmpeg_motion
+
+binary_sensors_mqtt:
+  name: MQTT
+  entities:
+    - binary_sensor.mqtt_binary_sensor
+
+binary_sensors_ping:
+  name: Ping
+  entities:
+    - binary_sensor.ping_binary_sensor
+
+binary_sensors_workday:
+  name: Workday
+  entities:
+    - binary_sensor.workday

@@ -1,0 +1,23 @@
+weblinks:
+  view: true
+  icon: mdi:web
+  name: Web Links
+  entities:
+    - group.weblinks_grafana
+    - group.weblinks_homeassistant
+    - group.weblinks_portainer
+
+weblinks_grafana:
+  name: Grafana
+  entities:
+    - weblink.grafana
+
+weblinks_homeassistant:
+  name: HomeAssistant
+  entities:
+    - weblink.home_assistant
+
+weblinks_portainer:
+  name: Portainer
+  entities:
+    - weblink.portainer

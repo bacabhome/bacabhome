@@ -1,0 +1,11 @@
+switches:
+  view: true
+  icon: mdi:switch
+  name: Switches
+  entities:
+    - group.switches_mqtt
+
+switches_mqtt:
+  name: Mqtt
+  entities:
+    - switch.mqtt_switch

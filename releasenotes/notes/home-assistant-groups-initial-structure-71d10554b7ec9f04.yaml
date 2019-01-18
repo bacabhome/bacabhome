@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Initial structure includes the following components: Binary Sensor,
+    Camera, Default View, Image Processing, Sensor, Switch, Weather and
+    Weblinks.

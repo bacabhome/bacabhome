@@ -1,0 +1,12 @@
+weather:
+  view: true
+  icon: mdi:weather-cloudy
+  name: Weather
+  entities:
+    - group.weather_darksky
+
+weather_darksky:
+  name: DarkSky
+  entities:
+    -  weather.dark_sky
+
