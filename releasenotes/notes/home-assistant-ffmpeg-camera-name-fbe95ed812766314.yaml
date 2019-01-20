@@ -1,0 +1,5 @@
+---
+other:
+  - |
+    We are adding more FFmpeg cameras so let's change the default name for our first
+    camera added. Also move input URL to secrets file.

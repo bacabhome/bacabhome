@@ -5,7 +5,7 @@ scan_interval: 5
 keep_known_faces: True
 keep_unknown_faces: True
 source:
-  - entity_id: camera.ffmpeg
-    name: dlib_face_detect_ffmpeg
+  - entity_id: camera.ffmpeg_camera
+    name: dlib_face_detect_ffmpeg_camera
   - entity_id: camera.mjpeg_camera
     name: dlib_face_detect_mjpeg_camera

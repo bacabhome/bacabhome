@@ -34,7 +34,7 @@ views:
           - binary_sensor.mqtt_binary_sensor
           - sensor.dark_sky_apparent_temperature
           - sensor.mqtt_sensor
-        camera_image: camera.ffmpeg
+        camera_image: camera.ffmpeg_camera
 
       - type: picture-glance
         title: Camera Mjpeg

@@ -3,6 +3,6 @@ cameras:
   icon: mdi:cctv
   name: Cameras
   entities:
-    - camera.ffmpeg
+    - camera.ffmpeg_camera
     - camera.mjpeg_camera
 
