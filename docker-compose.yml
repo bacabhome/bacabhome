@@ -84,8 +84,24 @@ services:
       - bacabhome-portainer-storage:/data:rw
       - /var/run/docker.sock:/var/run/docker.sock
 
+  nodered:
+    image: nodered/node-red-docker:v8
+    container_name: bacab-home-nodered
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 1880:1880
+    depends_on:
+      - "homeassistant"
+    restart: on-failure
+    user: root
+    volumes:
+      - bacabhome-nodered-storage:/data
+      - /etc/localtime:/etc/localtime:ro
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
   bacabhome-grafana-storage:
   bacabhome-portainer-storage:
+  bacabhome-nodered-storage:
