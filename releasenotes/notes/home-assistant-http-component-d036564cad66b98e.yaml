@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The http component serves all files and data required for the
+    Home Assistant frontend.
