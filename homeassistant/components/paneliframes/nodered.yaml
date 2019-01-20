@@ -2,4 +2,4 @@
 
 nodered:
   title: 'Node-RED'
-  url: 'http://127.0.0.1:1880'
+  url: !secret services_nodered_url

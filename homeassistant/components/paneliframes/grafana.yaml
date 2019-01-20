@@ -2,4 +2,4 @@
 
 grafana:
   title: 'Grafana'
-  url: 'http://127.0.0.1:3000'
+  url: !secret services_grafana_url

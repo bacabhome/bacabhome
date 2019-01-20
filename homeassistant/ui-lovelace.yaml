@@ -61,7 +61,7 @@ views:
           - weather.dark_sky
 
       - type: iframe
-        url: https://embed.windy.com/embed2.html?lat=23.564&lon=-102.305&zoom=5&level=surface&overlay=rain&menu=&message=true&marker=&calendar=12&pressure=&type=map&location=coordinates&detail=&detailLat=20.724&detailLon=-103.385&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1
+        url: !secret services_windy_url
         aspect_ratio: 50%
 
       - type: entities
@@ -214,10 +214,10 @@ views:
             icon: mdi:home-assistant
           - type: weblink
             name: Grafana
-            url: http://127.0.0.1:9000
+            url: !secret services_grafana_url
           - type: weblink
             name: Portainer
-            url: http://127.0.0.1:3000
+            url: !secret services_portainer_url
 
 
       - type: entities
@@ -227,11 +227,11 @@ views:
             name: Grafana
 
       - type: iframe
-        url: http://127.0.0.1:3000/d/IkHMgesmz/hello-world?orgId=1&from=now-6h&to=now&panelId=1
+        url: !secret services_grafana_url
         aspect_ratio: 100%
 
       - type: iframe
-        url: http://127.0.0.1:9000/
+        url: !secret services_portainer_url
         aspect_ratio: 100%
 
   - icon: mdi:toggle-switch

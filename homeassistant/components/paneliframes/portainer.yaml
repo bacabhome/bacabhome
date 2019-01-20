@@ -2,4 +2,4 @@
 
 portainer:
   title: 'Portainer'
-  url: 'http://127.0.0.1:9000'
+  url: !secret services_portainer_url
