@@ -1,0 +1,5 @@
+# https://nodered.org/
+
+nodered:
+  title: 'Node-RED'
+  url: 'http://127.0.0.1:1880'
