@@ -1,18 +1,10 @@
 title: Bacab Home
 
-views:
+resources:
+    - url: /local/bignumber-card.js?v=0.0.1
+      type: js
 
-  - icon: mdi:cctv
-    title: Surveillance
-    panel: true
-    cards:
-      - type: custom:surveillance-card
-        thumb_interval: 15
-        update_interval: 2
-        cameras:
-          - entity: camera.ffmpeg
-            motion_entity: binary_sensor.ffmpeg_motion
-          - entity: camera.mjpeg_camera
+views:
 
   - icon: mdi:home-heart
     title: Sweet Home
@@ -316,3 +308,22 @@ views:
         state_image:
           "on": /local/pictures/ui-lovelace/2018073001.jpg
           "off": /local/pictures/ui-lovelace/2018073002.jpg
+
+  - icon: mdi:oil-temperature
+    if: Custom
+    title: Custom
+    cards:
+      - type: custom:bignumber-card
+        title: Sensor MQTT
+        entity: sensor.mqtt_sensor
+        scale: 30px
+        from: bottom
+        min: 0
+        max: 100
+        severity:
+          - value: 70
+            style: 'var(--label-badge-green)'
+          - value: 90
+            style: 'var(--label-badge-yellow)'
+          - value: 100
+            style: 'var(--label-badge-red)'
