@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Add a Node-RED Dashboard panel, provides a set of nodes in Node-RED to
+    quickly create a live data dashboard.
