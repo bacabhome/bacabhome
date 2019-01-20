@@ -5,3 +5,15 @@ doc/build
 
 # Documentation Release Notes
 releasenotes/build
+
+# Home Assistant
+
+homeassistant/.HA_VERSION
+homeassistant/.shopping_list.json
+homeassistant/.storage/
+homeassistant/deps/
+homeassistant/home-assistant.log
+homeassistant/home-assistant_v2.db
+homeassistant/known_devices.yaml
+homeassistant/secrets.yaml
+homeassistant/www/
