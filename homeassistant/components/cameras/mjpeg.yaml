@@ -1,2 +1,2 @@
 platform: mjpeg
-mjpeg_url: !secret mjpeg_mobile
+mjpeg_url: !secret mjpeg_camera
