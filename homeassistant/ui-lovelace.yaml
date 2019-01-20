@@ -3,6 +3,8 @@ title: Bacab Home
 resources:
     - url: /local/bignumber-card.js?v=0.0.1
       type: js
+    - url: /local/monster-card.js?v=0.2.3
+      type: js
 
 views:
 
@@ -313,6 +315,7 @@ views:
     if: Custom
     title: Custom
     cards:
+
       - type: custom:bignumber-card
         title: Sensor MQTT
         entity: sensor.mqtt_sensor
@@ -327,3 +330,25 @@ views:
             style: 'var(--label-badge-yellow)'
           - value: 100
             style: 'var(--label-badge-red)'
+
+      - type: custom:monster-card
+        card:
+          type: entities
+          title: Broken Things
+          show_header_toggle: false
+        filter:
+          include:
+            - state: "unknown"
+          exclude:
+            - entity_id: group.*
+
+      - type: custom:monster-card
+        card:
+          type: glance
+          title: Monster
+        filter:
+          include:
+            - domain: device_tracker
+              attributes:
+                battery: '< 25'
+                source_type: gps
