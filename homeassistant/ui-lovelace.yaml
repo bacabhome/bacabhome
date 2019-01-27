@@ -37,6 +37,15 @@ views:
         camera_image: camera.ffmpeg_camera
 
       - type: picture-glance
+        title: Camera FFmpeg Raspberry Pi
+        entities:
+          - binary_sensor.ffmpeg_motion
+          - binary_sensor.mqtt_binary_sensor
+          - sensor.dark_sky_apparent_temperature
+          - sensor.mqtt_sensor
+        camera_image: camera.ffmpeg_raspberrypi
+
+      - type: picture-glance
         title: Camera Mjpeg
         entities:
           - binary_sensor.ffmpeg_motion

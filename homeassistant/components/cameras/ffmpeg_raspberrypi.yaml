@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/.
+
+platform: ffmpeg
+name: ffmpeg raspberrypi
+input: !secret ffmpeg_raspberrypi

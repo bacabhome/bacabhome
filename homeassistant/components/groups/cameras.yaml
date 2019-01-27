@@ -4,5 +4,5 @@ cameras:
   name: Cameras
   entities:
     - camera.ffmpeg_camera
+    - camera.ffmpeg_raspberrypi
     - camera.mjpeg_camera
-
