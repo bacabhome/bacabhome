@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+
+  mjpeg-streamer:
+    build:
+      context: ./mjpeg-streamer/
+      dockerfile: Dockerfile.mjpeg-streamer
+      args:
+        - STREAMING_PORT="8080"
+    image: xe1gyq/mjpeg-streamer
+    container_name: bacab-home-mjpeg-streamer
+    environment:
+      - TZ=America/Mexico_City
+      - STREAMING_PORT=8080
+    ports:
+      - 8080:8080
+    devices:
+      - /dev/video0
