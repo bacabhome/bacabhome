@@ -1,2 +1,3 @@
 platform: mjpeg
+name: mjpeg camera
 mjpeg_url: !secret mjpeg_camera
