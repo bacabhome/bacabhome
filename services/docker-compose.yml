@@ -16,3 +16,20 @@ services:
       - 8080:8080
     devices:
       - /dev/video0
+
+  gstreamer:
+    build:
+      context: ./gstreamer/
+      dockerfile: Dockerfile.gstreamer
+      args:
+        - STREAMING_PORT="5000"
+    image: xe1gyq/gstreamer
+    container_name: bacab-home-gstreamer
+    environment:
+      - TZ=America/Mexico_City
+      - STREAMING_PORT=5000
+    ports:
+      - 5000:5000
+    devices:
+      - /dev/video0
+
