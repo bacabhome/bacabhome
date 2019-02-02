@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Add to mqtt sensor platform the unit of measurement and create
+    its entry under Lovelace UI Sensors view.
+

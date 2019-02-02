@@ -2,3 +2,4 @@
 
 platform: mqtt
 state_topic: "bacabhome/sensor/mqtt"
+unit_of_measurement: '%'

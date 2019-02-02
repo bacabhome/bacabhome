@@ -108,6 +108,13 @@ views:
     cards:
 
       - type: sensor
+        entity: sensor.mqtt_sensor
+        name: Sensor MQTT
+        graph: line
+        unit: '%'
+        detail: 1
+
+      - type: sensor
         entity: sensor.glances_cpu_load
         name: CPU Load
         graph: line
