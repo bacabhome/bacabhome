@@ -1,0 +1,3 @@
+platform: mjpeg
+name: mjpeg raspberrypi
+mjpeg_url: !secret mjpeg_raspberrypi

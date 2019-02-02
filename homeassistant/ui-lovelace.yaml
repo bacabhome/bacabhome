@@ -54,6 +54,15 @@ views:
           - sensor.mqtt_sensor
         camera_image: camera.mjpeg_camera
 
+      - type: picture-glance
+        title: Camera Mjpeg Raspberry Pi
+        entities:
+          - binary_sensor.ffmpeg_motion
+          - binary_sensor.mqtt_binary_sensor
+          - sensor.dark_sky_apparent_temperature
+          - sensor.mqtt_sensor
+        camera_image: camera.mjpeg_raspberrypi
+
   - icon: mdi:weather-cloudy
     id: Weather
     title: Weather
