@@ -33,3 +33,14 @@ services:
     devices:
       - /dev/video0
 
+  opencv:
+    build:
+      context: ./opencv/
+      dockerfile: Dockerfile.opencv
+    image: xe1gyq/opencv
+    container_name: bacab-home-opencv
+    environment:
+      - TZ=America/Mexico_City
+    devices:
+      - /dev/video0
+
