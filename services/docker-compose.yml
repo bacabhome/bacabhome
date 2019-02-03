@@ -44,3 +44,23 @@ services:
     devices:
       - /dev/video0
 
+  yolo:
+    build:
+      context: ./yolo/
+      dockerfile: Dockerfile.yolo
+    image: xe1gyq/yolo
+    container_name: bacab-home-yolo
+    environment:
+      - TZ=America/Mexico_City
+      - DISPLAY=:0
+      - STREAMING_PORT=5000
+      - DISPLAY_IP=172.17.0.1
+      - DISPLAY_PORT=5100
+    ports:
+      - 5000:5000
+      - 5100:5100
+    devices:
+      - /dev/video0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
