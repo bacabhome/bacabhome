@@ -11,29 +11,7 @@ views:
   - !include lovelace/weblinks.yaml
   - !include lovelace/binary_sensors.yaml
   - !include lovelace/image_processing.yaml
-
-  - icon: mdi:switch
-    id: Switches
-    title: Switches
-    cards:
-
-      - type: entities
-        title: Mqtt
-        show_header_toggle: false
-        entities:
-          - switch.mqtt_switch
-
-      - type: picture
-        image: /local/pictures/ui-lovelace/2018072903.jpg
-        service: switch.toggle
-        service_data:
-          entity_id: switch.mqtt_switch
-
-      - type: picture-entity
-        entity: switch.mqtt_switch
-        state_image:
-          "on": /local/pictures/ui-lovelace/2018073001.jpg
-          "off": /local/pictures/ui-lovelace/2018073002.jpg
+  - !include lovelace/switches.yaml
 
   - icon: mdi:oil-temperature
     if: Custom
