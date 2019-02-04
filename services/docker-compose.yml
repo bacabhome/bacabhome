@@ -64,3 +64,25 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
 
+  haarcascades:
+    build:
+      context: ./haarcascades/
+      dockerfile: Dockerfile.haarcascades
+    image: xe1gyq/haarcascades
+    container_name: bacab-home-haarcascades
+    environment:
+      - TZ=America/Mexico_City
+      - DISPLAY=:0
+      - NAME=Demo
+      - STREAMING_PORT=5000
+      - DISPLAY_IP=172.17.0.1
+      - DISPLAY_PORT=5100
+    entrypoint:
+      - /home/user/main.sh
+    command: ["Demo", "5000", "172.17.0.1", "5100"]
+    ports:
+      - 5000:5000
+    devices:
+      - /dev/video0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix

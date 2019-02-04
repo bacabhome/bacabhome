@@ -1,0 +1,32 @@
+FROM xe1gyq/opencv
+
+MAINTAINER Abraham Arce "xe1gyq@gmail.com"
+
+ENV TIMEZONE America/Mexico_City
+ENV USER root
+
+USER user
+WORKDIR /home/user
+
+ADD --chown=1000:1000 main.sh /home/user/
+RUN /bin/bash -c 'chmod +x /home/user/main.sh'
+ADD --chown=1000:1000 haarcascades.py /home/user/
+RUN /bin/bash -c 'chmod +x /home/user/haarcascades.py'
+
+EXPOSE 5000/tcp
+EXPOSE 5100/udp
+
+ARG NAME=Demo
+ENV NAME="${NAME}"
+
+ARG STREAMING_PORT=5000
+ENV STREAMING_PORT="${STREAMING_PORT}"
+
+ARG DISPLAY_IP=172.17.0.1
+ENV DISPLAY_IP="${DISPLAY_IP}"
+
+ARG DISPLAY_PORT=5100
+ENV DISPLAY_PORT="${DISPLAY_PORT}"
+
+ENTRYPOINT ["/home/user/main.sh"]
+CMD [$NAME, $STREAMING_PORT, $DISPLAY_IP, $DISPLAY_PORT]
