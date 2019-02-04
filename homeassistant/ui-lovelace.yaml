@@ -4,18 +4,7 @@ resources: !include lovelace/resources.yaml
 
 views:
 
-  - icon: mdi:home-heart
-    title: Sweet Home
-    cards:
-
-      - type: markdown
-        title: Welcome to Bacab Home!
-        content: >
-          Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
-          Today? a Smart Home!
-
-      - type: shopping-list
-        title: Shopping List
+  - !include lovelace/home.yaml
 
   - icon: mdi:cctv
     id: Camera

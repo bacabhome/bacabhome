@@ -1,0 +1,13 @@
+title: Home
+icon: mdi:home-heart
+path: home
+cards:
+
+  - type: markdown
+    title: Welcome to Bacab Home!
+    content: >
+      Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
+      Today? a Smart Home!
+
+  - type: shopping-list
+    title: Shopping List
