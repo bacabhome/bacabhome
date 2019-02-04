@@ -99,6 +99,20 @@ services:
       - bacabhome-nodered-storage:/data
       - /etc/localtime:/etc/localtime:ro
 
+  netdata:
+    image: netdata/netdata
+    container_name: bacab-home-netdata
+    ports:
+      - 19999:19999
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - apparmor:unconfined
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
