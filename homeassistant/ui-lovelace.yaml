@@ -6,45 +6,7 @@ views:
 
   - !include lovelace/home.yaml
   - !include lovelace/cameras.yaml
-
-  - icon: mdi:weather-cloudy
-    id: Weather
-    title: Weather
-    panel: false
-    cards:
-
-      - type: weather-forecast
-        entity: weather.dark_sky
-
-      - type: entities
-        title: Dark Sky
-        show_header_toggle: false
-        entities:
-          - weather.dark_sky
-
-      - type: iframe
-        url: !secret services_windy_url
-        aspect_ratio: 50%
-
-      - type: entities
-        title: Dark Sky
-        entities:
-          - entity: sensor.dark_sky_precip_probability
-            name: Precipitation Probability
-          - entity: sensor.dark_sky_temperature
-            name: Temperature
-          - entity: sensor.dark_sky_wind_speed
-            name: Wind Speed
-          - entity: sensor.dark_sky_cloud_coverage
-            name: Cloud Coverage
-          - entity: sensor.dark_sky_humidity
-            name: Humidity
-          - entity: sensor.dark_sky_visibility
-            name: Visibility
-          - entity: sensor.dark_sky_daytime_high_temperature_0
-            name: Daytime High Temperature
-          - entity: sensor.dark_sky_overnight_low_temperature_0
-            name: Overnight Low Temperature
+  - !include lovelace/weather.yaml
 
   - icon: mdi:chart-bar
     id: Sensors
