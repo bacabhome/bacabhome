@@ -17,7 +17,7 @@ streamport=sys.argv[2]
 displayip=sys.argv[3]
 displayport=sys.argv[4]
 
-cap = cv2.VideoCapture("tcp://172.17.0.1:5000")
+cap = cv2.VideoCapture("http://172.17.0.1:8080/?action=stream")
 
 display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + displayip + " port=" + displayport
 displayout = cv2.VideoWriter(display, 0, framerate, (640, 480))

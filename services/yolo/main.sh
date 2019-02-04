@@ -7,7 +7,7 @@ set -x
 # =============================================================================
 
 NAME=$1
-STREAMing_PORT=$2
+STREAMING_PORT=$2
 DISPLAY_IP=$3
 DISPLAY_PORT=$4
 
