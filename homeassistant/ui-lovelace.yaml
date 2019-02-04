@@ -1,10 +1,6 @@
 title: Bacab Home
 
-resources:
-    - url: /local/bignumber-card.js?v=0.0.1
-      type: js
-    - url: /local/monster-card.js?v=0.2.3
-      type: js
+resources: !include lovelace/resources.yaml
 
 views:
 

@@ -1,0 +1,6 @@
+# https://developers.home-assistant.io/docs/en/lovelace_custom_card.html
+
+- url: /local/bignumber-card.js?v=0.0.1
+  type: js
+- url: /local/monster-card.js?v=0.2.3
+  type: js
