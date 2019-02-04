@@ -10,19 +10,7 @@ views:
   - !include lovelace/sensors.yaml
   - !include lovelace/weblinks.yaml
   - !include lovelace/binary_sensors.yaml
-
-  - icon: mdi:image-filter
-    id: Image Processing
-    title: Image Processing
-    cards:
-
-      - type: entities
-        title: Face Detect
-        entities:
-          - entity: image_processing.dlib_face_detect_ffmpeg
-            name: FFmpeg
-          - entity: image_processing.dlib_face_detect_mjpeg_camera
-            name: Mjpeg
+  - !include lovelace/image_processing.yaml
 
   - icon: mdi:switch
     id: Switches

@@ -1,0 +1,13 @@
+title: Image Processing
+icon: mdi:image-filter
+path: imageprocessing
+id: Image Processing
+cards:
+
+  - type: entities
+    title: Face Detect
+    entities:
+      - entity: image_processing.dlib_face_detect_ffmpeg
+        name: FFmpeg
+      - entity: image_processing.dlib_face_detect_mjpeg_camera
+        name: Mjpeg
