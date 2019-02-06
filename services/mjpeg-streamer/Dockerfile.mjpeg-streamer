@@ -29,10 +29,13 @@ RUN git clone https://github.com/jacksonliam/mjpg-streamer && \
 ADD --chown=1000:1000 main.sh /home/user/
 RUN /bin/bash -c 'chmod +x /home/user/main.sh'
 
-ARG STREAMING_PORT=8080
-ENV STREAMING_PORT="${STREAMING_PORT}"
+ARG VIDEO_DEVICE
+ENV VIDEO_DEVICE="${VIDEO_DEVICE}"
 
-EXPOSE 8080
+ARG SERVER_TCP_PORT
+ENV SERVER_TCP_PORT="${SERVER_TCP_PORT}"
+
+EXPOSE ${SERVER_TCP_PORT}
 
 ENTRYPOINT ["/home/user/main.sh"]
-CMD [$STREAMING_PORT]
+CMD [${VIDEO_DEVICE}, ${SERVER_TCP_PORT}]

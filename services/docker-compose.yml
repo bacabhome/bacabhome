@@ -6,16 +6,19 @@ services:
       context: ./mjpeg-streamer/
       dockerfile: Dockerfile.mjpeg-streamer
       args:
-        - STREAMING_PORT="8080"
+        - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+        - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
     image: xe1gyq/mjpeg-streamer
+    privileged: true
     container_name: bacab-home-mjpeg-streamer
     environment:
       - TZ=America/Mexico_City
-      - STREAMING_PORT=8080
+      - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+      - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
     ports:
       - 8080:8080
     devices:
-      - /dev/video0
+      - /dev
 
   gstreamer:
     build:

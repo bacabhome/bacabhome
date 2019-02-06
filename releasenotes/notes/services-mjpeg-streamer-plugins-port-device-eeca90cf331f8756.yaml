@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    When launching mjpg-streamer, you specify one or more input plugins
+    and an output plugin, enable server tcp port argument for
+    input_uvc.so plugin and video device argument for output_http.so plugin.
