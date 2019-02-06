@@ -16,4 +16,4 @@
 # Main
 # =============================================================================
 
-gst-launch-1.0 v4l2src ! video/x-h264,width=1280,height=720,framerate=30/1 ! h264parse config-interval=1 ! matroskamux streamable=true ! tcpserversink host=::0 port=5000 sync=false sync-method=2
+gst-launch-1.0 v4l2src device=${VIDEO_DEVICE} ! video/x-h264,width=800,height=600,framerate=15/1 ! h264parse config-interval=1 ! matroskamux streamable=true ! tcpserversink host=::0 port=${SINK_HOST_PORT} sync=false sync-method=2

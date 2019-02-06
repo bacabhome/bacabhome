@@ -25,16 +25,19 @@ services:
       context: ./gstreamer/
       dockerfile: Dockerfile.gstreamer
       args:
-        - STREAMING_PORT="5000"
+        - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     image: xe1gyq/gstreamer
+    privileged: true
     container_name: bacab-home-gstreamer
     environment:
       - TZ=America/Mexico_City
-      - STREAMING_PORT=5000
+      - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     ports:
       - 5000:5000
     devices:
-      - /dev/video0
+      - /dev
 
   opencv:
     build:
