@@ -1,0 +1,7 @@
+---
+features:
+  - |
+    List new features here, or remove this section.  All of the list items in
+    When launching Haar Caascades, you specify the service name, the video
+    capture, the server sink host IP address and port.
+

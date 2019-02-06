@@ -3,14 +3,14 @@ import sys
 import time
 
 framerate=25
-name=sys.argv[1]
-streamport=sys.argv[2]
-displayip=sys.argv[3]
-displayport=sys.argv[4]
+service_name=sys.argv[1]
+video_capture=sys.argv[2]
+sink_host_ip=sys.argv[3]
+sink_host_port=sys.argv[4]
 
-cap = cv2.VideoCapture("http://172.17.0.1:8080/?action=stream")
+cap = cv2.VideoCapture(video_capture)
 
-display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + displayip + " port=" + displayport
+display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + sink_host_ip + " port=" + sink_host_port
 displayout = cv2.VideoWriter(display, 0, framerate, (640, 480))
 
 faceCascade = cv2.CascadeClassifier("/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml")
@@ -35,7 +35,7 @@ while(True):
 	for (x, y, w, h) in faces:
 		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-	banner = name + ' FPS {:.1f}'.format(1 / (time.time() - stime))
+	banner = service_name + ' FPS {:.1f}'.format(1 / (time.time() - stime))
 	cv2.putText(frame, banner, (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,177,1), 3)
 	displayout.write(frame)
 
