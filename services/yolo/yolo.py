@@ -7,19 +7,19 @@ import numpy as np
 import sys
 import time
 
-min_confidence=0.14
+min_confidence = 0.14
 model = 'yolov2.weights'
 config = 'yolov2.cfg'
 
 framerate=25
-name=sys.argv[1]
-streamport=sys.argv[2]
-displayip=sys.argv[3]
-displayport=sys.argv[4]
+service_name=sys.argv[1]
+video_capture=sys.argv[2]
+sink_host_ip=sys.argv[3]
+sink_host_port=sys.argv[4]
 
-cap = cv2.VideoCapture("http://172.17.0.1:8080/?action=stream")
+cap = cv2.VideoCapture(video_capture)
 
-display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + displayip + " port=" + displayport
+display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + sink_host_ip + " port=" + sink_host_port
 displayout = cv2.VideoWriter(display, 0, framerate, (640, 480))
 
 classes = None
@@ -63,7 +63,7 @@ while(True):
             cv2.rectangle(frame,(x1,y1),(x2,y2),(255,255,255),1)
             cv2.putText(frame,classes[class_index]+" "+"{0:.1f}".format(confidence),(x1,y1), cv2.FONT_HERSHEY_SIMPLEX, 1,(255,255,255),1,cv2.LINE_AA)
 
-    banner = name + ' FPS {:.1f}'.format(1 / (time.time() - stime))
+    banner = service_name + ' FPS {:.1f}'.format(1 / (time.time() - stime))
     cv2.putText(frame, banner, (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,177,1), 3)
     displayout.write(frame)
 

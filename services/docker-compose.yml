@@ -54,22 +54,25 @@ services:
     build:
       context: ./yolo/
       dockerfile: Dockerfile.yolo
+      args:
+        - SERVICE_NAME=${SERVICE_NAME:-Demo}
+        - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
+        - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
+        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     image: xe1gyq/yolo
+    privileged: true
     container_name: bacab-home-yolo
     environment:
       - TZ=America/Mexico_City
       - DISPLAY=:0
-      - NAME= Demo
-      - STREAMING_PORT=5000
-      - DISPLAY_IP=172.17.0.1
-      - DISPLAY_PORT=5100
-    entrypoint:
-      - /home/user/main.sh
-    command: ["Demo", "5000", "172.17.0.1", "5100"]
+      - SERVICE_NAME=${SERVICE_NAME:-Demo}
+      - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
+      - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
+      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     ports:
       - 5000:5000
     devices:
-      - /dev/video0
+      - /dev
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
 
