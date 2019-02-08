@@ -37,6 +37,7 @@ while(True):
 
 	banner = service_name + ' FPS {:.1f}'.format(1 / (time.time() - stime))
 	cv2.putText(frame, banner, (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,177,1), 3)
+	cv2.imshow(service_name,frame)
 	displayout.write(frame)
 
 	if cv2.waitKey(1) & 0xFF == ord('q'):
