@@ -24,5 +24,7 @@ echo "MODELS=$OPENVINO_INSTALLATION/deployment_tools/intel_models/" >> /home/use
 mkdir openvino-samples
 cd openvino-samples/
 
+# Samples
+
 cmake /opt/intel/computer_vision_sdk/inference_engine/samples/
-make interactive_face_detection_demo
+make all
