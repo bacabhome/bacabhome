@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Intel® Movidius® Vision Processing Unit (VPU) enables visual intelligence
+    at a high compute per watt. It supports camera processing, computer vision,
+    and deep learning inferences.
