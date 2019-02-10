@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER Alfredo Reyes "reyes-fred@hotmail.com"
 
-ARG OPENCV_VERSION=4.0.0-beta
+ARG OPENCV_VERSION=4.0.1
 
 ENV TIMEZONE America/Mexico_City
 ENV USER root
