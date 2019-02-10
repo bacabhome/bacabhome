@@ -10,6 +10,7 @@ ARG WAYLAND_VERSION=1.8.93
 ENV TIMEZONE America/Mexico_City
 ENV DEBIAN_FRONTEND noninteractive
 ENV INSTALLATION_DIRECTORY=/usr/local/
+ENV INSTALLATION_DIRECTORY_MEDIA_SDK=/opt/intel/mediasdk/
 ENV PKG_CONFIG_PATH=$INSTALLATION_DIRECTORY/lib/pkgconfig/:$PKG_CONFIG_PATH
 ENV LIBGL_DRIVERS_PATH=$INSTALLATION_DIRECTORY/lib/dri
 ENV LD_LIBRARY_PATH=$INSTALLATION_DIRECTORY/lib
@@ -19,8 +20,11 @@ WORKDIR /
 
 RUN apt-get update && apt-get install -y \
     sudo \
+    build-essential \
     wget \
     curl \
+    git \
+    ca-certificates \
     bzip2 \
     libgstreamer1.0-0 \
     gstreamer1.0-plugins-base \
@@ -125,6 +129,47 @@ RUN cd $INSTALLATION_DIRECTORY && \
     make -j8 && \
     make install && \
     make clean
+
+RUN cd $INSTALLATION_DIRECTORY && \
+    wget --no-check-certificate https://github.com/Kitware/CMake/releases/download/v3.13.4/cmake-3.13.4.tar.gz && \
+    tar xvf cmake-3.13.4.tar.gz && \
+    cd cmake-3.13.4 && \
+    ./configure && \
+    make && \
+    make install
+
+RUN git clone https://github.com/intel/libva.git && \
+    cd libva && \
+    #git checkout tags/2.1.1.pre1-20180601 && \
+    ./autogen.sh && \
+    make && \
+    make install
+
+RUN cd $INSTALLATION_DIRECTORY && \
+    git clone https://github.com/Intel-Media-SDK/MediaSDK && \
+    cd MediaSDK && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make && \
+    make install
+
+ENV MFX_HOME=/opt/intel/mediasdk/
+ENV GST_PLUGIN_PATH_1_0=/usr/local/lib:$INSTALLATION_DIRECTORY_MEDIA_SDK/lib/
+
+RUN git clone https://github.com/Intel-Media-SDK/gstreamer-plugins.git && \
+    cd gstreamer-plugins && \
+    sudo cp -r $INSTALLATION_DIRECTORY_MEDIA_SDK/include/mfx/mfx* $INSTALLATION_DIRECTORY_MEDIA_SDK/include/ && \
+    sudo mkdir $INSTALLATION_DIRECTORY_MEDIA_SDK/lib/lin_x64/ && \
+    sudo cp -r $INSTALLATION_DIRECTORY_MEDIA_SDK/lib/*.* $INSTALLATION_DIRECTORY_MEDIA_SDK/lib/lin_x64/ && \
+    MFX_HOME=$MFX_HOME ./autogen.sh --libdir=${MFX_HOME}/lib/ --includedir=${MFX_HOME}/include --prefix=/usr/local/lib && \
+    make && \
+    make install && \
+    echo /opt/intel/mediasdk/lib/ > /etc/ld.so.conf.d/media-sdk.conf && \
+    ldconfig
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    v4l-utils
 
 RUN groupadd user && \
     useradd -g user -s /bin/bash -d /home/user -m user && \
