@@ -49,6 +49,9 @@ RUN sudo usermod -a -G video user && \
 RUN cd $OPENVINO_INSTALL/deployment_tools/model_optimizer/install_prerequisites && \
     ./install_prerequisites.sh
 
+RUN cd $OPENVINO_INSTALL/install_dependencies/ && \
+    sudo -E ./install_NEO_OCL_driver.sh
+
 RUN sudo apt autoremove -y && \
     sudo rm -rf /home/user/${OPENVINO} /var/lib/apt/lists/*
 
