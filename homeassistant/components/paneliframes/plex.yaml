@@ -1,0 +1,5 @@
+# https://www.plex.tv/
+
+plex:
+  title: 'Plex'
+  url: !secret services_plex_url
