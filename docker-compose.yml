@@ -113,6 +113,19 @@ services:
       - /sys:/host/sys:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
+  plex:
+    image: plexinc/pms-docker
+    container_name: bacab-home-plex
+    restart: unless-stopped
+    environment:
+      - TZ=America/Mexico_City
+      - PLEX_CLAIM=<claimToken>
+    network_mode: host
+    volumes:
+      - ./homeassistant/www/plex/database:/config
+      - ./homeassistant/www/plex/transcode:/transcode
+      - ./homeassistant/www/plex/media:/data
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
