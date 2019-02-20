@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Install Advanced Package Tool (APT) and Python packages as requirements
+    for Object Size Detector and Store Traffic Monitor OpenVINO Reference
+    Implementations.

@@ -18,10 +18,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     automake \
     autoconf \
-    libtool && \
+    libtool \
+    ffmpeg \
+    python-pip \
+    python-setuptools \
+    vim && \
     #udev \
     #libusb-1.0-0-dev && \
     rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade \
+    pyyaml
 
 RUN cd /tmp/ && \
    wget https://github.com/libusb/libusb/archive/v1.0.22.zip && \
@@ -32,8 +39,9 @@ RUN cd /tmp/ && \
    make install && \
    rm -rf /tmp/*
 
-USER user
 WORKDIR /home/user
+RUN chown user /home/user
+USER user
 
 ADD --chown=1000:1000 ${OPENVINO} /home/user/${OPENVINO}
 RUN /bin/bash -c 'chmod +x /home/user/${OPENVINO}'
