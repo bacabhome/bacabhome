@@ -1,0 +1,9 @@
+---
+features:
+  - |
+    The Matroska Multimedia Container is an open standard, free container
+    format, a file format that can hold an unlimited number of video, audio,
+    picture, or subtitle tracks in one file. OpenCV class provides
+    cv::VideoWriter Video writer class for writing video files or image
+    sequences and from gst-plugins-good, matroskamux muxes different input
+    streams into a Matroska file.

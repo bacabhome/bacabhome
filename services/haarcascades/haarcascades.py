@@ -10,7 +10,7 @@ sink_host_port=sys.argv[4]
 
 cap = cv2.VideoCapture(video_capture)
 
-display="appsrc ! videoconvert ! video/x-raw,format=YUY2,width=640,height=480 ! jpegenc ! rtpjpegpay ! udpsink host=" + sink_host_ip + " port=" + sink_host_port
+display="appsrc ! videoconvert ! matroskamux streamable=true ! tcpserversink host=" + sink_host_ip + " port=" + sink_host_port + " sync=false sync-method=2"
 displayout = cv2.VideoWriter(display, 0, framerate, (640, 480))
 
 faceCascade = cv2.CascadeClassifier("/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml")
