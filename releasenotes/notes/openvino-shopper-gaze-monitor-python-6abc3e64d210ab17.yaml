@@ -1,0 +1,10 @@
+---
+features:
+  - |
+    This Shopper Gaze Monitor application uses the Inference Engine included
+    in the Intel® Distribution of OpenVINO™ toolkit and the Intel® Deep
+    Learning Deployment Toolkit. It is designed for a retail shelf mounted
+    camera system that counts the number of passers-by that look towards the
+    display vs. the number of people that pass by the display without looking.
+    It is intended to provide real-world marketing statistics for in-store
+    shelf-space advertising.
