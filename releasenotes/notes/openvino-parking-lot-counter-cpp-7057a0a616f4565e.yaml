@@ -1,0 +1,10 @@
+---
+features:
+  - |
+    Parking lot counter is one of a series of reference implementations
+    for Computer Vision (CV) using the Intel® Distribution of OpenVINO™
+    toolkit. This application is designed for a parking space area mounted
+    camera which monitors available parking space by tracking the counts of
+    the vehicles entering and leaving the parking space area. This example
+    is intended to demonstrate how to use CV to monitor parking spaces in
+    dedicated parking area.
