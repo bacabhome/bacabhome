@@ -4,11 +4,12 @@ services:
   mosquitto:
     image: eclipse-mosquitto
     container_name: bacab-home-mosquitto
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    network_mode: host
     ports:
       - 1883:1883
-    restart: on-failure
     user: "1000:1000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
@@ -19,30 +20,33 @@ services:
   glances:
     image: docker.io/nicolargo/glances
     container_name: bacab-home-glances
+    restart: on-failure
     pid: host
+    environment:
+      - TZ=America/Mexico_City
+      - "GLANCES_OPT=-w"
     network_mode: host
     ports:
       - 61208-61208
       - 61209-61209
-    environment:
-      - "GLANCES_OPT=-w"
-    restart: on-failure
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
     image: homeassistant/home-assistant
     container_name: bacab-home-homeassistant
+    restart: on-failure
     depends_on:
       - "influxdb"
       - "mosquitto"
       - "glances"
+    environment:
+      - TZ=America/Mexico_City
     network_mode: host
     ports:
       - 8123:8123
     devices:
       - /dev/urandom:/dev/urandom
-    restart: on-failure
     volumes:
       - ./homeassistant:/config
       - /etc/localtime:/etc/localtime:ro
@@ -50,36 +54,41 @@ services:
   influxdb:
     image: influxdb
     container_name: bacab-home-influxdb
+    restart: on-failure
+    environment:
+      - TZ=America/Mexico_City
+      - INFLUXDB_ADMIN_ENABLED='true'
+      - INFLUXDB_DB="home_assistant"
+    network_mode: host
     ports:
       - 8083:8083
       - 8086:8086
-    environment:
-      - INFLUXDB_ADMIN_ENABLED='true'
-      - INFLUXDB_DB="home_assistant"
-    restart: on-failure
     volumes:
       - bacabhome-influxdb-storage:/var/lib/influxdb
 
   grafana:
     image: grafana/grafana
     container_name: bacab-home-grafana
+    restart: on-failure
     depends_on:
       - "influxdb"
+    environment:
+      - TZ=America/Mexico_City
     network_mode: host
     ports:
       - 3000:3000
-    restart: on-failure
     volumes:
       - bacabhome-grafana-storage:/var/lib/grafana
 
   portainer:
     image: portainer/portainer
     container_name: bacab-home-portainer
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    network_mode: host
     ports:
       - 9000:9000
-    restart: on-failure
     volumes:
       - bacabhome-portainer-storage:/data:rw
       - /var/run/docker.sock:/var/run/docker.sock
@@ -87,13 +96,14 @@ services:
   nodered:
     image: nodered/node-red-docker:v8
     container_name: bacab-home-nodered
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    network_mode: host
     ports:
       - 1880:1880
     depends_on:
       - "homeassistant"
-    restart: on-failure
     user: root
     volumes:
       - bacabhome-nodered-storage:/data
@@ -102,6 +112,10 @@ services:
   netdata:
     image: netdata/netdata
     container_name: bacab-home-netdata
+    restart: on-failure
+    environment:
+      - TZ=America/Mexico_City
+    network_mode: host
     ports:
       - 19999:19999
     cap_add:
@@ -116,7 +130,7 @@ services:
   plex:
     image: plexinc/pms-docker
     container_name: bacab-home-plex
-    restart: unless-stopped
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
       - PLEX_CLAIM=<claimToken>

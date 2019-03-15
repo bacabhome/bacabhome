@@ -1,0 +1,4 @@
+---
+other:
+  - |
+    Main Docker compose file clean up for Services, Networks and Volumes.
