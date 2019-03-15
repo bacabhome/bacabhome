@@ -1,0 +1,6 @@
+---
+features:
+  - |
+    Add a motionEye panel, a web-based frontend for Motion, a highly
+    configurable program that monitors video signals from many types
+    of cameras.
