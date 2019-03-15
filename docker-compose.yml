@@ -127,6 +127,20 @@ services:
       - /sys:/host/sys:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
+  motioneye:
+    image: cahna/motioneye
+    container_name: bacab-home-motioneye
+    restart: on-failure
+    environment:
+      - TZ=America/Mexico_City
+    network_mode: host
+    ports:
+      - "8081:8081"
+      - "8765:8765"
+    volumes:
+      - ./config/motioneye/etc:/etc/motioneye
+      - ./media/motioneye/:/var/lib/motioneye
+
   plex:
     image: plexinc/pms-docker
     container_name: bacab-home-plex
