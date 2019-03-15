@@ -136,9 +136,9 @@ services:
       - PLEX_CLAIM=<claimToken>
     network_mode: host
     volumes:
-      - ./homeassistant/www/plex/database:/config
-      - ./homeassistant/www/plex/transcode:/transcode
-      - ./homeassistant/www/plex/media:/data
+      - ./config/plex/database:/config
+      - ./config/plex/transcode:/transcode
+      - ./media/:/data
 
 volumes:
   bacabhome-mosquitto-storage:

@@ -1,0 +1,4 @@
+---
+fixes:
+  - |
+    Plex media server paths changed in Docker compose.

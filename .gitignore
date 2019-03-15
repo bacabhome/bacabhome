@@ -1,5 +1,8 @@
 .tox
 
+# Config
+config/plex/
+
 # Documentation Sphinx
 doc/build
 
@@ -7,7 +10,6 @@ doc/build
 releasenotes/build
 
 # Home Assistant
-
 homeassistant/.HA_VERSION
 homeassistant/.shopping_list.json
 homeassistant/.storage/
@@ -17,3 +19,6 @@ homeassistant/home-assistant_v2.db
 homeassistant/known_devices.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
+
+# Media
+media/
