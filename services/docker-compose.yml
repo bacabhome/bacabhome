@@ -1,22 +1,17 @@
 version: '3.7'
 services:
 
-  mjpeg-streamer:
+  opencv:
     build:
-      context: ./mjpeg-streamer/
-      dockerfile: Dockerfile.mjpeg-streamer
-      args:
-        - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
-        - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
-    image: xe1gyq/mjpeg-streamer
+      context: ./opencv/
+      dockerfile: Dockerfile.opencv
+    image: xe1gyq/opencv
+    container_name: bacab-home-opencv
     privileged: true
-    container_name: bacab-home-mjpeg-streamer
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
-      - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
-      - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
-    ports:
-      - 8080:8080
+    network_mode: host
     devices:
       - /dev
 
@@ -28,47 +23,61 @@ services:
         - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
         - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     image: xe1gyq/gstreamer
-    privileged: true
     container_name: bacab-home-gstreamer
+    privileged: true
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
       - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
       - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
+    network_mode: host
     ports:
       - 5000:5000
     devices:
       - /dev
 
-  opencv:
+  mjpeg-streamer:
     build:
-      context: ./opencv/
-      dockerfile: Dockerfile.opencv
-    image: xe1gyq/opencv
-    container_name: bacab-home-opencv
+      context: ./mjpeg-streamer/
+      dockerfile: Dockerfile.mjpeg-streamer
+      args:
+        - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+        - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
+    image: xe1gyq/mjpeg-streamer
+    container_name: bacab-home-mjpeg-streamer
+    privileged: true
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
+      - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
+      - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
+    network_mode: host
+    ports:
+      - 8080:8080
     devices:
-      - /dev/video0
+      - /dev
 
-  yolo:
+  haarcascades:
     build:
-      context: ./yolo/
-      dockerfile: Dockerfile.yolo
+      context: ./haarcascades/
+      dockerfile: Dockerfile.haarcascades
       args:
-        - SERVICE_NAME=${SERVICE_NAME:-Demo}
+        - SERVICE_NAME=${SERVICE_NAME:-HaarCascades}
         - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
         - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
         - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/yolo
+    image: xe1gyq/haarcascades
+    container_name: bacab-home-haarcascades
     privileged: true
-    container_name: bacab-home-yolo
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
       - DISPLAY=:0
-      - SERVICE_NAME=${SERVICE_NAME:-Demo}
+      - SERVICE_NAME=${SERVICE_NAME:-HaarCascades}
       - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
       - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
       - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
+    network_mode: host
     ports:
       - 5000:5000
     devices:
@@ -76,25 +85,27 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
 
-  haarcascades:
+  yolo:
     build:
-      context: ./haarcascades/
-      dockerfile: Dockerfile.haarcascades
+      context: ./yolo/
+      dockerfile: Dockerfile.yolo
       args:
-        - SERVICE_NAME=${SERVICE_NAME:-Demo}
+        - SERVICE_NAME=${SERVICE_NAME:-YouOnlyLookOnce}
         - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
         - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
         - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/haarcascades
+    image: xe1gyq/yolo
+    container_name: bacab-home-yolo
     privileged: true
-    container_name: bacab-home-haarcascades
+    restart: on-failure
     environment:
       - TZ=America/Mexico_City
       - DISPLAY=:0
-      - SERVICE_NAME=${SERVICE_NAME:-Demo}
+      - SERVICE_NAME=${SERVICE_NAME:-YouOnlyLookOnce}
       - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
       - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
       - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
+    network_mode: host
     ports:
       - 5000:5000
     devices:
