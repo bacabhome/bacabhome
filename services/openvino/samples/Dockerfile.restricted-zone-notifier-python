@@ -30,13 +30,26 @@ RUN /bin/bash -c "source $OPENVINO_INSTALL/bin/setupvars.sh"
 RUN git clone https://github.com/intel-iot-devkit/restricted-zone-notifier-python.git && \
     git clone https://github.com/bacabhome/other.git
 
-RUN cp /home/user/other/restricted-zone-notifier-python/main.py /home/user/restricted-zone-notifier-python
+RUN mv /home/user/restricted-zone-notifier-python/* /home/user/ && \
+    cp /home/user/other/restricted-zone-notifier-python/main.py /home/user/
 
-ADD --chown=1000:1000 main.sh /home/user/
+ADD --chown=1000:1000 restricted-zone-notifier-python.sh /home/user/main.sh
 RUN /bin/bash -c 'chmod +x /home/user/main.sh'
-RUN /bin/bash -c '/home/user/main.sh'
 
 RUN /bin/bash -c "source $OPENVINO_INSTALL/bin/setupvars.sh"
 RUN echo "source $OPENVINO_INSTALL/bin/setupvars.sh" >> /home/user/.bashrc
 
-CMD ["/home/user/main.sh"]
+ARG CAMERA_IDENTIFICATION
+ENV CAMERA_IDENTIFICATION="${CAMERA_IDENTIFICATION}"
+
+ARG VIDEO_CAPTURE
+ENV VIDEO_CAPTURE="${VIDEO_CAPTURE}"
+
+ARG SINK_HOST_IP
+ENV SINK_HOST_IP="${SINK_HOST_IP}"
+
+ARG SINK_HOST_PORT
+ENV SINK_HOST_PORT="${SINK_HOST_PORT}"
+
+ENTRYPOINT ["/home/user/main.sh"]
+CMD [${CAMERA_IDENTIFICATION}, ${VIDEO_CAPTURE}, ${SINK_HOST_IP}, ${SINK_HOST_PORT}]
