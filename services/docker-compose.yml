@@ -113,6 +113,20 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
 
+  openvino:
+    build:
+      context: ./openvino/
+      dockerfile: Dockerfile.openvino
+    image: xe1gyq/openvino
+    container_name: bacab-home-openvino
+    privileged: true
+    restart: on-failure
+    network_mode: host
+    devices:
+      - /dev
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
   rznp:
     build:
       context: ./openvino/samples/
