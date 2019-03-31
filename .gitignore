@@ -16,6 +16,8 @@ homeassistant/.storage/
 homeassistant/deps/
 homeassistant/home-assistant.log
 homeassistant/home-assistant_v2.db
+homeassistant/home-assistant_v2.db-shm
+homeassistant/home-assistant_v2.db-wal
 homeassistant/known_devices.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
