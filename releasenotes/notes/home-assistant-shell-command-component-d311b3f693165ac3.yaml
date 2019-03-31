@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Shell command component can expose regular shell commands as services.
+    Services can be called from a script or in automation.
