@@ -5,6 +5,13 @@ id: Sensors
 cards:
 
   - type: sensor
+    entity: sensor.stats_mean
+    name: Sensor Statistics
+    graph: line
+    unit: '%'
+    detail: 1
+
+  - type: sensor
     entity: sensor.mqtt_sensor
     name: Sensor MQTT
     graph: line
