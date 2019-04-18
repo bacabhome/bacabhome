@@ -1,4 +1,4 @@
-platform: speedtest
+platform: speedtestdotnet
 monitored_conditions:
   - ping
   - download
