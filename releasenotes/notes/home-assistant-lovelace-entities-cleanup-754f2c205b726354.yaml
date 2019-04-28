@@ -1,0 +1,4 @@
+---
+deprecations:
+  - |
+    Clean up entities for Image Processing and Weather components.

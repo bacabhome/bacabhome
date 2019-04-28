@@ -33,7 +33,3 @@ cards:
         name: Humidity
       - entity: sensor.dark_sky_visibility
         name: Visibility
-      - entity: sensor.dark_sky_daytime_high_temperature_0
-        name: Daytime High Temperature
-      - entity: sensor.dark_sky_overnight_low_temperature_0
-        name: Overnight Low Temperature
