@@ -154,6 +154,20 @@ services:
       - ./config/plex/transcode:/transcode
       - ./media/:/data
 
+  prometheus:
+    image: prom/prometheus:0.18.0
+    container_name: bacab-home-prometheus
+    restart: on-failure
+    environment:
+      - TZ=America/Mexico_City
+    network_mode: host
+    ports:
+        - '9090:9090'
+    volumes:
+        - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+        - '-config.file=/etc/prometheus/prometheus.yml'
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
