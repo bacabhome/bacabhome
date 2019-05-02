@@ -162,11 +162,33 @@ services:
       - TZ=America/Mexico_City
     network_mode: host
     ports:
-        - '9090:9090'
+      - '9090:9090'
     volumes:
-        - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     command:
-        - '-config.file=/etc/prometheus/prometheus.yml'
+      - '-config.file=/etc/prometheus/prometheus.yml'
+
+  node-exporter:
+    image: prom/node-exporter
+    container_name: bacab-home-node-exporter
+    restart: on-failure
+    environment:
+      - TZ=America/Mexico_City
+    network_mode: host
+    ports:
+      - '9100:9100'
+    cap_add:
+      - SYS_PTRACE
+      - SYS_TIME
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - --collector.filesystem.ignored-mount-points
+      - '^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)'
 
 volumes:
   bacabhome-mosquitto-storage:
