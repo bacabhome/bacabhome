@@ -1,0 +1,19 @@
+# https://www.home-assistant.io/components/template
+
+platform: template
+sensors:
+  spacex_next_launch_date:
+    friendly_name: 'Next Launch Date'
+    value_template: '{{ states.sensor.spacex.state | int | timestamp_custom("%m/%d/%Y %H:%M")}}'
+  spacex_next_rocket:
+    friendly_name: 'Rocket'
+    value_template: '{{ states.sensor.spacex.attributes["rocket"]["rocket_name"] }}'
+  spacex_next_landing_type:
+    friendly_name: 'Landing Type'
+    value_template: '{{ states.sensor.spacex.attributes["rocket"]["first_stage"]["cores"][0]["landing_type"] }}'
+  spacex_next_launch_site:
+    friendly_name: 'Launch Site'
+    value_template: '{{ states.sensor.spacex.attributes["launch_site"]["site_name"] }}'
+  spacex_next_mission_name:
+    friendly_name: 'Mission Name'
+    value_template: '{{ states.sensor.spacex.attributes["mission_name"] }}'
