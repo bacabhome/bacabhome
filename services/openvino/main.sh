@@ -4,7 +4,7 @@
 # Variables
 # =============================================================================
 
-OPENVINO_INSTALLATION=/opt/intel/computer_vision_sdk/
+OPENVINO_INSTALLATION=/opt/intel/openvino/
 
 # =============================================================================
 # Functions
@@ -18,7 +18,6 @@ OPENVINO_INSTALLATION=/opt/intel/computer_vision_sdk/
 
 cd $HOME
 
-source $OPENVINO_INSTALLATION/bin/setupvars.sh
 echo "MODELS=$OPENVINO_INSTALLATION/deployment_tools/intel_models/" >> /home/user/.bashrc
 
 mkdir openvino-samples
