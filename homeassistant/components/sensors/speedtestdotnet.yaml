@@ -1,5 +1,0 @@
-platform: speedtestdotnet
-monitored_conditions:
-  - ping
-  - download
-  - upload
