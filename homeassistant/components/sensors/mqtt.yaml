@@ -1,5 +1,5 @@
 # https://www.home-assistant.io/components/sensor.mqtt/
 
 platform: mqtt
-state_topic: "bacabhome/sensor/mqtt"
+state_topic: "sensor/mqtt"
 unit_of_measurement: '%'
