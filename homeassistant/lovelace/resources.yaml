@@ -4,3 +4,5 @@
   type: js
 - url: /local/monster-card.js?v=0.2.3
   type: js
+- url: /local/mini-graph-card-bundle.js?v=0.5.0
+  type: module
