@@ -1,0 +1,75 @@
+title: Server
+icon: mdi:server
+path: server
+cards:
+
+  - type: custom:mini-graph-card
+    name: Processor Usage
+    align_state: center
+    icon: mdi:speedometer
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.processor_use
+        name: All System
+        color: black
+      - entity: sensor.glances_containers_cpu_used
+        name: Only Containers
+        color: grey
+
+  - type: custom:mini-graph-card
+    name: Memory Disk Usage
+    align_state: center
+    icon: mdi:speedometer
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.glances_ram_used_percent
+        name: Memory
+        color: black
+      - entity: sensor.glances_disk_used_percent
+        name: Disk
+        color: grey
+
+  - type: custom:mini-graph-card
+    name: Download Upload Speed
+    align_state: center
+    icon: mdi:speedometer
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.speedtest_download
+        name: Download
+        color: black
+      - entity: sensor.speedtest_upload
+        name: Upload
+        color: grey
+
+  - type: entities
+    title: System
+    show_header_toggle: false
+    entities:
+      - sensor.memory_free
+      - sensor.disk_free_home
+      - sensor.last_boot
+
+  - type: entities
+    title: Containers
+    show_header_toggle: false
+    entities:
+      - sensor.glances_containers_active
+      - sensor.glances_containers_ram_used
+
+  - type: entities
+    title: Network
+    show_header_toggle: false
+    entities:
+      - binary_sensor.ping_binary_sensor
+      - binary_sensor.ping_binary_sensor_camera_01
+      - binary_sensor.ping_binary_sensor_camera_02
