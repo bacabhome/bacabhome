@@ -1,0 +1,4 @@
+---
+features:
+  - |
+    Make media directory config accesible for Home Assistant frontend.

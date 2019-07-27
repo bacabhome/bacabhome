@@ -16,5 +16,8 @@ homeassistant:
   # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Mexico_City
 
+  whitelist_external_dirs:
+    - '/config/www/media/'
+
   # Load packages
   packages: !include_dir_named components/packages
