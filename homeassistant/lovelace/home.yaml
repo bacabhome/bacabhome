@@ -9,5 +9,25 @@ cards:
       Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
       Today? a Smart Home!
 
+  - type: weather-forecast
+    entity: weather.dark_sky
+
   - type: shopping-list
     title: Shopping List
+
+  - type: entities
+    title: Lights
+    show_header_toggle: false
+    entities:
+      - entity: group.all_lights
+        name: All Lights
+      - entity: light.mom_bedroom_light
+        name: Mom Bedroom
+      - entity: light.kitchen
+        name: Kitchen
+      - entity: light.hallway_light
+        name: Hallway
+      - entity: light.laundry_room_light
+        name: Laundry
+      - entity: light.street_light
+        name: Street

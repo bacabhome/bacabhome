@@ -1,0 +1,103 @@
+title: Lights
+icon: mdi:lightbulb-on
+path: lights
+id: Lights
+cards:
+
+  - type: entities
+    title: Upstairs
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Mom
+
+      - entity: light.mom_bathroom_light
+        name: Bathroom
+        icon: mdi:toilet
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: light.mom_bedroom_light
+        name: Bedroom
+        icon: mdi:bed-empty
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Princess
+
+      - entity: light.princess_bathroom_light
+        name: Bathroom
+        icon: mdi:toilet
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: light.princess_bedroom_light
+        name: Bedroom
+        icon: mdi:bed-empty
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Common
+
+      - entity: light.hallway_light
+        name: Hallway
+        icon: mdi:stairs
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: light.television_room_light
+        name: Bedroom
+        icon: mdi:television-classic
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: light.color_light
+        name: Color
+        icon: mdi:desk-lamp
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Dad
+      
+      - entity: light.dad_bedroom_light
+        name: Bedroom
+        icon: mdi:bed-empty
+        type: custom:slider-entity-row
+        toggle: true
+      - entity: light.mobile_room_light
+        name: Mobile
+        icon: mdi:desk-lamp
+        type: custom:slider-entity-row
+        toggle: true
+
+  - type: entities
+    title: Downstairs
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Kitchen
+
+      - entity: light.kitchen
+        name: Stove
+        icon: mdi:stove
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Laundry
+
+      - entity: light.laundry_room_light
+        name: Washer
+        icon: mdi:dishwasher
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Street
+
+      - entity: light.street_light
+        name: Front Yard
+        icon: mdi:car
+        type: custom:slider-entity-row
+        toggle: true

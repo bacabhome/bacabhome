@@ -5,8 +5,9 @@ resources: !include lovelace/resources.yaml
 views:
 
   - !include lovelace/home.yaml
+  - !include lovelace/lights.yaml
+  - !include lovelace/weather.yaml
   - !include lovelace/server.yaml
   - !include lovelace/cameras.yaml
-  - !include lovelace/weather.yaml
   - !include lovelace/science.yaml
   - !include lovelace/custom.yaml
