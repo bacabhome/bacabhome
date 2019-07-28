@@ -9,6 +9,9 @@ cards:
     show_header_toggle: false
     entities:
 
+      - entity: group.all_lights
+        name: All Lights
+
       - type: section
         label: Mom
 
