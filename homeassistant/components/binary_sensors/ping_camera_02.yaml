@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/binary_sensor.ping/
+
+platform: ping
+name: Ping Binary Sensor Camera 02
+host: !secret camera_02_ip_address
+count: 2
+scan_interval: 30
