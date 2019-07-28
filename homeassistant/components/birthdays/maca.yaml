@@ -1,0 +1,2 @@
+name: Maca
+date_of_birth: !secret maca_birthday

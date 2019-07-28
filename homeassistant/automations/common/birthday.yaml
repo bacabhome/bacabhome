@@ -1,0 +1,18 @@
+alias: Happy Birthday
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "07:00:00"
+  - platform: event
+    event_type: 'birthday'
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.50
+  - delay: '00:00:15'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data:
+     message: 'Feliz cumple {{ trigger.event.data.name }}, felices {{ trigger.event.data.age }}'

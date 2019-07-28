@@ -1,0 +1,3 @@
+# https://github.com/Miicroo/homeassistant-custom-components/tree/master/birthdays
+
+birthdays: !include_dir_list ../birthdays

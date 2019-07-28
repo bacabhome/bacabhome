@@ -1,0 +1,2 @@
+name: Mom
+date_of_birth: !secret mom_birthday

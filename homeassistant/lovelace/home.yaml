@@ -10,6 +10,21 @@ cards:
       Today? a Smart Home!
 
   - type: glance
+    title: Birthdays
+    show_header_toggle: false
+    columns: 4
+    entities:
+     - entity: birthday.princess
+       name: Princess
+     - entity: birthday.mom
+       name: Mom
+     - entity: birthday.maca
+       name: Maca
+     - entity: birthday.dad
+       name: Dad
+
+  - type: glance
+    title: House Lights
     show_header_toggle: false
     columns: 5
     entities:
