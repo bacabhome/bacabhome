@@ -2,3 +2,5 @@
 
 platform: google_translate
 language: 'es'
+cache: true
+cache_dir: /config/www/media/tts/
