@@ -6,37 +6,37 @@ panel: false
 cards:
 
   - type: picture-glance
-    title: Camera FFmpeg
+    title: Camera 01
     entities:
       - binary_sensor.ffmpeg_motion
-      - binary_sensor.mqtt_binary_sensor
       - sensor.dark_sky_apparent_temperature
-      - sensor.mqtt_sensor
-    camera_image: camera.ffmpeg_camera
+    image:
+    camera_image: camera.ffmpeg_camera_01
+    camera_view: live
 
   - type: picture-glance
-    title: Camera FFmpeg Raspberry Pi
+    title: Camera 02
     entities:
       - binary_sensor.ffmpeg_motion
-      - binary_sensor.mqtt_binary_sensor
       - sensor.dark_sky_apparent_temperature
-      - sensor.mqtt_sensor
-    camera_image: camera.ffmpeg_raspberrypi
+    image:
+    camera_image: camera.ffmpeg_camera_02
+    camera_view: live
 
   - type: picture-glance
-    title: Camera Mjpeg
+    title: Camera 01
     entities:
       - binary_sensor.ffmpeg_motion
-      - binary_sensor.mqtt_binary_sensor
       - sensor.dark_sky_apparent_temperature
-      - sensor.mqtt_sensor
-    camera_image: camera.mjpeg_camera
+    image:
+    camera_image: camera.mjpeg_camera_01
+    camera_view: live
 
   - type: picture-glance
-    title: Camera Mjpeg Raspberry Pi
+    title: Camera 02
     entities:
       - binary_sensor.ffmpeg_motion
-      - binary_sensor.mqtt_binary_sensor
       - sensor.dark_sky_apparent_temperature
-      - sensor.mqtt_sensor
-    camera_image: camera.mjpeg_raspberrypi
+    image:
+    camera_image: camera.mjpeg_camera_02
+    camera_view: live

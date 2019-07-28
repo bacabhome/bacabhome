@@ -1,4 +1,0 @@
-platform: mjpeg
-name: mjpeg camera
-mjpeg_url: !secret mjpeg_camera
-still_image_url: !secret mjpeg_camera_still_image
