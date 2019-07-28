@@ -46,7 +46,7 @@ cards:
         type: custom:slider-entity-row
         toggle: true
       - entity: light.television_room_light
-        name: Bedroom
+        name: Television
         icon: mdi:television-classic
         type: custom:slider-entity-row
         toggle: true

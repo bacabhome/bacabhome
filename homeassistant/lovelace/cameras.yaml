@@ -11,6 +11,7 @@ cards:
     show_state: false
     entities:
       - binary_sensor.ping_binary_sensor_camera_01
+      - light.street_light
     image:
     camera_image: camera.mjpeg_camera_01
     camera_view: live

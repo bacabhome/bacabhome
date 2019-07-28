@@ -20,6 +20,7 @@ cards:
 
   - type: entities
     title: Dark Sky
+    show_header_toggle: false
     entities:
       - entity: sensor.dark_sky_precip_probability
         name: Precipitation Probability
