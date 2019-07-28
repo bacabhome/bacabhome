@@ -13,12 +13,15 @@ releasenotes/build
 homeassistant/.HA_VERSION
 homeassistant/.shopping_list.json
 homeassistant/.storage/
+homeassistant/.cloud/
+homeassistant/.google.token
 homeassistant/deps/
 homeassistant/home-assistant.log
 homeassistant/home-assistant_v2.db
 homeassistant/home-assistant_v2.db-shm
 homeassistant/home-assistant_v2.db-wal
 homeassistant/known_devices.yaml
+homeassistant/ip_bans.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
 
