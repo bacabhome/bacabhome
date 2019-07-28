@@ -1,4 +1,5 @@
 # https://www.home-assistant.io/components/binary_sensor.ffmpeg_motion/
 
 platform: ffmpeg_motion
+name: motion camera 02
 input: !secret ffmpeg_camera_02

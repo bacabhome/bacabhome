@@ -8,8 +8,7 @@ cards:
   - type: picture-glance
     title: Camera 01
     entities:
-      - binary_sensor.ffmpeg_motion
-      - sensor.dark_sky_apparent_temperature
+      - binary_sensor.motion_camera_01
     image:
     camera_image: camera.ffmpeg_camera_01
     camera_view: live
@@ -17,8 +16,7 @@ cards:
   - type: picture-glance
     title: Camera 02
     entities:
-      - binary_sensor.ffmpeg_motion
-      - sensor.dark_sky_apparent_temperature
+      - binary_sensor.motion_camera_02
     image:
     camera_image: camera.ffmpeg_camera_02
     camera_view: live
@@ -26,8 +24,7 @@ cards:
   - type: picture-glance
     title: Camera 01
     entities:
-      - binary_sensor.ffmpeg_motion
-      - sensor.dark_sky_apparent_temperature
+      - binary_sensor.ping_binary_sensor_camera_01
     image:
     camera_image: camera.mjpeg_camera_01
     camera_view: live
@@ -35,8 +32,7 @@ cards:
   - type: picture-glance
     title: Camera 02
     entities:
-      - binary_sensor.ffmpeg_motion
-      - sensor.dark_sky_apparent_temperature
+      - binary_sensor.ping_binary_sensor_camera_02
     image:
     camera_image: camera.mjpeg_camera_02
     camera_view: live
