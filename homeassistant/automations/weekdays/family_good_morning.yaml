@@ -1,0 +1,24 @@
+alias: Family Good Morning
+initial_state: 'true'
+trigger: 
+  - platform: time
+    at: '06:55:00'
+condition:
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.50
+  - delay: '00:00:15'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data:
+     message: Hola Familia! Muy buenos dias!

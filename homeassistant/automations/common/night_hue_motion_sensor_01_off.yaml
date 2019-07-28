@@ -1,0 +1,13 @@
+alias: Night Hue Motion Sensor 01 Off
+initial_state: 'true'
+trigger:
+  platform: state
+  entity_id: binary_sensor.hue_motion_sensor_01_motion
+  to: 'off'
+condition:
+  condition: state
+  entity_id: light.mobile_room_light
+  state: 'on'
+action:
+  service: light.turn_off
+  entity_id: light.mobile_room_light
