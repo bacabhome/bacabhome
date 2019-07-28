@@ -9,11 +9,28 @@ cards:
       Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
       Today? a Smart Home!
 
-  - type: weather-forecast
-    entity: weather.dark_sky
-
   - type: shopping-list
     title: Shopping List
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Temperature
+        align_state: center
+        icon: mdi:home-thermometer
+        show:
+          icon: true
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.hue_motion_sensor_01_temperature
+            name: Downstairs
+            color: black
+          - entity: sensor.hue_motion_sensor_02_temperature
+            name: Upstairs
+            color: gray
+        height: 50
 
   - type: entities
     title: Lights
@@ -31,3 +48,12 @@ cards:
         name: Laundry
       - entity: light.street_light
         name: Street
+
+  - type: entities
+    title: Players
+    show_header_toggle: false
+    entities:
+      - entity: media_player.eek
+        name: Eek
+      - entity: media_player.amigo
+        name: Amigo
