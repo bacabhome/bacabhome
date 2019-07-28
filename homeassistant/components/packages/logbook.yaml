@@ -1,0 +1,12 @@
+# https://www.home-assistant.io/components/logbook/
+
+logbook:
+  exclude:
+    entities:
+      - sensor.last_boot
+      - sensor.date
+      - sensor.date_time
+      - sensor.time
+      - sensor.time_date
+      - sensor.time_utc
+      - sensor.worldclock_sensor
