@@ -9,8 +9,30 @@ cards:
       Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
       Today? a Smart Home!
 
-  - type: shopping-list
-    title: Shopping List
+  - type: glance
+    show_header_toggle: false
+    columns: 5
+    entities:
+      - entity: group.all_lights
+        name: House
+        tap_action:
+          action: toggle
+      - entity: light.mom_bedroom_light
+        name: Mom
+        tap_action:
+          action: toggle
+      - entity: light.kitchen
+        name: Kitchen
+        tap_action:
+          action: toggle
+      - entity: light.hallway_light
+        name: Hallway
+        tap_action:
+          action: toggle
+      - entity: light.laundry_room_light
+        name: Laundry
+        tap_action:
+          action: toggle
 
   - type: horizontal-stack
     cards:
@@ -30,24 +52,7 @@ cards:
           - entity: sensor.hue_motion_sensor_02_temperature
             name: Upstairs
             color: gray
-        height: 50
-
-  - type: entities
-    title: Lights
-    show_header_toggle: false
-    entities:
-      - entity: group.all_lights
-        name: All Lights
-      - entity: light.mom_bedroom_light
-        name: Mom Bedroom
-      - entity: light.kitchen
-        name: Kitchen
-      - entity: light.hallway_light
-        name: Hallway
-      - entity: light.laundry_room_light
-        name: Laundry
-      - entity: light.street_light
-        name: Street
+        height: 75
 
   - type: entities
     title: Players
@@ -57,3 +62,6 @@ cards:
         name: Eek
       - entity: media_player.amigo
         name: Amigo
+
+  - type: shopping-list
+    title: Shopping List
