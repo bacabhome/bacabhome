@@ -8,9 +8,4 @@ views:
   - !include lovelace/server.yaml
   - !include lovelace/cameras.yaml
   - !include lovelace/weather.yaml
-  - !include lovelace/sensors.yaml
-  - !include lovelace/weblinks.yaml
-  - !include lovelace/binary_sensors.yaml
-  - !include lovelace/image_processing.yaml
-  - !include lovelace/switches.yaml
   - !include lovelace/custom.yaml
