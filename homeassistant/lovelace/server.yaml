@@ -70,6 +70,9 @@ cards:
     title: Network
     show_header_toggle: false
     entities:
-      - binary_sensor.ping_binary_sensor
-      - binary_sensor.ping_binary_sensor_camera_01
-      - binary_sensor.ping_binary_sensor_camera_02
+      - entity: binary_sensor.ping_binary_sensor
+        name: Google Public DNS
+      - entity: binary_sensor.ping_binary_sensor_camera_01
+        name: Camera 01
+      - entity: binary_sensor.ping_binary_sensor_camera_02
+        name: Camera 02
