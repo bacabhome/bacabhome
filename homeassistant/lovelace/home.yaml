@@ -24,7 +24,7 @@ cards:
        name: Dad
 
   - type: glance
-    title: House Lights
+    title: Lights
     show_header_toggle: false
     columns: 5
     entities:
