@@ -1,10 +1,12 @@
 # https://developers.home-assistant.io/docs/en/lovelace_custom_card.html
 
-- url: /local/bignumber-card.js?v=0.0.1
+- url: /local/commmunity/bignumber-card.js?v=0.0.1
   type: js
-- url: /local/monster-card.js?v=0.2.3
+- url: /local/community/monster-card.js?v=0.2.3
   type: js
-- url: /local/mini-graph-card-bundle.js?v=0.5.0
+- url: /local/community/mini-graph-card-bundle.js?v=0.5.0
   type: module
-- url: /local/slider-entity-row.js
+- url: /local/community/slider-entity-row.js
+  type: module
+- url: /local/community/mini-media-player/mini-media-player.js
   type: module
