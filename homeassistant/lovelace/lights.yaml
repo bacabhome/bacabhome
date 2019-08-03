@@ -104,3 +104,23 @@ cards:
         icon: mdi:car
         type: custom:slider-entity-row
         toggle: true
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Light Levels
+        align_state: center
+        icon: mdi:track-light
+        show:
+          icon: true
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.hue_motion_sensor_01_light_level
+            name: Downstairs
+            color: black
+          - entity: sensor.hue_motion_sensor_02_light_level
+            name: Upstairs
+            color: gray
+        height: 100
