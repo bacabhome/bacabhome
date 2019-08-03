@@ -67,7 +67,10 @@ cards:
           - entity: sensor.hue_motion_sensor_02_temperature
             name: Upstairs
             color: gray
-        height: 75
+          - entity: sensor.dark_sky_temperature
+            name: DarkSky
+            color: '#0080FF'
+        height: 100
 
   - type: entities
     title: Players
@@ -75,8 +78,10 @@ cards:
     entities:
       - entity: media_player.eek
         name: Eek
+        type: custom:mini-media-player
       - entity: media_player.amigo
         name: Amigo
+        type: custom:mini-media-player
 
   - type: shopping-list
     title: Shopping List
