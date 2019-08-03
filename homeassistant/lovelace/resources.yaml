@@ -4,9 +4,15 @@
   type: js
 - url: /local/community/monster-card.js?v=0.2.3
   type: js
+- url: /local/community/calendar-card/calendar-card.js
+  type: js
 - url: /local/community/mini-graph-card-bundle.js?v=0.5.0
   type: module
 - url: /local/community/slider-entity-row.js
   type: module
 - url: /local/community/mini-media-player/mini-media-player.js
+  type: module
+- url: /local/community/surveillance-card/surveillance-card.js
+  type: module
+- url: /local/community/compact-custom-header/compact-custom-header.js
   type: module
