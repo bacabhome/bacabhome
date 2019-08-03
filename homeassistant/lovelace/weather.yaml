@@ -34,3 +34,12 @@ cards:
         name: Humidity
       - entity: sensor.dark_sky_visibility
         name: Visibility
+
+  - type: entities
+    title: OpenVU
+    show_header_toggle: false
+    entities:
+      - entity: sensor.current_ozone_level
+      - entity: sensor.current_uv_index
+      - entity: sensor.current_uv_level
+      - entity: sensor.max_uv_index

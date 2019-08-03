@@ -1,0 +1,4 @@
+# https://www.home-assistant.io/components/openuv/
+
+openuv:
+  api_key: !secret openvu_api_key
