@@ -1,0 +1,19 @@
+title: Living Room
+icon: mdi:sofa
+path: livingroom
+id: Living Room
+cards:
+
+  - type: entities
+    title: Television Scenes
+    show_header_toggle: false
+    entities:
+      - script.fireplace_livingroom
+
+  - type: entities
+    title: Players
+    show_header_toggle: false
+    entities:
+      - entity: media_player.eek
+        name: Eek
+        type: custom:mini-media-player
