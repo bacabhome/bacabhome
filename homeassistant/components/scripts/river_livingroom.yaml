@@ -1,0 +1,7 @@
+river_livingroom:
+  sequence:
+  - service: media_extractor.play_media
+    data:
+      entity_id: media_player.eek
+      media_content_id: !secret river_livingroom
+      media_content_type: video
