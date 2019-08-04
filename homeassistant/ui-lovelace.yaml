@@ -6,6 +6,7 @@ views:
 
   - !include lovelace/home.yaml
   - !include lovelace/lights.yaml
+  - !include lovelace/bedrooms.yaml
   - !include lovelace/livingroom.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/server.yaml

@@ -1,0 +1,22 @@
+title: Bedrooms
+icon: mdi:bed-empty
+path: bedrooms
+id: Bedrooms
+cards:
+
+  - type: entities
+    title: Sounds
+    show_header_toggle: false
+    entities:
+      - script.fireplace_amigo
+      - script.rain_amigo
+      - script.beach_amigo
+      - script.river_amigo
+
+  - type: entities
+    title: Players
+    show_header_toggle: false
+    entities:
+      - entity: media_player.amigo
+        name: Eek
+        type: custom:mini-media-player
