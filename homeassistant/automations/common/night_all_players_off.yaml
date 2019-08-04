@@ -1,0 +1,10 @@
+alias: Night All Players Off 
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "23:00:00"
+action:
+  - service: media_player.turn_off
+    entity_id: media_player.amigo
+  - service: media_player.turn_off
+    entity_id: media_player.eek
