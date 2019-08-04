@@ -9,6 +9,7 @@ cards:
     show_header_toggle: false
     entities:
       - script.fireplace_livingroom
+      - script.rain_livingroom
 
   - type: entities
     title: Players
