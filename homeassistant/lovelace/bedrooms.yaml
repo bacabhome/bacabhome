@@ -18,5 +18,5 @@ cards:
     show_header_toggle: false
     entities:
       - entity: media_player.amigo
-        name: Eek
+        name: Amigo
         type: custom:mini-media-player
