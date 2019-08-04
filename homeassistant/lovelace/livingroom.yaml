@@ -11,6 +11,7 @@ cards:
       - script.fireplace_livingroom
       - script.rain_livingroom
       - script.beach_livingroom
+      - script.river_livingroom
 
   - type: entities
     title: Players
