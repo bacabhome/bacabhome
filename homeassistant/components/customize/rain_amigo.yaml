@@ -1,0 +1,3 @@
+script.rain_amigo:
+  icon: mdi:weather-lightning-rainy
+  friendly_name: Rain and Thunders
