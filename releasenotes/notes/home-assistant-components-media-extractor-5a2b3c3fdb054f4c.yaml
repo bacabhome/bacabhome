@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Component media_extractor gets a stream URL and sends it to a media
+    player entity.
