@@ -1,0 +1,3 @@
+script.fireplace_livingroom:
+  icon: mdi:fire
+  friendly_name: Fireplace

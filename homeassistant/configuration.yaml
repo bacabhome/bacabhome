@@ -19,6 +19,9 @@ homeassistant:
   whitelist_external_dirs:
     - '/config/www/media/'
 
+  # Customizing entities
+  customize: !include_dir_merge_named components/customize/
+
   # Load packages
   packages: !include_dir_named components/packages
 
