@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  image-gray-scale:
+    lang: dockerfile
+    handler: ./image-gray-scale
+    image: xe1gyq/image-gray-scale:latest
