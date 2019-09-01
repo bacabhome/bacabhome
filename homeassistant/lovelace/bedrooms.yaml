@@ -5,6 +5,18 @@ id: Bedrooms
 cards:
 
   - type: entities
+    title: Switches
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Mom Bedroom
+
+      - entity: switch.wemo_switch_01
+        name: Television & Dish
+        icon: mdi:power-socket-us
+
+  - type: entities
     title: Sounds
     show_header_toggle: false
     entities:

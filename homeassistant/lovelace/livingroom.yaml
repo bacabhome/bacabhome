@@ -5,6 +5,15 @@ id: Living Room
 cards:
 
   - type: entities
+    title: Switches
+    show_header_toggle: false
+    entities:
+
+      - entity: switch.wemo_switch_02
+        name: Audio Video
+        icon: mdi:power-socket-us
+
+  - type: entities
     title: Television Scenes
     show_header_toggle: false
     entities:

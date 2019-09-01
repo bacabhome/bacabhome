@@ -1,0 +1,46 @@
+title: Power
+icon: mdi:power
+path: power
+id: Power
+cards:
+
+  - type: entities
+    title: Switches
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Mom Bedroom
+
+      - entity: switch.wemo_switch_01
+        name: Television & Dish
+        icon: mdi:power-socket-us
+
+      - type: section
+        label: Common Television
+
+      - entity: switch.wemo_switch_02
+        name: Audio Video
+        icon: mdi:power-socket-us
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Today Energy kWh
+        align_state: center
+        icon: mdi:power-socket-us
+        show:
+          icon: true
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.wemo_switch_01_today_energy_kwh
+            name: Mom Bedroom
+            color: black
+          - entity: sensor.wemo_switch_02_today_energy_kwh
+            name: Common Television
+            color: gray
+        height: 100
+        hours_to_show: 36
+        points_per_hour: 0.25
