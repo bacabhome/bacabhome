@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/wemo/
+
+wemo:
+  discovery: true
+  static:
+    - !secret wemo_switch_01
+    - !secret wemo_switch_02
