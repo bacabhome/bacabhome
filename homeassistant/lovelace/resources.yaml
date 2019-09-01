@@ -16,3 +16,5 @@
   type: module
 - url: /local/community/compact-custom-header/compact-custom-header.js
   type: module
+- url: /local/community/weather-card/weather-card.js
+  type: module

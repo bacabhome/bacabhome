@@ -124,3 +124,5 @@ cards:
             name: Upstairs
             color: gray
         height: 100
+        hours_to_show: 36
+        points_per_hour: 0.25

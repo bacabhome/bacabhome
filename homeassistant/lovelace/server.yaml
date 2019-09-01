@@ -18,6 +18,8 @@ cards:
       - entity: sensor.glances_containers_cpu_used
         name: Only Containers
         color: grey
+    hours_to_show: 36
+    points_per_hour: 0.25
 
   - type: custom:mini-graph-card
     name: Memory Disk Usage
@@ -34,6 +36,8 @@ cards:
       - entity: sensor.glances_disk_used_percent
         name: Disk
         color: grey
+    hours_to_show: 36
+    points_per_hour: 0.25
 
   - type: custom:mini-graph-card
     name: Download Upload Speed
@@ -50,6 +54,8 @@ cards:
       - entity: sensor.speedtest_upload
         name: Upload
         color: grey
+    hours_to_show: 36
+    points_per_hour: 0.25
 
   - type: entities
     title: System
