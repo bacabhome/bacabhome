@@ -1,0 +1,17 @@
+title: Downstairs
+icon: mdi:fridge-outline
+path: downstairs
+id: Downstairs
+cards:
+
+  - type: entities
+    title: Switches
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Kitchen
+
+      - entity: switch.wemo_switch_02
+        name: Refrigerator
+        icon: mdi:power-socket-us
