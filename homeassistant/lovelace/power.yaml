@@ -13,15 +13,53 @@ cards:
         label: Mom Bedroom
 
       - entity: switch.wemo_switch_01
-        name: Television & Dish
+        name: Television
         icon: mdi:power-socket-us
 
       - type: section
-        label: Common Television
+        label: Kitchen
 
       - entity: switch.wemo_switch_02
-        name: Audio Video
+        name: Refrigerator
         icon: mdi:power-socket-us
+
+      - type: section
+        label: Dad Bedroom
+
+      - entity: switch.wemo_switch_03
+        name: Servers
+        icon: mdi:power-socket-us
+
+      - type: section
+        label: Living Room
+
+      - entity: switch.wemo_switch_04
+        name: Demo
+        icon: mdi:power-socket-us
+
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.wemo_switch_01_today_energy_kwh
+            name: Mom TV
+        line_color: black
+        line_width: 8
+        font_size: 75
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.wemo_switch_02_today_energy_kwh
+            name: Refrigerator
+        line_color: gray
+        line_width: 8
+        font_size: 75
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.wemo_switch_03_today_energy_kwh
+            name: Servers
+        line_color: blue
+        line_width: 8
+        font_size: 75
 
   - type: horizontal-stack
     cards:
@@ -36,11 +74,14 @@ cards:
           points: true
         entities:
           - entity: sensor.wemo_switch_01_today_energy_kwh
-            name: Mom Bedroom
+            name: Mom Television
             color: black
           - entity: sensor.wemo_switch_02_today_energy_kwh
-            name: Common Television
+            name: Refrigerator
             color: gray
+          - entity: sensor.wemo_switch_03_today_energy_kwh
+            name: Servers
+            color: blue
         height: 100
         hours_to_show: 36
         points_per_hour: 0.25

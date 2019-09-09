@@ -5,3 +5,5 @@ wemo:
   static:
     - !secret wemo_switch_01
     - !secret wemo_switch_02
+    - !secret wemo_switch_03
+    - !secret wemo_switch_04
