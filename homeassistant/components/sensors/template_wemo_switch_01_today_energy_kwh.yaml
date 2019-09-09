@@ -5,4 +5,4 @@ sensors:
   wemo_switch_01_today_energy_kwh:
     friendly_name: 'Wemo Switch 01 Today Energy kWh'
     value_template: '{{ states.switch.wemo_switch_01.attributes["today_energy_kwh"] }}'
-    unit_of_measurement: 'W'
+    unit_of_measurement: 'kWh'

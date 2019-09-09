@@ -37,51 +37,123 @@ cards:
         name: Demo
         icon: mdi:power-socket-us
 
-  - type: horizontal-stack
+  - type: vertical-stack
     cards:
-      - type: custom:mini-graph-card
-        entities:
-          - entity: sensor.wemo_switch_01_today_energy_kwh
-            name: Mom TV
-        line_color: black
-        line_width: 8
-        font_size: 75
-      - type: custom:mini-graph-card
-        entities:
-          - entity: sensor.wemo_switch_02_today_energy_kwh
-            name: Refrigerator
-        line_color: gray
-        line_width: 8
-        font_size: 75
-      - type: custom:mini-graph-card
-        entities:
-          - entity: sensor.wemo_switch_03_today_energy_kwh
-            name: Servers
-        line_color: blue
-        line_width: 8
-        font_size: 75
 
-  - type: horizontal-stack
+    - type: markdown
+      content: >
+        __Current Power Watts__
+
+    - type: horizontal-stack
+      cards:
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_01_current_power_w
+              name: Mom TV
+          line_color: black
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_02_current_power_w
+              name: Refrigerator
+          line_color: gray
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_03_current_power_w
+              name: Servers
+          line_color: blue
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+
+    - type: horizontal-stack
+      cards:
+        - type: custom:mini-graph-card
+          name: Current Power W
+          align_state: center
+          icon: mdi:power-socket-us
+          show:
+            icon: true
+            extrema: true
+            labels: true
+            points: false
+          entities:
+            - entity: sensor.wemo_switch_01_current_power_w
+              name: Mom Television
+              color: black
+            - entity: sensor.wemo_switch_02_current_power_w
+              name: Refrigerator
+              color: gray
+            - entity: sensor.wemo_switch_03_current_power_w
+              name: Servers
+              color: blue
+          line_width: 1
+          height: 100
+          hours_to_show: 168
+          points_per_hour: 0.25
+
+  - type: vertical-stack
     cards:
-      - type: custom:mini-graph-card
-        name: Today Energy kWh
-        align_state: center
-        icon: mdi:power-socket-us
-        show:
-          icon: true
-          extrema: true
-          labels: true
-          points: true
-        entities:
-          - entity: sensor.wemo_switch_01_today_energy_kwh
-            name: Mom Television
-            color: black
-          - entity: sensor.wemo_switch_02_today_energy_kwh
-            name: Refrigerator
-            color: gray
-          - entity: sensor.wemo_switch_03_today_energy_kwh
-            name: Servers
-            color: blue
-        height: 100
-        hours_to_show: 36
-        points_per_hour: 0.25
+
+    - type: markdown
+      content: >
+        __Today Energy kWh__
+
+    - type: horizontal-stack
+      cards:
+
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_01_today_energy_kwh
+              name: Mom TV
+          line_color: black
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_02_today_energy_kwh
+              name: Refrigerator
+          line_color: gray
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+        - type: custom:mini-graph-card
+          entities:
+            - entity: sensor.wemo_switch_03_today_energy_kwh
+              name: Servers
+          line_color: blue
+          line_width: 1
+          font_size: 55
+          hours_to_show: 168
+
+    - type: horizontal-stack
+      cards:
+        - type: custom:mini-graph-card
+          name: Today Energy kWh
+          align_state: center
+          icon: mdi:power-socket-us
+          show:
+            icon: true
+            extrema: true
+            labels: true
+            points: false
+          entities:
+            - entity: sensor.wemo_switch_01_today_energy_kwh
+              name: Mom Television
+              color: black
+            - entity: sensor.wemo_switch_02_today_energy_kwh
+              name: Refrigerator
+              color: gray
+            - entity: sensor.wemo_switch_03_today_energy_kwh
+              name: Servers
+              color: blue
+          line_width: 1
+          height: 100
+          hours_to_show: 168
+          points_per_hour: 0.25
