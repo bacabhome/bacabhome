@@ -22,12 +22,12 @@ cards:
     entities:
      - entity: birthday.princess
        name: Princess
-     - entity: birthday.mom
-       name: Mom
+     - entity: birthday.polito
+       name: Polito
      - entity: birthday.maca
        name: Maca
-     - entity: birthday.dad
-       name: Dad
+     - entity: birthday.balam
+       name: Balam
 
   - type: glance
     title: Lights

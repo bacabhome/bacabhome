@@ -1,0 +1,2 @@
+name: Polito
+date_of_birth: !secret polito_birthday
