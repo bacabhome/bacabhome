@@ -49,7 +49,7 @@ services:
       - /dev/urandom:/dev/urandom
     volumes:
       - ./homeassistant:/config
-      - ./media:/config/www/media/
+      - ./media:/config/www/media/:consistent
       - /etc/localtime:/etc/localtime:ro
 
   influxdb:

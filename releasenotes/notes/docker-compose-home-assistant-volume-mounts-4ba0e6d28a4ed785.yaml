@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    The Home Assistant container runtime and the host maintain an identical
+    view of the mount at all times.
