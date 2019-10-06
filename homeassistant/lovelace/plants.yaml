@@ -1,0 +1,49 @@
+title: Plants
+icon: mdi:tree
+path: plants
+id: Plants
+cards:
+
+  - type: plant-status
+    entity: plant.palmachamedor
+    name: Palma Chamedor
+
+  - type: vertical-stack
+    cards:
+
+      - type: entities
+        title: Vital Signs
+        show_header_toggle: false
+        entities:
+          - entity: sensor.wio_link_01_moisture
+            name: Moisture
+          - entity: sensor.wio_link_01_light
+            name: Light
+
+      - type: custom:mini-graph-card
+        name: Moisture
+        align_state: center
+        icon: mdi:tree
+        show:
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.wio_link_01_moisture
+            color: black
+        hours_to_show: 168
+        points_per_hour: 0.25
+
+      - type: custom:mini-graph-card
+        name: Light
+        align_state: center
+        icon: mdi:tree
+        show:
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.wio_link_01_light
+            color: black
+        hours_to_show: 168
+        points_per_hour: 0.25
