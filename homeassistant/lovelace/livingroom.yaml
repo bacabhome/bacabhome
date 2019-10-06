@@ -5,7 +5,7 @@ id: Living Room
 cards:
 
   - type: entities
-    title: Television Scenes
+    title: Eek Television Scenes
     show_header_toggle: false
     entities:
       - script.fireplace_livingroom
@@ -14,9 +14,21 @@ cards:
       - script.river_livingroom
 
   - type: entities
+    title: Amigo Sounds
+    show_header_toggle: false
+    entities:
+      - script.fireplace_amigo
+      - script.rain_amigo
+      - script.beach_amigo
+      - script.river_amigo
+
+  - type: entities
     title: Players
     show_header_toggle: false
     entities:
       - entity: media_player.eek
         name: Eek
+        type: custom:mini-media-player
+      - entity: media_player.amigo
+        name: Amigo
         type: custom:mini-media-player

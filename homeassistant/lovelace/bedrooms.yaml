@@ -22,20 +22,3 @@ cards:
       - entity: switch.wemo_switch_03
         name: Servers
         icon: mdi:power-socket-us
-
-  - type: entities
-    title: Sounds
-    show_header_toggle: false
-    entities:
-      - script.fireplace_amigo
-      - script.rain_amigo
-      - script.beach_amigo
-      - script.river_amigo
-
-  - type: entities
-    title: Players
-    show_header_toggle: false
-    entities:
-      - entity: media_player.amigo
-        name: Amigo
-        type: custom:mini-media-player
