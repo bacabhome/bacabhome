@@ -6,5 +6,5 @@ palmachamedor:
     brightness: sensor.wio_link_01_light
   min_moisture: 500
   max_moisture: 700
-  min_brightness: 100
-  max_brightness: 600
+  min_brightness: 0
+  max_brightness: 200
