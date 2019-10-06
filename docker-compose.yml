@@ -116,6 +116,7 @@ services:
     restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    entrypoint: ["echo", "Service disabled"]
     network_mode: host
     ports:
       - 19999:19999
@@ -149,6 +150,7 @@ services:
     environment:
       - TZ=America/Mexico_City
       - PLEX_CLAIM=<claimToken>
+    entrypoint: ["echo", "Service disabled"]
     network_mode: host
     volumes:
       - ./config/plex/database:/config
@@ -161,6 +163,7 @@ services:
     restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    entrypoint: ["echo", "Service disabled"]
     network_mode: host
     ports:
       - '9090:9090'
@@ -175,6 +178,7 @@ services:
     restart: on-failure
     environment:
       - TZ=America/Mexico_City
+    entrypoint: ["echo", "Service disabled"]
     network_mode: host
     ports:
       - '9100:9100'
