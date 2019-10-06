@@ -1,0 +1,20 @@
+alias: Palma Chamedor
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "20:00:00"
+condition:
+  condition: state
+  entity_id: plant.palmachamedor
+  state: 'problem'
+action:
+  - delay: '{{ ((range(0, 1) | random) | int) ~ ":" ~ ((range(5, 55) | random) | int)  ~ ":" ~  ((range(5, 55) | random) | int) }}'
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.75
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data:
+     message: 'Hola familia, soy palma chamedor! Tengo sed'
