@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/plant/
+
+palmachamedor:
+  sensors:
+    moisture: sensor.wio_link_01_moisture
+    brightness: sensor.wio_link_01_light
+  min_moisture: 500
+  max_moisture: 700
+  min_brightness: 100
+  max_brightness: 600
