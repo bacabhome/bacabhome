@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/rest
+
+platform: command_line
+name: Wio Link 01 Light
+command: !secret wio_link_01_light
+unit_of_measurement: "Lux"
+value_template: '{{ value_json.lux }}'

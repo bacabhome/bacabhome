@@ -1,0 +1,4 @@
+---
+features:
+  - |
+    Home Assistant command_line sensor platform.
