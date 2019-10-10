@@ -1,6 +1,6 @@
 # https://www.home-assistant.io/integrations/plant/
 
-palmachamedor:
+palma_chamedor_01:
   sensors:
     moisture: sensor.wio_link_01_moisture
     brightness: sensor.wio_link_01_light
