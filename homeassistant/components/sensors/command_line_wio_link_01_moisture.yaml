@@ -5,3 +5,4 @@ name: Wio Link 01 Moisture
 command: !secret wio_link_01_moisture
 unit_of_measurement: "%"
 value_template: '{{ value_json.moisture }}'
+scan_interval: 5
