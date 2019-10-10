@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/rest
+
+platform: command_line
+name: Wio Link 02 Dust
+command: !secret wio_link_02_dust
+unit_of_measurement: "Dust"
+value_template: '{{ value_json.dust }}'
+scan_interval: 5
