@@ -5,20 +5,39 @@ id: Plants
 cards:
 
   - type: plant-status
-    entity: plant.palmachamedor
-    name: Palma Chamedor
+    entity: plant.palma_chamedor_01
+    name: Palma Chamedor 01
+
+  - type: plant-status
+    entity: plant.palma_chamedor_02
+    name: Palma Chamedor 02
 
   - type: vertical-stack
     cards:
 
       - type: entities
-        title: Vital Signs
+        title: Palma Chamedor 01
         show_header_toggle: false
         entities:
           - entity: sensor.wio_link_01_moisture
             name: Moisture
           - entity: sensor.wio_link_01_light
             name: Light
+
+      - type: entities
+        title: Palma Chamedor 02
+        show_header_toggle: false
+        entities:
+          - entity: sensor.miflora_01_battery
+            name: Battery
+          - entity: sensor.miflora_01_conductivity
+            name: Conductivity
+          - entity: sensor.miflora_01_light_intensity
+            name: Brightness
+          - entity: sensor.miflora_01_moisture
+            name: Moisture
+          - entity: sensor.miflora_01_temperature
+            name: Temperature
 
       - type: custom:mini-graph-card
         name: Moisture
@@ -31,6 +50,8 @@ cards:
         entities:
           - entity: sensor.wio_link_01_moisture
             color: black
+          - entity: sensor.miflora_01_light_intensity
+            color: gray
         hours_to_show: 168
         points_per_hour: 0.25
 
@@ -45,5 +66,7 @@ cards:
         entities:
           - entity: sensor.wio_link_01_light
             color: black
+          - entity: sensor.miflora_01_light_intensity
+            color: gray
         hours_to_show: 168
         points_per_hour: 0.25
