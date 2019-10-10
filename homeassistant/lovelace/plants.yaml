@@ -50,7 +50,7 @@ cards:
         entities:
           - entity: sensor.wio_link_01_moisture
             color: black
-          - entity: sensor.miflora_01_light_intensity
+          - entity: sensor.miflora_01_moisture
             color: gray
         hours_to_show: 168
         points_per_hour: 0.25
