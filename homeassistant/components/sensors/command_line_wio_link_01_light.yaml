@@ -3,5 +3,6 @@
 platform: command_line
 name: Wio Link 01 Light
 command: !secret wio_link_01_light
-unit_of_measurement: "Lux"
+unit_of_measurement: "lx"
 value_template: '{{ value_json.lux }}'
+scan_interval: 5
