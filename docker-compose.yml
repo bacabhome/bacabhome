@@ -42,15 +42,18 @@ services:
       - "glances"
     environment:
       - TZ=America/Mexico_City
-    network_mode: host
+    network_mode: "host"
     ports:
       - 8123:8123
     devices:
       - /dev/urandom:/dev/urandom
+    cap_add:
+      - SYS_ADMIN
     volumes:
       - ./homeassistant:/config
       - ./media:/config/www/media/:consistent
       - /etc/localtime:/etc/localtime:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
 
   influxdb:
     image: influxdb
