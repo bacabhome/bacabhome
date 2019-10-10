@@ -15,3 +15,10 @@ cards:
       - entity: switch.wemo_switch_02
         name: Refrigerator
         icon: mdi:power-socket-us
+
+  - type: entities
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.hue_motion_sensor_01_motion
+        name: Hue 01

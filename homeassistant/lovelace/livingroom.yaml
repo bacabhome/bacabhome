@@ -5,6 +5,13 @@ id: Living Room
 cards:
 
   - type: entities
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.hue_motion_sensor_02_motion
+        name: Hue 02
+
+  - type: entities
     title: Eek Television Scenes
     show_header_toggle: false
     entities:
