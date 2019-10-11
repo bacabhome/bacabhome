@@ -28,6 +28,7 @@ cards:
       - script.rain_amigo
       - script.beach_amigo
       - script.river_amigo
+      - script.lasmananitas_amigo
 
   - type: entities
     title: Players
