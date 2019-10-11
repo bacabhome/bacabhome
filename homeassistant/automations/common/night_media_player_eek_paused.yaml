@@ -1,0 +1,24 @@
+alias: Media Player Eek Paused
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: media_player.eek
+    from: 'playing'
+    to: 'paused'
+  - platform: state
+    entity_id: media_player.eek
+    from: 'playing'
+    to: 'idle'
+  - platform: state
+    entity_id: media_player.eek
+    from: 'playing'
+    to: 'off'
+condition:
+  - condition: state
+    entity_id: sun.sun
+    state: 'below_horizon'
+action:
+  - service: light.turn_on
+    entity_id: light.hallway
+  - service: light.turn_on
+    entity_id: light.television_room_light
