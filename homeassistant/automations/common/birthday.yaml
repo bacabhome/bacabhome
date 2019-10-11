@@ -14,5 +14,6 @@ action:
   - delay: '00:00:15'
   - service: tts.google_translate_say
     entity_id: media_player.amigo
-    data:
+    data_template:
      message: 'Feliz cumple {{ trigger.event.data.name }}, felices {{ trigger.event.data.age }}'
+     language: 'es'
