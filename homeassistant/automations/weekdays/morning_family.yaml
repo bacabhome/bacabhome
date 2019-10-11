@@ -17,7 +17,12 @@ action:
     - media_player.amigo
     data:
       volume_level: 0.50
-  - delay: '00:00:15'
+  - delay: '00:00:05'
+  - service: media_player.play_media
+    entity_id: media_player.amigo
+    data:
+      media_content_id: "http://smrtho.us/storage/startup.mp3"
+      media_content_type: "audio/mp3"
   - service: tts.google_translate_say
     entity_id: media_player.amigo
     data_template:
