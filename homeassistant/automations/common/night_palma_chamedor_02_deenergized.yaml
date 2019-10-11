@@ -1,0 +1,25 @@
+alias: Palma Chamedor 02 Deenergized
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "20:00:00"
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: plant.palma_chamedor_02
+      state: 'problem'
+    - condition: numeric_state
+      entity_id: 'sensor.miflora_01_battery'
+      below: 20
+action:
+  - delay: '{{ ((range(0, 1) | random) | int) ~ ":" ~ ((range(5, 55) | random) | int)  ~ ":" ~  ((range(5, 55) | random) | int) }}'
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.75
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data:
+     message: 'Hola familia, soy Palma Chamedor 01, me estoy quedando sin energia!'
