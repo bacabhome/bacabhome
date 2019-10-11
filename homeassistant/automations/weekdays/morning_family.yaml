@@ -21,7 +21,7 @@ action:
   - service: tts.google_translate_say
     entity_id: media_player.amigo
     data_template:
-      message: >
+      message: >-
                  Good morning family, we all hope you had a great night!.
                  Today is {{ now().strftime( '%B %d, %Y') }}.
                  The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Celsius,
