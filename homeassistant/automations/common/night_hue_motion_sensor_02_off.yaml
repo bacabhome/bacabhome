@@ -5,9 +5,14 @@ trigger:
   entity_id: binary_sensor.hue_motion_sensor_02_motion
   to: 'off'
 condition:
-  condition: state
-  entity_id: light.hallway_light
-  state: 'on'
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: light.hallway_ligh
+      state: 'on'
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
 action:
   service: light.turn_off
   entity_id: light.hallway_light

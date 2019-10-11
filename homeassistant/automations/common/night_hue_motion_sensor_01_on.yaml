@@ -5,9 +5,17 @@ trigger:
   entity_id: binary_sensor.hue_motion_sensor_01_motion
   to: 'on'
 condition:
-  condition: state
-  entity_id: light.mobile_room_light
-  state: 'off'
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: light.mobile_room_light
+      state: 'off'
+    - condition: or
+      conditions:
+        - condition: sun
+          before: sunrise
+        - condition: sun
+          after: sunset
 action:
   service: light.turn_on
   entity_id: light.mobile_room_light
