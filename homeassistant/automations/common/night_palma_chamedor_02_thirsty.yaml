@@ -1,12 +1,17 @@
-alias: Palma Chamedor
+alias: Palma Chamedor 02 Thirsty
 initial_state: 'true'
 trigger:
   - platform: time
     at: "20:00:00"
 condition:
-  condition: state
-  entity_id: plant.palmachamedor
-  state: 'problem'
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: plant.palma_chamedor_02
+      state: 'problem'
+    - condition: numeric_state
+      entity_id: 'sensor.miflora_01_moisture'
+      below: 15
 action:
   - delay: '{{ ((range(0, 1) | random) | int) ~ ":" ~ ((range(5, 55) | random) | int)  ~ ":" ~  ((range(5, 55) | random) | int) }}'
   - service: media_player.volume_set
@@ -17,4 +22,4 @@ action:
   - service: tts.google_translate_say
     entity_id: media_player.amigo
     data:
-     message: 'Hola familia, soy palma chamedor! Tengo sed'
+     message: 'Hola familia, soy Palma Chamedor 01, tengo sed!'
