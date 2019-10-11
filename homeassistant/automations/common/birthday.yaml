@@ -10,10 +10,11 @@ action:
     entity_id:
     - media_player.amigo
     data:
-      volume_level: 0.50
-  - delay: '00:00:15'
+      volume_level: 0.60
+  - delay: '00:00:05'
   - service: tts.google_translate_say
     entity_id: media_player.amigo
     data_template:
-     message: 'Feliz cumple {{ trigger.event.data.name }}, felices {{ trigger.event.data.age }}'
-     language: 'es'
+      message: >-
+                 'Feliz cumple {{ trigger.event.data.name }}, felices {{ trigger.event.data.age }}'
+      language: 'es'
