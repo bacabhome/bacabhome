@@ -1,0 +1,19 @@
+alias: Night All Lights Off Lights On
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "01:00:00"
+condition:
+  condition: or
+  conditions:
+    - condition: numeric_state
+      entity_id: 'sensor.house_lights_on_today'
+      above: .5
+    - condition: state
+      entity_id: 'sensor.house_lights_on_today'
+      state: 'on'
+      for:
+        minutes: 30
+action:
+   service: light.turn_off
+   entity_id: group.all_lights

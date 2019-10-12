@@ -1,4 +1,4 @@
-alias: Night All Lights Off
+alias: Night All Lights Off Time
 initial_state: 'true'
 trigger:
   - platform: time
