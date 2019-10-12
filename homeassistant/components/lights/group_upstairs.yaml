@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/integrations/light.group/
+
+platform: group
+name: Upstairs Lights
+entities:
+  - light.color_light
+  - light.dad_bedroom_light 
+  - light.mobile_room_light
+  - light.mom_bathroom_light
+  - light.mom_bedroom_light 
+  - light.princess_bathroom_light 
+  - light.princess_bedroom_light
+  - light.television_room_light

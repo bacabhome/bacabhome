@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/light.group/
+
+platform: group
+name: Downstairs Lights
+entities:
+  - light.dining_room_light
+  - light.kitchen_backup_light
+  - light.kitchen_light
+  - light.laundry_room_light
+  - light.street_light
