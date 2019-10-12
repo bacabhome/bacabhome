@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/integrations/history_stats/
+
+platform: statistics
+name: House Energy Today
+entity_id: group.energy
