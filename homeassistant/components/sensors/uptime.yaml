@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/integrations/uptime/
+
+platform: uptime
+name: Time Online
+unit_of_measurement: hours
