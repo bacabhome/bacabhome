@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/integrations/miflora
+
+platform: miflora
+name: MiFlora 02
+mac: !secret miflora_02_mac
+force_update: true
+median: 1
+monitored_conditions:
+  - moisture
+  - light
+  - temperature
+  - conductivity
+  - battery
