@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/history_stats/
+
+platform: history_stats
+name: WioLink 02 Motion On Today
+entity_id: binary_sensor.wio_link_02_motion
+state: 'on'
+type: time
+start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+end: '{{ now() }}'
