@@ -1,0 +1,19 @@
+alias: House Alarm Arm Away
+initial_state: 'true'
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.house_alarm
+    to: 'armed_away'
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.80
+  - delay: '00:00:05'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
+                  'Alarma armada, hasta pronto. Alexa, adiós'
+      language: 'es'
