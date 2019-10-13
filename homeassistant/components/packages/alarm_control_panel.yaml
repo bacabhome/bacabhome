@@ -1,0 +1,3 @@
+# https://www.home-assistant.io/integrations/manual/
+
+alarm_control_panel: !include_dir_list ../alarm_control_panels
