@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/group/
+
+lights_rgb:
+  name: Lights RGB
+  entities:
+    - light.mom_bedroom_light
+    - light.television_room_light
+    - light.princess_bedroom_light
+    - light.color_light
+    - light.mobile_room_light
