@@ -27,10 +27,25 @@ action:
     entity_id: media_player.amigo
     data_template:
       message: >-
-                 Good morning family, we all hope you had a great night!.
+                 Buenos dias familia.
+      language: 'es'
+  - delay: '00:00:05'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
                  Today is {{ now().strftime( '%B %d, %Y') }}.
                  The current temperature is {{state_attr('weather.dark_sky', 'temperature')}} degrees Celsius,
                  with a forecast of {{states('sensor.dark_sky_summary_0d')}}.
                  The high temperature today will be {{states('sensor.dark_sky_daytime_high_temperature_0d')}} degrees Celsius.
                  There is a {{states('sensor.dark_sky_precip_probability_0d')}}% chance of precipitation today.
       language: 'en'
+  - delay: '00:00:05'
+  - wait_template: "{{ is_state('media_player.amigo', 'idle') }}"
+  - delay: '00:00:05'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
+                 Alexa, buenos dias.
+      language: 'es'
