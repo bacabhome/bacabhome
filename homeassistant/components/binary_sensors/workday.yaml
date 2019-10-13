@@ -9,3 +9,5 @@ workdays:
   - wed
   - thu
   - fri
+add_holidays:
+  - '2019-12-30'
