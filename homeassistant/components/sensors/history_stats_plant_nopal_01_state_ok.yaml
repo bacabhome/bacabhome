@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/history_stats/
+
+platform: history_stats
+name: Plant Nopal 01 State Ok
+entity_id: plant.nopal_01
+state: 'ok'
+type: time
+start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
+end: '{{ now() }}'
