@@ -1,0 +1,18 @@
+# https://www.home-assistant.io/integrations/plant/
+
+nopal_01:
+  sensors:
+    battery: sensor.miflora_02_battery
+    conductivity: sensor.miflora_02_conductivity
+    brightness: sensor.miflora_02_light_intensity
+    moisture: sensor.miflora_02_moisture
+    temperature: sensor.miflora_02_temperature
+  min_battery: 20
+  min_brightness: 3000
+  max_brightness: 100000
+  min_conductivity: 100
+  max_conductivity: 1000
+  min_moisture: 7
+  max_moisture: 50
+  min_temperature: 8
+  max_temperature: 35
