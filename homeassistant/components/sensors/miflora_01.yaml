@@ -4,7 +4,7 @@ platform: miflora
 name: MiFlora 01
 mac: !secret miflora_01_mac
 force_update: true
-median: 3
+median: 1
 monitored_conditions:
   - moisture
   - light
