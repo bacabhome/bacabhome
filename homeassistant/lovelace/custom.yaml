@@ -4,6 +4,29 @@ path: custom
 id: Custom
 cards:
 
+  - type: entities
+    title: Components Total Count
+    show_header_toggle: false
+    entities:
+      - entity:  sensor.template_total_automations
+        name: Automation
+      - entity: sensor.template_total_binary_sensors
+        name: Binary Sensors
+      - entity: sensor.template_total_cameras
+        name: Cameras
+      - entity:  sensor.template_total_devices
+        name: Devices
+      - entity: sensor.template_total_lights
+        name: Lights
+      - entity: sensor.template_total_media_players
+        name: Media Players
+      - entity: sensor.template_total_scripts
+        name: Scripts
+      - entity: sensor.template_total_sensors
+        name: Sensors
+      - entity: sensor.template_total_switches
+        name: Switches
+
   - type: custom:bignumber-card
     title: Sensor MQTT
     entity: sensor.mqtt_sensor
