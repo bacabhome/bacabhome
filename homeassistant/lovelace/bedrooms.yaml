@@ -4,6 +4,15 @@ path: bedrooms
 id: Bedrooms
 cards:
 
+  - type: glance
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.wio_link_02_motion
+        name: Now
+      - entity: sensor.wiolink_02_motion_on_today
+        name: On Today
+
   - type: entities
     title: Switches
     show_header_toggle: false
@@ -23,37 +32,37 @@ cards:
         name: Servers
         icon: mdi:power-socket-us
 
-  - type: entities
-    title: Entities Motion
-    show_header_toggle: false
-    entities:
-      - entity: binary_sensor.wio_link_02_motion
-        name: Wio Link 02
+  - type: vertical-stack
+    cards:
 
-  - type: custom:mini-graph-card
-    name: Dust
-    align_state: center
-    icon: mdi:factory
-    show:
-      extrema: true
-      labels: true
-      points: true
-    entities:
-      - entity: sensor.wio_link_02_dust
-        color: black
-    hours_to_show: 168
-    points_per_hour: 0.25
+    - type: markdown
+      content: >
+        __Dad__
 
-  - type: custom:mini-graph-card
-    name: Sound
-    align_state: center
-    icon: mdi:microphone
-    show:
-      extrema: true
-      labels: true
-      points: true
-    entities:
-      - entity: sensor.wio_link_02_sound
-        color: black
-    hours_to_show: 168
-    points_per_hour: 0.25
+    - type: custom:mini-graph-card
+      name: Dust
+      align_state: center
+      icon: mdi:factory
+      show:
+        extrema: true
+        labels: true
+        points: true
+      entities:
+        - entity: sensor.wio_link_02_dust
+          color: black
+      hours_to_show: 168
+      points_per_hour: 0.25
+
+    - type: custom:mini-graph-card
+      name: Sound
+      align_state: center
+      icon: mdi:microphone
+      show:
+        extrema: true
+        labels: true
+        points: true
+      entities:
+        - entity: sensor.wio_link_02_sound
+          color: black
+      hours_to_show: 168
+      points_per_hour: 0.25
