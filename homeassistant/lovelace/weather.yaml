@@ -8,20 +8,48 @@ cards:
   - type: weather-forecast
     entity: weather.dark_sky
 
-  - type: entities
-    title: Dark Sky
-    show_header_toggle: false
-    entities:
-      - weather.dark_sky
+  - type: custom:weather-card
+    entity: weather.dark_sky
+    current: true
+    details: true
+    forecast: true
 
   - type: iframe
     url: !secret services_windy_url
     aspect_ratio: 50%
 
+  - type: horizontal-stack
+    cards:
+      - type: custom:mini-graph-card
+        name: Temperature
+        align_state: center
+        icon: mdi:home-thermometer
+        show:
+          icon: true
+          extrema: true
+          labels: true
+          points: true
+        entities:
+          - entity: sensor.hue_motion_sensor_01_temperature
+            name: Downstairs
+            color: black
+          - entity: sensor.hue_motion_sensor_02_temperature
+            name: Upstairs
+            color: gray
+          - entity: sensor.dark_sky_temperature
+            name: DarkSky
+            color: '#0080FF'
+        height: 100
+        hours_to_show: 36
+        points_per_hour: 0.25
+        hour24: true
+
   - type: entities
-    title: Dark Sky
+    title: Dark Sky More Details
     show_header_toggle: false
     entities:
+      - entity: weather.dark_sky
+        name: Dark Sky
       - entity: sensor.dark_sky_precip_probability
         name: Precipitation Probability
       - entity: sensor.dark_sky_temperature
