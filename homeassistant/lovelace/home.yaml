@@ -28,6 +28,12 @@ cards:
     entities:
 
       - type: section
+        label: Weather Hourly
+
+      - entity: sensor.dark_sky_hourly_summary
+        label: Summary
+
+      - type: section
         label: Motion Today
 
       - entity: binary_sensor.template_house_motion
