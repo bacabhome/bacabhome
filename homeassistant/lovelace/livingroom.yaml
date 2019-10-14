@@ -4,15 +4,17 @@ path: livingroom
 id: Living Room
 cards:
 
-  - type: entities
+  - type: glance
     title: Motion
     show_header_toggle: false
     entities:
       - entity: binary_sensor.hue_motion_sensor_02_motion
-        name: Hue 02
+        name: Now
+      - entity: sensor.hue_motion_sensor_02_motion_on_today
+        name: On Today
 
   - type: entities
-    title: Eek Television Scenes
+    title: Eek Television
     show_header_toggle: false
     entities:
       - script.fireplace_livingroom
@@ -21,7 +23,7 @@ cards:
       - script.river_livingroom
 
   - type: entities
-    title: Amigo Sounds
+    title: Amigo
     show_header_toggle: false
     entities:
       - script.fireplace_amigo
