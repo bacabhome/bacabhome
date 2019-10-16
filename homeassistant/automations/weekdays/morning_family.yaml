@@ -11,6 +11,9 @@ condition:
     - wed
     - thu
     - fri
+  - condition: state
+    entity_id: binary_sensor.workday
+    state: 'on'
 action:
   - service: media_player.volume_set
     entity_id:
