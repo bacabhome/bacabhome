@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/components/rest
+
+platform: command_line
+switches:
+  wio_link_03_switch_led:
+    friendly_name: Wio Link 03 Switch LED
+    command_on: !secret wio_link_03_switch_led_on
+    command_off: !secret wio_link_03_switch_led_off
+    command_state: !secret wio_link_03_switch_led_state

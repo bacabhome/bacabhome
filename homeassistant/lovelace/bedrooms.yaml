@@ -13,6 +13,13 @@ cards:
       - entity: sensor.wiolink_02_motion_on_today
         name: On Today
 
+  - type: glance
+    title: Occupancy
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.wio_link_03_ir_distance
+        name: Now
+
   - type: entities
     title: Switches
     show_header_toggle: false
@@ -32,12 +39,16 @@ cards:
         name: Servers
         icon: mdi:power-socket-us
 
+      - entity: switch.wio_link_03_switch_led
+        name: Wio Link 03 Switch LED
+        icon: mdi:power-socket-us
+
   - type: vertical-stack
     cards:
 
     - type: markdown
       content: >
-        __Dad__
+        __Wio Link 02__
 
     - type: custom:mini-graph-card
       name: Dust
@@ -63,6 +74,24 @@ cards:
         points: true
       entities:
         - entity: sensor.wio_link_02_sound
+          color: black
+      hours_to_show: 168
+      points_per_hour: 0.25
+
+    - type: markdown
+      content: >
+        __Wio Link 03__
+
+    - type: custom:mini-graph-card
+      name: Sound
+      align_state: center
+      icon: mdi:microphone
+      show:
+        extrema: true
+        labels: true
+        points: true
+      entities:
+        - entity: sensor.wio_link_03_sound
           color: black
       hours_to_show: 168
       points_per_hour: 0.25

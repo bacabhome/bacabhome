@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/components/rest
+
+platform: command_line
+name: Wio Link 03 IR Distance
+command: !secret wio_link_03_ir_distance
+value_template: '{{ value_json.approach }}'
+payload_on: "1"
+payload_off: "0"
+device_class: occupancy
+scan_interval: 1
