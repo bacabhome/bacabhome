@@ -1,0 +1,14 @@
+title: Wio Link 01
+icon: mdi:tree
+path: wiolink01
+id: WioLink01
+cards:
+
+  - type: entities
+    title: Wio Link 01
+    show_header_toggle: false
+    entities:
+      - entity: sensor.wio_link_01_moisture
+        name: Moisture
+      - entity: sensor.wio_link_01_light
+        name: Light

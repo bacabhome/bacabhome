@@ -5,14 +5,6 @@ resources: !include lovelace/resources.yaml
 views:
 
   - !include lovelace/home.yaml
-  - !include lovelace/lights.yaml
-  - !include lovelace/downstairs.yaml
-  - !include lovelace/bedrooms.yaml
-  - !include lovelace/livingroom.yaml
-  - !include lovelace/plants.yaml
-  - !include lovelace/power.yaml
-  - !include lovelace/weather.yaml
-  - !include lovelace/cameras.yaml
-  - !include lovelace/server.yaml
-  - !include lovelace/science.yaml
-  - !include lovelace/custom.yaml
+  - !include lovelace/wio_link_01.yaml
+  - !include lovelace/wio_link_02.yaml
+  - !include lovelace/wio_link_03.yaml

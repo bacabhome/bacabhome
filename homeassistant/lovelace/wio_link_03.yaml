@@ -1,0 +1,16 @@
+title: Wio Link 03
+icon: mdi:tree
+path: wiolink03
+id: WioLink03
+cards:
+
+  - type: entities
+    title: Wio Link 03
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.wio_link_03_ir_distance
+        name: Occupancy
+      - entity: sensor.wio_link_03_sound
+        name: Sound
+      - entity: switch.wio_link_03_switch_led
+        name: Switch
