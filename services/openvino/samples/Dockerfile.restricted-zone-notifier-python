@@ -12,7 +12,8 @@ ENV DEBIAN_FRONTEND noninteractive
 WORKDIR /
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    vim && \
+    vim \
+    python-setuptools && \
     rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade \
