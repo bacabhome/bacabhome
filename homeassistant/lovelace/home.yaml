@@ -4,89 +4,30 @@ path: home
 cards:
 
   - type: markdown
-    title: Welcome to Bacab Home!
+    title: Welcome to Tatai Home!
     content: >
-      Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
-      Today? a Smart Home!
+      Tatai? Yes!, Tatai!
 
-  - type: glance
-    title: Birthdays
-    show_header_toggle: false
-    columns: 4
-    entities:
-     - entity: birthday.princess
-       name: Princess
-     - entity: birthday.polito
-       name: Polito
-     - entity: birthday.maca
-       name: Maca
-     - entity: birthday.balam
-       name: Balam
+  - type: vertical-stack
+    cards:
 
-  - type: entities
-    show_header_toggle: false
-    entities:
+      - type: picture-glance
+        title: Camera 01
+        show_name: false
+        show_state: false
+        entities:
+          - binary_sensor.ping_binary_sensor_camera_01
+        image:
+        camera_image: camera.mjpeg_camera_01
+        camera_view: live
 
-      - type: section
-        label: Weather Hourly
-
-      - entity: sensor.dark_sky_hourly_summary
-        label: Summary
-
-      - type: section
-        label: Motion Today
-
-      - entity: binary_sensor.template_house_motion
-        name: Now
-      - entity: sensor.house_motion_on_today
-        name: On House
-      - entity: sensor.hue_motion_sensor_01_motion_on_today
-        name: On Downstairs
-      - entity: sensor.hue_motion_sensor_02_motion_on_today
-        name: On Upstairs
-      - entity: sensor.wiolink_02_motion_on_today
-        name: On Wio Link 02
-
-      - type: section
-        label: Lights Today
-
-      - entity: sensor.house_lights_on_today
-        name: On Today
-
-      - type: section
-        label: Users Week
-
-      - entity: sensor.person_balam_not_home_week
-        name: Balam Not Home
-
-  - type: glance
-    title: Lights
-    show_header_toggle: false
-    columns: 5
-    entities:
-      - entity: group.all_lights
-        name: House
-        tap_action:
-          action: toggle
-      - entity: light.mom_bedroom_light
-        name: Mom
-        tap_action:
-          action: toggle
-      - entity: light.kitchen
-        name: Kitchen
-        tap_action:
-          action: toggle
-      - entity: light.hallway_light
-        name: Hallway
-        tap_action:
-          action: toggle
-      - entity: light.laundry_room_light
-        name: Laundry
-        tap_action:
-          action: toggle
-
-  - type: shopping-list
-    title: Shopping List
+      - type: picture-glance
+        title: Camera 02
+        entities:
+          - binary_sensor.ping_binary_sensor_camera_02
+        image:
+        camera_image: camera.mjpeg_camera_02
+        camera_view: live
 
   - type: alarm-panel
     name: House Alarm
