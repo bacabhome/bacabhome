@@ -33,8 +33,12 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
+    build:
+      context: ./config/homeassistant/
+      dockerfile: Dockerfile.homeassistant
     image: homeassistant/home-assistant
     container_name: bacab-home-homeassistant
+    privileged: true
     restart: on-failure
     depends_on:
       - "influxdb"
@@ -42,11 +46,20 @@ services:
       - "glances"
     environment:
       - TZ=America/Mexico_City
+    cap_add:
+      - ALL
+    pid: "host"
+    ipc: "host"
     network_mode: "host"
     ports:
       - 8123:8123
     devices:
       - /dev/urandom:/dev/urandom
+      - /dev
+      - /dev/snd
+      - /proc
+      - /dev/dri/card1:/dev/dri/card0
+      - /dev/dri/renderD129:/dev/dri/renderD128
     cap_add:
       - SYS_ADMIN
     volumes:
@@ -54,6 +67,10 @@ services:
       - ./media:/config/www/media/:consistent
       - /etc/localtime:/etc/localtime:ro
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:consistent
+      - $HOME/.Xauthority:/root/.Xauthority:rw
+      - ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native:consistent
+      - ~/.config/pulse/cookie:/root/.config/pulse/cookie:consistent
 
   influxdb:
     image: influxdb
