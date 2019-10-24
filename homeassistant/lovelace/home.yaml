@@ -8,6 +8,15 @@ cards:
     content: >
       Tatai? Yes!, Tatai!
 
+  - type: glance
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.wio_link_02_motion
+        name: Now
+      - entity: sensor.wiolink_02_motion_on_today
+        name: On Today
+
   - type: vertical-stack
     cards:
 
