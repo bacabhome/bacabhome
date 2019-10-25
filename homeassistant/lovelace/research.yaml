@@ -1,0 +1,32 @@
+title: Science
+icon: mdi:rocket
+path: science
+id: Science
+cards:
+
+  - type: custom:mini-graph-card
+    name: Dust
+    align_state: center
+    icon: mdi:factory
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.wio_link_02_dust
+        color: black
+    hours_to_show: 168
+    points_per_hour: 0.25
+
+  - type: custom:mini-graph-card
+    name: Sound
+    align_state: center
+    icon: mdi:microphone
+    show:
+      extrema: true
+      labels: true
+      points: true
+    entities:
+      - entity: sensor.wio_link_02_sound
+        color: black
+    hours_to_show: 168
