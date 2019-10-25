@@ -1,0 +1,20 @@
+FROM  homeassistant/home-assistant
+
+MAINTAINER Abraham Arce "xe1gyq@gmail.com"
+
+ENV TIMEZONE America/Mexico_City
+USER root
+
+RUN apk update && \
+    apk --no-cache add \
+    openrc \
+    shadow \
+    alsa-utils \
+    alsa-utils-doc \
+    alsa-lib \
+    alsaconf \
+    vlc \
+    espeak \
+    eog
+
+ADD asoundrc /root/.asoundrc
