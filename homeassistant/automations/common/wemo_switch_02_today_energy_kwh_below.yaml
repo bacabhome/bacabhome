@@ -1,0 +1,20 @@
+alias: Wemo Switch 02 Today Energy kWh Below
+initial_state: 'true'
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.wemo_switch_02_today_energy_kwh
+    below: '.8'
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.60
+  - delay: '00:00:05'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
+                 La lectura Wemo Switch 02 es {{states('sensor.wemo_switch_02_today_energy_kwh')}}.
+                 Por favor revisar su temperatura.
+      language: 'es'
