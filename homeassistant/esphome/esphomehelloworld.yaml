@@ -18,12 +18,8 @@ binary_sensor:
   - !include common/binary_sensors/status.yaml
 
 sensor:
-  - platform: wifi_signal
-    name: ${main_name} WiFi Signal
-    update_interval: 60s
-
-  - platform: uptime
-    name: ${main_name} Uptime
+  - !include common/sensors/uptime.yaml
+  - !include common/sensors/wifi-signal.yaml
 
 text_sensor:
   - platform: version
