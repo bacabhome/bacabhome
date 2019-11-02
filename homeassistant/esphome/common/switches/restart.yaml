@@ -1,0 +1,2 @@
+platform: restart
+name: ${main_name} Restart
