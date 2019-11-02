@@ -1,0 +1,7 @@
+platform: wifi_info
+ip_address:
+  name: ${main_name} IP Address
+ssid:
+  name: ${main_name} SSID
+bssid:
+  name: ${main_name} BSSID

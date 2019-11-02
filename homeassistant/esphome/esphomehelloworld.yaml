@@ -22,5 +22,5 @@ sensor:
   - !include common/sensors/wifi-signal.yaml
 
 text_sensor:
-  - platform: version
-    name: ${main_name} Version
+  - !include common/text_sensors/version.yaml
+  - !include common/text_sensors/wifi-info.yaml
