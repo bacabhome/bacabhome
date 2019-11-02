@@ -1,0 +1,5 @@
+# https://www.pistar.uk/ 
+
+brandmeister:
+  title: 'BrandMeister'
+  url: !secret services_brandmeister_url
