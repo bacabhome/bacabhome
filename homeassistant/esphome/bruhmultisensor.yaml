@@ -1,0 +1,51 @@
+# https://esphome.io/cookbook/bruh.html
+
+substitutions:
+  main_name: "BRUH Multisensor"
+
+esphome:
+  name: "bruhmultisensor"
+  platform: ESP8266
+  board: nodemcuv2
+
+<<: !include common/main.yaml
+
+binary_sensor:
+  - !include common/binary_sensors/status.yaml
+  - platform: gpio
+    pin: D5
+    name: ${main_name} PIR
+    device_class: motion
+
+sensor:
+  - !include common/sensors/uptime.yaml
+  - !include common/sensors/wifi-signal.yaml
+  - platform: dht
+    pin: D7
+    temperature:
+      name: ${main_name} Temperature
+    humidity:
+      name: ${main_name} Humidity
+    update_interval: 60s
+
+text_sensor:
+  - !include common/text_sensors/version.yaml
+  - !include common/text_sensors/wifi-info.yaml
+
+output:
+  - platform: esp8266_pwm
+    pin: D1
+    id: redgpio
+  - platform: esp8266_pwm
+    pin: D2
+    id: greengpio
+  - platform: esp8266_pwm
+    pin: D3
+    id: bluegpio
+
+light:
+  - platform: rgb
+    name: ${main_name} RGB Light
+    red: redgpio
+    green: greengpio
+    blue: bluegpio
