@@ -21,12 +21,13 @@ sensor:
   - !include common/sensors/uptime.yaml
   - !include common/sensors/wifi-signal.yaml
   - platform: dht
+    model: AM2302
     pin: D7
     temperature:
       name: ${main_name} Temperature
     humidity:
       name: ${main_name} Humidity
-    update_interval: 60s
+    update_interval: 30s
 
 text_sensor:
   - !include common/text_sensors/version.yaml
