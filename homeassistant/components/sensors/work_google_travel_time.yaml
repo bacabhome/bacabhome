@@ -1,0 +1,9 @@
+platform: google_travel_time
+name: Work Google Travel Time
+api_key: !secret google_api_credential
+origin: !secret home_google_travel_time_origin
+destination: !secret work_google_travel_time_destination
+scan_interval: 1800
+options:
+  mode: bicycling
+  arrival_time: '08:00:00'

@@ -1,0 +1,20 @@
+alias: Google Travel Time Update Default
+initial_state: 'false'
+trigger:
+  - platform: time_pattern
+    minutes: '/60'
+condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      - sat
+      - sun
+action:
+  - service: homeassistant.update_entity
+    entity_id:
+      - sensor.school_google_travel_time
+      - sensor.work_google_travel_time

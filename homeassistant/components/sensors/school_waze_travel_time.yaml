@@ -1,0 +1,6 @@
+platform: waze_travel_time
+name: School Waze Travel Time
+origin: !secret school_waze_travel_time_origin
+destination: !secret school_waze_travel_time_destination
+region: 'US'
+vehicle_type: car

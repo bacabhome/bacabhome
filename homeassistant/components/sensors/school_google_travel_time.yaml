@@ -1,0 +1,9 @@
+platform: google_travel_time
+name: School Google Travel Time
+api_key: !secret google_api_credential
+origin: !secret home_google_travel_time_origin
+destination: !secret school_google_travel_time_destination
+scan_interval: 1800
+options:
+  mode: driving
+  arrival_time: '07:45:00'
