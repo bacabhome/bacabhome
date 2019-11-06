@@ -1,0 +1,6 @@
+home:
+  zone: home
+  devices:
+    - device_tracker.user_balam
+  tolerance: 50
+  unit_of_measurement: km
