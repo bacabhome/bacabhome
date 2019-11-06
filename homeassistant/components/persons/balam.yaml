@@ -1,0 +1,4 @@
+name: Balam
+id: balam01
+device_trackers:
+  - device_tracker.user_balam

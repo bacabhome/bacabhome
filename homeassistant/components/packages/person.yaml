@@ -1,0 +1,3 @@
+# https://www.home-assistant.io/integrations/person/
+
+person: !include_dir_list ../persons
