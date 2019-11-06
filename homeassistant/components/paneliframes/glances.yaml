@@ -3,4 +3,3 @@
 glances:
   title: 'Glances'
   url: !secret services_glances_url
-
