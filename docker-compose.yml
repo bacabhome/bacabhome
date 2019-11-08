@@ -215,6 +215,17 @@ services:
       - --collector.filesystem.ignored-mount-points
       - '^/(sys|proc|dev|host|etc|rootfs/var/lib/docker/containers|rootfs/var/lib/docker/overlay2|rootfs/run/docker/netns|rootfs/var/lib/docker/aufs)($$|/)'
 
+  hadockermon:
+    image: philhawthorne/ha-dockermon
+    container_name: bacab-home-ha-dockermon
+    restart: always
+    network_mode: host
+    ports:
+      - 8126:8126
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/ha-dockermon/:/config
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
