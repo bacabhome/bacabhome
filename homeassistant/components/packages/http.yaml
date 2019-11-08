@@ -1,4 +1,4 @@
 # https://www.home-assistant.io/components/http/
 
 http:
-  api_password: !secret http_api_password
+  #api_password: !secret http_api_password
