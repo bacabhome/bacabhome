@@ -1,0 +1,14 @@
+FROM  homeassistant/home-assistant
+
+MAINTAINER Abraham Arce "xe1gyq@gmail.com"
+
+ENV TIMEZONE America/Mexico_City
+
+RUN apk add --update \
+    curl \
+    && rm -rf /var/cache/apk/*
+
+RUN curl -sSL https://cli.openfaas.com | sh
+
+ENV TIMEZONE America/Mexico_City
+USER root
