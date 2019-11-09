@@ -16,6 +16,17 @@ homeassistant:
   # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Mexico_City
 
+  auth_providers:
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.192.0/24
+        - 192.168.1.0/24
+        - 172.17.0.1
+        - 127.0.0.1
+        - ::1
+      allow_bypass_login: true
+    - type: homeassistant
+
   whitelist_external_dirs:
     - '/config/www/media/'
 
