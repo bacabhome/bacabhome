@@ -56,6 +56,8 @@ cards:
       - type: section
         label: Users Week
 
+      - entity: sensor.person_balam_home_week
+        name: Balam Home
       - entity: sensor.person_balam_not_home_week
         name: Balam Not Home
 

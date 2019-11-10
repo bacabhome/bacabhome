@@ -12,6 +12,15 @@ cards:
         content: >
           ## Original Streams
 
+      - type: entities
+        title: OpenVINO
+        show_header_toggle: false
+        entities:
+          - entity: switch.application_restricted_zone_notifier_cpp
+            name: Restricted Zone Notifier CPP
+          - entity: switch.application_shopper_gaze_monitor_cpp
+            name: Shopper Gaze Monitor CPP
+
       - type: picture-glance
         title: Camera 01
         show_name: false
