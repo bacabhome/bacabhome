@@ -1,0 +1,15 @@
+title: ESPHome
+icon: mdi:cpu-32-bit
+path: esphome
+id: ESPHome
+cards:
+
+  - type: entities
+    title: BRUH Multisensor
+    show_header_toggle: false
+    entities:
+      - binary_sensor.bruh_multisensor_status
+      - binary_sensor.bruh_multisensor_pir
+      - light.bruh_multisensor_rgb_light
+      - sensor.bruh_multisensor_humidity
+      - sensor.bruh_multisensor_temperature

@@ -14,5 +14,7 @@ views:
   - !include lovelace/weather.yaml
   - !include lovelace/cameras.yaml
   - !include lovelace/server.yaml
+  - !include lovelace/sports.yaml
   - !include lovelace/science.yaml
+  - !include lovelace/esphome.yaml
   - !include lovelace/custom.yaml

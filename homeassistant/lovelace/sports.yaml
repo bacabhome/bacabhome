@@ -1,0 +1,16 @@
+title: Sports
+icon: mdi:bike
+path: sports
+id: sports
+cards:
+
+  - type: entities
+    title: Balam
+    show_header_toggle: false
+    entities:
+      - device_tracker.user_balam
+      - person.balam
+      - sensor.person_balam_home_week
+      - sensor.person_balam_not_home_week
+      - proximity.home
+      - proximity.work
