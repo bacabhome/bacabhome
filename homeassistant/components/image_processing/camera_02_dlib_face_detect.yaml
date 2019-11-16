@@ -1,8 +1,0 @@
-# https://www.home-assistant.io/components/image_processing.dlib_face_detect/
-
-platform: dlib_face_detect
-source:
-  - entity_id: camera.ffmpeg_camera_02
-    name: dlib_face_detect_ffmpeg_camera
-  - entity_id: camera.mjpeg_camera_02
-    name: dlib_face_detect_mjpeg_camera
