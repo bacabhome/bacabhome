@@ -1,5 +1,5 @@
 alias: Night Hue Motion Sensor 01 On
-initial_state: 'true'
+initial_state: 'false'
 trigger:
   platform: state
   entity_id: binary_sensor.hue_motion_sensor_01_motion
