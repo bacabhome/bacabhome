@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  template_balam_biking:
+    friendly_name: "Template Balam Biking"
+    value_template: >
+                     {{ state_attr('device_tracker.user_balam', 'velocity') > 5 and
+                        state_attr('device_tracker.user_balam', 'velocity') < 35 }}
+    device_class: moving

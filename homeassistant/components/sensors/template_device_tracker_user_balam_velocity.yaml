@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/template
+
+platform: template
+sensors:
+  device_tracker_user_balam_velocity:
+    friendly_name: 'Device Tracker User Balam Velocity'
+    value_template: '{{ states.device_tracker.user_balam.attributes["velocity"] }}'
+    unit_of_measurement: 'km/h'
