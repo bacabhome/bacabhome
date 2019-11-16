@@ -14,64 +14,9 @@ cards:
         name: Nopal
 
   - type: plant-status
-    entity: plant.palma_chamedor_01
-    name: Palma Chamedor Wio
-
-  - type: plant-status
     entity: plant.palma_chamedor_02
     name: Palma Chamedor
 
   - type: plant-status
     entity: plant.nopal_01
     name: Nopal
-
-  - type: vertical-stack
-    cards:
-
-      - type: custom:mini-graph-card
-        name: Moisture
-        align_state: center
-        icon: mdi:tree
-        show:
-          extrema: true
-          labels: true
-          points: true
-        entities:
-          - entity: sensor.miflora_01_moisture
-            color: black
-          - entity: sensor.miflora_02_moisture
-            color: gray
-        hours_to_show: 168
-        points_per_hour: 0.25
-
-      - type: custom:mini-graph-card
-        name: Light
-        align_state: center
-        icon: mdi:tree
-        show:
-          extrema: true
-          labels: true
-          points: true
-        entities:
-          - entity: sensor.miflora_01_light_intensity
-            color: black
-          - entity: sensor.miflora_02_light_intensity
-            color: gray
-        hours_to_show: 168
-        points_per_hour: 0.25
-
-      - type: custom:mini-graph-card
-        name: Conductivity 
-        align_state: center
-        icon: mdi:tree
-        show:
-          extrema: true
-          labels: true
-          points: true
-        entities:
-          - entity: sensor.miflora_01_conductivity
-            color: black
-          - entity: sensor.miflora_02_conductivity
-            color: gray
-        hours_to_show: 168
-        points_per_hour: 0.25
