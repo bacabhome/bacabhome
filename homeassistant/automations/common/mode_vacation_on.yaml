@@ -1,0 +1,13 @@
+alias: 'Mode Vacation On'
+trigger:
+  - platform: state
+    entity_id: device_tracker.user_balam
+    from: 'home'
+    to: 'not_home'
+    for:
+      hours: 24
+      minutes: 0
+      seconds: 0
+action:
+  - service: homeassistant.turn_on
+    entity_id: input_boolean.mode_vacation

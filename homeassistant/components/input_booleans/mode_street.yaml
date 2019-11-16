@@ -1,0 +1,4 @@
+mode_street:
+  name: Mode Street
+  initial: off
+  icon: mdi:google-street-view

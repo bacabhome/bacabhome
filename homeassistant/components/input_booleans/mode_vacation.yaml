@@ -1,0 +1,4 @@
+mode_vacation:
+  name: Mode Vacation
+  initial: off
+  icon: mdi:alpha-v-box-outline
