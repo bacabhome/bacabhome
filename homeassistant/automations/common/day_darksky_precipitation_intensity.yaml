@@ -1,22 +1,22 @@
 alias: Dark Sky Precipitation Intensity
+initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: sensor.dark_sky_precip
-    to: 'rain'
-  - platform: state
-    entity_id: sensor.dark_sky_precip_0d
-    to: 'rain'
-  - platform: numeric_state
-    entity_id: sensor.dark_sky_precip_probability_0d
-    above: '50'
+    entity_id: binary_sensor.hue_motion_sensor_02_motion
+    from: 'off'
+    to: 'on'
 condition:
-  - condition: state
-    entity_id: sun.sun
-    state: 'above_horizon'
+  condition: or
+  conditions:
+    - condition: state
+      entity_id: sensor.dark_sky_precip
+      state: 'rain'
+    - condition: state
+      entity_id: sensor.dark_sky_precip_0d
+      state: 'rain'
+    - condition: numeric_state
+      entity_id: sensor.dark_sky_precip_probability_0d
+      above: '50'
 action:
   - service: script.turn_on
-    data_template:
-    entity_id: >-
-      {% if is_state('binary_sensor.rain', 'on') %}
-         script.rain_light_notification
-      {% endif %}
+    entity_id: script.rain_light_notification
