@@ -44,6 +44,8 @@ cards:
         name: On Downstairs
       - entity: sensor.hue_motion_sensor_02_motion_on_today
         name: On Upstairs
+      - entity: sensor.hue_outdoor_motion_sensor_01_motion_on_today
+        name: On Front Yard
       - entity: sensor.wiolink_02_motion_on_today
         name: On Wio Link 02
 

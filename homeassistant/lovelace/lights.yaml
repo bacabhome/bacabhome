@@ -178,6 +178,9 @@ cards:
           - entity: sensor.hue_motion_sensor_02_light_level
             name: Upstairs
             color: gray
+          - entity: sensor.hue_outdoor_motion_sensor_01_light_level
+            name: Front Yard
+            color: '#C0C0C0'
         height: 100
         hours_to_show: 36
         points_per_hour: 0.25

@@ -36,6 +36,9 @@ cards:
           - entity: sensor.hue_motion_sensor_02_temperature
             name: Upstairs
             color: gray
+          - entity: sensor.hue_outdoor_motion_sensor_01_temperature
+            name: Front Yard
+            color: '#C0C0C0'
           - entity: sensor.dark_sky_temperature
             name: DarkSky
             color: '#0080FF'

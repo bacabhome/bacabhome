@@ -5,13 +5,24 @@ id: Downstairs
 cards:
 
   - type: glance
-    title: Motion
+    title: Motion Now
     show_header_toggle: false
     entities:
+
       - entity: binary_sensor.hue_motion_sensor_01_motion
-        name: Now
+        name: Living Room
+      - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
+        name: Front Yard
+
+  - type: glance
+    title: Motion On Today
+    show_header_toggle: false
+    entities:
+
       - entity: sensor.hue_motion_sensor_01_motion_on_today
-        name: On Today
+        name: Living Room
+      - entity: sensor.hue_outdoor_motion_sensor_01_motion_on_today
+        name: Front Yard
 
   - type: entities
     title: Switches
