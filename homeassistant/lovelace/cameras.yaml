@@ -8,18 +8,28 @@ cards:
   - type: vertical-stack
     cards:
 
-      - type: markdown
-        content: >
-          ## Original Streams
-
       - type: entities
         title: OpenVINO
         show_header_toggle: false
         entities:
           - entity: switch.application_restricted_zone_notifier_cpp
-            name: Restricted Zone Notifier CPP
+            name: Restricted Zone Notifier
           - entity: switch.application_shopper_gaze_monitor_cpp
-            name: Shopper Gaze Monitor CPP
+            name: Shopper Gaze Monitor
+
+      - type: entities
+        title: Motion
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.restricted_zone_notifier_cpp_motion
+            name: Restricted Zone Notifier
+
+  - type: vertical-stack
+    cards:
+
+      - type: markdown
+        content: >
+          ## Original Streams
 
       - type: picture-glance
         title: Camera 01
