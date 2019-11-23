@@ -4,5 +4,5 @@ platform: command_line
 name: Wio Link 02 Sound
 command: !secret wio_link_02_sound
 unit_of_measurement: "dB"
-value_template: '{{ value_json.sound_level }}'
+value_template: '{{ value_json.loudness }}'
 scan_interval: 1
