@@ -6,3 +6,4 @@ energy:
     - sensor.wemo_switch_01_today_energy_kwh
     - sensor.wemo_switch_02_today_energy_kwh
     - sensor.wemo_switch_03_today_energy_kwh
+    - sensor.wemo_switch_04_today_energy_kwh
