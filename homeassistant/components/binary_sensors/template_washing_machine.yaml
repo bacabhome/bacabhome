@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  template_washing_machine:
+    friendly_name: "Template Washing Machine"
+    delay_off:
+      minutes: 2
+    delay_off:
+      minutes: 2
+    value_template: >-
+                       {{ states('sensor.wemo_switch_04_current_power_w')|float > 20 }}
+    device_class: power
