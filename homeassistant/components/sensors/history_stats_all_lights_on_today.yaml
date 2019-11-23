@@ -1,8 +1,8 @@
 # https://www.home-assistant.io/integrations/history_stats/
 
 platform: history_stats
-name: House Switches On Today
-entity_id: group.all_switches
+name: All Lights On Today
+entity_id: group.all_lights
 state: 'on'
 type: time
 start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'

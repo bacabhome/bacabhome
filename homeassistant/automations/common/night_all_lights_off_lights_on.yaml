@@ -7,10 +7,10 @@ condition:
   condition: or
   conditions:
     - condition: numeric_state
-      entity_id: 'sensor.house_lights_on_today'
+      entity_id: 'sensor.all_lights_on_today'
       above: .5
     - condition: state
-      entity_id: 'sensor.house_lights_on_today'
+      entity_id: 'sensor.all_lights_on_today'
       state: 'on'
       for:
         minutes: 30

@@ -2,8 +2,8 @@
 
 platform: template
 sensors:
-  template_house_motion:
-    friendly_name: "Template House Motion"
+  template_all_motion_on:
+    friendly_name: "Template All Motion On"
     value_template: >
                      {{ is_state('binary_sensor.hue_motion_sensor_01_motion', 'on') or
                         is_state('binary_sensor.hue_motion_sensor_02_motion', 'on') or
