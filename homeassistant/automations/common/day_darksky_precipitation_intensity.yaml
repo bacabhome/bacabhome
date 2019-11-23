@@ -1,5 +1,5 @@
 alias: Dark Sky Precipitation Intensity
-initial_state: 'true'
+initial_state: 'false'
 trigger:
   - platform: state
     entity_id: binary_sensor.hue_motion_sensor_02_motion

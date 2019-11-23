@@ -1,5 +1,5 @@
 alias: Wemo Switch 02 Today Energy kWh Below
-initial_state: 'true'
+initial_state: 'false'
 trigger:
   - platform: numeric_state
     entity_id: sensor.wemo_switch_02_today_energy_kwh
