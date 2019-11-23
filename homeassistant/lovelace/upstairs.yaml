@@ -1,0 +1,68 @@
+title: Upstairs
+icon: mdi:bed-empty
+path: upstairs
+id: Upstairs
+cards:
+
+  - type: glance
+    title: Appliances
+    show_header_toggle: false
+    entities:
+
+      - entity: binary_sensor.template_servers
+        name: Server
+        icon: mdi:server
+
+  - type: glance
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.hue_motion_sensor_02_motion
+        name: Now
+
+  - type: entities
+    title: Environment
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Living Room
+
+      - entity: sensor.hue_motion_sensor_02_light_level
+        name: Light Level
+      - entity: sensor.hue_motion_sensor_02_temperature
+        name: Temperature
+
+  - type: entities
+    title: Switches
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Dad Bedroom
+
+      - entity: switch.wemo_switch_03
+        name: Servers
+        icon: mdi:power-socket-us
+
+  - type: entities
+    title: Players
+    show_header_toggle: false
+    entities:
+      - entity: media_player.vlc
+        name: Server Vlc
+        type: custom:mini-media-player
+
+  - type: entities
+    title: Wio Link 02
+    show_header_toggle: false
+    entities:
+
+      - entity: sensor.wio_link_02_dust
+        name: Dust
+      - entity: sensor.wio_link_02_sound
+        name: Sound
+      - entity: binary_sensor.wio_link_02_motion
+        name: Motion
+      - entity: sensor.wiolink_02_motion_on_today
+        name: Motion On Today

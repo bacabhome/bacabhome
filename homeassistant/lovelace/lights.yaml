@@ -9,25 +9,25 @@ cards:
     elements:
 
       - type: state-icon
-        entity: sensor.house_lights_on_today
+        entity: sensor.all_lights_on_today
         style: {color: white, left: 22%, top: 10%}
       - type: state-label
-        entity: sensor.house_lights_on_today
+        entity: sensor.all_lights_on_today
         title: Today
         style: {color: white, left: 10%, top: 11%}
 
       - type: state-label
-        entity: sensor.house_lights_on_yesterday
+        entity: sensor.all_lights_on_yesterday
         title: Yesterday
         style: {color: white, left: 10%, top: 21%}
 
       - type: state-label
-        entity: sensor.house_lights_on_week
+        entity: sensor.all_lights_on_week
         title: Week
         style: {color: white, left: 9%, top: 31%}
 
       - type: state-label
-        entity: sensor.house_lights_on_month
+        entity: sensor.all_lights_on_month
         title: Month
         style: {color: white, left: 9%, top: 41%}
 
@@ -35,17 +35,17 @@ cards:
     title: Lights On
     show_header_toggle: false
     entities:
-      - entity: sensor.house_lights_on_today
+      - entity: sensor.all_lights_on_today
         name: Today
-      - entity: sensor.house_lights_on_yesterday
+      - entity: sensor.all_lights_on_yesterday
         name: Yesterday
-      - entity: sensor.house_lights_on_week
+      - entity: sensor.all_lights_on_week
         name: Week
-      - entity: sensor.house_lights_on_month
+      - entity: sensor.all_lights_on_month
         name: Month
 
   - type: glance
-    title: Switches
+    title: House
     show_header_toggle: false
     entities:
       - entity: group.all_lights
@@ -61,6 +61,38 @@ cards:
         name: Upstairs
         tap_action:
           action: toggle
+
+  - type: entities
+    title: Downstairs
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Kitchen
+
+      - entity: light.kitchen
+        name: Stove
+        icon: mdi:stove
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Laundry
+
+      - entity: light.laundry_room_light
+        name: Washer
+        icon: mdi:dishwasher
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Street
+
+      - entity: light.street_light
+        name: Front Yard
+        icon: mdi:car
+        type: custom:slider-entity-row
+        toggle: true
 
   - type: entities
     title: Upstairs
@@ -125,38 +157,6 @@ cards:
       - entity: light.mobile_room_light
         name: Mobile
         icon: mdi:desk-lamp
-        type: custom:slider-entity-row
-        toggle: true
-
-  - type: entities
-    title: Downstairs
-    show_header_toggle: false
-    entities:
-
-      - type: section
-        label: Kitchen
-
-      - entity: light.kitchen
-        name: Stove
-        icon: mdi:stove
-        type: custom:slider-entity-row
-        toggle: true
-
-      - type: section
-        label: Laundry
-
-      - entity: light.laundry_room_light
-        name: Washer
-        icon: mdi:dishwasher
-        type: custom:slider-entity-row
-        toggle: true
-
-      - type: section
-        label: Street
-
-      - entity: light.street_light
-        name: Front Yard
-        icon: mdi:car
         type: custom:slider-entity-row
         toggle: true
 

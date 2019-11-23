@@ -10,7 +10,7 @@ cards:
       Today? a Smart Home!
 
   - type: entities
-    title: Family Mode
+    title: Family
     show_header_toggle: false
     entities:
       - entity: input_boolean.mode_vacation
@@ -43,26 +43,20 @@ cards:
         label: Summary
 
       - type: section
-        label: Motion Today
+        label: Motion On Today
 
-      - entity: binary_sensor.template_house_motion
+      - entity: binary_sensor.template_all_motion_on
         name: Now
-      - entity: sensor.house_motion_on_today
-        name: On House
-      - entity: sensor.hue_motion_sensor_01_motion_on_today
-        name: On Downstairs
-      - entity: sensor.hue_motion_sensor_02_motion_on_today
-        name: On Upstairs
-      - entity: sensor.hue_outdoor_motion_sensor_01_motion_on_today
-        name: On Front Yard
-      - entity: sensor.wiolink_02_motion_on_today
-        name: On Wio Link 02
+      - entity: sensor.all_motion_on_today
+        name: Hours
 
       - type: section
-        label: Lights Today
+        label: All Lights On
 
-      - entity: sensor.house_lights_on_today
-        name: On Today
+      - entity: sensor.all_lights_on_today
+        name: Today
+      - entity: sensor.all_lights_on_yesterday
+        name: Yesterday
 
       - type: section
         label: Users Week
@@ -75,26 +69,18 @@ cards:
   - type: glance
     title: Lights
     show_header_toggle: false
-    columns: 5
+    columns: 3
     entities:
       - entity: group.all_lights
-        name: House
+        name: All
         tap_action:
           action: toggle
-      - entity: light.mom_bedroom_light
-        name: Mom
+      - entity: light.downstairs_lights
+        name: Downstairs
         tap_action:
           action: toggle
-      - entity: light.kitchen
-        name: Kitchen
-        tap_action:
-          action: toggle
-      - entity: light.hallway_light
-        name: Hallway
-        tap_action:
-          action: toggle
-      - entity: light.laundry_room_light
-        name: Laundry
+      - entity: light.upstairs_lights
+        name: Upstairs
         tap_action:
           action: toggle
 

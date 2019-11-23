@@ -1,0 +1,57 @@
+title: Motion
+icon: mdi:motion-sensor
+path: motion
+id: Motion
+cards:
+
+  - type: entities
+    title: House
+    show_header_toggle: false
+    entities:
+
+      - entity: binary_sensor.template_all_motion_on
+        name: Now
+      - entity: sensor.all_motion_on_today
+        name: On Today
+
+  - type: entities
+    title: Downstairs
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Front Yard
+
+      - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
+        name: Hue Outdoor 01 Now
+      - entity: sensor.hue_outdoor_motion_sensor_01_motion_on_today
+        name: Hue Outdoor 01 On Today
+
+      - type: section
+        label: Dining Room
+
+      - entity: binary_sensor.hue_motion_sensor_01_motion
+        name: Hue 01 Now
+      - entity: sensor.hue_motion_sensor_01_motion_on_today
+        name: Hue 01 On Today
+
+  - type: entities
+    title: Upstairs
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Living Room
+
+      - entity: binary_sensor.hue_motion_sensor_02_motion
+        name: Hue 02 Now
+      - entity: sensor.hue_motion_sensor_02_motion_on_today
+        name: Hue 02 On Today
+
+      - type: section
+        label: Dad Bedroom
+
+      - entity: binary_sensor.wio_link_02_motion
+        name: WioLink 02 Now
+      - entity: sensor.wiolink_02_motion_on_today
+        name: WioLink 02 On Today

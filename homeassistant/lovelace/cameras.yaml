@@ -21,6 +21,8 @@ cards:
         title: Motion
         show_header_toggle: false
         entities:
+          - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
+            name: Hue Outdoor Motion Sensor 01
           - entity: binary_sensor.restricted_zone_notifier_cpp_motion
             name: Restricted Zone Notifier
 
@@ -37,6 +39,8 @@ cards:
         show_state: false
         entities:
           - binary_sensor.ping_binary_sensor_camera_01
+          - binary_sensor.hue_outdoor_motion_sensor_01_motion
+          - binary_sensor.restricted_zone_notifier_cpp_motion
           - light.street_light
         image:
         camera_image: camera.mjpeg_camera_01

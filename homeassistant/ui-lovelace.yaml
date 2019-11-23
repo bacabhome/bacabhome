@@ -6,11 +6,12 @@ views:
 
   - !include lovelace/home.yaml
   - !include lovelace/lights.yaml
+  - !include lovelace/motion.yaml
   - !include lovelace/downstairs.yaml
-  - !include lovelace/bedrooms.yaml
-  - !include lovelace/livingroom.yaml
-  - !include lovelace/plants.yaml
+  - !include lovelace/upstairs.yaml
+  - !include lovelace/cast.yaml
   - !include lovelace/power.yaml
+  - !include lovelace/plants.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/cameras.yaml
   - !include lovelace/server.yaml

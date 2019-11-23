@@ -5,7 +5,19 @@ id: Downstairs
 cards:
 
   - type: glance
-    title: Motion Now
+    title: Appliances
+    show_header_toggle: false
+    entities:
+
+      - entity: binary_sensor.template_refrigerator
+        name: Refrigerator
+        icon: mdi:fridge
+      - entity: binary_sensor.template_washing_machine 
+        name: Washing Machine
+        icon: mdi:washing-machine
+
+  - type: glance
+    title: Motion
     show_header_toggle: false
     entities:
 
@@ -14,15 +26,26 @@ cards:
       - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
         name: Front Yard
 
-  - type: glance
-    title: Motion On Today
+  - type: entities
+    title: Environment
     show_header_toggle: false
     entities:
 
-      - entity: sensor.hue_motion_sensor_01_motion_on_today
-        name: Living Room
-      - entity: sensor.hue_outdoor_motion_sensor_01_motion_on_today
-        name: Front Yard
+      - type: section
+        label: Front Yard
+
+      - entity: sensor.hue_outdoor_motion_sensor_01_light_level
+        name: Light Level
+      - entity: sensor.hue_outdoor_motion_sensor_01_temperature
+        name: Temperature
+
+      - type: section
+        label: Living Room
+
+      - entity: sensor.hue_motion_sensor_01_light_level
+        name: Light Level
+      - entity: sensor.hue_motion_sensor_01_temperature
+        name: Temperature
 
   - type: entities
     title: Switches
@@ -30,8 +53,41 @@ cards:
     entities:
 
       - type: section
+        label: Living Room
+
+      - entity: switch.wemo_switch_01
+        name: Xmas
+        icon: mdi:pine-tree
+
+      - type: section
         label: Kitchen
 
       - entity: switch.wemo_switch_02
         name: Refrigerator
-        icon: mdi:power-socket-us
+        icon: mdi:fridge
+
+      - type: section
+        label: Laundry
+
+      - entity: switch.wemo_switch_04
+        name: Washing Machine
+        icon: mdi:washing-machine
+
+  - type: entities
+    title: Statistics
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Kitchen
+
+      - entity: sensor.refrigerator_on_today
+        name: Refrigerator On Today
+        icon: mdi:fridge
+
+      - type: section
+        label: Laundry
+
+      - entity: sensor.washing_machine_on_today
+        name: Washing Machine On Today
+        icon: mdi:washing-machine

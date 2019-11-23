@@ -1,20 +1,11 @@
-title: Living Room
-icon: mdi:sofa
-path: livingroom
-id: Living Room
+title: Cast
+icon: mdi:cast
+path: cast
+id: cast
 cards:
 
-  - type: glance
-    title: Motion
-    show_header_toggle: false
-    entities:
-      - entity: binary_sensor.hue_motion_sensor_02_motion
-        name: Now
-      - entity: sensor.hue_motion_sensor_02_motion_on_today
-        name: On Today
-
   - type: entities
-    title: Eek Television
+    title: Eek
     show_header_toggle: false
     entities:
       - script.fireplace_livingroom
