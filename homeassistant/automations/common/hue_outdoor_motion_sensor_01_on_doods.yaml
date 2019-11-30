@@ -1,4 +1,4 @@
-alias: Doods MJPEG Camera 01
+alias: Hue Outdoor Motion Sensor 01 On Doods
 trigger:
   - platform: state
     entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
@@ -6,4 +6,4 @@ trigger:
 action:
   - service: image_processing.scan
     data:
-      entity_id: image_processing.doods_mjpeg_camera_01
+      entity_id: camera.mjpeg_camera_01
