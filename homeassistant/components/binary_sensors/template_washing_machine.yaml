@@ -4,7 +4,7 @@ platform: template
 sensors:
   template_washing_machine:
     friendly_name: "Template Washing Machine"
-    delay_off:
+    delay_on:
       minutes: 2
     delay_off:
       minutes: 2

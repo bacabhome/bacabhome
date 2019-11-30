@@ -4,7 +4,7 @@ platform: template
 sensors:
   template_refrigerator:
     friendly_name: "Template Refrigerator"
-    delay_off:
+    delay_on:
       minutes: 2
     delay_off:
       minutes: 2
