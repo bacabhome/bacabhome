@@ -9,15 +9,6 @@ cards:
       Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
       Today? a Smart Home!
 
-  - type: entities
-    title: Family
-    show_header_toggle: false
-    entities:
-      - entity: input_boolean.mode_vacation
-        name: Mode Vacation
-      - entity: input_boolean.mode_street
-        name: Mode Street
-
   - type: glance
     title: Birthdays
     show_header_toggle: false
@@ -33,6 +24,28 @@ cards:
        name: Balam
 
   - type: entities
+    title: Family
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Commute
+
+      - entity: sensor.here_travel_time_home_to_school
+        name: Home To School
+      - entity: sensor.here_travel_time_home_to_work
+        name: Home To Work
+
+      - type: section
+        label: Mode
+
+      - entity: input_boolean.mode_vacation
+        name: Vacation
+      - entity: input_boolean.mode_street
+        name: Street
+
+  - type: entities
+    title: Summary
     show_header_toggle: false
     entities:
 

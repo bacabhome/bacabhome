@@ -8,21 +8,43 @@ cards:
     title: Balam
     show_header_toggle: false
     entities:
-      - entity: device_tracker.user_balam
-        name: Where is User?
-      - entity: person.balam
-        name: Where is Balam?
-      - entity: sensor.person_balam_home_week
-        name: How long Balam @ home?
-      - entity: sensor.person_balam_not_home_week
-        name: How long Balam not @ home?
-      - entity: proximity.home
-        name: How far Balam to home?
-      - entity: proximity.work
-        name: How Far Balam to work?
+
+      - type: section
+        label: Commute
+
+      - entity: sensor.here_travel_time_home_to_work
+        name: Home To Work
+
+      - type: section
+        label: Status
+
       - entity: binary_sensor.template_balam_biking
         name: Is Balam biking?
       - entity: sensor.device_tracker_user_balam_velocity
         name: What is Balam's velocity?
       - entity: sensor.device_tracker_user_balam_battery_level
         name: What is Balam's cell phone battery level?
+
+      - type: section
+        label: Location
+
+      - entity: device_tracker.user_balam
+        name: Where is User?
+      - entity: person.balam
+        name: Where is Balam?
+
+      - type: section
+        label: Statistics
+
+      - entity: sensor.person_balam_home_week
+        name: How long Balam @ home?
+      - entity: sensor.person_balam_not_home_week
+        name: How long Balam not @ home?
+
+      - type: section
+        label: Proximity
+
+      - entity: proximity.home
+        name: How far Balam to home?
+      - entity: proximity.work
+        name: How Far Balam to work?
