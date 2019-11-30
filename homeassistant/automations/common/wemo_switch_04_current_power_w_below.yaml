@@ -1,0 +1,19 @@
+alias: Wemo Switch 04 Current Power W
+initial_state: 'true'
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.wemo_switch_04_current_power_w
+    below: '20'
+action:
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.60
+  - delay: '00:00:05'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
+                 El ciclo de lavado ha acabado.
+      language: 'es'
