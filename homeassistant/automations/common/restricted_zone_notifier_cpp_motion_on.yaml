@@ -1,0 +1,16 @@
+alias: Restricted Zone Notifier Motion On
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.restricted_zone_notifier_cpp_motion
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.mjpeg_camera_01
+      filename: '/config/www/media/frontyard/{{ entity_id }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: camera.record
+    data:
+      entity_id: camera.mjpeg_camera_01
+      filename: '/config/www/media/frontyard/{{ entity_id }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
