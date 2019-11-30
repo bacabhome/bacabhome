@@ -32,6 +32,32 @@ cards:
         name: Light Level
       - entity: sensor.hue_motion_sensor_02_temperature
         name: Temperature
+      - entity: sensor.hue_motion_sensor_02_battery_level
+        name: Battery Level
+
+      - type: section
+        label: Mom Room
+
+      - entity: sensor.lumi_lumi_weather_fb246b03_humidity
+        name: Humidity
+      - entity: sensor.lumi_lumi_weather_fb246b03_pressure
+        name: Pressure
+      - entity: sensor.lumi_lumi_weather_fb246b03_temperature
+        name: Temperature
+      - entity: sensor.lumi_lumi_weather_fb246b03_power
+        name: Power
+
+      - type: section
+        label: Dad Room
+
+      - entity: sensor.lumi_lumi_weather_5ac24603_humidity
+        name: Humidity
+      - entity: sensor.lumi_lumi_weather_5ac24603_pressure
+        name: Pressure
+      - entity: sensor.lumi_lumi_weather_5ac24603_temperature
+        name: Temperature
+      - entity: sensor.lumi_lumi_weather_5ac24603_power
+        name: Power
 
   - type: entities
     title: Switches
@@ -52,6 +78,18 @@ cards:
       - entity: media_player.vlc
         name: Server Vlc
         type: custom:mini-media-player
+
+  - type: entities
+    title: Statistics
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Dad Bedroom
+
+      - entity: sensor.servers_on_today
+        name: Servers On Today
+        icon: mdi:server
 
   - type: entities
     title: Wio Link 02

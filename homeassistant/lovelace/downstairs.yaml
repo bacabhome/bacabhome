@@ -4,6 +4,17 @@ path: downstairs
 id: Downstairs
 cards:
 
+  - type: entities
+    title: Xmas
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Front Yard
+
+      - entity: light.fastled_downstairs
+        name: Windows LEDs
+
   - type: glance
     title: Appliances
     show_header_toggle: false
@@ -15,6 +26,27 @@ cards:
       - entity: binary_sensor.template_washing_machine 
         name: Washing Machine
         icon: mdi:washing-machine
+
+  - type: entities
+    title: Doors
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Front Yard
+
+      - entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_on_off
+        name: Status
+      - entity: sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_power
+        name: Power
+
+      - type: section
+        label: Back Yard
+
+      - entity: binary_sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_on_off
+        name: Status
+      - entity: sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_power
+        name: Power
 
   - type: glance
     title: Motion
@@ -38,6 +70,8 @@ cards:
         name: Light Level
       - entity: sensor.hue_outdoor_motion_sensor_01_temperature
         name: Temperature
+      - entity: sensor.hue_outdoor_motion_sensor_01_battery_level
+        name: Battery Level
 
       - type: section
         label: Living Room
@@ -46,6 +80,8 @@ cards:
         name: Light Level
       - entity: sensor.hue_motion_sensor_01_temperature
         name: Temperature
+      - entity: sensor.hue_motion_sensor_01_battery_level
+        name: Battery Level
 
   - type: entities
     title: Switches
