@@ -116,6 +116,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   nodered:
+    build:
+      context: ./config/nodered/
+      dockerfile: Dockerfile.nodered
     image: nodered/node-red-docker:v8
     container_name: bacab-home-nodered
     restart: on-failure

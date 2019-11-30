@@ -1,0 +1,12 @@
+FROM nodered/node-red-docker
+
+MAINTAINER Abraham Arce "xe1gyq@gmail.com"
+
+ENV TIMEZONE America/Mexico_City
+
+RUN npm install \
+    node-red-dashboard \
+    node-red-contrib-home-assistant-llat \
+    node-red-contrib-bigtimer \
+    node-red-contrib-openfaas \
+    node-red-contrib-openfaas-gateway
