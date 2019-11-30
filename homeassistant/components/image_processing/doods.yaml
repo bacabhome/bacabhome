@@ -1,0 +1,17 @@
+# 
+platform: doods
+scan_interval: 3600
+url: !secret services_doods_url
+timeout: 60
+detector: default
+source:
+  - entity_id: camera.mjpeg_camera_01
+file_out:
+  - "/config/www/media/frontyard/{{ camera_entity.split('.')[1] }}_latest.jpg"
+  - "/config/www/media/frontyard/{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+confidence: 50
+labels:
+  - name: person
+    confidence: 60
+  - car
+  - truck
