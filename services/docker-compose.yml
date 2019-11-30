@@ -1,41 +1,6 @@
 version: '3.7'
 services:
 
-  opencv:
-    build:
-      context: ./opencv/
-      dockerfile: Dockerfile.opencv
-    image: xe1gyq/opencv
-    container_name: bacab-home-opencv
-    privileged: true
-    restart: on-failure
-    environment:
-      - TZ=America/Mexico_City
-    network_mode: host
-    devices:
-      - /dev
-
-  gstreamer:
-    build:
-      context: ./gstreamer/
-      dockerfile: Dockerfile.gstreamer
-      args:
-        - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
-        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/gstreamer
-    container_name: bacab-home-gstreamer
-    privileged: true
-    restart: on-failure
-    environment:
-      - TZ=America/Mexico_City
-      - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
-      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    network_mode: host
-    ports:
-      - 5000:5000
-    devices:
-      - /dev
-
   mjpeg-streamer:
     build:
       context: ./mjpeg-streamer/
@@ -44,9 +9,8 @@ services:
         - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
         - SERVER_TCP_PORT=${SERVER_TCP_PORT:-8080}
     image: xe1gyq/mjpeg-streamer
-    container_name: bacab-home-mjpeg-streamer
+    container_name: ich-mjpeg-streamer
     privileged: true
-    restart: on-failure
     environment:
       - TZ=America/Mexico_City
       - VIDEO_DEVICE=${VIDEO_DEVICE:-/dev/video0}
@@ -57,101 +21,38 @@ services:
     devices:
       - /dev
 
-  haarcascades:
+  opencv:
     build:
-      context: ./haarcascades/
-      dockerfile: Dockerfile.haarcascades
-      args:
-        - SERVICE_NAME=${SERVICE_NAME:-HaarCascades}
-        - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-        - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/haarcascades
-    container_name: bacab-home-haarcascades
-    privileged: true
-    restart: on-failure
+      context: ./opencv/
+      dockerfile: Dockerfile.opencv
+    image: xe1gyq/opencv
+    container_name: ich-opencv
     environment:
       - TZ=America/Mexico_City
-      - DISPLAY=:0
-      - SERVICE_NAME=${SERVICE_NAME:-HaarCascades}
-      - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-      - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     network_mode: host
-    ports:
-      - 5000:5000
     devices:
       - /dev
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-
-  yolo:
-    build:
-      context: ./yolo/
-      dockerfile: Dockerfile.yolo
-      args:
-        - SERVICE_NAME=${SERVICE_NAME:-YouOnlyLookOnce}
-        - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-        - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/yolo
-    container_name: bacab-home-yolo
-    privileged: true
-    restart: on-failure
-    environment:
-      - TZ=America/Mexico_City
-      - DISPLAY=:0
-      - SERVICE_NAME=${SERVICE_NAME:-YouOnlyLookOnce}
-      - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-      - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    network_mode: host
-    ports:
-      - 5000:5000
-    devices:
-      - /dev
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
 
   openvino:
     build:
       context: ./openvino/
       dockerfile: Dockerfile.openvino
     image: xe1gyq/openvino
-    container_name: bacab-home-openvino
-    privileged: true
-    restart: on-failure
-    network_mode: host
-    devices:
-      - /dev
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-
-  rznp:
-    build:
-      context: ./openvino/samples/
-      dockerfile: Dockerfile.restricted-zone-notifier-python
-      args:
-        - CAMERA_IDENTIFICATION=${CAMERA_IDENTIFICATION:-Camera1}
-        - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-        - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-        - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
-    image: xe1gyq/rznp
-    container_name: bacab-home-rznp
-    privileged: true
-    restart: always
+    container_name: ich-openvino
     environment:
       - TZ=America/Mexico_City
-      - DISPLAY=:0
-      - CAMERA_IDENTIFICATION=${CAMERA_IDENTIFICATION:-Camera1}
-      - VIDEO_CAPTURE=${VIDEO_CAPTURE:-http://172.17.0.1:8080/?action=stream}
-      - SINK_HOST_IP=${SINK_HOST_IP:-172.17.0.1}
-      - SINK_HOST_PORT=${SINK_HOST_PORT:-5000}
     network_mode: host
-    ports:
-      - 5000:5000
     devices:
       - /dev
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - ../media/:/home/user/media
+
+  openvino-2018r5:
+    build:
+      context: ./openvino-2018r5/
+      dockerfile: Dockerfile.openvino-2018r5
+    image: xe1gyq/openvino-2018r5
+    container_name: ich-openvino-2018r5
+    environment:
+      - TZ=America/Mexico_City
+    network_mode: host
+    devices:
+      - /dev
