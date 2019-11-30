@@ -1,0 +1,15 @@
+# https://www.home-assistant.io/integrations/here_travel_time/
+
+platform: here_travel_time
+name: HERE Travel Time Home To Work
+app_id: !secret here_travel_time_app_id
+app_code: !secret here_travel_time_app_code
+origin_latitude: !secret here_travel_time_home_latitude
+origin_longitude: !secret here_travel_time_home_longitude
+destination_latitude: !secret here_travel_time_work_latitude
+destination_longitude: !secret here_travel_time_work_longitude
+mode: bicycle
+route_mode: fastest
+traffic_mode: false
+unit_system: metric
+scan_interval: 900

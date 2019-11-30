@@ -1,0 +1,22 @@
+alias: "HERE Travel Time Home To School Morning"
+initial_state: 'on'
+trigger:
+  - platform: time_pattern
+    minutes: '/2'
+condition:
+  - condition: time
+    after: '07:00:00'
+    before: '07:30:00'
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: binary_sensor.workday
+    state: 'on'
+action:
+  - service: homeassistant.update_entity
+    entity_id: sensor.here_travel_time_home_to_school
