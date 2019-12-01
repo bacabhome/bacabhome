@@ -10,6 +10,12 @@ cards:
     entities:
 
       - type: section
+        label: Location
+
+      - entity: person.balam
+        name: Where is Balam?
+
+      - type: section
         label: Commute
 
       - entity: sensor.here_travel_time_home_to_work
@@ -18,20 +24,16 @@ cards:
       - type: section
         label: Status
 
+      - entity: binary_sensor.template_device_tracker_life360_balam_moving
+        name: Is Balam moving?
       - entity: binary_sensor.template_device_tracker_life360_balam_biking
         name: Is Balam biking?
       - entity: sensor.device_tracker_life360_balam_speed
         name: What is Balam's speed?
       - entity: sensor.device_tracker_life360_balam_battery
         name: What is Balam's cell phone battery?
-
-      - type: section
-        label: Location
-
-      - entity: device_tracker.life360_balam
-        name: Where is User?
-      - entity: person.balam
-        name: Where is Balam?
+      - entity: binary_sensor.template_device_tracker_life360_balam_battery_charging
+        name: Is Balam's battery charging?
 
       - type: section
         label: Statistics

@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  template_device_tracker_life360_balam_moving:
+    friendly_name: "Template Device Tracker Life360 Balam Moving"
+    value_template: >-
+                       {{ state_attr('device_tracker.life360_balam', 'moving') }}
+    device_class: moving
