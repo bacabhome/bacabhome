@@ -90,17 +90,3 @@ cards:
       - entity: sensor.servers_on_today
         name: Servers On Today
         icon: mdi:server
-
-  - type: entities
-    title: Wio Link 02
-    show_header_toggle: false
-    entities:
-
-      - entity: sensor.wio_link_02_dust
-        name: Dust
-      - entity: sensor.wio_link_02_sound
-        name: Sound
-      - entity: binary_sensor.wio_link_02_motion
-        name: Motion
-      - entity: sensor.wiolink_02_motion_on_today
-        name: Motion On Today

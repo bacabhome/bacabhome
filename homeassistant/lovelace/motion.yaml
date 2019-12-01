@@ -47,11 +47,3 @@ cards:
         name: Hue 02 Now
       - entity: sensor.hue_motion_sensor_02_motion_on_today
         name: Hue 02 On Today
-
-      - type: section
-        label: Dad Bedroom
-
-      - entity: binary_sensor.wio_link_02_motion
-        name: WioLink 02 Now
-      - entity: sensor.wiolink_02_motion_on_today
-        name: WioLink 02 On Today
