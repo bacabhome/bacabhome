@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/integrations/telegram/
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_token
+    allowed_chat_ids:
+      - !secret telegram_chat_id_one

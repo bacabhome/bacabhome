@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/integrations/telegram_chatbot
+
+name: Telegram Bacab Home Bot
+platform: telegram
+api_key: !secret telegram_token
+chat_id: !secret telegram_chat_id_one
