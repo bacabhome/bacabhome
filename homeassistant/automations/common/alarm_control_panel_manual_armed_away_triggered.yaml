@@ -7,6 +7,12 @@ trigger:
   - platform: state
     entity_id: binary_sensor.hue_motion_sensor_02_motion
     to: 'on'
+  - platform: state
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_on_off
+    to: 'on'
+  - platform: state
+    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_on_off
+    to: 'on'
 condition:
   - condition: state
     entity_id: alarm_control_panel.alarm_control_panel_manual
@@ -20,7 +26,7 @@ action:
   - service: media_player.volume_set
     entity_id: media_player.amigo
     data:
-      volume_level: 0.80
+      volume_level: 1.0
   - delay: '00:00:05'
   - service: script.turn_on
     entity_id: script.alarm_control_panel_manual_triggered
