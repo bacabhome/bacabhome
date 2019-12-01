@@ -1,6 +1,6 @@
 platform: manual
-name: House Alarm
-code: !secret house_alarm_code
+name: Alarm Control Panel Manual
+code: !secret alarm_control_panel_manual_code
 pending_time: 30
 delay_time: 20
 trigger_time: 4

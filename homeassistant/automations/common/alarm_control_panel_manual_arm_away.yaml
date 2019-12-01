@@ -1,8 +1,8 @@
-alias: House Alarm Arm Away
+alias: Alarm Control Panel Manual Arm Away
 initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.house_alarm
+    entity_id: alarm_control_panel.alarm_control_panel_manual
     to: 'armed_away'
 action:
   - service: media_player.volume_set
@@ -17,3 +17,6 @@ action:
       message: >-
                   'Alarma armada, hasta pronto. Alexa, adiós'
       language: 'es'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: 'Alarma armada'

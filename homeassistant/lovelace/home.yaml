@@ -101,8 +101,8 @@ cards:
     title: Shopping List
 
   - type: alarm-panel
-    name: House Alarm
-    entity: alarm_control_panel.house_alarm
+    name: Alarm
+    entity: alarm_control_panel.alarm_control_panel_manual
     states:
       - arm_home
       - arm_away
