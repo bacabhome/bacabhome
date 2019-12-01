@@ -18,17 +18,17 @@ cards:
       - type: section
         label: Status
 
-      - entity: binary_sensor.template_balam_biking
+      - entity: binary_sensor.template_device_tracker_life360_balam_biking
         name: Is Balam biking?
-      - entity: sensor.device_tracker_user_balam_velocity
-        name: What is Balam's velocity?
-      - entity: sensor.device_tracker_user_balam_battery_level
-        name: What is Balam's cell phone battery level?
+      - entity: sensor.device_tracker_life360_balam_speed
+        name: What is Balam's speed?
+      - entity: sensor.device_tracker_life360_balam_battery
+        name: What is Balam's cell phone battery?
 
       - type: section
         label: Location
 
-      - entity: device_tracker.user_balam
+      - entity: device_tracker.life360_balam
         name: Where is User?
       - entity: person.balam
         name: Where is Balam?

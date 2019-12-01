@@ -2,7 +2,7 @@
 
 platform: template
 sensors:
-  device_tracker_user_balam_velocity:
-    friendly_name: 'Device Tracker User Balam Velocity'
-    value_template: '{{ states.device_tracker.user_balam.attributes["velocity"] }}'
+  device_tracker_life360_balam_speed:
+    friendly_name: 'Device Tracker Life360 Balam Speed'
+    value_template: '{{ states.device_tracker.life360_balam.attributes["speed"] }}'
     unit_of_measurement: 'km/h'

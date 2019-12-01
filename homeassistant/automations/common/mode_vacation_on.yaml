@@ -1,7 +1,7 @@
 alias: 'Mode Vacation On'
 trigger:
   - platform: state
-    entity_id: device_tracker.user_balam
+    entity_id: person.balam
     from: 'home'
     to: 'not_home'
     for:

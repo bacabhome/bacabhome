@@ -1,6 +1,6 @@
 work:
   zone: work
   devices:
-    - device_tracker.user_balam
+    - device_tracker.life360_balam
   tolerance: 50
   unit_of_measurement: km

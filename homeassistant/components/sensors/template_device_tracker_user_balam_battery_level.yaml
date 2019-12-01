@@ -2,7 +2,7 @@
 
 platform: template
 sensors:
-  device_tracker_user_balam_battery_level:
-    friendly_name: 'Device Tracker User Balam Battery Level'
-    value_template: '{{ states.device_tracker.user_balam.attributes["battery_level"] }}'
+  device_tracker_life360_balam_battery:
+    friendly_name: 'Device Tracker Life360 Balam Battery'
+    value_template: '{{ states.device_tracker.life360_balam.attributes["battery"] }}'
     unit_of_measurement: '%'
