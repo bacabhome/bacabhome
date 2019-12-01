@@ -1,8 +1,0 @@
-# https://www.home-assistant.io/components/template
-
-platform: template
-sensors:
-  wemo_switch_04_current_power_w:
-    friendly_name: 'Wemo Switch 04 Current Power W'
-    value_template: '{{ states.switch.wemo_switch_04.attributes["current_power_w"] }}'
-    unit_of_measurement: 'W'

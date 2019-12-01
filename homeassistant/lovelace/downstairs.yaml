@@ -91,21 +91,21 @@ cards:
       - type: section
         label: Living Room
 
-      - entity: switch.wemo_switch_01
+      - entity: switch.wemo_insight_01
         name: Xmas
         icon: mdi:pine-tree
 
       - type: section
         label: Kitchen
 
-      - entity: switch.wemo_switch_02
+      - entity: switch.wemo_insight_02
         name: Refrigerator
         icon: mdi:fridge
 
       - type: section
         label: Laundry
 
-      - entity: switch.wemo_switch_04
+      - entity: switch.wemo_insight_04
         name: Washing Machine
         icon: mdi:washing-machine
 

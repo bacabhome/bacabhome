@@ -1,9 +1,9 @@
-alias: Wemo Switch 04 Current Power W
-initial_state: 'true'
+alias: Wemo Insight 02 Today Energy kWh Below
+initial_state: 'false'
 trigger:
   - platform: numeric_state
-    entity_id: sensor.wemo_switch_04_current_power_w
-    below: '20'
+    entity_id: sensor.wemo_insight_02_today_energy_kwh
+    below: '.8'
 action:
   - service: media_player.volume_set
     entity_id:
@@ -15,5 +15,6 @@ action:
     entity_id: media_player.amigo
     data_template:
       message: >-
-                 El ciclo de lavado ha acabado.
+                 La lectura Wemo Insight 02 es {{states('sensor.wemo_insight_02_today_energy_kwh')}}.
+                 Por favor revisar su temperatura.
       language: 'es'

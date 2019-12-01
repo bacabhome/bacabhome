@@ -1,8 +1,0 @@
-# https://www.home-assistant.io/components/template
-
-platform: template
-sensors:
-  wemo_switch_04_today_energy_kwh:
-    friendly_name: 'Wemo Switch 04 Today Energy kWh'
-    value_template: '{{ states.switch.wemo_switch_04.attributes["today_energy_kwh"] }}'
-    unit_of_measurement: 'kWh'

@@ -19,28 +19,28 @@ cards:
       - type: section
         label: Living Room
 
-      - entity: switch.wemo_switch_01
+      - entity: switch.wemo_insight_01
         name: Xmas
         icon: mdi:pine-tree
 
       - type: section
         label: Kitchen
 
-      - entity: switch.wemo_switch_02
+      - entity: switch.wemo_insight_02
         name: Refrigerator
         icon: mdi:fridge
 
       - type: section
         label: Dad Bedroom
 
-      - entity: switch.wemo_switch_03
+      - entity: switch.wemo_insight_03
         name: Servers
         icon: mdi:server
 
       - type: section
         label: Laundry
 
-      - entity: switch.wemo_switch_04
+      - entity: switch.wemo_insight_04
         name: Washing Machine
         icon: mdi:washing-machine
 
@@ -55,7 +55,7 @@ cards:
       cards:
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_01_current_power_w
+            - entity: sensor.wemo_insight_01_current_power_w
               name: Xmas
           line_color: black
           line_width: 1
@@ -63,7 +63,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_02_current_power_w
+            - entity: sensor.wemo_insight_02_current_power_w
               name: Refrigerator
           line_color: gray
           line_width: 1
@@ -71,7 +71,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_03_current_power_w
+            - entity: sensor.wemo_insight_03_current_power_w
               name: Servers
           line_color: blue
           line_width: 1
@@ -79,7 +79,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_04_current_power_w
+            - entity: sensor.wemo_insight_04_current_power_w
               name: Laundry
           line_color: silver
           line_width: 1
@@ -98,16 +98,16 @@ cards:
             labels: true
             points: false
           entities:
-            - entity: sensor.wemo_switch_01_current_power_w
+            - entity: sensor.wemo_insight_01_current_power_w
               name: Xmas
               color: black
-            - entity: sensor.wemo_switch_02_current_power_w
+            - entity: sensor.wemo_insight_02_current_power_w
               name: Refrigerator
               color: gray
-            - entity: sensor.wemo_switch_03_current_power_w
+            - entity: sensor.wemo_insight_03_current_power_w
               name: Servers
               color: blue
-            - entity: sensor.wemo_switch_04_current_power_w
+            - entity: sensor.wemo_insight_04_current_power_w
               name: Laundry
               color: silver
           line_width: 1
@@ -127,7 +127,7 @@ cards:
 
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_01_today_energy_kwh
+            - entity: sensor.wemo_insight_01_today_energy_kwh
               name: Xmas
           line_color: black
           line_width: 1
@@ -135,7 +135,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_02_today_energy_kwh
+            - entity: sensor.wemo_insight_02_today_energy_kwh
               name: Refrigerator
           line_color: gray
           line_width: 1
@@ -143,7 +143,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_03_today_energy_kwh
+            - entity: sensor.wemo_insight_03_today_energy_kwh
               name: Servers
           line_color: blue
           line_width: 1
@@ -151,7 +151,7 @@ cards:
           hours_to_show: 168
         - type: custom:mini-graph-card
           entities:
-            - entity: sensor.wemo_switch_04_today_energy_kwh
+            - entity: sensor.wemo_insight_04_today_energy_kwh
               name: Laundry
           line_color: silver
           line_width: 1
@@ -171,16 +171,16 @@ cards:
             labels: true
             points: false
           entities:
-            - entity: sensor.wemo_switch_01_today_energy_kwh
+            - entity: sensor.wemo_insight_01_today_energy_kwh
               name: Xmas
               color: black
-            - entity: sensor.wemo_switch_02_today_energy_kwh
+            - entity: sensor.wemo_insight_02_today_energy_kwh
               name: Refrigerator
               color: gray
-            - entity: sensor.wemo_switch_03_today_energy_kwh
+            - entity: sensor.wemo_insight_03_today_energy_kwh
               name: Servers
               color: blue
-            - entity: sensor.wemo_switch_04_today_energy_kwh
+            - entity: sensor.wemo_insight_04_today_energy_kwh
               name: Laundry
               color: silver
           line_width: 1

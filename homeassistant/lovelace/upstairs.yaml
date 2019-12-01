@@ -67,7 +67,7 @@ cards:
       - type: section
         label: Dad Bedroom
 
-      - entity: switch.wemo_switch_03
+      - entity: switch.wemo_insight_03
         name: Servers
         icon: mdi:power-socket-us
 

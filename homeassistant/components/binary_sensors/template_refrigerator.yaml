@@ -9,5 +9,5 @@ sensors:
     delay_off:
       minutes: 2
     value_template: >-
-                       {{ states('sensor.wemo_switch_02_current_power_w')|float > 20 }}
+                       {{ states('sensor.wemo_insight_02_current_power_w')|float > 20 }}
     device_class: power

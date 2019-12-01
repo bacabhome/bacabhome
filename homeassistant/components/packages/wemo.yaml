@@ -3,7 +3,7 @@
 wemo:
   discovery: false
   static:
-    - !secret wemo_switch_01
-    - !secret wemo_switch_02
-    - !secret wemo_switch_03
-    - !secret wemo_switch_04
+    - !secret wemo_insight_01
+    - !secret wemo_insight_02
+    - !secret wemo_insight_03
+    - !secret wemo_insight_04
