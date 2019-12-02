@@ -1,8 +1,8 @@
-alias: Application Restricted Zone Notifier Motion On
+alias: Application Restricted Zone Notifier
 initial_state: true
 trigger:
   platform: state
-  entity_id: binary_sensor.restricted_zone_notifier_cpp_motion
+  entity_id: binary_sensor.application_restricted_zone_notifier_cpp
   from: 'off'
   to: 'on'
 action:
