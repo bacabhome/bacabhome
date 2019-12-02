@@ -5,6 +5,9 @@ trigger:
     entity_id: alarm_control_panel.alarm_control_panel_manual
     to: 'armed_away'
 action:
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Alarm! Armed Away {{ states('sensor.date_time') }}"
   - service: media_player.volume_set
     entity_id:
     - media_player.amigo
@@ -17,6 +20,3 @@ action:
       message: >-
                   'Alarma armada, hasta pronto. Alexa, adiós'
       language: 'es'
-  - service: notify.telegram_bacab_home_bot
-    data:
-      message: 'Alarma armada'

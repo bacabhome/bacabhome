@@ -1,0 +1,10 @@
+alias: Alarm Control Panel Manual Triggered
+initial_state: 'true'
+trigger:
+  - platform: state
+    entity_id: alarm_control_panel.alarm_control_panel_manual
+    to: 'triggered'
+action:
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Alarm! Triggered {{ states('sensor.date_time') }}"
