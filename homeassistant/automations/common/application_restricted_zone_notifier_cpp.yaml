@@ -1,4 +1,4 @@
-alias: Application Restricted Zone Notifier
+alias: Application Restricted Zone Notifier CPP
 initial_state: true
 trigger:
   platform: state

@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+platform: mqtt
+name: Application Shopper Mood Monitor CPP Surprised
+state_topic: "retail/traffic"
+value_template: "{{ value_json.surprised }}"
+unit_of_measurement: 'Count'
