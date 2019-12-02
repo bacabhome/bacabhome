@@ -70,9 +70,30 @@ cards:
       - type: section
         label: Kitchen
 
-      - entity: light.kitchen
+      - entity: light.kitchen_light
         name: Stove
         icon: mdi:stove
+        type: custom:slider-entity-row
+        toggle: true
+
+      - entity: light.kitchen_backup_light
+        name: Stove
+        icon: mdi:stove
+        type: custom:slider-entity-row
+        toggle: true
+
+      - entity: light.table_light
+        name: Table
+        icon: mdi:table-chair
+        type: custom:slider-entity-row
+        toggle: true
+
+      - type: section
+        label: Living Room
+
+      - entity: light.dining_room_light
+        name: Table
+        icon: mdi:table-chair
         type: custom:slider-entity-row
         toggle: true
 
