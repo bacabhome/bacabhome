@@ -1,0 +1,12 @@
+alias: Telegram Bacab Home Bot Weather Forecast
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/weather'
+action:
+  - service: telegram_bot.send_message
+    data_template:
+      target: '{{ trigger.event.data.user_id }}'
+      disable_notification: true
+      message: '{{ states.sensor.dark_sky_hourly_summary.state }} {{ states.sensor.dark_sky_daily_summary.state }}'

@@ -1,0 +1,11 @@
+alias: 'Telegram Bacab Home Bot Ping'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/ping'
+action:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: 'pong'
