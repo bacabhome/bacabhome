@@ -67,6 +67,17 @@ cards:
         name: Visibility
 
   - type: entities
+    title: World Air Quality Index
+    show_header_toggle: false
+    entities:
+      - entity: sensor.waqi_aguilas_jalisco_mexico
+        name: Las Aguilas Jalisco
+      - entity: sensor.waqi_guadalajara_i_jalisco_tlaquepaque_guadalajara_mexico
+        name: Tlaquepaque Jalisco
+      - entity: sensor.waqi_centro_jalisco_mexico
+        name: Centro Jalisco
+
+  - type: entities
     title: OpenVU
     show_header_toggle: false
     entities:
