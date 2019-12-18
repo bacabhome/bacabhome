@@ -67,7 +67,7 @@ services:
       - ./homeassistant:/config
       - ./media:/config/www/media/:consistent
       - /etc/localtime:/etc/localtime:ro
-      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+      - /sys/fs/cgroup:/sys/fs/cgroup
       - /tmp/.X11-unix:/tmp/.X11-unix:consistent
       - $HOME/.Xauthority:/root/.Xauthority:rw
       - ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native:consistent
@@ -174,7 +174,6 @@ services:
     environment:
       - TZ=America/Mexico_City
       - PLEX_CLAIM=<claimToken>
-    entrypoint: ["echo", "Service disabled"]
     network_mode: host
     volumes:
       - ./config/plex/database:/config
