@@ -4,17 +4,6 @@ path: downstairs
 id: Downstairs
 cards:
 
-  - type: entities
-    title: Xmas
-    show_header_toggle: false
-    entities:
-
-      - type: section
-        label: Front Yard
-
-      - entity: light.fastled_downstairs
-        name: Windows LEDs
-
   - type: glance
     title: Appliances
     show_header_toggle: false
