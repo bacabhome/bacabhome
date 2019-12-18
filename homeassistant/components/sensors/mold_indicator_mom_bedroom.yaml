@@ -1,0 +1,6 @@
+platform: mold_indicator
+name: Mold Indicator Mom Bedroom
+indoor_temp_sensor: sensor.lumi_lumi_weather_fb246b03_temperature
+indoor_humidity_sensor: sensor.lumi_lumi_weather_fb246b03_humidity
+outdoor_temp_sensor: sensor.hue_outdoor_motion_sensor_01_temperature
+calibration_factor: 2.0

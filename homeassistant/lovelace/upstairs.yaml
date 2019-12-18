@@ -38,6 +38,8 @@ cards:
       - type: section
         label: Mom Room
 
+      - entity: sensor.mold_indicator_mom_bedroom
+        name: Mold Indicator
       - entity: sensor.lumi_lumi_weather_fb246b03_humidity
         name: Humidity
       - entity: sensor.lumi_lumi_weather_fb246b03_pressure
@@ -50,6 +52,8 @@ cards:
       - type: section
         label: Dad Room
 
+      - entity: sensor.mold_indicator_dad_bedroom
+        name: Mold Indicator
       - entity: sensor.lumi_lumi_weather_5ac24603_humidity
         name: Humidity
       - entity: sensor.lumi_lumi_weather_5ac24603_pressure
