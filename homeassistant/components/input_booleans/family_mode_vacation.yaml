@@ -1,0 +1,4 @@
+family_mode_vacation:
+  name: Family Mode Vacation
+  initial: off
+  icon: mdi:alpha-v-box-outline

@@ -1,9 +1,9 @@
-alias: Mode Vacation Off
+alias: Family Mode Vacation Off
 trigger:
   - platform: state
     entity_id: person.balam
-    from: 'not_home'
+    from: 'away'
     to: 'home'
 action:
   - service: homeassistant.turn_off
-    entity_id: input_boolean.mode_vacation
+    entity_id: input_boolean.family_mode_vacation

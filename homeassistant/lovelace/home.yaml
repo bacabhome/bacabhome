@@ -39,9 +39,9 @@ cards:
       - type: section
         label: Mode
 
-      - entity: input_boolean.mode_vacation
+      - entity: input_boolean.family_mode_vacation
         name: Vacation
-      - entity: input_boolean.mode_street
+      - entity: input_boolean.family_mode_street
         name: Street
 
   - type: entities
