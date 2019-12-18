@@ -1,0 +1,21 @@
+title: Development
+icon: mdi:language-python
+path: development
+id: development
+cards:
+
+  - type: entities
+    title: Home Assistant
+    show_header_toggle: false
+    entities:
+
+      - entity: sensor.home_assistant
+        name: Last Commit ID
+
+  - type: entities
+    title: Bacab Home
+    show_header_toggle: false
+    entities:
+
+      - entity: sensor.bacab_home
+        name: Last Commit ID

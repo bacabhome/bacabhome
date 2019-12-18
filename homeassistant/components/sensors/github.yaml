@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/github/
+
+platform: github
+access_token: !secret github_access_token
+repositories:
+  - path: 'home-assistant/home-assistant'
+    name: Home Assistant
+  - path: 'bacabhome/bacabhome'
+    name: Bacab Home
