@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/integrations/blockchain
+
+platform: blockchain
+addresses:
+  - !secret blockchain_bitcoin_address

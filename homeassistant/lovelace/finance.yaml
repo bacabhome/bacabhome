@@ -1,0 +1,20 @@
+title: Finance
+icon: mdi:bitcoin
+path: finance
+id: Finance
+cards:
+
+  - type: entities
+    title: Blockchain Us
+    show_header_toggle: false
+    entities:
+      - sensor.bitcoin_balance
+
+  - type: entities
+    title: Bitcoin
+    show_header_toggle: false
+    entities:
+      - sensor.no_of_transactions
+      - sensor.exchange_rate_1_btc
+      - sensor.market_price
+      - sensor.mined
