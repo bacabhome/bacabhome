@@ -40,6 +40,8 @@ cards:
 
       - entity: sensor.person_balam_home_week
         name: How long Balam @ home?
+      - entity: sensor.person_balam_work_week
+        name: How long Balam @ work?
       - entity: sensor.person_balam_not_home_week
         name: How long Balam not @ home?
 
