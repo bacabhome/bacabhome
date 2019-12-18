@@ -23,7 +23,7 @@ cards:
         entities:
           - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
             name: Hue Outdoor Motion Sensor 01
-          - entity: binary_sensor.restricted_zone_notifier_cpp_motion
+          - entity: binary_sensor.application_restricted_zone_notifier_cpp
             name: Restricted Zone Notifier
 
   - type: vertical-stack
@@ -40,7 +40,7 @@ cards:
         entities:
           - binary_sensor.ping_binary_sensor_camera_01
           - binary_sensor.hue_outdoor_motion_sensor_01_motion
-          - binary_sensor.restricted_zone_notifier_cpp_motion
+          - binary_sensor.application_restricted_zone_notifier_cpp
           - light.street_light
         image:
         camera_image: camera.mjpeg_camera_01
