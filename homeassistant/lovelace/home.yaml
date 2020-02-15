@@ -83,6 +83,12 @@ cards:
       - entity: sensor.person_balam_not_home_week
         name: Balam Not Home
 
+      - type: section
+        label: Battery Levels
+
+      - entity: sensor.home_mean_battery
+        name: Home Mean Battery Levels
+
   - type: glance
     title: Lights
     show_header_toggle: false

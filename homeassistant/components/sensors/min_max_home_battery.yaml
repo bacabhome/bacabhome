@@ -1,0 +1,15 @@
+# https://www.home-assistant.io/integrations/min_max
+
+platform: min_max
+name: Home Mean Battery
+entity_ids:
+  - sensor.miflora_01_battery
+  - sensor.miflora_02_battery
+  - sensor.hue_motion_sensor_01_battery_level
+  - sensor.hue_motion_sensor_02_battery_level 
+  - sensor.hue_outdoor_motion_sensor_01_battery_level
+  - sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_power
+  - sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_power
+  - sensor.lumi_lumi_weather_5ac24603_power
+  - sensor.lumi_lumi_weather_fb246b03_power
+type: mean
