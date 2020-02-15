@@ -50,10 +50,14 @@ cards:
     entities:
 
       - type: section
-        label: Weather Hourly
+        label: Environment
 
       - entity: sensor.dark_sky_hourly_summary
-        label: Summary
+        label: Dark Sky Hourly Summary
+      - entity: sensor.home_mean_temperature
+        name: Home Mean Temperature
+      - entity: sensor.home_mean_humidity
+        name: Home Mean Humidity
 
       - type: section
         label: Motion On Today

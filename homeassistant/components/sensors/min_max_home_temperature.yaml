@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/min_max
+
+platform: min_max
+name: Home Mean Temperature
+entity_ids:
+  - sensor.hue_motion_sensor_01_temperature
+  - sensor.hue_motion_sensor_02_temperature
+  - sensor.lumi_lumi_weather_5ac24603_temperature
+  - sensor.lumi_lumi_weather_fb246b03_temperature
+type: mean

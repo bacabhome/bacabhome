@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/integrations/min_max
+
+platform: min_max
+name: Home Mean Humidity
+entity_ids:
+  - sensor.lumi_lumi_weather_5ac24603_humidity
+  - sensor.lumi_lumi_weather_fb246b03_humidity
+type: mean
