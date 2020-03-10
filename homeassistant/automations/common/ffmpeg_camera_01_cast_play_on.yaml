@@ -1,0 +1,12 @@
+alias: FFmpeg Camera 01 Cast Play On
+initial_state: 'true'
+trigger:
+- platform: state
+  entity_id: binary_sensor.ffmpeg_camera_01_cast
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.play_stream
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      media_player: media_player.eek

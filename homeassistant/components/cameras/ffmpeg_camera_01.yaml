@@ -3,3 +3,4 @@
 platform: ffmpeg
 name: ffmpeg camera 01
 input: !secret ffmpeg_camera_01
+extra_arguments: '-vf "scale=384:216"'

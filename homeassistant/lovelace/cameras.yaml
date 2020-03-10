@@ -5,6 +5,14 @@ id: Cameras
 panel: false
 cards:
 
+  - type: entities
+    title: Controls
+    show_header_toggle: false
+    entities:
+
+      - entity: input_boolean.ffmpeg_camera_01_cast
+        name: Camera 01 Cast
+
   - type: vertical-stack
     cards:
 
@@ -33,25 +41,16 @@ cards:
         content: >
           ## Original Streams
 
-      - type: picture-glance
-        title: Camera 01
-        show_name: false
+      - type: picture-entity
+        title: MJPEG Camera 01
+        entity: camera.mjpeg_camera_01
         show_state: false
-        entities:
-          - binary_sensor.ping_binary_sensor_camera_01
-          - binary_sensor.hue_outdoor_motion_sensor_01_motion
-          - binary_sensor.application_restricted_zone_notifier_cpp
-          - light.street_light
-        image:
-        camera_image: camera.mjpeg_camera_01
         camera_view: live
 
-      - type: picture-glance
-        title: Camera 02
-        entities:
-          - binary_sensor.ping_binary_sensor_camera_02
-        image:
-        camera_image: camera.mjpeg_camera_02
+      - type: picture-entity
+        title: MJPEG Camera 02
+        entity: camera.mjpeg_camera_02
+        show_state: false
         camera_view: live
 
   - type: vertical-stack
@@ -61,18 +60,27 @@ cards:
         content: >
           ## Computer Vision Applications
 
-      - type: picture-glance
-        title: Camera 01
-        entities:
-          - binary_sensor.motion_camera_01
-        image:
-        camera_image: camera.ffmpeg_camera_01
+      - type: picture-entity
+        title: FFMPEG Camera 01
+        entity: camera.ffmpeg_camera_01
+        show_state: false
         camera_view: live
 
-      - type: picture-glance
-        title: Camera 02
-        entities:
-          - binary_sensor.motion_camera_02
-        image:
-        camera_image: camera.ffmpeg_camera_02
+      - type: picture-entity
+        title: FFMPEG Camera 02
+        entity: camera.ffmpeg_camera_02
+        show_state: false
+        camera_view: live
+
+  - type: vertical-stack
+    cards:
+
+      - type: markdown
+        content: >
+          ## Generic
+
+      - type: picture-entity
+        title: Generic Camera 01
+        entity: camera.generic_camera_01
+        show_state: false
         camera_view: live
