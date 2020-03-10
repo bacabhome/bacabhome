@@ -47,12 +47,6 @@ cards:
         show_state: false
         camera_view: live
 
-      - type: picture-entity
-        title: MJPEG Camera 02
-        entity: camera.mjpeg_camera_02
-        show_state: false
-        camera_view: live
-
   - type: vertical-stack
     cards:
 
@@ -63,24 +57,5 @@ cards:
       - type: picture-entity
         title: FFMPEG Camera 01
         entity: camera.ffmpeg_camera_01
-        show_state: false
-        camera_view: live
-
-      - type: picture-entity
-        title: FFMPEG Camera 02
-        entity: camera.ffmpeg_camera_02
-        show_state: false
-        camera_view: live
-
-  - type: vertical-stack
-    cards:
-
-      - type: markdown
-        content: >
-          ## Generic
-
-      - type: picture-entity
-        title: Generic Camera 01
-        entity: camera.generic_camera_01
         show_state: false
         camera_view: live
