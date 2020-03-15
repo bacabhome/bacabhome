@@ -70,7 +70,6 @@ services:
       - /sys/fs/cgroup:/sys/fs/cgroup
       - /tmp/.X11-unix:/tmp/.X11-unix:consistent
       - $HOME/.Xauthority:/root/.Xauthority:rw
-      - ${XDG_RUNTIME_DIR}/pulse/native:${XDG_RUNTIME_DIR}/pulse/native:consistent
       - ~/.config/pulse/cookie:/root/.config/pulse/cookie:consistent
 
   influxdb:
@@ -236,6 +235,16 @@ services:
     network_mode: host
     ports:
       - 8080:8080
+
+  telegraf:
+    image: telegraf:latest
+    container_name: bacab-home-telegraf
+    restart: always
+    network_mode: host
+    depends_on:
+      - "influxdb"
+    volumes:
+      - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
 volumes:
   bacabhome-mosquitto-storage:
