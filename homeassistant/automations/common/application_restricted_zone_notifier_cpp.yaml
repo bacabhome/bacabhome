@@ -8,9 +8,9 @@ trigger:
 action:
   - service: camera.snapshot
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/applications/rzncpp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: camera.record
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/applications/rzncpp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

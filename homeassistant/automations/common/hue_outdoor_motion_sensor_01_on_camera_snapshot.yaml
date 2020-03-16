@@ -7,9 +7,9 @@ trigger:
 action:
   - service: camera.snapshot
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/frontyard/hue_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: camera.record
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/frontyard/hue_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

@@ -6,4 +6,4 @@ trigger:
 action:
   - service: image_processing.scan
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01

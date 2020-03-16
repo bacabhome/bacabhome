@@ -8,11 +8,11 @@ trigger:
 action:
   - service: camera.snapshot
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/frontyard/frontyard_picture.jpg'
   - service: camera.snapshot
     data:
-      entity_id: camera.mjpeg_camera_01
+      entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
