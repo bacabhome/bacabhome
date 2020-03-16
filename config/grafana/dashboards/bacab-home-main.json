@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 7,
   "links": [],
   "panels": [
     {
@@ -43,7 +43,6 @@
       },
       "id": 42,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Conmmute Time",
@@ -61,7 +60,6 @@
       },
       "id": 43,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Environment",
@@ -79,7 +77,6 @@
       },
       "id": 46,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Motion On",
@@ -97,7 +94,6 @@
       },
       "id": 47,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Lights On",
@@ -115,7 +111,6 @@
       },
       "id": 54,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Users",
@@ -133,7 +128,6 @@
       },
       "id": 57,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "Battery Levels",
@@ -158,6 +152,9 @@
             "mean"
           ],
           "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
             "mappings": [
               {
                 "id": 0,
@@ -170,24 +167,28 @@
             "max": 100,
             "min": 0,
             "nullValueMode": "connected",
-            "thresholds": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
             "unit": "none"
           },
-          "override": {},
+          "overrides": [],
           "values": false
         },
-        "orientation": "horizontal"
+        "orientation": "horizontal",
+        "showUnfilled": true
       },
-      "pluginVersion": "6.5.2",
+      "pluginVersion": "6.7.0-beta1",
       "targets": [
         {
           "alias": "School",
@@ -283,7 +284,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -410,7 +410,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -542,7 +541,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -663,7 +661,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -784,7 +781,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -878,6 +874,9 @@
             "mean"
           ],
           "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
             "mappings": [
               {
                 "id": 0,
@@ -890,28 +889,32 @@
             "max": 100,
             "min": 0,
             "nullValueMode": "connected",
-            "thresholds": [
-              {
-                "color": "#299c46",
-                "value": null
-              },
-              {
-                "color": "rgba(237, 129, 40, 0.89)",
-                "value": 60
-              },
-              {
-                "color": "#d44a3a",
-                "value": 70
-              }
-            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "#299c46",
+                  "value": null
+                },
+                {
+                  "color": "rgba(237, 129, 40, 0.89)",
+                  "value": 60
+                },
+                {
+                  "color": "#d44a3a",
+                  "value": 70
+                }
+              ]
+            },
             "unit": "none"
           },
-          "override": {},
+          "overrides": [],
           "values": false
         },
-        "orientation": "horizontal"
+        "orientation": "horizontal",
+        "showUnfilled": true
       },
-      "pluginVersion": "6.5.2",
+      "pluginVersion": "6.7.0-beta1",
       "targets": [
         {
           "alias": "Work",
@@ -1006,7 +1009,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -1133,7 +1135,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -1254,7 +1255,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -1375,7 +1375,6 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
-      "options": {},
       "pluginVersion": "6.5.2",
       "postfix": "",
       "postfixFontSize": "50%",
@@ -1463,7 +1462,6 @@
       },
       "id": 64,
       "mode": "markdown",
-      "options": {},
       "timeFrom": null,
       "timeShift": null,
       "title": "",
@@ -1488,11 +1486,10 @@
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 3
+            "y": 10
           },
           "id": 71,
           "mode": "markdown",
-          "options": {},
           "timeFrom": null,
           "timeShift": null,
           "title": "",
@@ -1524,7 +1521,7 @@
             "h": 3,
             "w": 3,
             "x": 0,
-            "y": 4
+            "y": 11
           },
           "id": 66,
           "interval": "",
@@ -1543,7 +1540,6 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "options": {},
           "pluginVersion": "6.5.2",
           "postfix": "",
           "postfixFontSize": "50%",
@@ -1616,13 +1612,7 @@
           "transparent": true,
           "type": "singlestat",
           "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "Restarted",
-              "value": "0"
-            }
-          ],
+          "valueMaps": [],
           "valueName": "current"
         },
         {
@@ -1651,7 +1641,7 @@
             "h": 3,
             "w": 3,
             "x": 3,
-            "y": 4
+            "y": 11
           },
           "id": 72,
           "interval": "",
@@ -1670,7 +1660,6 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "options": {},
           "pluginVersion": "6.5.2",
           "postfix": "",
           "postfixFontSize": "50%",
@@ -1739,7 +1728,7 @@
           "thresholds": "70,90",
           "timeFrom": null,
           "timeShift": null,
-          "title": "Uptime",
+          "title": "Internet",
           "transparent": true,
           "type": "singlestat",
           "valueFontSize": "80%",
@@ -1783,7 +1772,7 @@
             "h": 3,
             "w": 3,
             "x": 6,
-            "y": 4
+            "y": 11
           },
           "id": 69,
           "interval": null,
@@ -1802,7 +1791,6 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "options": {},
           "pluginVersion": "6.5.2",
           "postfix": "",
           "postfixFontSize": "50%",
@@ -1910,7 +1898,7 @@
             "h": 3,
             "w": 3,
             "x": 9,
-            "y": 4
+            "y": 11
           },
           "id": 67,
           "interval": null,
@@ -1929,7 +1917,6 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "options": {},
           "pluginVersion": "6.5.2",
           "postfix": "",
           "postfixFontSize": "50%",
@@ -2037,7 +2024,7 @@
             "h": 3,
             "w": 3,
             "x": 12,
-            "y": 4
+            "y": 11
           },
           "id": 68,
           "interval": null,
@@ -2056,7 +2043,6 @@
           "maxDataPoints": 100,
           "nullPointMode": "connected",
           "nullText": null,
-          "options": {},
           "pluginVersion": "6.5.2",
           "postfix": "",
           "postfixFontSize": "50%",
@@ -2147,11 +2133,10 @@
             "h": 1,
             "w": 24,
             "x": 0,
-            "y": 7
+            "y": 14
           },
           "id": 70,
           "mode": "markdown",
-          "options": {},
           "timeFrom": null,
           "timeShift": null,
           "title": "",
@@ -2170,7 +2155,7 @@
             "h": 8,
             "w": 8,
             "x": 0,
-            "y": 8
+            "y": 15
           },
           "hiddenSeries": false,
           "id": 59,
@@ -2344,7 +2329,7 @@
             "h": 8,
             "w": 8,
             "x": 8,
-            "y": 8
+            "y": 15
           },
           "hiddenSeries": false,
           "id": 18,
@@ -2518,7 +2503,7 @@
             "h": 8,
             "w": 8,
             "x": 16,
-            "y": 8
+            "y": 15
           },
           "hiddenSeries": false,
           "id": 62,
@@ -3343,7 +3328,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 21,
+  "schemaVersion": 22,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -3381,5 +3366,8 @@
   "timezone": "",
   "title": "Bacab Home Main",
   "uid": "2o7C42cZk",
-  "version": 1
+  "variables": {
+    "list": []
+  },
+  "version": 5
 }
