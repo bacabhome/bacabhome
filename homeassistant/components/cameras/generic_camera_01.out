@@ -3,4 +3,5 @@
 platform: generic
 name: generic camera 01
 stream_source: !secret generic_camera_01
+framerate: 5
 still_image_url: !secret generic_camera_01_still_image_url
