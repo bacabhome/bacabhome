@@ -1,0 +1,26 @@
+# config file version
+apiVersion: 1
+
+datasources:
+- name: Home Assistant
+  type: influxdb
+  access: direct
+  orgId: 1
+  url: http://172.17.0.1:8086
+  password:
+  user: admin
+  database: home_assistant
+  basicAuth: false
+  isDefault: false
+  editable: true
+- name: Telegraf
+  type: influxdb
+  access: direct
+  orgId: 1
+  url: http://172.17.0.1:8086
+  password:
+  user: admin
+  database: telegraf
+  basicAuth: false
+  isDefault: false
+  editable: true
