@@ -1,0 +1,20 @@
+alias: 'Telegram Bacab Home Bot Status'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/status'
+action:
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: |
+               Hi There!
+
+               Server was last rebooted {{ (as_timestamp(states.sensor.last_boot.state) | timestamp_custom("%b %d %Y", true)) }}.
+
+               Mean temperature inside home is {{ states.sensor.home_mean_temperature.state }}.
+               Mean humidity inside home is {{ states.sensor.home_mean_humidity.state }}.
+               Frontyard temperature is {{ states.sensor.hue_outdoor_motion_sensor_01_temperature.state }}.
+
+               Group all lights state is {{ states.group.all_lights.state }}.
