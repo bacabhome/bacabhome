@@ -3,7 +3,7 @@ trigger:
   - platform: state
     entity_id: person.balam
     from: 'home'
-    to: 'away'
+    to: 'not_home'
     for:
       hours: 18
       minutes: 0

@@ -2,7 +2,7 @@ alias: Family Mode Vacation Off
 trigger:
   - platform: state
     entity_id: person.balam
-    from: 'away'
+    from: 'not_home'
     to: 'home'
 action:
   - service: homeassistant.turn_off
