@@ -44,15 +44,3 @@ services:
     network_mode: host
     devices:
       - /dev
-
-  openvino-2018r5:
-    build:
-      context: ./openvino-2018r5/
-      dockerfile: Dockerfile.openvino-2018r5
-    image: xe1gyq/openvino-2018r5
-    container_name: ich-openvino-2018r5
-    environment:
-      - TZ=America/Mexico_City
-    network_mode: host
-    devices:
-      - /dev
