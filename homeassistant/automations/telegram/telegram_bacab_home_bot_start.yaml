@@ -11,6 +11,6 @@ action:
       message: 'commands'
       data:
         keyboard:
-          - '/ping, /weather'
-          - '/speak, /frontyard'
-          - '/alarm'
+          - '/status, /status'
+          - '/weather, speak'
+          - '/frontyard, /alarm'
