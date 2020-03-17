@@ -1,0 +1,9 @@
+alias: Family Mode Vacation Off
+initial_state: 'true'
+trigger:
+  - platform: template
+    entity_id: "{% if is_state(' device_tracker.life360_balam', 'home') %}true{% endif %}" 
+    for: "00:00:01"
+action:
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.family_mode_vacation
