@@ -2,7 +2,7 @@ FROM xe1gyq/opencv
 
 MAINTAINER Abraham Arce "xe1gyq@gmail.com"
 
-ARG OPENVINO=l_openvino_toolkit_p_2019.3.376
+ARG OPENVINO=l_openvino_toolkit_p_2020.1.023
 ARG OPENVINO_INSTALL=/opt/intel/openvino
 
 ENV TIMEZONE America/Mexico_City
@@ -43,7 +43,7 @@ WORKDIR /home/user
 RUN chown user /home/user
 USER user
 
-RUN wget -O /tmp/${OPENVINO}.tgz http://registrationcenter-download.intel.com/akdlm/irc_nas/16057/${OPENVINO}.tgz
+RUN wget -O /tmp/${OPENVINO}.tgz http://registrationcenter-download.intel.com/akdlm/irc_nas/16345/${OPENVINO}.tgz
 
 RUN cd /tmp/ && \
     tar xvf ${OPENVINO}.tgz && \
