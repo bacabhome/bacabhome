@@ -1,0 +1,11 @@
+alias: Wemo Insight 04 Current Power W Below For
+initial_state: 'true'
+trigger:
+  - platform: numeric_state
+    entity_id: sensor.wemo_insight_04_current_power_w
+    below: '20'
+    for:
+      minutes: 5
+action:
+    service: switch.turn_off
+    entity_id: switch.wemo_insight_04

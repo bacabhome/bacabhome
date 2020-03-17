@@ -1,0 +1,13 @@
+alias: Doorbell_test
+initial_state: 'true'
+trigger:
+  - platform: event
+    event_type: 'birthday'
+condition:
+  - platform: time
+    at: "07:00:00"
+action:
+  - service: camera.play_stream
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      media_player: media_player.eek

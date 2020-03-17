@@ -1,18 +1,18 @@
-alias: Night Hue Motion Sensor 02 Off
+alias: Night Hue Motion Sensor 02 On
 initial_state: 'true'
 trigger:
   platform: state
   entity_id: binary_sensor.hue_motion_sensor_02_motion
-  to: 'off'
+  to: 'on'
 condition:
   condition: and
   conditions:
     - condition: state
-      entity_id: light.hallway_ligh
-      state: 'on'
+      entity_id: light.hallway_light
+      state: 'off'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
 action:
-  service: light.turn_off
+  service: light.turn_on
   entity_id: light.hallway_light

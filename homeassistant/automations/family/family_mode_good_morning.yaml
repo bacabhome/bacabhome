@@ -1,4 +1,4 @@
-alias: Morning Family
+alias: Family Mode Good Morning
 initial_state: 'true'
 trigger: 
   - platform: time

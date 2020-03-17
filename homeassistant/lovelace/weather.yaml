@@ -81,6 +81,7 @@ cards:
     title: OpenVU
     show_header_toggle: false
     entities:
+      - entity: binary_sensor.protection_window
       - entity: sensor.current_ozone_level
       - entity: sensor.current_uv_index
       - entity: sensor.current_uv_level

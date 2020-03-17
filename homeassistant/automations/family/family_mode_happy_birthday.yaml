@@ -1,4 +1,4 @@
-alias: Happy Birthday
+alias: Family Mode Happy Birthday
 initial_state: 'true'
 trigger:
   - platform: event

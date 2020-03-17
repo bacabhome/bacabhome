@@ -25,7 +25,7 @@ action:
             caption: Who is there?
   - service: image_processing.scan
     data:
-      entity_id: image_processing.doods_mjpeg_camera_01
+      entity_id: image_processing.doods_ffmpeg_camera_01
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:

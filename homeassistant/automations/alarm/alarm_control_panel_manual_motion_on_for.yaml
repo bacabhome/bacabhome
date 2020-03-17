@@ -5,16 +5,16 @@ trigger:
   entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
   to: 'on'
   for:
-    seconds: 20
+    seconds: 30
 action:
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/motion_on_for.jpg'
+      filename: '/config/www/media/frontyard/alarm_motion_on_for.jpg'
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/frontyard/alarm_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data_template:
@@ -25,5 +25,5 @@ action:
       message: "This is it..."
       data:
         photo:
-          - file: '/config/www/media/frontyard/motion_on_for.jpg'
+          - file: '/config/www/media/frontyard/alarm_motion_on_for.jpg'
             caption: Who is there?
