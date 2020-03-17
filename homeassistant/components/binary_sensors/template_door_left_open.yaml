@@ -1,0 +1,12 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors: 
+  door_left_open:
+    friendly_name: "Template Door Left Open"
+    value_template: >-
+      {{ ( is_state('binary_sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_on_off', 'on')
+            or is_state('binary_sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_on_off', 'on')
+          ) and is_state('person.balam', 'home')
+            and is_state('input_boolean.family_mode_street','off') }}
+    device_class: safety
