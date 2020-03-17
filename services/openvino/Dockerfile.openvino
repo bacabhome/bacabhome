@@ -1,0 +1,77 @@
+FROM xe1gyq/opencv
+
+MAINTAINER Abraham Arce "xe1gyq@gmail.com"
+
+ARG OPENVINO=l_openvino_toolkit_p_2019.3.376
+ARG OPENVINO_INSTALL=/opt/intel/openvino
+
+ENV TIMEZONE America/Mexico_City
+USER root
+
+ENV DEBIAN_FRONTEND noninteractive
+
+WORKDIR /
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    wget \
+    unzip \
+    automake \
+    autoconf \
+    libtool \
+    make \
+    sudo \
+    cpio \
+    lsb-release \
+    python-pip \
+    pciutils \
+    vim && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install --upgrade \
+    pip
+
+RUN cd /tmp/ && \
+     wget --no-check-certificate https://github.com/libusb/libusb/archive/v1.0.22.zip && \
+     unzip v1.0.22.zip && cd libusb-1.0.22 && \
+     bash ./bootstrap.sh && \
+     bash ./configure --disable-udev --enable-shared && \
+     make -j4 && \
+     make install && \
+     rm -rf /tmp/*
+
+WORKDIR /home/user
+RUN chown user /home/user
+USER user
+
+RUN wget -O /tmp/${OPENVINO}.tgz http://registrationcenter-download.intel.com/akdlm/irc_nas/16057/${OPENVINO}.tgz
+
+RUN cd /tmp/ && \
+    tar xvf ${OPENVINO}.tgz && \
+    cd ${OPENVINO} && \
+    sed -i 's/decline/accept/g' silent.cfg && \
+    sudo ./install.sh --silent silent.cfg && \
+    cd ../ && \
+    rm -r ${OPENVINO}.tgz ${OPENVINO}/
+
+RUN sudo usermod -a -G video user && \
+    sudo usermod -a -G user user
+
+RUN cd $OPENVINO_INSTALL/install_dependencies/ && \
+    sudo -E ./install_openvino_dependencies.sh
+
+RUN echo "source $OPENVINO_INSTALL/bin/setupvars.sh" >> /home/user/.bashrc && \
+    /bin/bash -c "source /home/user/.bashrc" &
+
+RUN cd $OPENVINO_INSTALL/deployment_tools/model_optimizer/install_prerequisites && \
+    sudo ./install_prerequisites.sh
+
+RUN cd $OPENVINO_INSTALL/install_dependencies/ && \
+    sudo -E ./install_NEO_OCL_driver.sh
+
+RUN sudo apt autoremove -y && \
+    sudo rm -rf /home/user/${OPENVINO} /var/lib/apt/lists/*
+
+RUN cd $OPENVINO_INSTALL/deployment_tools/demo && \
+    ./demo_squeezenet_download_convert_run.sh
+
+CMD ["/bin/bash"]
