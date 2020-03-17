@@ -1,12 +1,12 @@
 # https://www.home-assistant.io/integrations/doods/
 
 platform: doods
-scan_interval: 3600
+scan_interval: 60
 url: !secret services_doods_url
 timeout: 60
 detector: default
 source:
-  - entity_id: camera.mjpeg_camera_01
+  - entity_id: camera.ffmpeg_camera_01
 file_out:
   - "/config/www/media/frontyard/doods_{{ camera_entity.split('.')[1] }}_latest.jpg"
   - "/config/www/media/frontyard/doods_{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"

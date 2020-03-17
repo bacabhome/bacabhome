@@ -1,4 +1,5 @@
 alias: Hue Outdoor Motion Sensor 01 On Doods
+initial_state: true
 trigger:
   - platform: state
     entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion

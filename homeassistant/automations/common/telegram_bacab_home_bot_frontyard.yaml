@@ -23,3 +23,15 @@ action:
         photo:
           - file: '/config/www/media/frontyard/frontyard_picture.jpg'
             caption: Who is there?
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.doods_mjpeg_camera_01
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Doods Frontyard Picture'
+      message: "Doods is it..."
+      data:
+        photo:
+          - file: '/config/www/media/frontyard/doods_ffmpeg_camera_01_latest.jpg'
+            caption: Person? Car? Truck?
