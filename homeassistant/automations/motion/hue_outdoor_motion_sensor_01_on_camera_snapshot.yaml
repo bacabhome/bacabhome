@@ -1,4 +1,4 @@
-alias: Hue Outdoor Motion Sensor 01 On Camera Snapshot
+alias: Hue Outdoor Motion Sensor 01 On Camera
 initial_state: true
 trigger:
   platform: state
@@ -8,8 +8,8 @@ action:
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/hue_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: camera.record
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/hue_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
