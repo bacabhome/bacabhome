@@ -14,5 +14,3 @@ confidence: 50
 labels:
   - name: person
     confidence: 60
-  - car
-  - truck
