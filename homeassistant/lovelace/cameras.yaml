@@ -6,7 +6,7 @@ panel: false
 cards:
 
   - type: entities
-    title: Controls
+    title: Cast
     show_header_toggle: false
     entities:
 
@@ -19,12 +19,17 @@ cards:
     title: Motion
     show_header_toggle: false
     entities:
+
       - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
         name: Hue Outdoor Motion Sensor 01
 
   - type: vertical-stack
     cards:
 
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_camera_01_doods
+        show_state: false
       - type: picture-entity
         title: Last Person Seen
         entity: camera.local_file_camera_02_doods

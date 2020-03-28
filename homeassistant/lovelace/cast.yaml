@@ -5,6 +5,16 @@ id: cast
 cards:
 
   - type: entities
+    title: Cameras
+    show_header_toggle: false
+    entities:
+
+      - entity: input_boolean.ffmpeg_camera_01_cast
+        name: Camera 01 Cast
+      - entity: input_boolean.ffmpeg_camera_02_cast
+        name: Camera 02 Cast
+
+  - type: entities
     title: Eek
     show_header_toggle: false
     entities:
