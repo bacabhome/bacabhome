@@ -1,4 +1,4 @@
-alias: Alarm Control Panel Manual Armed Home Triggered
+alias: Alarm Manual Armed Night Triggered
 initial_state: 'true'
 trigger:
   - platform: state
@@ -15,8 +15,8 @@ trigger:
     to: 'on'
 condition:
   - condition: state
-    entity_id: alarm_control_panel.alarm_control_panel_manual
-    state: armed_home
+    entity_id: alarm_control_panel.alarm_manual
+    state: armed_night
 action:
   - service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm_control_panel_manual
+    entity_id: alarm_control_panel.alarm_manual

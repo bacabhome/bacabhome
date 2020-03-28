@@ -1,6 +1,8 @@
+# https://www.home-assistant.io/integrations/manual/
+
 platform: manual
-name: Alarm Control Panel Manual
-code: !secret alarm_control_panel_manual_code
+name: Alarm Manual
+code: !secret alarm_manual_code
 pending_time: 30
 delay_time: 20
 trigger_time: 4

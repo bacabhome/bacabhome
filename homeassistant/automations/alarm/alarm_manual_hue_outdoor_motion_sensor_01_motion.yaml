@@ -1,4 +1,4 @@
-alias: Alarm Control Panel Manual Motion On For
+alias: Alarm Manual Hue Outdoor Motion Sensor 01 Motion
 initial_state: 'true'
 trigger:
   platform: state
@@ -10,11 +10,11 @@ action:
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/alarm_motion_on_for.jpg'
+      filename: '/config/www/media/frontyard/alarm_ffmpeg_camera_01.jpg'
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/alarm_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/frontyard/alarm_ffmpeg_camera_01_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data_template:
@@ -25,5 +25,5 @@ action:
       message: "This is it..."
       data:
         photo:
-          - file: '/config/www/media/frontyard/alarm_motion_on_for.jpg'
+          - file: '/config/www/media/frontyard/alarm_ffmpeg_camera_01.jpg'
             caption: Who is there?

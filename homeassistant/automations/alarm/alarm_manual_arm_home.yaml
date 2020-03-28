@@ -1,8 +1,8 @@
-alias: Alarm Control Panel Manual Arm Home
+alias: Alarm Manual Arm Home
 initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.alarm_control_panel_manual
+    entity_id: alarm_control_panel.alarm_manual
     to: 'armed_home'
 action:
   - service: notify.telegram_bacab_home_bot

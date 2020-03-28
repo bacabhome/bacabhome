@@ -112,7 +112,7 @@ cards:
 
   - type: alarm-panel
     name: Alarm
-    entity: alarm_control_panel.alarm_control_panel_manual
+    entity: alarm_control_panel.alarm_manual
     states:
       - arm_home
       - arm_away
