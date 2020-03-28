@@ -8,3 +8,20 @@ action:
   - service: notify.telegram_bacab_home_bot
     data_template:
       message: "Alarm! Disarmed {{ states('sensor.date_time') }}"
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.amigo
+    data:
+      volume_level: 0.80
+  - service: media_player.play_media
+    entity_id: media_player.amigo
+    data:
+      media_content_id: "http://smrtho.us/storage/startup.mp3"
+      media_content_type: "audio/mp3"
+  - delay: '00:00:01'
+  - service: tts.google_translate_say
+    entity_id: media_player.amigo
+    data_template:
+      message: >-
+                  'Alarma desarmada. Alexa, hola'
+      language: 'es'
