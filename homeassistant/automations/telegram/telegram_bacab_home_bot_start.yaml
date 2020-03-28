@@ -13,4 +13,5 @@ action:
         keyboard:
           - '/ping, /status'
           - '/weather, /speak'
-          - '/frontyard, /alarm'
+          - '/house, /frontyard'
+          - '/alarm'

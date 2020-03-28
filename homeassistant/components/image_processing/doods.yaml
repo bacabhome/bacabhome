@@ -7,9 +7,10 @@ timeout: 60
 detector: default
 source:
   - entity_id: camera.ffmpeg_camera_01
+  - entity_id: camera.ffmpeg_camera_02
 file_out:
-  - "/config/www/media/frontyard/doods_{{ camera_entity.split('.')[1] }}_latest.jpg"
-  - "/config/www/media/frontyard/doods_{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+  - "/config/www/media/doods/{{ camera_entity.split('.')[1] }}_latest.jpg"
+  - "/config/www/media/doods/{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
 confidence: 50
 labels:
   - name: person

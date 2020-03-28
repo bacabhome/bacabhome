@@ -1,31 +1,31 @@
-alias: 'Telegram Bacab Home Bot Frontyard'
+alias: 'Telegram Bacab Home Bot House'
 hide_entity: true
 trigger:
   platform: event
   event_type: telegram_command
   event_data:
-    command: '/frontyard'
+    command: '/house'
 action:
   - service: camera.snapshot
     data:
-      entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/snapshot.jpg'
+      entity_id: camera.ffmpeg_camera_02
+      filename: '/config/www/media/house/snapshot.jpg'
   - service: camera.snapshot
     data:
-      entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      entity_id: camera.ffmpeg_camera_02
+      filename: '/config/www/media/house/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'Frontyard Picture'
+      title: 'Home Picture'
       message: "This is it..."
       data:
         photo:
-          - file: '/config/www/media/frontyard/snapshot.jpg'
+          - file: '/config/www/media/house/snapshot.jpg'
             caption: Who is there?
   - service: image_processing.scan
     data:
-      entity_id: image_processing.doods_ffmpeg_camera_01
+      entity_id: image_processing.doods_ffmpeg_camera_02
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:
@@ -33,5 +33,5 @@ action:
       message: "Doods is it..."
       data:
         photo:
-          - file: '/config/www/media/doods/ffmpeg_camera_01_latest.jpg'
+          - file: '/config/www/media/doods/ffmpeg_camera_02_latest.jpg'
             caption: Last Person
