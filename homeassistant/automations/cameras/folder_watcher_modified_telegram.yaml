@@ -1,0 +1,19 @@
+alias: Folder Watcher Modified Telegram
+initial_state: 'false'
+trigger:
+- platform: event
+  event_type: folder_watcher
+  event_data:
+    event_type: modified
+action:
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Modified {{ trigger.event.data.file }} in {{ trigger.event.data.folder }}"
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Folder Watcher Modified Telegram'
+      message: "Here"
+      data:
+        photo:
+          - file: "{{ trigger.event.data.path }}"
+            caption: Hi Event

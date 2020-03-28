@@ -33,5 +33,5 @@ action:
       message: "Doods is it..."
       data:
         photo:
-          - file: '/config/www/media/doods/ffmpeg_camera_02_latest.jpg'
+          - file: '/config/www/media/doods/doods_ffmpeg_camera_02_latest.jpg'
             caption: Last Person

@@ -15,46 +15,23 @@ cards:
       - entity: input_boolean.ffmpeg_camera_02_cast
         name: Camera 02 Cast
 
-  - type: vertical-stack
-    cards:
-
-      - type: entities
-        title: OpenVINO
-        show_header_toggle: false
-        entities:
-          - entity: switch.application_restricted_zone_notifier_cpp
-            name: Restricted Zone Notifier
-          - entity: switch.application_shopper_gaze_monitor_cpp
-            name: Shopper Gaze Monitor
-
-      - type: entities
-        title: Motion
-        show_header_toggle: false
-        entities:
-          - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
-            name: Hue Outdoor Motion Sensor 01
-          - entity: binary_sensor.application_restricted_zone_notifier_cpp
-            name: Restricted Zone Notifier
+  - type: entities
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
+        name: Hue Outdoor Motion Sensor 01
 
   - type: vertical-stack
     cards:
-
-      - type: markdown
-        content: >
-          ## Original Streams
 
       - type: picture-entity
-        title: MJPEG Camera 01
-        entity: camera.mjpeg_camera_01
+        title: Last Person Seen
+        entity: camera.local_file_camera_02_doods
         show_state: false
-        camera_view: live
 
   - type: vertical-stack
     cards:
-
-      - type: markdown
-        content: >
-          ## Computer Vision Applications
 
       - type: picture-entity
         title: FFMPEG Camera 01

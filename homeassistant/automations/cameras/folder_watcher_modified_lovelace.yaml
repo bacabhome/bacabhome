@@ -1,0 +1,16 @@
+alias: Folder Watcher Modified Lovelace
+initial_state: 'true'
+trigger:
+- platform: event
+  event_type: folder_watcher
+  event_data:
+    event_type: modified
+action:
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.local_file_camera_01_doods
+      file_path: /config/www/media/doods/doods_ffmpeg_camera_01_latest.jpg
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.local_file_camera_02_doods
+      file_path: /config/www/media/doods/doods_ffmpeg_camera_02_latest.jpg
