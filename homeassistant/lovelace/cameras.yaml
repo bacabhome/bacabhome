@@ -59,3 +59,8 @@ cards:
         entity: camera.ffmpeg_camera_01
         show_state: false
         camera_view: live
+      - type: picture-entity
+        title: FFMPEG Camera 02
+        entity: camera.ffmpeg_camera_02
+        show_state: false
+        camera_view: live
