@@ -25,3 +25,5 @@ action:
       message: >-
                   'Alarma desarmada. Alexa, hola'
       language: 'es'
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.family_mode_street

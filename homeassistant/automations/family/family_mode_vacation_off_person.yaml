@@ -5,5 +5,5 @@ trigger:
     from: 'not_home'
     to: 'home'
 action:
-  - service: homeassistant.turn_off
+  - service: input_boolean.turn_off
     entity_id: input_boolean.family_mode_vacation

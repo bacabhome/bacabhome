@@ -23,5 +23,7 @@ action:
     entity_id: media_player.amigo
     data_template:
       message: >-
-                  'Alarma armada, hasta pronto. Alexa, adiós'
+                  'Alarma armada. Alexa, hasta pronto'
       language: 'es'
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.family_mode_street

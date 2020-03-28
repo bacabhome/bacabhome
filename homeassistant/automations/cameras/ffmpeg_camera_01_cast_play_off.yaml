@@ -2,7 +2,7 @@ alias: FFmpeg Camera 01 Cast Play Off
 initial_state: 'true'
 trigger:
 - platform: state
-  entity_id: binary_sensor.ffmpeg_camera_01_cast
+  entity_id: input_boolean.ffmpeg_camera_01_cast
   from: 'on'
   to: 'off'
 action:
