@@ -5,15 +5,30 @@ id: Cameras
 panel: false
 cards:
 
-  - type: entities
-    title: Cast
-    show_header_toggle: false
+  - type: glance
+    title: Media
     entities:
 
       - entity: input_boolean.ffmpeg_camera_01_cast
-        name: Camera 01 Cast
+        name: Frontyard
+        tap_action:
+          action: toggle
       - entity: input_boolean.ffmpeg_camera_02_cast
-        name: Camera 02 Cast
+        name: House
+        tap_action:
+          action: toggle
+      - entity: input_boolean.amcrest_camera_01_cast
+        name: Amcrest
+        tap_action:
+          action: toggle
+      - entity: script.frontyard
+        name: Frontyard
+        tap_action:
+          action: toggle
+      - entity: script.house
+        name: House
+        tap_action:
+          action: toggle
 
   - type: entities
     title: Motion
@@ -22,6 +37,10 @@ cards:
 
       - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
         name: Hue Outdoor Motion Sensor 01
+      - entity: binary_sensor.hue_motion_sensor_02_motion
+        name: Hue Motion Sensor 02
+      - entity: binary_sensor.amcrest_camera_01_motion_detected
+        name: Amcrest Camera 01 Motion
 
   - type: vertical-stack
     cards:
@@ -33,6 +52,10 @@ cards:
       - type: picture-entity
         title: Last Person Seen
         entity: camera.local_file_camera_02_doods
+        show_state: false
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_amcrest_camera_01_doods
         show_state: false
 
   - type: vertical-stack
@@ -46,5 +69,10 @@ cards:
       - type: picture-entity
         title: FFMPEG Camera 02
         entity: camera.ffmpeg_camera_02
+        show_state: false
+        camera_view: live
+      - type: picture-entity
+        title: Amcrest Camera 01
+        entity: camera.amcrest_camera_01
         show_state: false
         camera_view: live

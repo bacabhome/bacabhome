@@ -1,0 +1,31 @@
+frontyard:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/frontyard/snapshot.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Frontyard Picture'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/frontyard/snapshot.jpg'
+            caption: Who is there?
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.doods_ffmpeg_camera_01
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Doods Frontyard Picture'
+      message: "Doods is it..."
+      data:
+        photo:
+          - file: '/config/www/media/doods/doods_ffmpeg_camera_01_latest.jpg'
+            caption: Last Person

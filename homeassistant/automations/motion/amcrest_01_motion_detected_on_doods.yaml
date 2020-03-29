@@ -1,0 +1,10 @@
+alias: Amcrest 01 Motion Detected On Doods
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.amcrest_camera_01_motion_detected
+    to: 'on'
+action:
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.doods_amcrest_camera_01

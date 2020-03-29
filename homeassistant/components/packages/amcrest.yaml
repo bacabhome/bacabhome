@@ -1,0 +1,14 @@
+# https://www.home-assistant.io/integrations/amcrest/
+
+amcrest:
+  - host: !secret amcrest_01_host
+    username: !secret amcrest_01_username
+    password: !secret amcrest_01_password
+    name: Amcrest Camera 01
+    resolution: high
+    stream_source: rtsp
+    binary_sensors:
+      - motion_detected
+      - online
+    sensors:
+      - sdcard

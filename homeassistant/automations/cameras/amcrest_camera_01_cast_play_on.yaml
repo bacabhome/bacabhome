@@ -1,0 +1,12 @@
+alias: Amcrest Camera 01 Cast Play On
+initial_state: 'true'
+trigger:
+- platform: state
+  entity_id: input_boolean.amcrest_camera_01_cast
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.play_stream
+    data:
+      entity_id: camera.amcrest_camera_01
+      media_player: media_player.eek

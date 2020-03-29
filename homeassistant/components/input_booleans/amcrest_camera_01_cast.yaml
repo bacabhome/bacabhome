@@ -1,0 +1,4 @@
+amcrest_camera_01_cast:
+  name: Amcrest Camera 01 Cast
+  initial: off
+  icon: mdi:cast

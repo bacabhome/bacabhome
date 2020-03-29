@@ -1,0 +1,3 @@
+script.house:
+  icon: mdi:telegram
+  friendly_name: House

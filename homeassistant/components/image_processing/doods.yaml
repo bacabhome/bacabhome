@@ -8,6 +8,7 @@ detector: default
 source:
   - entity_id: camera.ffmpeg_camera_01
   - entity_id: camera.ffmpeg_camera_02
+  - entity_id: camera.amcrest_camera_01
 file_out:
   - "/config/www/media/doods/doods_{{ camera_entity.split('.')[1] }}_latest.jpg"
   - "/config/www/media/doods/doods_{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"

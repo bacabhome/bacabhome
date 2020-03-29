@@ -7,3 +7,4 @@ cameras:
     - camera.ffmpeg_camera_02
     - camera.mjpeg_camera_01
     - camera.mjpeg_camera_02
+    - camera.amcrest_camera_01

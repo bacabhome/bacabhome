@@ -14,3 +14,7 @@ action:
     data_template:
       entity_id: camera.local_file_camera_02_doods
       file_path: /config/www/media/doods/doods_ffmpeg_camera_02_latest.jpg
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.local_file_amcrest_camera_01_doods
+      file_path: /config/www/media/doods/doods_amcrest_camera_01_latest.jpg
