@@ -1,0 +1,44 @@
+title: Pedestrian
+icon: mdi:account-group
+path: pedestrian
+id: Pedestrian
+panel: false
+cards:
+
+  - type: vertical-stack
+    cards:
+
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_ffmpeg_camera_01_doods
+        show_state: false
+        name: Ffmpeg Camera 01
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_ffmpeg_camera_02_doods
+        show_state: false
+        name: Ffmpeg Camera 02
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_amcrest_camera_01_doods
+        show_state: false
+        name: Amcrest Camera 01
+
+  - type: vertical-stack
+    cards:
+
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_ffmpeg_camera_01
+        show_state: false
+        name: Ffmpeg Camera 01
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_ffmpeg_camera_02
+        show_state: false
+        name: Ffmpeg Camera 02
+      - type: picture-entity
+        title: Last Person Seen
+        entity: camera.local_file_amcrest_camera_01
+        show_state: false
+        name: Amcrest Camera 01

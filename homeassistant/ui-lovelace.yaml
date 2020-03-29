@@ -14,6 +14,7 @@ views:
   - !include lovelace/plants.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/cameras.yaml
+  - !include lovelace/pedestrian.yaml
   - !include lovelace/server.yaml
   - !include lovelace/users.yaml
   - !include lovelace/finance.yaml

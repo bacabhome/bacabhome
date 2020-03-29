@@ -1,6 +1,6 @@
 # https://www.home-assistant.io/components/mjpeg/
 
 platform: mjpeg
-name: mjpeg camera 01
+name: Mjpeg Camera 01
 mjpeg_url: !secret mjpeg_camera_01
 still_image_url: !secret mjpeg_camera_01_still_image

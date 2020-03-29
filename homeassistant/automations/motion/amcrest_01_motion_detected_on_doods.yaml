@@ -5,6 +5,10 @@ trigger:
     entity_id: binary_sensor.amcrest_camera_01_motion_detected
     to: 'on'
 action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.amcrest_camera_01
+      filename: '/config/www/media/cameras/amcrest_camera_01.jpg'
   - service: image_processing.scan
     data:
       entity_id: image_processing.doods_local_file_amcrest_camera_01

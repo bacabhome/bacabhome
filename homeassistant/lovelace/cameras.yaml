@@ -5,35 +5,6 @@ id: Cameras
 panel: false
 cards:
 
-  - type: glance
-    title: Media
-    entities:
-
-      - entity: input_boolean.ffmpeg_camera_01_cast
-        name: Frontyard
-        tap_action:
-          action: toggle
-      - entity: input_boolean.ffmpeg_camera_02_cast
-        name: House
-        tap_action:
-          action: toggle
-      - entity: input_boolean.amcrest_camera_01_cast
-        name: Amcrest
-        tap_action:
-          action: toggle
-      - entity: script.frontyard
-        name: Frontyard
-        tap_action:
-          action: toggle
-      - entity: script.house
-        name: House
-        tap_action:
-          action: toggle
-      - entity: script.amcrest
-        name: Amcrest
-        tap_action:
-          action: toggle
-
   - type: entities
     title: Motion
     show_header_toggle: false
@@ -46,37 +17,65 @@ cards:
       - entity: binary_sensor.amcrest_camera_01_motion_detected
         name: Amcrest Camera 01 Motion
 
-  - type: vertical-stack
-    cards:
+  - type: picture-entity
+    title: FFMPEG Camera 01
+    entity: camera.ffmpeg_camera_01
+    show_state: false
+    camera_view: live
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.ffmpeg_camera_01
+    double_tap_action:
+      action: call-service
+      service: input_boolean.turn_on
+      service_data:
+        entity_id: input_boolean.ffmpeg_camera_01_cast
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:
+        entity_id: input_boolean.ffmpeg_camera_01_cast
 
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_ffmpeg_camera_01_doods
-        show_state: false
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_ffmpeg_camera_02_doods
-        show_state: false
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_amcrest_camera_01_doods
-        show_state: false
+  - type: picture-entity
+    title: FFMPEG Camera 02
+    entity: camera.ffmpeg_camera_02
+    show_state: false
+    camera_view: live
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.ffmpeg_camera_02
+    double_tap_action:
+      action: call-service
+      service: input_boolean.turn_on
+      service_data:
+        entity_id: input_boolean.ffmpeg_camera_02_cast
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:            
+        entity_id: input_boolean.ffmpeg_camera_02_cast
 
-  - type: vertical-stack
-    cards:
-
-      - type: picture-entity
-        title: FFMPEG Camera 01
-        entity: camera.ffmpeg_camera_01
-        show_state: false
-        camera_view: live
-      - type: picture-entity
-        title: FFMPEG Camera 02
-        entity: camera.ffmpeg_camera_02
-        show_state: false
-        camera_view: live
-      - type: picture-entity
-        title: Amcrest Camera 01
-        entity: camera.amcrest_camera_01
-        show_state: false
-        camera_view: live
+  - type: picture-entity
+    title: Amcrest Camera 01
+    entity: camera.amcrest_camera_01
+    show_state: false
+    camera_view: live
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.amcrest_camera_01
+    double_tap_action:
+      action: call-service
+      service: input_boolean.turn_on
+      service_data:
+        entity_id: input_boolean.amcrest_camera_01_cast
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:            
+        entity_id: input_boolean.ffmpeg_camera_02_cast

@@ -10,20 +10,19 @@ action:
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}.jpg'
+      filename: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_ffmpeg_camera_01
       filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
-  - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data_template:
       message: "Warning! Motion on threshold exceeded! {{ states('sensor.date_time') }}"
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'Motion On For Picture'
+      title: 'Motion On For 30 Seconds'
       message: "This is it..."
       data:
         photo:
           - file: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}.jpg'
-            caption: Who is there?
+            caption: 30 seconds! via Ffmpeg Camera 01

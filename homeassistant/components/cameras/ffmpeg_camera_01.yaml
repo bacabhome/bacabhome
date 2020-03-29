@@ -1,7 +1,7 @@
 # https://www.home-assistant.io/components/camera.ffmpeg/
 
 platform: ffmpeg
-name: ffmpeg camera 01
+name: Ffmpeg Camera 01
 input: !secret ffmpeg_camera_01
 extra_arguments: '-vf "scale=384:216"'
 #extra_arguments: '-vf "scale=384:216" -fflags nobuffer -probesize 1024 -framedrop'
