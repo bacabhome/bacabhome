@@ -22,19 +22,14 @@ cards:
     entity: camera.ffmpeg_camera_01
     show_state: false
     camera_view: live
-    tap_action:
+    double_tap_action:
       action: call-service
       service: script.turn_on
       service_data:
         entity_id: script.ffmpeg_camera_01
-    double_tap_action:
-      action: call-service
-      service: input_boolean.turn_on
-      service_data:
-        entity_id: input_boolean.ffmpeg_camera_01_cast
     hold_action:
       action: call-service
-      service: input_boolean.turn_off
+      service: input_boolean.toggle
       service_data:
         entity_id: input_boolean.ffmpeg_camera_01_cast
 
@@ -43,19 +38,14 @@ cards:
     entity: camera.ffmpeg_camera_02
     show_state: false
     camera_view: live
-    tap_action:
+    double_tap_action:
       action: call-service
       service: script.turn_on
       service_data:
         entity_id: script.ffmpeg_camera_02
-    double_tap_action:
-      action: call-service
-      service: input_boolean.turn_on
-      service_data:
-        entity_id: input_boolean.ffmpeg_camera_02_cast
     hold_action:
       action: call-service
-      service: input_boolean.turn_off
+      service: input_boolean.toggle
       service_data:            
         entity_id: input_boolean.ffmpeg_camera_02_cast
 
@@ -64,18 +54,13 @@ cards:
     entity: camera.amcrest_camera_01
     show_state: false
     camera_view: live
-    tap_action:
+    double_tap_action:
       action: call-service
       service: script.turn_on
       service_data:
         entity_id: script.amcrest_camera_01
-    double_tap_action:
-      action: call-service
-      service: input_boolean.turn_on
-      service_data:
-        entity_id: input_boolean.amcrest_camera_01_cast
     hold_action:
       action: call-service
-      service: input_boolean.turn_off
+      service: input_boolean.toggle
       service_data:            
         entity_id: input_boolean.ffmpeg_camera_02_cast
