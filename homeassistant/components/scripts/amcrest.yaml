@@ -1,0 +1,31 @@
+amcrest:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.amcrest_camera_01
+      filename: '/config/www/media/cameras/amcrest_camera_01.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_amcrest_camera_01
+      filename: '/config/www/media/house/amcrest_camera_01_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Home Picture'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/cameras/amcrest_camera_01.jpg'
+            caption: Who is there? via Amcrest Camera 01
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.doods_local_file_amcrest_camera_01
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Doods Frontyard Picture'
+      message: "Doods is it..."
+      data:
+        photo:
+          - file: '/config/www/media/doods/doods_local_file_amcrest_camera_01.jpg'
+            caption: Last Person via Amcrest Camera 01

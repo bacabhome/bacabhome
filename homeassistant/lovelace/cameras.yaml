@@ -29,6 +29,10 @@ cards:
         name: House
         tap_action:
           action: toggle
+      - entity: script.amcrest
+        name: Amcrest
+        tap_action:
+          action: toggle
 
   - type: entities
     title: Motion
@@ -47,11 +51,11 @@ cards:
 
       - type: picture-entity
         title: Last Person Seen
-        entity: camera.local_file_camera_01_doods
+        entity: camera.local_file_ffmpeg_camera_01_doods
         show_state: false
       - type: picture-entity
         title: Last Person Seen
-        entity: camera.local_file_camera_02_doods
+        entity: camera.local_file_ffmpeg_camera_02_doods
         show_state: false
       - type: picture-entity
         title: Last Person Seen

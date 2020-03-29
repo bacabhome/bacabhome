@@ -13,7 +13,7 @@ action:
       filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}.jpg'
   - service: camera.snapshot
     data:
-      entity_id: camera.ffmpeg_camera_01
+      entity_id: camera.local_file_ffmpeg_camera_01
       filename: '/config/www/media/frontyard/motion_{{ trigger.from_state.attributes.friendly_name }}_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot

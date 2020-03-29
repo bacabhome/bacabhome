@@ -3,23 +3,23 @@ frontyard:
   - service: camera.snapshot
     data:
       entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/snapshot.jpg'
+      filename: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
   - service: camera.snapshot
     data:
-      entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      entity_id: camera.local_file_ffmpeg_camera_01
+      filename: '/config/www/media/house/ffmpeg_camera_01_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'Frontyard Picture'
+      title: 'Home Picture'
       message: "This is it..."
       data:
         photo:
-          - file: '/config/www/media/frontyard/snapshot.jpg'
-            caption: Who is there?
+          - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
+            caption: Who is there? via Ffmpeg Camera 01
   - service: image_processing.scan
     data:
-      entity_id: image_processing.doods_ffmpeg_camera_01
+      entity_id: image_processing.doods_local_file_ffmpeg_camera_01
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:
@@ -27,5 +27,5 @@ frontyard:
       message: "Doods is it..."
       data:
         photo:
-          - file: '/config/www/media/doods/doods_ffmpeg_camera_01_latest.jpg'
-            caption: Last Person
+          - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
+            caption: Last Person via Ffmpeg Camera 01
