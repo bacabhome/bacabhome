@@ -2,7 +2,6 @@ alias: 'Family Mode Vacation On'
 trigger:
   - platform: state
     entity_id: person.balam
-    from: 'home'
     to: 'not_home'
     for:
       hours: 18
