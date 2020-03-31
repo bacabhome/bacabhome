@@ -2,7 +2,6 @@ alias: Family Mode Vacation Off
 trigger:
   - platform: state
     entity_id: person.balam
-    from: 'not_home'
     to: 'home'
 action:
   - service: input_boolean.turn_off
