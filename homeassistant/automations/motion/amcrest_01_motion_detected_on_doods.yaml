@@ -2,7 +2,7 @@ alias: Amcrest 01 Motion Detected On Doods
 initial_state: true
 trigger:
   - platform: state
-    entity_id: binary_sensor.amcrest_camera_01_motion_detected
+    entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
     to: 'on'
 action:
   - service: camera.snapshot
