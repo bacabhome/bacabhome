@@ -17,4 +17,4 @@ action:
   - service: local_file_update_file_path
     data_template:
       entity_id: camera.local_file_amcrest_camera_01_doods
-      file_path: /config/www/media/doods/dood_local_file_amcrest_camera_01.jpg
+      file_path: /config/www/media/doods/doods_local_file_amcrest_camera_01.jpg
