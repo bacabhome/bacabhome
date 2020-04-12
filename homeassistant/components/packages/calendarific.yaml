@@ -1,0 +1,5 @@
+# https://github.com/pinkywafer/Calendarific
+
+calendarific:
+  api_key: !secret calendarific_api_key
+  country: MX

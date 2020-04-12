@@ -23,6 +23,15 @@ cards:
      - entity: birthday.balam
        name: Balam
 
+  - type: glance
+    title: Holidays
+    show_header_toggle: false
+    entities:
+     - entity: sensor.calendarific_new_years_day
+       name: New Year
+     - entity: sensor.calendarific_day_of_the_holy_kings
+       name: Holy Kings
+
   - type: entities
     title: Family
     show_header_toggle: false

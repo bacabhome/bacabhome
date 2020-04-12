@@ -1,0 +1,9 @@
+# https://calendarific.com/holidays/2020/mx
+
+platform: calendarific
+holiday: Day of the Holy Kings
+name: Calendarific Day of the Holy Kings
+icon_normal: mdi:calendar-blank
+icon_today: mdi:calendar-star
+days_as_soon: 15
+icon_soon: mdi:calendar
