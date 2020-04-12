@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/sensor.statistics/
+
+platform: statistics
+entity_id: sensor.worldwide_coronavirus_confirmed
+name: Statistics Worldwide Coronavirus Confirmed

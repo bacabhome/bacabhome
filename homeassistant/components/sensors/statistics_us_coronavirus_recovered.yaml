@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/sensor.statistics/
+
+platform: statistics
+entity_id: sensor.us_coronavirus_recovered
+name: Statistics US Coronavirus Recovered

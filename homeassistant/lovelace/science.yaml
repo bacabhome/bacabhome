@@ -5,6 +5,84 @@ id: Science
 cards:
 
   - type: entities
+    title: Coronavirus Mexico
+    show_header_toggle: false
+    entities:
+      - entity: sensor.mexico_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.mexico_coronavirus_current
+        name: Current
+      - entity: sensor.mexico_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.mexico_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
+    title: Coronavirus Worlwide
+    show_header_toggle: false
+    entities:
+      - entity: sensor.worldwide_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.worldwide_coronavirus_current
+        name: Current
+      - entity: sensor.worldwide_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.worldwide_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
+    title: Coronavirus US
+    show_header_toggle: false
+    entities:
+      - entity: sensor.us_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.us_coronavirus_current
+        name: Current
+      - entity: sensor.us_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.us_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
+    title: Statistics Coronavirus Mexico
+    show_header_toggle: false
+    entities:
+      - entity: sensor.statistics_mexico_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.statistics_mexico_coronavirus_current
+        name: Current
+      - entity: sensor.statistics_mexico_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.statistics_mexico_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
+    title: Statistics Coronavirus Worlwide
+    show_header_toggle: false
+    entities:
+      - entity: sensor.statistics_worldwide_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.statistics_worldwide_coronavirus_current
+        name: Current
+      - entity: sensor.statistics_worldwide_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.statistics_worldwide_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
+    title: Statistics Coronavirus US
+    show_header_toggle: false
+    entities:
+      - entity: sensor.statistics_us_coronavirus_confirmed
+        name: Confirmed
+      - entity: sensor.statistics_us_coronavirus_current
+        name: Current
+      - entity: sensor.statistics_us_coronavirus_deaths
+        name: Deaths
+      - entity: sensor.statistics_us_coronavirus_recovered
+        name: Recovered
+
+  - type: entities
     title: SpaceX
     show_header_toggle: false
     entities:

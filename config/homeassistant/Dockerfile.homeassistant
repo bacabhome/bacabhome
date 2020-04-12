@@ -1,4 +1,4 @@
-FROM  homeassistant/home-assistant
+FROM  homeassistant/home-assistant:dev
 
 MAINTAINER Abraham Arce "xe1gyq@gmail.com"
 

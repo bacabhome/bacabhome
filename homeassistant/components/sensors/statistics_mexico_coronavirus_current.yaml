@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/sensor.statistics/
+
+platform: statistics
+entity_id: sensor.mexico_coronavirus_current
+name: Statistics Mexico Coronavirus Current
