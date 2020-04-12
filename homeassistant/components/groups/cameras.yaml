@@ -1,5 +1,4 @@
 cameras:
-  view: true
   icon: mdi:cctv
   name: Cameras
   entities:
