@@ -1,5 +1,4 @@
 binary_sensors:
-  view: true
   icon: mdi:toggle-switch
   name: Binary Sensors
   entities:
