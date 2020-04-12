@@ -1,0 +1,19 @@
+alias: Hue Outdoor Motion Sensor 01 On Ffmpeg Camera 01
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
+    to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.doods_local_file_ffmpeg_camera_01
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_ffmpeg_camera_01
+      filename: '/config/www/media/frontyard/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+
