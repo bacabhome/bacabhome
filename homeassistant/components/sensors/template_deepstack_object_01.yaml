@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/components/template
+
+platform: template
+sensors:
+  deepstack_object_01_person:
+    friendly_name: DeepStack Object 01 Person
+    value_template: "{{ states.image_processing.deepstack_object_01.attributes.summary['person'] }}"
+  deepstack_object_01_dog:
+    friendly_name: DeepStack Object 01 Dog
+    value_template: "{{ states.image_processing.deepstack_object_01.attributes.summary['dog'] }}"

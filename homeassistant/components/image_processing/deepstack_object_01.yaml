@@ -1,0 +1,15 @@
+# https://www.home-assistant.io/integrations/doods/
+
+platform: deepstack_object
+ip_address: !secret deepstack_object_01_ip_address
+port: !secret deepstack_object_01_port
+api_key: !secret deepstack_object_01_api_key
+scan_interval: 30
+save_file_folder: /config/www/media/deepstack/
+save_timestamped_file: True
+target:
+  - person
+  - dog
+source:
+  - entity_id: camera.mjpeg_camera_01
+    name: deepstack_object_01
