@@ -1,5 +1,4 @@
 weblinks:
-  view: true
   icon: mdi:web
   name: Web Links
   entities:

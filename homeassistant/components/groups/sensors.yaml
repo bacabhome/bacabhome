@@ -1,5 +1,4 @@
 sensors:
-  view: true
   icon: mdi:chart-bar
   name: Sensors
   entities:

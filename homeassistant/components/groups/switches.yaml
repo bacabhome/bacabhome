@@ -1,5 +1,4 @@
 switches:
-  view: true
   icon: mdi:switch
   name: Switches
   entities:

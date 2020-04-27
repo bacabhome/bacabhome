@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/integrations/local_file/
+
+platform: local_file
+name: Local File DeepStack Object 01
+file_path: /config/www/media/deepstack/deepstack_object_01_latest_person.jpg
