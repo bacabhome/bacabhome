@@ -1,0 +1,24 @@
+# https://www.home-assistant.io/integrations/group/
+
+upstairs_lights:
+  name: Upstairs Lights
+  entities:
+    - light.color_light
+    - light.dad_bedroom
+    - light.dad_bedroom_light
+    - light.entertainment_area
+    - light.hallway
+    - light.hallway_light
+    - light.mobile_room
+    - light.mobile_room_light
+    - light.mom_bathroom
+    - light.mom_bathroom_light
+    - light.mom_bedroom
+    - light.mom_bedroom_light
+    - light.princess_bathroom
+    - light.princess_bathroom_light
+    - light.princess_bedroom
+    - light.princess_bedroom_light
+    - light.table_light
+    - light.television_room
+    - light.television_room_light
