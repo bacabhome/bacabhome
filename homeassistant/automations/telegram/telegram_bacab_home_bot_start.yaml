@@ -15,4 +15,5 @@ action:
           - '/weather, /speak'
           - '/house, /frontyard'
           - '/alarm, /lastperson'
-          - '/amcrest'
+          - '/amcrest, /dslperson'
+          - '/dsldog, /dslcar'

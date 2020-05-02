@@ -1,5 +1,5 @@
 alias: Object Detected DeepStack Object 01 Car
-initial_state: true
+initial_state: false
 trigger:
   - platform: event
     event_type: deepstack.object_detected

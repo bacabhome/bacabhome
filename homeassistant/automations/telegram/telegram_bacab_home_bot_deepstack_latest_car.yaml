@@ -1,0 +1,10 @@
+alias: 'Telegram Bacab Home Bot Deepstack Latest Car'
+hide_entity: true
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/dslcar'
+action:
+  - service: script.turn_on
+    entity_id: script.deepstack_object_01_latest_car

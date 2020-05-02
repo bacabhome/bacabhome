@@ -8,7 +8,6 @@ scan_interval: 3600
 save_file_folder: /config/www/media/deepstack/
 save_timestamped_file: True
 target:
-  - car
   - person
   - dog
 source:

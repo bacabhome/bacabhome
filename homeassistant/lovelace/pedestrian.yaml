@@ -18,32 +18,32 @@ cards:
     cards:
 
       - type: picture-entity
-        title: Last Person Seen
+        title: Lastest Person Doods
         entity: camera.local_file_ffmpeg_camera_01_doods
         show_state: false
-        name: Last Person Ffmpeg Camera 01
+        name: Last Person Doods
 
       - type: picture-glance
-        title: Last Person Seen
+        title: Lastest Person DeepStack
         camera_image: camera.local_file_deepstack_object_01_person
         show_state: false
-        name: Last Person DeepStack Object 01 Person
+        name: Latest Person DeepStack Object 01 Person
         entities:
           - sensor.deepstack_object_01_person
 
       - type: picture-glance
-        title: Last Dog Seen
+        title: Lastest Dog DeepStack
         camera_image: camera.local_file_deepstack_object_01_dog
         show_state: false
-        name: Last Person DeepStack Object 01 Dog
+        name: Latest Person DeepStack Object 01 Dog
         entities:
           - sensor.deepstack_object_01_dog
 
       - type: picture-glance
-        title: Last Car Seen
+        title: Lastest Car DeepStack
         camera_image: camera.local_file_deepstack_object_01_car
         show_state: false
-        name: Last Person DeepStack Object 01 Car
+        name: Latest Person DeepStack Object 01 Car
         entities:
           - sensor.deepstack_object_01_car
 

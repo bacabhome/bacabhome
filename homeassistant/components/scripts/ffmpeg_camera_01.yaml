@@ -35,7 +35,7 @@ ffmpeg_camera_01:
       message: "Deepstack is it..."
       data:
         photo:
-          - file: '/config/www/media/deepstack/deepstack_object_01_latest_car.jpg'
+          - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'
             caption: Last X via Ffmpeg Camera 01
   - service: camera.snapshot
     data:
