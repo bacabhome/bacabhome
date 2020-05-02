@@ -4,6 +4,7 @@ amcrest_camera_01:
     data:
       entity_id: camera.amcrest_camera_01
       filename: '/config/www/media/cameras/amcrest_camera_01.jpg'
+  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Picture'
@@ -15,6 +16,7 @@ amcrest_camera_01:
   - service: image_processing.scan
     data:
       entity_id: image_processing.doods_local_file_amcrest_camera_01
+  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Doods'
@@ -23,6 +25,7 @@ amcrest_camera_01:
         photo:
           - file: '/config/www/media/doods/doods_local_file_amcrest_camera_01.jpg'
             caption: Last Person via Amcrest Camera 01
+  - delay: '00:00:01'
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_amcrest_camera_01

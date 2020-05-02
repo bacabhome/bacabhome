@@ -4,6 +4,7 @@ ffmpeg_camera_01:
     data:
       entity_id: camera.ffmpeg_camera_01
       filename: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
+  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Picture'
@@ -15,6 +16,7 @@ ffmpeg_camera_01:
   - service: image_processing.scan
     data:
       entity_id: image_processing.doods_local_file_ffmpeg_camera_01
+  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Doods'
@@ -23,6 +25,18 @@ ffmpeg_camera_01:
         photo:
           - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
             caption: Last Person via Ffmpeg Camera 01
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.deepstack_object_01
+  - delay: '00:00:01'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'DeepStack'
+      message: "Deepstack is it..."
+      data:
+        photo:
+          - file: '/config/www/media/deepstack/deepstack_object_01_latest_car.jpg'
+            caption: Last X via Ffmpeg Camera 01
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_ffmpeg_camera_01

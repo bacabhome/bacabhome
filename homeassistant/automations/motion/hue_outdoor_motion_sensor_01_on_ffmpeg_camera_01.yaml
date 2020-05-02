@@ -12,6 +12,9 @@ action:
   - service: image_processing.scan
     data:
       entity_id: image_processing.doods_local_file_ffmpeg_camera_01
+  - service: image_processing.scan
+    data:
+      entity_id: image_processing.deepstack_object_01
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_ffmpeg_camera_01
