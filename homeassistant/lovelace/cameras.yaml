@@ -32,35 +32,3 @@ cards:
       service: input_boolean.toggle
       service_data:
         entity_id: input_boolean.ffmpeg_camera_01_cast
-
-  - type: picture-entity
-    title: FFMPEG Camera 02
-    entity: camera.ffmpeg_camera_02
-    show_state: false
-    camera_view: live
-    double_tap_action:
-      action: call-service
-      service: script.turn_on
-      service_data:
-        entity_id: script.ffmpeg_camera_02
-    hold_action:
-      action: call-service
-      service: input_boolean.toggle
-      service_data:            
-        entity_id: input_boolean.ffmpeg_camera_02_cast
-
-  - type: picture-entity
-    title: Amcrest Camera 01
-    entity: camera.amcrest_camera_01
-    show_state: false
-    camera_view: live
-    double_tap_action:
-      action: call-service
-      service: script.turn_on
-      service_data:
-        entity_id: script.amcrest_camera_01
-    hold_action:
-      action: call-service
-      service: input_boolean.toggle
-      service_data:            
-        entity_id: input_boolean.ffmpeg_camera_02_cast

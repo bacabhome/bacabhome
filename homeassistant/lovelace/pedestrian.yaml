@@ -5,6 +5,15 @@ id: Pedestrian
 panel: false
 cards:
 
+  - type: entities
+    title: DeepStack
+    show_header_toggle: false
+    entities:
+
+      - entity: image_processing.deepstack_object_01
+        name: Object 01
+
+
   - type: vertical-stack
     cards:
 
@@ -14,17 +23,30 @@ cards:
         show_state: false
         name: Last Person Ffmpeg Camera 01
 
-      - type: picture-entity
+      - type: picture-glance
         title: Last Person Seen
-        entity: camera.local_file_ffmpeg_camera_02_doods
+        camera_image: camera.local_file_deepstack_object_01_person
         show_state: false
-        name: Last Person Ffmpeg Camera 02
+        name: Last Person DeepStack Object 01 Person
+        entities:
+          - sensor.deepstack_object_01_person
 
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_amcrest_camera_01_doods
+      - type: picture-glance
+        title: Last Dog Seen
+        camera_image: camera.local_file_deepstack_object_01_dog
         show_state: false
-        name: Last Person Amcrest Camera 01
+        name: Last Person DeepStack Object 01 Dog
+        entities:
+          - sensor.deepstack_object_01_dog
+
+      - type: picture-glance
+        title: Last Car Seen
+        camera_image: camera.local_file_deepstack_object_01_car
+        show_state: false
+        name: Last Person DeepStack Object 01 Car
+        entities:
+          - sensor.deepstack_object_01_car
+
 
   - type: vertical-stack
     cards:
@@ -43,31 +65,3 @@ cards:
           service_data:
             entity_id: script.ffmpeg_camera_01
 
-      - type: picture-glance
-        title: Last Picture
-        camera_image: camera.local_file_ffmpeg_camera_02
-        show_state: false
-        name: Last Picture Ffmpeg Camera 02
-        entities:
-          - binary_sensor.ping_binary_sensor_ffmpeg_camera_02
-          - binary_sensor.hue_outdoor_motion_sensor_01_motion
-        hold_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.ffmpeg_camera_02
-
-      - type: picture-glance
-        title: Last Picture
-        camera_image: camera.local_file_amcrest_camera_01
-        show_state: false
-        name: Last Picture Amcrest Camera 01
-        entities:
-          - binary_sensor.amcrest_camera_01_online
-          - binary_sensor.amcrest_camera_01_motion_detected
-          - binary_sensor.hue_outdoor_motion_sensor_01_motion
-        hold_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.amcrest_camera_01

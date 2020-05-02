@@ -11,10 +11,6 @@ cards:
 
       - entity: input_boolean.ffmpeg_camera_01_cast
         name: Camera 01 Cast
-      - entity: input_boolean.ffmpeg_camera_02_cast
-        name: Camera 02 Cast
-      - entity: input_boolean.amcrest_camera_01_cast
-        name: Amcrest Camera 01 Cast
 
   - type: entities
     title: Eek
