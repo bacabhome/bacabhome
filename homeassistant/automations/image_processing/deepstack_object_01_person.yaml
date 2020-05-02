@@ -1,0 +1,12 @@
+alias: Object Detected DeepStack Object 01 Person
+initial_state: true
+trigger:
+  - platform: event
+    event_type: deepstack.object_detected
+    event_data:
+      object: person
+action:
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      title: 'DeepStack Object 01'
+      message: "{{ trigger.event.data.object }} with confidence {{ trigger.event.data.confidence }}"
