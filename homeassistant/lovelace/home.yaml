@@ -59,22 +59,6 @@ cards:
     entities:
 
       - type: section
-        label: Last Person Seen
-
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_ffmpeg_camera_01_doods
-        show_state: false
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_ffmpeg_camera_02_doods
-        show_state: false
-      - type: picture-entity
-        title: Last Person Seen
-        entity: camera.local_file_amcrest_camera_01_doods
-        show_state: false
-
-      - type: section
         label: Environment
 
       - entity: sensor.dark_sky_hourly_summary
