@@ -1,0 +1,4 @@
+name: REST Anki Vector
+platform: rest
+resource: http://192.168.1.128:8013/api/say?text=
+method: POST
