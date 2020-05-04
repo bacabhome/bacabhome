@@ -2,8 +2,7 @@
 
 platform: here_travel_time
 name: HERE Travel Time Home To Work
-app_id: !secret here_travel_time_app_id
-app_code: !secret here_travel_time_app_code
+api_key: !secret here_travel_time_api_key
 origin_latitude: !secret here_travel_time_home_latitude
 origin_longitude: !secret here_travel_time_home_longitude
 destination_latitude: !secret here_travel_time_work_latitude
