@@ -1,0 +1,10 @@
+deepstack_object_01_latest_dog:
+  sequence:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'DeepStack'
+      message: "Deepstack Object 01"
+      data:
+        photo:
+          - file: '/config/www/media/deepstack/deepstack_object_01_latest_dog.jpg'
+            caption: Latest Dog
