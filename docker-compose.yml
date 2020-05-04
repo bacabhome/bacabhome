@@ -248,6 +248,31 @@ services:
     volumes:
       - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
+  deepstack:
+    image: deepquestai/deepstack
+    container_name: bacab-home-deepstack
+    restart: alaways
+    network_mode: host
+    ports:
+      - 80:5000
+    environment:
+      - VISION-SCENE=True
+      - API-KEY=${API-KEY}
+    volumes:
+      - ./media/deepstackdatastorage/:/datastore
+
+  facebox:
+    image: machinebox/facebox
+    container_name: bacab-home-facebox
+    restart: always
+    network_mode: host
+    ports:
+      - 8090:8090
+    environment:
+      - MB_KEY=${MB_KEY}
+      - MB_FACEBOX_DISABLE_RECOGNITION=true
+    entrypoint: ["echo", "Service disabled"]
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
