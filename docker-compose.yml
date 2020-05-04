@@ -45,6 +45,7 @@ services:
       - "mosquitto"
       - "glances"
       - "doods"
+      - "deepstack"
     environment:
       - TZ=America/Mexico_City
     cap_add:
@@ -230,14 +231,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./config/ha-dockermon/:/config
 
-  doods:
-    image: snowzach/doods
-    container_name: bacab-home-doods
-    restart: always
-    network_mode: host
-    ports:
-      - 8080:8080
-
   telegraf:
     image: telegraf:latest
     container_name: bacab-home-telegraf
@@ -248,16 +241,24 @@ services:
     volumes:
       - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
+  doods:
+    image: snowzach/doods
+    container_name: bacab-home-doods
+    restart: always
+    network_mode: host
+    ports:
+      - 8080:8080
+
   deepstack:
     image: deepquestai/deepstack
     container_name: bacab-home-deepstack
-    restart: alaways
+    restart: always
     network_mode: host
     ports:
-      - 80:5000
+      - 5000:5000
     environment:
       - VISION-SCENE=True
-      - API-KEY=${API-KEY}
+      - API-KEY=${API_KEY}
     volumes:
       - ./media/deepstackdatastorage/:/datastore
 
@@ -267,7 +268,7 @@ services:
     restart: always
     network_mode: host
     ports:
-      - 8090:8090
+      - 8082:8080
     environment:
       - MB_KEY=${MB_KEY}
       - MB_FACEBOX_DISABLE_RECOGNITION=true

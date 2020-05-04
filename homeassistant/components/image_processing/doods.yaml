@@ -2,7 +2,7 @@
 
 platform: doods
 scan_interval: 60
-url: !secret services_doods_url
+url: !secret doods_url
 timeout: 60
 detector: default
 source:
