@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/integrations/facebox/
+
+platform: facebox
+ip_address: !secret services_facebox_ip_address
+port: !secret services_facebox_port
+source:
+  - entity_id: camera.local_file_ffmpeg_camera_01
+    name: facebox 01
