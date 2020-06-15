@@ -5,7 +5,7 @@ trigger:
   entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
   to: 'on'
   for:
-    seconds: 30
+    seconds: 60
 action:
   - service: camera.snapshot
     data:
@@ -16,7 +16,7 @@ action:
       message: "Warning! Motion on threshold exceeded! {{ states('sensor.date_time') }}"
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'Motion On For 30 Seconds'
+      title: 'Motion On For 60 Seconds'
       message: "This is it..."
       data:
         photo:

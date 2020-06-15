@@ -7,4 +7,4 @@ trigger:
     command: '/lastperson'
 action:
   - service: script.turn_on
-    entity_id: script.lastperson
+    entity_id: script.last_person

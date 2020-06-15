@@ -12,7 +12,7 @@ ffmpeg_camera_01:
       data:
         photo:
           - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
-            caption: Who is there? via Ffmpeg Camera 01
+            caption: Who is there? Ffmpeg Camera 01
   - service: image_processing.scan
     data:
       entity_id: image_processing.doods_local_file_ffmpeg_camera_01
@@ -24,7 +24,7 @@ ffmpeg_camera_01:
       data:
         photo:
           - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
-            caption: Last Person via Ffmpeg Camera 01
+            caption: Doods Ffmpeg Camera 01
   - service: image_processing.scan
     data:
       entity_id: image_processing.deepstack_object_01
@@ -36,7 +36,7 @@ ffmpeg_camera_01:
       data:
         photo:
           - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'
-            caption: Last X via Ffmpeg Camera 01
+            caption: DeepStack Ffmpeg Camera 01
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_ffmpeg_camera_01
