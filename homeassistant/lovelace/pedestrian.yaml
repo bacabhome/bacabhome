@@ -13,7 +13,6 @@ cards:
       - entity: image_processing.deepstack_object_01
         name: Object 01
 
-
   - type: vertical-stack
     cards:
 
@@ -21,21 +20,30 @@ cards:
         title: Lastest Person Doods
         entity: camera.local_file_ffmpeg_camera_01_doods
         show_state: false
-        name: Last Person Doods
+        name: Last Detection Doods
+
+     - type: picture-entity
+        title: Lastest Person DeepStack
+        entity: camera.local_file_deepstack_object_01
+        show_state: false
+        name: Last Detection DeepStack
+
+  - type: vertical-stack
+    cards:
 
       - type: picture-glance
-        title: Lastest Person DeepStack
+        title: DeepStack Latest Person
         camera_image: camera.local_file_deepstack_object_01_person
         show_state: false
-        name: Latest Person DeepStack Object 01 Person
+        name: DeepStack Object 01 Latest Person
         entities:
           - sensor.deepstack_object_01_person
 
       - type: picture-glance
-        title: Lastest Dog DeepStack
+        title: DeepStack Latest Dog
         camera_image: camera.local_file_deepstack_object_01_dog
         show_state: false
-        name: Latest Person DeepStack Object 01 Dog
+        name: DeepStack Object 01 Latest Dog
         entities:
           - sensor.deepstack_object_01_dog
 
