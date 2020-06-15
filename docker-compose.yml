@@ -257,8 +257,8 @@ services:
     ports:
       - 5000:5000
     environment:
-      - VISION-SCENE=True
-      - API-KEY=${API_KEY}
+      - VISION-DETECTION=True
+      - API-KEY=${DEEPSTACK_API_KEY}
     volumes:
       - ./media/deepstackdatastorage/:/datastore
 

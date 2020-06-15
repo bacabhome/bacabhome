@@ -39,15 +39,6 @@ cards:
         entities:
           - sensor.deepstack_object_01_dog
 
-      - type: picture-glance
-        title: Lastest Car DeepStack
-        camera_image: camera.local_file_deepstack_object_01_car
-        show_state: false
-        name: Latest Person DeepStack Object 01 Car
-        entities:
-          - sensor.deepstack_object_01_car
-
-
   - type: vertical-stack
     cards:
 
