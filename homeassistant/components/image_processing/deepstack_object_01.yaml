@@ -6,7 +6,7 @@ port: !secret deepstack_object_01_port
 api_key: !secret deepstack_object_01_api_key
 scan_interval: 86400
 save_file_folder: /config/www/media/deepstack/
-save_timestamped_file: True
+save_timestamped_file: False
 targets:
   - person
   - dog
