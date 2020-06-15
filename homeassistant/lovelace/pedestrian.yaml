@@ -22,7 +22,7 @@ cards:
         show_state: false
         name: Last Detection Doods
 
-     - type: picture-entity
+      - type: picture-entity
         title: Lastest Person DeepStack
         entity: camera.local_file_deepstack_object_01
         show_state: false
