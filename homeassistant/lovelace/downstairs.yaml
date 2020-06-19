@@ -85,7 +85,7 @@ cards:
 
       - entity: switch.wemo_insight_01
         name: Server
-        icon: mdi:pine-tree
+        icon: mdi:server
 
       - type: section
         label: Laundry

@@ -107,5 +107,4 @@ cards:
 
       - entity: sensor.wemo_insight_03_on_today
         name: Workstation
-        icon: mdi:workstation
-        
+        icon: mdi:desktop-classic
