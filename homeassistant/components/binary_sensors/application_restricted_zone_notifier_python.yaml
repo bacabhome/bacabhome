@@ -1,9 +1,9 @@
 # https://www.home-assistant.io/integrations/binary_sensor.mqtt/
 
 platform: mqtt
-name: Application Restricted Zone Notifier CPP
-state_topic: "machine/zone"
-value_template: '{{ value_json.Safe }}'
+name: Application Restricted Zone Notifier Python
+state_topic: "Restricted_zone_python"
+value_template: '{{ value_json.Alert }}'
 payload_on: "0"
 payload_off: "1"
 device_class: motion

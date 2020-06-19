@@ -30,3 +30,9 @@ cards:
       service: input_boolean.toggle
       service_data:
         entity_id: input_boolean.ffmpeg_camera_01_cast
+
+  - type: picture-entity
+    title: Amcrest Camera 01
+    entity: camera.amcrest_camera_01
+    show_state: false
+    camera_view: live

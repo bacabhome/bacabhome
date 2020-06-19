@@ -1,0 +1,16 @@
+alias: Application Restricted Zone Notifier Python
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.application_restricted_zone_notifier_python
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.amcrest_camera_01
+      filename: '/config/www/media/applications/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: camera.record
+    data:
+      entity_id: camera.amcrest_camera_01
+      filename: '/config/www/media/applications/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
