@@ -3,8 +3,8 @@ amcrest_camera_01_notify:
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Picture'
-      message: "This is it..."
+      message: "This was it..."
       data:
         photo:
           - file: '/config/www/media/cameras/amcrest_camera_01.jpg'
-            caption: Who is there? Amcrest Camera 01
+            caption: Who was there? Amcrest Camera 01

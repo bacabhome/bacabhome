@@ -8,9 +8,3 @@ ffmpeg_camera_01_capture:
     data:
       entity_id: camera.local_file_ffmpeg_camera_01
       filename: '/config/www/media/house/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
-  - service: image_processing.scan
-    data:
-      entity_id: image_processing.doods_local_file_ffmpeg_camera_01
-  - service: image_processing.scan
-    data:
-      entity_id: image_processing.deepstack_object_01

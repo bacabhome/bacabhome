@@ -1,0 +1,3 @@
+script.ffmpeg_camera_01_capture:
+  icon: mdi:telegram
+  friendly_name: Ffmpeg

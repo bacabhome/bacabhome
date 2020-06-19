@@ -1,9 +1,0 @@
-alias: Hue Outdoor Motion Sensor 01 On Ffmpeg Camera 02
-initial_state: false
-trigger:
-  - platform: state
-    entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
-    to: 'on'
-action:
-  - service: script.turn_on
-    entity_id: script.ffmpeg_camera_02_capture

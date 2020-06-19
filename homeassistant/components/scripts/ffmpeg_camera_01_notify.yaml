@@ -3,15 +3,15 @@ ffmpeg_camera_01_notify:
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Picture'
-      message: "This is it..."
+      message: "This was it..."
       data:
         photo:
           - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
-            caption: Who is there? Ffmpeg Camera 01
+            caption: Who was there? Ffmpeg Camera 01
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Doods'
-      message: "Doods is it..."
+      message: "Doods was it..."
       data:
         photo:
           - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
@@ -19,7 +19,7 @@ ffmpeg_camera_01_notify:
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'DeepStack'
-      message: "Deepstack is it..."
+      message: "Deepstack was it..."
       data:
         photo:
           - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'

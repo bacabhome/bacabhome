@@ -6,5 +6,6 @@ state_topic: "Restricted_zone_python"
 value_template: '{{ value_json.Alert }}'
 payload_on: True
 payload_off: False
+off_delay: 1
 device_class: motion
 force_update: true

@@ -13,5 +13,6 @@ action:
         keyboard:
           - '/ping, /status'
           - '/weather, /speak'
-          - '/house, /alarm'
+          - '/notify, /alarm'
+          - '/ffmpeg, /amcrest'
           - '/lastperson'
