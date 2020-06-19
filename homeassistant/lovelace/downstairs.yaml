@@ -10,11 +10,11 @@ cards:
     show_state: false
     entities:
 
-      - entity: binary_sensor.template_wemo_insight_01
+      - entity: binary_sensor.template_wemo_insight_01_on
         name: Server
         icon: mdi:server
 
-      - entity: binary_sensor.template_wemo_insight_02
+      - entity: binary_sensor.template_wemo_insight_02_on
         name: Washing Machine
         icon: mdi:washing-machine
 

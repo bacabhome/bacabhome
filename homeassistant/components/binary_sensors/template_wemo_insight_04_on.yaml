@@ -2,8 +2,8 @@
 
 platform: template
 sensors:
-  template_wemo_insight_04:
-    friendly_name: "Template Wemo Insight 04"
+  template_wemo_insight_04_on:
+    friendly_name: "Template Wemo Insight 04 On"
     delay_on:
       minutes: 1
     delay_off:

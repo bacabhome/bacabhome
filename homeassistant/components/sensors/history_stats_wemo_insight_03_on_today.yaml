@@ -2,7 +2,7 @@
 
 platform: history_stats
 name: Wemo Insight 03 On Today
-entity_id: binary_sensor.template_wemo_insight_03
+entity_id: binary_sensor.template_wemo_insight_03_on
 state: 'on'
 type: time
 start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
