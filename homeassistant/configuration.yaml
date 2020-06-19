@@ -31,7 +31,6 @@ homeassistant:
     - '/config/www/media/cameras/'
     - '/config/www/media/deepstack/'
     - '/config/www/media/doods/'
-    - '/config/www/media/frontyard/'
     - '/config/www/media/house/'
     - '/config/www/media/motioneye/'
 

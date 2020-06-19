@@ -4,7 +4,7 @@ platform: mqtt
 name: Application Restricted Zone Notifier Python
 state_topic: "Restricted_zone_python"
 value_template: '{{ value_json.Alert }}'
-payload_on: "0"
-payload_off: "1"
+payload_on: "true"
+payload_off: "false"
 device_class: motion
 force_update: true
