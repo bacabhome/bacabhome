@@ -10,10 +10,11 @@ cards:
     show_state: false
     entities:
 
-      - entity: binary_sensor.template_refrigerator
-        name: Refrigerator
-        icon: mdi:fridge
-      - entity: binary_sensor.template_washing_machine 
+      - entity: binary_sensor.template_wemo_insight_01
+        name: Server
+        icon: mdi:server
+
+      - entity: binary_sensor.template_wemo_insight_02
         name: Washing Machine
         icon: mdi:washing-machine
 
@@ -83,15 +84,8 @@ cards:
         label: Living Room
 
       - entity: switch.wemo_insight_01
-        name: Xmas
+        name: Server
         icon: mdi:pine-tree
-
-      - type: section
-        label: Kitchen
-
-      - entity: switch.wemo_insight_02
-        name: Refrigerator
-        icon: mdi:fridge
 
       - type: section
         label: Laundry
@@ -106,15 +100,15 @@ cards:
     entities:
 
       - type: section
-        label: Kitchen
+        label: Living Room
 
-      - entity: sensor.refrigerator_on_today
-        name: Refrigerator On Today
-        icon: mdi:fridge
+      - entity: sensor.wemo_insight_01_on_today
+        name: Server On Today
+        icon: mdi:server
 
       - type: section
         label: Laundry
 
-      - entity: sensor.washing_machine_on_today
+      - entity: sensor.wemo_insight_04_on_today
         name: Washing Machine On Today
         icon: mdi:washing-machine

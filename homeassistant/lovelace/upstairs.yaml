@@ -10,9 +10,13 @@ cards:
     show_state: false
     entities:
 
-      - entity: binary_sensor.template_servers
-        name: Server
-        icon: mdi:server
+      - entity: binary_sensor.template_wemo_insight_02
+        name: Floating
+        icon: mdi:laptop
+
+      - entity: binary_sensor.template_wemo_insight_03
+        name: Workstation
+        icon: mdi:desktop-classic
 
   - type: glance
     title: Motion
@@ -73,8 +77,12 @@ cards:
       - type: section
         label: Dad Bedroom
 
+      - entity: switch.wemo_insight_02
+        name: Floating
+        icon: mdi:power-socket-us
+
       - entity: switch.wemo_insight_03
-        name: Servers
+        name: Workstation
         icon: mdi:power-socket-us
 
   - type: entities
@@ -93,6 +101,11 @@ cards:
       - type: section
         label: Dad Bedroom
 
-      - entity: sensor.servers_on_today
-        name: Servers On Today
-        icon: mdi:server
+      - entity: sensor.wemo_insight_02_on_today
+        name: Floating On Today
+        icon: mdi:laptop
+
+      - entity: sensor.wemo_insight_03_on_today
+        name: Workstation
+        icon: mdi:workstation
+        

@@ -2,12 +2,12 @@
 
 platform: template
 sensors:
-  template_refrigerator:
-    friendly_name: "Template Refrigerator"
+  template_wemo_insight_03:
+    friendly_name: "Template Wemo Insight 03"
     delay_on:
       minutes: 2
     delay_off:
       minutes: 2
     value_template: >-
-                       {{ states('sensor.wemo_insight_02_current_power_w')|float > 20 }}
+                       {{ states('sensor.wemo_insight_03_current_power_w')|float > 20 }}
     device_class: power

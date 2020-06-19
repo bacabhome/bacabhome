@@ -20,22 +20,19 @@ cards:
         label: Living Room
 
       - entity: switch.wemo_insight_01
-        name: Xmas
-        icon: mdi:pine-tree
-
-      - type: section
-        label: Kitchen
-
-      - entity: switch.wemo_insight_02
-        name: Refrigerator
-        icon: mdi:fridge
+        name: Server
+        icon: mdi:server
 
       - type: section
         label: Dad Bedroom
 
+      - entity: switch.wemo_insight_02
+        name: Floating
+        icon: mdi:laptop
+
       - entity: switch.wemo_insight_03
-        name: Servers
-        icon: mdi:server
+        name: Workstation
+        icon: mdi:desktop-classic
 
       - type: section
         label: Laundry
@@ -56,7 +53,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_01_current_power_w
-              name: Xmas
+              name: Server
           line_color: black
           line_width: 1
           font_size: 55
@@ -64,7 +61,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_02_current_power_w
-              name: Refrigerator
+              name: Floating
           line_color: gray
           line_width: 1
           font_size: 55
@@ -72,7 +69,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_03_current_power_w
-              name: Servers
+              name: Workstation
           line_color: blue
           line_width: 1
           font_size: 55
@@ -80,7 +77,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_04_current_power_w
-              name: Laundry
+              name: Washing Machine
           line_color: silver
           line_width: 1
           font_size: 55
@@ -99,16 +96,16 @@ cards:
             points: false
           entities:
             - entity: sensor.wemo_insight_01_current_power_w
-              name: Xmas
+              name: Server
               color: black
             - entity: sensor.wemo_insight_02_current_power_w
-              name: Refrigerator
+              name: Floating
               color: gray
             - entity: sensor.wemo_insight_03_current_power_w
-              name: Servers
+              name: Workstation
               color: blue
             - entity: sensor.wemo_insight_04_current_power_w
-              name: Laundry
+              name: Washing Machine
               color: silver
           line_width: 1
           height: 100
@@ -128,7 +125,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_01_today_energy_kwh
-              name: Xmas
+              name: Server
           line_color: black
           line_width: 1
           font_size: 55
@@ -136,7 +133,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_02_today_energy_kwh
-              name: Refrigerator
+              name: Floating
           line_color: gray
           line_width: 1
           font_size: 55
@@ -144,7 +141,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_03_today_energy_kwh
-              name: Servers
+              name: Workstation
           line_color: blue
           line_width: 1
           font_size: 55
@@ -152,7 +149,7 @@ cards:
         - type: custom:mini-graph-card
           entities:
             - entity: sensor.wemo_insight_04_today_energy_kwh
-              name: Laundry
+              name: Washing Machine
           line_color: silver
           line_width: 1
           font_size: 55
@@ -172,16 +169,16 @@ cards:
             points: false
           entities:
             - entity: sensor.wemo_insight_01_today_energy_kwh
-              name: Xmas
+              name: Server
               color: black
             - entity: sensor.wemo_insight_02_today_energy_kwh
-              name: Refrigerator
+              name: Floating
               color: gray
             - entity: sensor.wemo_insight_03_today_energy_kwh
-              name: Servers
+              name: Workstation
               color: blue
             - entity: sensor.wemo_insight_04_today_energy_kwh
-              name: Laundry
+              name: Washing Machine
               color: silver
           line_width: 1
           height: 100

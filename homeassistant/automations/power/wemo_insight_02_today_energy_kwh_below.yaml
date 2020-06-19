@@ -16,5 +16,4 @@ action:
     data_template:
       message: >-
                  La lectura Wemo Insight 02 es {{states('sensor.wemo_insight_02_today_energy_kwh')}}.
-                 Por favor revisar su temperatura.
       language: 'es'
