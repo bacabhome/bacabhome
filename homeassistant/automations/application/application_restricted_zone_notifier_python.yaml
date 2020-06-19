@@ -14,8 +14,8 @@ action:
     data_template:
       entity_id: camera.amcrest_camera_01
       filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
-      duration: 20
-      lookback: 0
+      duration: 30
+      lookback: 2
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_restricted_zone_notifier_python
