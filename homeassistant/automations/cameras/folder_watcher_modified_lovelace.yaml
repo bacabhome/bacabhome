@@ -20,5 +20,5 @@ action:
       file_path: /config/www/media/cameras/amcrest_camera_01.jpg
   - service: local_file_update_file_path
     data_template:
-      entity_id: camera.local_file_amcrest_camera_01_doods
-      file_path: /config/www/media/doods/doods_local_file_amcrest_camera_01.jpg
+      entity_id: camera.local_file_restricted_zone_notifier_python
+      file_path: /config/www/media/application/restricted_zone_notifier_python.jpg

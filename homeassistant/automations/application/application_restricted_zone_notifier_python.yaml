@@ -9,8 +9,14 @@ action:
   - service: camera.snapshot
     data:
       entity_id: camera.amcrest_camera_01
-      filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/application/restricted_zone_notifier_python.jpg'
   - service: camera.record
-    data:
+    data_template:
       entity_id: camera.amcrest_camera_01
       filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 20
+      lookback: 0
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_restricted_zone_notifier_python
+      filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

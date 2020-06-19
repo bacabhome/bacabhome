@@ -28,6 +28,12 @@ cards:
         show_state: false
         name: Last Detection DeepStack
 
+      - type: picture-entity
+        title: Application Restricted Zone Notifier Python
+        entity: camera.local_file_restricted_zone_notifier_python
+        show_state: false
+        name: Last Detection Restricted Zone Notifier Python
+
   - type: vertical-stack
     cards:
 
@@ -46,34 +52,3 @@ cards:
         name: DeepStack Object 01 Latest Dog
         entities:
           - sensor.deepstack_object_01_dog
-
-  - type: vertical-stack
-    cards:
-
-      - type: picture-glance
-        title: Last Picture Ffmpeg Camera 01
-        camera_image: camera.local_file_ffmpeg_camera_01
-        show_state: false
-        name: Last Picture Ffmpeg Camera 01
-        entities:
-          - binary_sensor.ping_binary_sensor_ffmpeg_camera_01
-          - binary_sensor.hue_outdoor_motion_sensor_01_motion
-        hold_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.ffmpeg_camera_01_capture
-      - type: picture-glance
-        title: Last Picture Amcrest Camera 01
-        camera_image: camera.local_file_amcrest_camera_01
-        show_state: false
-        name: Last Picture Amcrest Camera 01
-        entities:
-          - binary_sensor.amcrest_camera_01_motion_detected
-          - binary_sensor.amcrest_camera_01_online
-          - binary_sensor.application_restricted_zone_notifier_python
-        hold_action:
-          action: call-service
-          service: script.turn_on
-          service_data:
-            entity_id: script.amcrest_camera_01_capture

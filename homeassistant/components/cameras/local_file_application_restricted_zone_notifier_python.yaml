@@ -1,0 +1,3 @@
+platform: local_file
+name: Local File Restricted Zone Notifier Python
+file_path: /config/www/media/application/restricted_zone_notifier_python.jpg
