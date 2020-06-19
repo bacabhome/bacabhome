@@ -1,0 +1,10 @@
+amcrest_camera_01_capture:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.amcrest_camera_01
+      filename: '/config/www/media/cameras/amcrest_camera_01.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_amcrest_camera_01
+      filename: '/config/www/media/house/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

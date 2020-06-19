@@ -8,12 +8,16 @@ trigger:
 action:
   - service: local_file_update_file_path
     data_template:
+      entity_id: camera.local_file_camera_01
+      file_path: /config/www/media/cameras/ffmpeg_camera_01.jpg
+  - service: local_file_update_file_path
+    data_template:
       entity_id: camera.local_file_camera_01_doods
       file_path: /config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg
   - service: local_file_update_file_path
     data_template:
-      entity_id: camera.local_file_camera_02_doods
-      file_path: /config/www/media/doods/doods_local_file_ffmpeg_camera_02.jpg
+      entity_id: camera.local_file_amcrest_camera_01
+      file_path: /config/www/media/cameras/amcrest_camera_01.jpg
   - service: local_file_update_file_path
     data_template:
       entity_id: camera.local_file_amcrest_camera_01_doods

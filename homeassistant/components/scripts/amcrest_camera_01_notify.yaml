@@ -1,0 +1,10 @@
+ffmpeg_camera_01_notify:
+  sequence:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Picture'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/cameras/amcrest_camera_01.jpg'
+            caption: Who is there? Amcrest Camera 01

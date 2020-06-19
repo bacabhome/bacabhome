@@ -1,10 +1,5 @@
-ffmpeg_camera_01:
+ffmpeg_camera_01_notify:
   sequence:
-  - service: camera.snapshot
-    data:
-      entity_id: camera.ffmpeg_camera_01
-      filename: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
-  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Picture'
@@ -13,10 +8,6 @@ ffmpeg_camera_01:
         photo:
           - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
             caption: Who is there? Ffmpeg Camera 01
-  - service: image_processing.scan
-    data:
-      entity_id: image_processing.doods_local_file_ffmpeg_camera_01
-  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Doods'
@@ -25,10 +16,6 @@ ffmpeg_camera_01:
         photo:
           - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
             caption: Doods Ffmpeg Camera 01
-  - service: image_processing.scan
-    data:
-      entity_id: image_processing.deepstack_object_01
-  - delay: '00:00:01'
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'DeepStack'
@@ -37,7 +24,3 @@ ffmpeg_camera_01:
         photo:
           - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'
             caption: DeepStack Ffmpeg Camera 01
-  - service: camera.snapshot
-    data:
-      entity_id: camera.local_file_ffmpeg_camera_01
-      filename: '/config/www/media/house/ffmpeg_camera_01_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

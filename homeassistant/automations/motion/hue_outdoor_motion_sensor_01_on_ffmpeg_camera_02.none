@@ -5,14 +5,5 @@ trigger:
     entity_id: binary_sensor.hue_outdoor_motion_sensor_01_motion
     to: 'on'
 action:
-  - service: camera.snapshot
-    data:
-      entity_id: camera.ffmpeg_camera_02
-      filename: '/config/www/media/cameras/ffmpeg_camera_02.jpg'
-  - service: image_processing.scan
-    data:
-      entity_id: image_processing.doods_local_file_ffmpeg_camera_02
-  - service: camera.snapshot
-    data:
-      entity_id: camera.local_file_ffmpeg_camera_02
-      filename: '/config/www/media/house/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: script.turn_on
+    entity_id: script.ffmpeg_camera_02_capture

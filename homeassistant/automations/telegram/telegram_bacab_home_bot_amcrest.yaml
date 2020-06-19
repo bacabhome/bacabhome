@@ -1,10 +1,10 @@
-alias: 'Telegram Bacab Home Bot Frontyard'
+alias: 'Telegram Bacab Home Bot Amcrest'
 hide_entity: true
 trigger:
   platform: event
   event_type: telegram_command
   event_data:
-    command: '/frontyard'
+    command: '/amcrest'
 action:
   - service: script.turn_on
-    entity_id: script.ffmpeg_camera_01
+    entity_id: script.amcrest_camera_01_amcrest

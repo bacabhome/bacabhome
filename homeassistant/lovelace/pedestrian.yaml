@@ -51,7 +51,7 @@ cards:
     cards:
 
       - type: picture-glance
-        title: Last Picture
+        title: Last Picture Ffmpeg Camera 01
         camera_image: camera.local_file_ffmpeg_camera_01
         show_state: false
         name: Last Picture Ffmpeg Camera 01
@@ -62,5 +62,18 @@ cards:
           action: call-service
           service: script.turn_on
           service_data:
-            entity_id: script.ffmpeg_camera_01
-
+            entity_id: script.ffmpeg_camera_01_capture
+      - type: picture-glance
+        title: Last Picture Amcrest Camera 01
+        camera_image: camera.local_file_amcrest_camera_01
+        show_state: false
+        name: Last Picture Amcrest Camera 01
+        entities:
+          - binary_sensor.amcrest_camera_01_motion_detected
+          - binary_sensor.amcrest_camera_01_online
+          - binary_sensor.application_restricted_zone_notifier_python
+        hold_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: script.amcrest_camera_01_capture
