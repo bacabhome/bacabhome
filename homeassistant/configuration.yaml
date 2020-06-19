@@ -26,11 +26,14 @@ homeassistant:
     - type: homeassistant
 
   whitelist_external_dirs:
+    - '/config/www/media/amcrest/'
+    - '/config/www/media/application/'
     - '/config/www/media/cameras/'
     - '/config/www/media/deepstack/'
     - '/config/www/media/doods/'
     - '/config/www/media/frontyard/'
     - '/config/www/media/house/'
+    - '/config/www/media/motioneye/'
 
   # Customizing entities
   customize: !include_dir_merge_named components/customize/

@@ -9,8 +9,8 @@ action:
   - service: camera.snapshot
     data:
       entity_id: camera.amcrest_camera_01
-      filename: '/config/www/media/applications/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: camera.record
     data:
       entity_id: camera.amcrest_camera_01
-      filename: '/config/www/media/applications/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
