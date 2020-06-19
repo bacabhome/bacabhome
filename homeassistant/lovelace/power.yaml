@@ -8,8 +8,8 @@ cards:
     title: House
     show_header_toggle: false
     entities:
-      - entity: sensor.switches_wemo_on_today
-        name: Switches Wemo On Today
+      - entity: sensor.switches_wemo_insight_on_today
+        name: Switches Wemo Insight On Today
 
   - type: entities
     title: Switches

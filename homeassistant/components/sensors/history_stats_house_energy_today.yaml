@@ -2,4 +2,4 @@
 
 platform: statistics
 name: House Energy Today
-entity_id: group.energy
+entity_id: group.switches_wemo_insight

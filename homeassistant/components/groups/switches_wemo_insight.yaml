@@ -1,7 +1,7 @@
 # https://www.home-assistant.io/integrations/group/
 
-energy:
-  name: Energy
+switches_wemo_insight:
+  name: Switches Wemo Insight
   entities:
     - sensor.wemo_insight_01_today_energy_kwh
     - sensor.wemo_insight_02_today_energy_kwh
