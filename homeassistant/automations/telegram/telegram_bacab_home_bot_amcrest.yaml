@@ -7,3 +7,5 @@ trigger:
 action:
   - service: script.turn_on
     entity_id: script.amcrest_camera_01_capture
+  - service: script.turn_on
+    entity_id: script.amcrest_camera_01_notify

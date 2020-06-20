@@ -8,19 +8,3 @@ ffmpeg_camera_01_notify:
         photo:
           - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
             caption: Who was there? Ffmpeg Camera 01
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'Doods'
-      message: "Doods was it..."
-      data:
-        photo:
-          - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
-            caption: Doods Ffmpeg Camera 01
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'DeepStack'
-      message: "Deepstack was it..."
-      data:
-        photo:
-          - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'
-            caption: DeepStack Ffmpeg Camera 01

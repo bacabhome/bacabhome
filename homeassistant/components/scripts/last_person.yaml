@@ -3,7 +3,7 @@ last_person:
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Last Person Doods'
-      message: "Doods is it..."
+      message: "Doods was it..."
       data:
         photo:
           - file: '/config/www/media/doods/doods_local_file_ffmpeg_camera_01.jpg'
@@ -11,7 +11,7 @@ last_person:
   - service: notify.telegram_bacab_home_bot
     data:
       title: 'Last Person DeepStack'
-      message: "DeepStack is it..."
+      message: "DeepStack was it..."
       data:
         photo:
           - file: '/config/www/media/deepstack/deepstack_object_01_latest_person.jpg'
