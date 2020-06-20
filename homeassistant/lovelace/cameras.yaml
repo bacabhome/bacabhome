@@ -12,8 +12,10 @@ cards:
 
       - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
         name: Hue Outdoor Motion Sensor 01
-      - entity: binary_sensor.hue_motion_sensor_02_motion
-        name: Hue Motion Sensor 02
+      - entity: binary_sensor.amcrest_camera_01_motion_detected
+        name: Amcrest Camera 01 Motion
+      - entity: binary_sensor.application_restricted_zone_notifier_python
+        name: Application Restrictied Zone Notifier Python
 
   - type: picture-entity
     title: FFMPEG Camera 01

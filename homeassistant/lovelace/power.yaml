@@ -23,6 +23,10 @@ cards:
         name: Server
         icon: mdi:server
 
+      - entity: switch.00200237a020a6052b75
+        name: Kisslink 02
+        icon: mdi:power-socket-us
+
       - type: section
         label: Dad Bedroom
 
@@ -33,6 +37,10 @@ cards:
       - entity: switch.wemo_insight_03
         name: Workstation
         icon: mdi:desktop-classic
+
+      - entity: switch.00200237a020a604a803
+        name: Kisslink 01
+        icon: mdi:power-socket-us
 
       - type: section
         label: Laundry

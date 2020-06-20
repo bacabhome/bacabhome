@@ -26,6 +26,8 @@ cards:
 
       - entity: binary_sensor.template_device_tracker_life360_balam_moving
         name: Is Balam moving?
+      - entity: sensor.device_tracker_life360_balam_moving
+        name: Is Balam moving?
       - entity: binary_sensor.template_device_tracker_life360_balam_biking
         name: Is Balam biking?
       - entity: sensor.device_tracker_life360_balam_speed
@@ -34,6 +36,8 @@ cards:
         name: What is Balam's cell phone battery?
       - entity: binary_sensor.template_device_tracker_life360_balam_battery_charging
         name: Is Balam's battery charging?
+      - entity: sensor.device_tracker_life360_balam_wifi_on
+        name: Is Balam's WiFi on?
 
       - type: section
         label: Statistics
@@ -52,3 +56,8 @@ cards:
         name: How far Balam to home?
       - entity: proximity.work
         name: How Far Balam to work?
+
+  - type: 'custom:travel-time-card'
+    entities:
+     - entity: sensor.here_travel_time_home_to_school
+     - entity: sensor.here_travel_time_home_to_work

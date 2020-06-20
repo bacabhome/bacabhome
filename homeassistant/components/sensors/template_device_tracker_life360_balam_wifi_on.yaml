@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/template
+
+platform: template
+sensors:
+  device_tracker_life360_balam_wifi_on:
+    friendly_name: 'Device Tracker Life360 Balam WiFi On'
+    value_template: '{{ states.device_tracker.life360_balam.attributes["wifi_on"] }}'

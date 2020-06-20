@@ -1,0 +1,8 @@
+platform: template
+sensors:
+  template_person_at_home:
+    friendly_name: Template Person At Home
+    entity_id:
+      - person.balam
+    value_template: >-
+      {{ states.person | map(attribute='state') | select('eq','home') | list | length }}
