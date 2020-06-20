@@ -8,4 +8,4 @@ action:
   - service: script.turn_on
     entity_id: script.ffmpeg_camera_01_capture
   - service: script.turn_on
-    entity_id: script.ffmpeg_camera_01_processing    
+    entity_id: script.ffmpeg_camera_01_processing

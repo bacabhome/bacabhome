@@ -1,5 +1,4 @@
 alias: 'Telegram Bacab Home Bot Alarm'
-hide_entity: true
 trigger:
   platform: event
   event_type: telegram_command

@@ -1,5 +1,4 @@
 alias: 'Telegram Bacab Home Bot Start'
-hide_entity: true
 trigger:
   platform: event
   event_type: telegram_command
