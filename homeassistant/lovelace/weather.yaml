@@ -86,3 +86,9 @@ cards:
       - entity: sensor.current_uv_index
       - entity: sensor.current_uv_level
       - entity: sensor.max_uv_index
+      - entity: sensor.skin_type_1_safe_exposure_time
+      - entity: sensor.skin_type_2_safe_exposure_time
+      - entity: sensor.skin_type_3_safe_exposure_time
+      - entity: sensor.skin_type_4_safe_exposure_time
+      - entity: sensor.skin_type_5_safe_exposure_time
+      - entity: sensor.skin_type_6_safe_exposure_time
