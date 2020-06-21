@@ -1,7 +1,7 @@
-alias: Update OpenUV every 30 minutes during the daytime
+alias: Update OpenUV every 60 minutes during the daytime
 trigger:
   platform: time_pattern
-  minutes: '/30'
+  minutes: '/60'
 condition:
   condition: and
   conditions:
