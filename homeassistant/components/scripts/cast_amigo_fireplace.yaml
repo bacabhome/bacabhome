@@ -1,7 +1,7 @@
-fireplace_amigo:
+cast_amigo_fireplace:
   sequence:
   - service: media_extractor.play_media
     data:
       entity_id: media_player.amigo
-      media_content_id: !secret fireplace_amigo
+      media_content_id: !secret amigo_fireplace
       media_content_type: video

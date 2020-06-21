@@ -18,20 +18,20 @@ cards:
     title: Eek
     show_header_toggle: false
     entities:
-      - script.fireplace_livingroom
-      - script.rain_livingroom
-      - script.beach_livingroom
-      - script.river_livingroom
+      - script.cast_livingroom_fireplace
+      - script.cast_livingroom_rain
+      - script.cast_livingroom_beach
+      - script.cast_livingroom_river
 
   - type: entities
     title: Amigo
     show_header_toggle: false
     entities:
-      - script.fireplace_amigo
-      - script.rain_amigo
-      - script.beach_amigo
-      - script.river_amigo
-      - script.lasmananitas_amigo
+      - script.cast_amigo_fireplace
+      - script.cast_amigo_rain
+      - script.cast_amigo_beach
+      - script.cast_amigo_river
+      - script.cast_amigo_lasmananitas
 
   - type: entities
     title: Players

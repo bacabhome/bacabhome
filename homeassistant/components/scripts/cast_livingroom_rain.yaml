@@ -1,7 +1,7 @@
-fireplace_livingroom:
+cast_livingroom_rain:
   sequence:
   - service: media_extractor.play_media
     data:
       entity_id: media_player.eek
-      media_content_id: !secret fireplace_livingroom
+      media_content_id: !secret livingroom_rain
       media_content_type: video

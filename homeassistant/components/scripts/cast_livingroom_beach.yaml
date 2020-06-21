@@ -1,7 +1,7 @@
-beach_livingroom:
+cast_livingroom_beach:
   sequence:
   - service: media_extractor.play_media
     data:
       entity_id: media_player.eek
-      media_content_id: !secret beach_livingroom
+      media_content_id: !secret livingroom_beach
       media_content_type: video

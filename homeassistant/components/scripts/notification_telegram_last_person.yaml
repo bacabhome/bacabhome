@@ -1,4 +1,4 @@
-last_person:
+notification_telegram_last_person:
   sequence:
   - service: notify.telegram_bacab_home_bot
     data:

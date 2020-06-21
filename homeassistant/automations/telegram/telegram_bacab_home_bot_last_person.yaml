@@ -6,4 +6,4 @@ trigger:
     command: '/lastperson'
 action:
   - service: script.turn_on
-    entity_id: script.last_person
+    entity_id: script.notification_telegram_last_person

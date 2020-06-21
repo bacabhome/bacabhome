@@ -1,7 +1,7 @@
-river_amigo:
+cast_amigo_rain:
   sequence:
   - service: media_extractor.play_media
     data:
       entity_id: media_player.amigo
-      media_content_id: !secret river_amigo
+      media_content_id: !secret amigo_rain
       media_content_type: video

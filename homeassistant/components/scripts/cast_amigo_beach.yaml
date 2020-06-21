@@ -1,7 +1,7 @@
-lasmananitas_amigo:
+cast_amigo_beach:
   sequence:
   - service: media_extractor.play_media
     data:
       entity_id: media_player.amigo
-      media_content_id: !secret lasmananitas_amigo
+      media_content_id: !secret amigo_beach
       media_content_type: video
