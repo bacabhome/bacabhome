@@ -19,4 +19,4 @@ condition:
       above: '50'
 action:
   - service: script.turn_on
-    entity_id: script.rain_light_notification
+    entity_id: script.notification_light_rain

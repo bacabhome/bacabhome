@@ -1,4 +1,4 @@
-rain_light_notification:
+notification_light_rain:
   sequence:
   - service: light.turn_on
     data:

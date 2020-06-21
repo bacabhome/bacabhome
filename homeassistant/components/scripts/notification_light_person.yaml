@@ -1,0 +1,21 @@
+notification_light_person:
+  sequence:
+  - service: light.turn_on
+    data:
+      brightness: 255
+      rgb_color: [255,0,0]
+      entity_id: 
+        - light.mobile_room_light
+  - delay: 00:00:01
+  - service: light.toggle
+    data:
+      entity_id:
+        - light.mobile_room_light
+  - service: light.toggle
+    data:
+      entity_id:
+        - light.mobile_room_light
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.mobile_room_light

@@ -16,6 +16,8 @@ action:
       filename: '/config/www/media/application/rznp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 30
       lookback: 2
+  - service: script.turn_on
+    entity_id: script.notification_light_person
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_restricted_zone_notifier_python
@@ -31,3 +33,4 @@ action:
         photo:
           - file: '/config/www/media/application/restricted_zone_notifier_python.jpg'
             caption: Person via Amcrest Camera 01
+
