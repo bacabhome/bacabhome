@@ -241,40 +241,6 @@ services:
     volumes:
       - ./config/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
 
-  doods:
-    image: snowzach/doods
-    container_name: bacab-home-doods
-    restart: always
-    network_mode: host
-    ports:
-      - 8080:8080
-
-  deepstack:
-    image: deepquestai/deepstack
-    container_name: bacab-home-deepstack
-    restart: always
-    network_mode: host
-    ports:
-      - 5000:5000
-    environment:
-      - MODE=High
-      - VISION-DETECTION=True
-      - API-KEY=${DEEPSTACK_API_KEY}
-    volumes:
-      - ./media/deepstackdatastorage/:/datastore
-
-  facebox:
-    image: machinebox/facebox
-    container_name: bacab-home-facebox
-    restart: always
-    network_mode: host
-    ports:
-      - 8082:8080
-    environment:
-      - MB_KEY=${MB_KEY}
-      - MB_FACEBOX_DISABLE_RECOGNITION=true
-    entrypoint: ["echo", "Service disabled"]
-
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
