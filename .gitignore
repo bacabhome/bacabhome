@@ -27,3 +27,6 @@ homeassistant/www/
 
 # Media
 media/
+
+# Services
+services/
