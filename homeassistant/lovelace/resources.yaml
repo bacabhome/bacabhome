@@ -6,3 +6,7 @@
   type: module
 - url: /hacsfiles/weather-card/weather-card.js
   type: module
+- url: /hacsfiles/button-text-card/button-text-card.js
+  type: module
+- url: /hacsfiles/button-card/button-card.js
+  type: module

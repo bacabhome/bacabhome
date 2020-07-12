@@ -1,0 +1,4 @@
+family_mode_emergency:
+  name: Family Mode Emergency
+  initial: off
+  icon: mdi:alpha-v-box-outline

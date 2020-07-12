@@ -1,0 +1,10 @@
+alias: Family Mode Emergency
+initial_state: 'true'
+trigger:
+  - platform: state
+    entity_id: input_boolean.family_mode_emergency
+    from: 'off'
+    to: 'on'
+action:
+  - service: script.turn_on
+    entity_id: script.family_mode_emergency

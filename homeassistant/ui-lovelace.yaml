@@ -3,4 +3,5 @@ title: Bacab Home
 views:
 
   - !include lovelace/home.yaml
+  - !include lovelace/calendar.yaml
   - !include lovelace/server.yaml

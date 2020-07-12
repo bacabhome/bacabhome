@@ -3,43 +3,15 @@ icon: mdi:home-heart
 path: home
 cards:
 
-  - type: markdown
-    title: Welcome to Bacab Home!
-    content: >
-      Bacab? Old god of the interior of the earth and of thunder, sky-carrier, fourfold.
-      Today? a Smart Home!
-
-  - type: glance
-    title: Birthdays
-    show_header_toggle: false
-    columns: 4
-    entities:
-     - entity: birthday.mina
-       name: Mina
-     - entity: birthday.uju
-       name: Uju
-     - entity: birthday.tipo
-       name: Tipo
-
-  - type: glance
-    title: Holidays
-    show_header_toggle: false
-    entities:
-     - entity: sensor.calendarific_new_years_day
-       name: New Year
-     - entity: sensor.calendarific_day_of_the_holy_kings
-       name: Holy Kings
-
-  - type: entities
-    title: Family
-    show_header_toggle: false
-    entities:
-
-      - type: section
-        label: Mode
-
-      - entity: input_boolean.family_mode_alarm
-        name: Alarm
+  - type: "custom:button-card"
+    entity: input_boolean.family_mode_emergency
+    icon: mdi:alert
+    color: red
+    color_type: card
+    name: Emergency
+    styles:
+      card:
+        - height: 100px
 
   - type: alarm-panel
     name: Alarm
