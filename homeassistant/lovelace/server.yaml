@@ -4,7 +4,7 @@ path: server
 cards:
 
   - type: custom:mini-graph-card
-    name: Processor Usage
+    name: Uso de Procesador
     align_state: center
     icon: mdi:speedometer
     show:
@@ -13,16 +13,16 @@ cards:
       points: true
     entities:
       - entity: sensor.processor_use
-        name: All System
+        name: Sistema
         color: black
       - entity: sensor.glances_containers_cpu_used
-        name: Only Containers
+        name: Contenedores
         color: grey
     hours_to_show: 36
     points_per_hour: 0.25
 
   - type: custom:mini-graph-card
-    name: Memory Disk Usage
+    name: Uso de Recursos
     align_state: center
     icon: mdi:speedometer
     show:
@@ -31,16 +31,16 @@ cards:
       points: true
     entities:
       - entity: sensor.glances_ram_used_percent
-        name: Memory
+        name: Memoria
         color: black
       - entity: sensor.glances_disk_used_percent
-        name: Disk
+        name: Disco Duro
         color: grey
     hours_to_show: 36
     points_per_hour: 0.25
 
   - type: custom:mini-graph-card
-    name: Temperature
+    name: Temperatura
     align_state: center
     icon: mdi:thermometer
     show:
@@ -58,7 +58,7 @@ cards:
     points_per_hour: 0.25
 
   - type: custom:mini-graph-card
-    name: Download Upload Speed
+    name: Velocidad de Internet
     align_state: center
     icon: mdi:speedometer
     show:
@@ -67,16 +67,16 @@ cards:
       points: true
     entities:
       - entity: sensor.speedtest_download
-        name: Download
+        name: Bajada
         color: black
       - entity: sensor.speedtest_upload
-        name: Upload
+        name: Subida
         color: grey
     hours_to_show: 36
     points_per_hour: 0.25
 
   - type: entities
-    title: System
+    title: Sistema
     show_header_toggle: false
     entities:
       - sensor.memory_free
@@ -84,15 +84,15 @@ cards:
       - sensor.last_boot
 
   - type: entities
-    title: Containers
+    title: Contenedores
     show_header_toggle: false
     entities:
       - sensor.glances_containers_active
       - sensor.glances_containers_ram_used
 
   - type: entities
-    title: Network
+    title: Red
     show_header_toggle: false
     entities:
       - entity: binary_sensor.ping_google_public_dns
-        name: Google Public DNS
+        name: Google DNS Publico
