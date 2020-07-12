@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/integrations/ios/
+# https://companion.home-assistant.io/docs/getting_started/getting-started
+
+mobile_app:
+ios:
