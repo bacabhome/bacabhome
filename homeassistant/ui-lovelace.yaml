@@ -1,7 +1,5 @@
 title: Bacab Home
 
-resources: !include lovelace/resources.yaml
-
 views:
 
   - !include lovelace/home.yaml
