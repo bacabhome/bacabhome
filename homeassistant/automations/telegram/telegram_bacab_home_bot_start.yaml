@@ -10,8 +10,4 @@ action:
       message: 'commands'
       data:
         keyboard:
-          - '/ping, /status'
-          - '/weather, /speak'
-          - '/notify, /alarm'
-          - '/ffmpeg, /amcrest'
-          - '/lastperson'
+          - '/ping'

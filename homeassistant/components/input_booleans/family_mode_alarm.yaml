@@ -1,0 +1,4 @@
+family_mode_alarm:
+  name: Family Mode Alarm
+  initial: off
+  icon: mdi:alpha-v-box-outline

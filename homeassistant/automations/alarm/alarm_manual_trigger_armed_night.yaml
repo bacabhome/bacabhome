@@ -2,16 +2,7 @@ alias: Alarm Manual Armed Night Triggered
 initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: binary_sensor.hue_motion_sensor_01_motion
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.hue_motion_sensor_02_motion
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_49fc4604_on_off
-    to: 'on'
-  - platform: state
-    entity_id: binary_sensor.lumi_lumi_sensor_magnet_aq2_f2eb4604_on_off
+    entity_id: input_boolean.family_mode_alarm_test
     to: 'on'
 condition:
   - condition: state

@@ -1,24 +1,6 @@
 title: Bacab Home
 
-resources: !include lovelace/resources.yaml
-
 views:
 
   - !include lovelace/home.yaml
-  - !include lovelace/lights.yaml
-  - !include lovelace/motion.yaml
-  - !include lovelace/downstairs.yaml
-  - !include lovelace/upstairs.yaml
-  - !include lovelace/cast.yaml
-  - !include lovelace/power.yaml
-  - !include lovelace/plants.yaml
-  - !include lovelace/weather.yaml
-  - !include lovelace/cameras.yaml
-  - !include lovelace/pedestrian.yaml
   - !include lovelace/server.yaml
-  - !include lovelace/users.yaml
-  - !include lovelace/finance.yaml
-  - !include lovelace/development.yaml
-  - !include lovelace/science.yaml
-  - !include lovelace/esphome.yaml
-  - !include lovelace/custom.yaml

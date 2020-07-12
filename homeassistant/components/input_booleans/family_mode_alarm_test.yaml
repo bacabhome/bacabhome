@@ -1,0 +1,4 @@
+family_mode_alarm_test:
+  name: Family Mode Alarm Test
+  initial: off
+  icon: mdi:alpha-v-box-outline

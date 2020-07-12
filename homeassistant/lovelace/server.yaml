@@ -96,5 +96,3 @@ cards:
     entities:
       - entity: binary_sensor.ping_google_public_dns
         name: Google Public DNS
-      - entity: binary_sensor.ping_binary_sensor_ffmpeg_camera_01
-        name: Camera 01

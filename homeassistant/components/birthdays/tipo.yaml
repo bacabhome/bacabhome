@@ -1,0 +1,2 @@
+name: Tipo
+date_of_birth: !secret tipo_birthday

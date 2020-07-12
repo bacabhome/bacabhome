@@ -1,18 +1,8 @@
 # https://developers.home-assistant.io/docs/en/lovelace_custom_card.html
 
-- url: /hacsfiles/bignumber-card.js?v=0.0.1
-  type: js
 - url: /hacsfiles/calendar-card/calendar-card.js
   type: js
 - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
   type: module
-- url: /hacsfiles/slider-entity-row.js
-  type: module
-- url: /hacsfiles/mini-media-player/mini-media-player.js
-  type: module
-- url: /hacsfiles/surveillance-card/surveillance-card.js
-  type: module
 - url: /hacsfiles/weather-card/weather-card.js
   type: module
-- url: /hacsfiles/travel-time-card/travel-time-card.js
-  type: js

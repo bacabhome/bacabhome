@@ -14,14 +14,12 @@ cards:
     show_header_toggle: false
     columns: 4
     entities:
-     - entity: birthday.princess
-       name: Princess
-     - entity: birthday.polito
-       name: Polito
-     - entity: birthday.maca
-       name: Maca
-     - entity: birthday.balam
-       name: Balam
+     - entity: birthday.mina
+       name: Mina
+     - entity: birthday.uju
+       name: Uju
+     - entity: birthday.tipo
+       name: Tipo
 
   - type: glance
     title: Holidays
@@ -38,86 +36,10 @@ cards:
     entities:
 
       - type: section
-        label: Commute
-
-      - entity: sensor.here_travel_time_home_to_school
-        name: Home To School
-      - entity: sensor.here_travel_time_home_to_work
-        name: Home To Work
-
-      - type: section
         label: Mode
 
-      - entity: input_boolean.family_mode_vacation
-        name: Vacation
-      - entity: input_boolean.family_mode_street
-        name: Street
-
-  - type: entities
-    title: Summary
-    show_header_toggle: false
-    entities:
-
-      - type: section
-        label: Environment
-
-      - entity: sensor.dark_sky_hourly_summary
-        label: Dark Sky Hourly Summary
-      - entity: sensor.home_mean_temperature
-        name: Home Mean Temperature
-      - entity: sensor.home_mean_humidity
-        name: Home Mean Humidity
-
-      - type: section
-        label: Motion On Today
-
-      - entity: binary_sensor.template_all_motion_on
-        name: Now
-      - entity: sensor.all_motion_on_today
-        name: Hours
-
-      - type: section
-        label: All Lights On
-
-      - entity: sensor.all_lights_on_today
-        name: Today
-      - entity: sensor.all_lights_on_yesterday
-        name: Yesterday
-
-      - type: section
-        label: Users Week
-
-      - entity: sensor.person_balam_home_week
-        name: Balam Home
-      - entity: sensor.person_balam_not_home_week
-        name: Balam Not Home
-
-      - type: section
-        label: Battery Levels
-
-      - entity: sensor.home_mean_battery
-        name: Home Mean Battery Levels
-
-  - type: glance
-    title: Lights
-    show_header_toggle: false
-    columns: 3
-    entities:
-      - entity: group.all_lights
-        name: All
-        tap_action:
-          action: toggle
-      - entity: light.downstairs_lights
-        name: Downstairs
-        tap_action:
-          action: toggle
-      - entity: light.upstairs_lights
-        name: Upstairs
-        tap_action:
-          action: toggle
-
-  - type: shopping-list
-    title: Shopping List
+      - entity: input_boolean.family_mode_alarm
+        name: Alarm
 
   - type: alarm-panel
     name: Alarm
