@@ -8,13 +8,16 @@ cards:
     icon: mdi:alert
     color: red
     color_type: card
-    name: Emergency
+    name: Emergencia
     styles:
       card:
         - height: 100px
 
+  - type: light
+    entity: light.foco_calle
+
   - type: alarm-panel
-    name: Alarm
+    name: Alarma
     entity: alarm_control_panel.alarm_manual
     states:
       - arm_home
