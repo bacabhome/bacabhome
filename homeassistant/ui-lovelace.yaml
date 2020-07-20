@@ -4,4 +4,6 @@ views:
 
   - !include lovelace/home.yaml
   - !include lovelace/calendar.yaml
+  - !include lovelace/cameras.yaml
+  - !include lovelace/cast.yaml
   - !include lovelace/server.yaml

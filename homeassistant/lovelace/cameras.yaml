@@ -1,0 +1,30 @@
+title: Cameras
+icon: mdi:cctv
+path: cameras
+id: Cameras
+panel: false
+cards:
+
+  - type: picture-entity
+    title: Camara Tendederos
+    entity: camera.camara_tendederos
+    show_state: false
+    camera_view: live
+    hold_action:
+      action: call-service
+      service: input_boolean.toggle
+      service_data:
+        entity_id: input_boolean.camara_tendederos_mina
+
+  - type: picture-glance
+    title: Ultima Imagen Camara Tendederos
+    camera_image: camera.camara_tendederos_imagen
+    show_state: false
+    name: Camara Tendederos
+    entities:
+      - binary_sensor.camara_tendederos_estado
+    hold_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.camara_tendederos_grabacion

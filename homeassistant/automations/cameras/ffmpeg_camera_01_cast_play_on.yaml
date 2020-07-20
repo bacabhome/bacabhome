@@ -2,11 +2,11 @@ alias: FFmpeg Camera 01 Cast Play On
 initial_state: 'true'
 trigger:
 - platform: state
-  entity_id: input_boolean.ffmpeg_camera_01_cast
+  entity_id: input_boolean.camara_tendederos_mina
   from: 'off'
   to: 'on'
 action:
   - service: camera.play_stream
     data:
-      entity_id: camera.ffmpeg_camera_01
-      media_player: media_player.eek
+      entity_id: camera.camara_tendederos
+      media_player: media_player.mina

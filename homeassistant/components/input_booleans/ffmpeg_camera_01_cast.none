@@ -1,4 +1,0 @@
-ffmpeg_camera_01_cast:
-  name: FFmpeg Camera 01 Cast
-  initial: off
-  icon: mdi:cast

@@ -1,4 +1,4 @@
-alias: FFmpeg Camera 02 Cast Play On
+alias: Ffmpeg Camera 02 Cast Play On
 initial_state: 'true'
 trigger:
 - platform: state

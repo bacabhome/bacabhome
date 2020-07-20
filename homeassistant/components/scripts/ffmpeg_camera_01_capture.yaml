@@ -1,0 +1,10 @@
+camara_tendederos_grabacion:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_tendederos
+      filename: '/config/www/media/cameras/camara_tendederos.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_tendederos_imagen
+      filename: '/config/www/media/archive/camara_tendederos_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

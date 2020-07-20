@@ -1,0 +1,21 @@
+title: Cast
+icon: mdi:cast
+path: cast
+id: cast
+cards:
+
+  - type: entities
+    title: Cameras
+    show_header_toggle: false
+    entities:
+
+      - entity: input_boolean.camara_tendederos_mina
+        name: Camara Tendederos Chromecast Mina
+
+  - type: entities
+    title: Players
+    show_header_toggle: false
+    entities:
+      - entity: media_player.mina
+        name: Mina
+        type: custom:mini-media-player

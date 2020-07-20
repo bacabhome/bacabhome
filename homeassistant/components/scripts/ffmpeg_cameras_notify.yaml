@@ -1,0 +1,4 @@
+camaras_notificacion:
+  sequence:
+  - service: script.turn_on
+    entity_id: script.camara_tendederos_notificacion

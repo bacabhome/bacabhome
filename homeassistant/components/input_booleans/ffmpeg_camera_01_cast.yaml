@@ -1,0 +1,4 @@
+camara_tendederos_mina:
+  name: Camara Tendederos Mina
+  initial: off
+  icon: mdi:cast

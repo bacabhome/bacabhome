@@ -1,0 +1,11 @@
+alias: 'Telegram Camaras'
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/cameras'
+action:
+  - service: script.turn_on
+    entity_id: script.camaras_grabacion
+  - service: script.turn_on
+    entity_id: script.camaras_notificacion

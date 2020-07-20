@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/
+
+platform: ffmpeg
+name: Camara Tendederos
+input: !secret ffmpeg_camera_01

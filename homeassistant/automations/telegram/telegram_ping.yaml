@@ -1,4 +1,4 @@
-alias: 'Telegram Bacab Home Bot Ping'
+alias: 'Telegram Ping'
 trigger:
   platform: event
   event_type: telegram_command

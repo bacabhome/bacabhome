@@ -1,10 +1,10 @@
-ffmpeg_camera_01_notify:
+camara_tendederos_notificacion:
   sequence:
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'Picture'
-      message: "This was it..."
+      title: 'Notificaciones'
+      message: "Esta es..."
       data:
         photo:
-          - file: '/config/www/media/cameras/ffmpeg_camera_01.jpg'
-            caption: Who was there? Ffmpeg Camera 01
+          - file: '/config/www/media/cameras/camara_tendederos.jpg'
+            caption: Notificacion! Quien esta? Camara Tendederos

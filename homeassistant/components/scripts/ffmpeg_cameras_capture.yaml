@@ -1,0 +1,4 @@
+camaras_grabacion:
+  sequence:
+  - service: script.turn_on
+    entity_id: script.camara_tendederos_grabacion

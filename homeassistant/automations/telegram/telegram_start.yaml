@@ -1,4 +1,4 @@
-alias: 'Telegram Bacab Home Bot Start'
+alias: 'Telegram Start'
 trigger:
   platform: event
   event_type: telegram_command
@@ -10,4 +10,4 @@ action:
       message: 'commands'
       data:
         keyboard:
-          - '/ping'
+          - '/ping, /cameras'

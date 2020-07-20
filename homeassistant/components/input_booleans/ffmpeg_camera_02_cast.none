@@ -1,4 +1,4 @@
 ffmpeg_camera_02_cast:
-  name: FFmpeg Camera 02 Cast
+  name: Ffmpeg Camera 02 Cast
   initial: off
   icon: mdi:cast
