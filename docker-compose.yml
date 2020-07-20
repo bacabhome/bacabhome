@@ -48,7 +48,6 @@ services:
       - TZ=America/Mexico_City
     cap_add:
       - ALL
-    pid: "host"
     ipc: "host"
     network_mode: "host"
     ports:
