@@ -1,0 +1,5 @@
+logger:                                                                                                                                                                                                                       
+  default: info                                                                                                                                                                                                               
+  logs:                                                                                                                                                                                                                       
+    hubitatmaker: debug                                                                                                                                                                                                       
+    homeassistant.custom_components.hubitat: debug   

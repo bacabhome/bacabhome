@@ -1,0 +1,7 @@
+camara_toldo_video:
+  alias: Camara Toldo Video
+  sequence:
+  - service: camera.record
+    data:
+      entity_id: camera.camara_toldo
+      filename: '/config/www/media/videos/toldo/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

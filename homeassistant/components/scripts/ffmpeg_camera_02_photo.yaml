@@ -1,0 +1,11 @@
+camara_toldo_foto:
+  alias: Camara Toldo Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_toldo
+      filename: '/config/www/media/cameras/camara_toldo.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_toldo_imagen
+      filename: '/config/www/media/photos/toldo/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

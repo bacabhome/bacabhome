@@ -1,0 +1,10 @@
+alias: FFmpeg Camera 04 Cast Mina Play Off
+initial_state: 'true'
+trigger:
+- platform: state
+  entity_id: input_boolean.camara_cocheras_mina
+  from: 'on'
+  to: 'off'
+action:
+  - service: media_player.turn_off
+    entity_id: media_player.mina

@@ -2,9 +2,26 @@ alias: Alarm Manual Arm Away
 initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: alarm_control_panel.alarm_manual
+    entity_id: alarm_control_panel.seguridad_casa
     to: 'armed_away'
 action:
   - service: notify.telegram_bacab_home_bot
     data_template:
       message: "Alarm! Armed Away {{ states('sensor.date_time') }}"
+  - service: media_player.volume_set
+    entity_id:
+    - media_player.guardian
+    data:
+      volume_level: 1.0
+  - service: media_player.play_media
+    entity_id: media_player.guardian
+    data:
+      media_content_id: "http://smrtho.us/storage/startup.mp3"
+      media_content_type: "audio/mp3"
+  - delay: '00:00:01'
+  - service: tts.google_translate_say
+    entity_id: media_player.guardian
+    data_template:
+      message: >-
+                  'Alarma armada. Hasta pronto'
+      language: 'es'

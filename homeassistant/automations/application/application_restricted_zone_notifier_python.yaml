@@ -1,0 +1,34 @@
+alias: Application Restricted Zone Notifier Python
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.application_restricted_zone_notifier_python
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_calle
+      filename: '/config/www/media/application/restricted_zone_notifier_python.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_calle
+      filename: '/config/www/media/application/restricted/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 45
+      lookback: 15
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_restricted_zone_notifier_python
+      filename: '/config/www/media/application/restricted/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Warning! Restricted Zone Notifier {{ states('sensor.date_time') }}"
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Restricted Zone Notifier'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/application/restricted_zone_notifier_python.jpg'
+            caption: Persona
+

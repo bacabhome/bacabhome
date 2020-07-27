@@ -1,0 +1,7 @@
+camara_pasillo_video:
+  alias: Camara Pasillo Video
+  sequence:
+  - service: camera.record
+    data:
+      entity_id: camera.camara_pasillo
+      filename: '/config/www/media/videos/pasillo/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

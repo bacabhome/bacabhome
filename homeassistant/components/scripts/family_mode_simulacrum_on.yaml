@@ -1,0 +1,6 @@
+family_mode_simulacrum_on:
+  alias: Modo Simulacro Prendido
+  sequence:
+    - service: notify.telegram_bacab_home_bot
+      data_template:
+        message: "Modo simulacro activado..."

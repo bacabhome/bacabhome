@@ -1,4 +1,5 @@
-camara_tendederos_notificacion:
+camara_lavadero_notificacion:
+  alias: Camara Lavadero Notificacion
   sequence:
   - service: notify.telegram_bacab_home_bot
     data:
@@ -6,5 +7,5 @@ camara_tendederos_notificacion:
       message: "Esta es..."
       data:
         photo:
-          - file: '/config/www/media/cameras/camara_tendederos.jpg'
-            caption: Notificacion! Quien esta? Camara Tendederos
+          - file: '/config/www/media/cameras/camara_lavadero.jpg'
+            caption: Notificacion! Quien esta? Camara Lavadero

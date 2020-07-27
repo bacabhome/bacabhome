@@ -1,0 +1,8 @@
+family_mode_panic_off:
+  alias: Modo Panico Apagado
+  sequence:
+    - service: notify.telegram_bacab_home_bot
+      data_template:
+        message: "Modo panico desactivado..."
+    - service: media_player.turn_off
+      entity_id: media_player.guardian

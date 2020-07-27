@@ -1,0 +1,10 @@
+alias: Family Mode Alarm On
+initial_state: 'true'
+trigger:
+  - platform: state
+    entity_id: input_boolean.family_mode_panic
+    from: 'off'
+    to: 'on'
+action:
+  - service: script.turn_on
+    entity_id: script.family_mode_panic_on

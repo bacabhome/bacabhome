@@ -1,0 +1,8 @@
+alias: Night Street Light Off
+initial_state: 'true'
+trigger:
+  - platform: time
+    at: "06:00:00"
+action:
+   service: light.turn_off
+   entity_id: light.foco_calle

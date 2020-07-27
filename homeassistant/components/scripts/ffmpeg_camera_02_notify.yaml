@@ -1,0 +1,11 @@
+camara_toldo_notificacion:
+  alias: Camara Toldo Notificacion
+  sequence:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Notificaciones'
+      message: "Esta es..."
+      data:
+        photo:
+          - file: '/config/www/media/cameras/camara_toldo.jpg'
+            caption: Notificacion! Quien esta? Camara Toldo

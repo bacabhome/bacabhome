@@ -1,0 +1,11 @@
+camara_pasillo_foto:
+  alias: Camara Pasillo Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_pasillo
+      filename: '/config/www/media/cameras/camara_pasillo.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_pasillo_imagen
+      filename: '/config/www/media/photos/pasillo/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

@@ -1,0 +1,8 @@
+alexa:
+  filter:
+    include_entities:
+      - alarm_control_panel.casa
+      - light.foco_calle
+    include_domains:
+      - switch
+      - alarm_control_panel

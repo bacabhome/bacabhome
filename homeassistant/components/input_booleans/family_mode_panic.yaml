@@ -1,0 +1,4 @@
+family_mode_panic:
+  name: Modo Panico
+  initial: off
+  icon: mdi:alpha-v-box-outline

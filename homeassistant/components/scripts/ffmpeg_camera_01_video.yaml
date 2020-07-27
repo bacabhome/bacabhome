@@ -1,0 +1,7 @@
+camara_lavadero_video:
+  alias: Camara Lavadero Video
+  sequence:
+  - service: camera.record
+    data:
+      entity_id: camera.camara_lavadero
+      filename: '/config/www/media/videos/lavadero/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

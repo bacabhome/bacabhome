@@ -1,0 +1,10 @@
+alias: FFmpeg Camera 05 Cast Mina Play Off
+initial_state: 'true'
+trigger:
+- platform: state
+  entity_id: input_boolean.camara_pasillo_mina
+  from: 'on'
+  to: 'off'
+action:
+  - service: media_player.turn_off
+    entity_id: media_player.mina

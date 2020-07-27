@@ -1,5 +1,0 @@
-family_mode_emergency:
-  sequence:
-    - service: notify.telegram_bacab_home_bot
-      data_template:
-        message: "Family Mode Emergency!"

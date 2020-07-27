@@ -1,0 +1,12 @@
+alias: FFmpeg Camera 03 Cast Mina Play On
+initial_state: 'true'
+trigger:
+- platform: state
+  entity_id: input_boolean.camara_azotea_mina
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.play_stream
+    data:
+      entity_id: camera.camara_azotea
+      media_player: media_player.mina

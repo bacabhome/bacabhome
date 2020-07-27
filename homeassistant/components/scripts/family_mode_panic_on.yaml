@@ -1,0 +1,8 @@
+family_mode_panic_on:
+  alias: Modo Panico Prendido
+  sequence:
+    - service: notify.telegram_bacab_home_bot
+      data_template:
+        message: "Modo panico activado..."
+    - service: script.turn_on
+      entity_id: script.alarm_manual_triggered_mode_panic

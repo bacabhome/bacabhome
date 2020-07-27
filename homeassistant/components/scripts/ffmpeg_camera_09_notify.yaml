@@ -1,0 +1,11 @@
+camara_calle_notificacion:
+  alias: Camara Calle Notificacion
+  sequence:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Notificaciones'
+      message: "Esta es..."
+      data:
+        photo:
+          - file: '/config/www/media/cameras/camara_calle.jpg'
+            caption: Notificacion! Quien esta? Camara Calle

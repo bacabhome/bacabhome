@@ -1,0 +1,4 @@
+camara_toldo_mina:
+  name: Camara Toldo Mina
+  initial: off
+  icon: mdi:cast

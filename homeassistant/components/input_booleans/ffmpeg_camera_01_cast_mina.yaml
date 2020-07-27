@@ -1,0 +1,4 @@
+camara_lavadero_mina:
+  name: Camara Lavadero Mina
+  initial: off
+  icon: mdi:cast

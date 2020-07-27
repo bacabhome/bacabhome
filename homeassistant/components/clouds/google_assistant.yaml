@@ -1,0 +1,11 @@
+google_actions:
+  filter:
+    include_entities:
+      - light.foco_calle
+    include_domains:
+      - switch
+  entity_config:
+    alarm_control_panel.casa:
+      name: Alarma Casa
+      expose: true
+      room: Casa

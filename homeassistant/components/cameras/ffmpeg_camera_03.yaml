@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/
+
+platform: ffmpeg
+name: Camara Azotea
+input: !secret ffmpeg_camera_03
+#extra_arguments: '-vf "scale=384:216"'
+#extra_arguments: '-b:v 64k -bufsize 64k'

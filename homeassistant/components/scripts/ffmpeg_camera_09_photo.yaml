@@ -1,0 +1,11 @@
+camara_calle_foto:
+  alias: Camara Calle Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_calle
+      filename: '/config/www/media/cameras/camara_calle.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_calle_imagen
+      filename: '/config/www/media/photos/calle/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

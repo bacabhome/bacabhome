@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/
+
+platform: ffmpeg
+name: Camara Calle
+input: !secret ffmpeg_camera_09
+extra_arguments: '-rtsp_transport tcp'
+#extra_arguments: '-vf "scale=384:216"'
+#extra_arguments: '-b:v 64k -bufsize 64k'

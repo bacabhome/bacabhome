@@ -1,0 +1,21 @@
+alias: Night Hue Motion Sensor One Off
+initial_state: 'false'
+trigger:
+  platform: state
+  entity_id: binary_sensor.hue_motion_sensor_one_motion
+  to: 'off'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: light.luz_cochera
+      state: 'on'
+    - condition: or
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+action:
+  service: light.turn_off
+  entity_id: light.luz_cochera

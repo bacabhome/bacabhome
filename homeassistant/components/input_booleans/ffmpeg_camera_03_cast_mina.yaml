@@ -1,0 +1,4 @@
+camara_azotea_mina:
+  name: Camara Azotea Mina
+  initial: off
+  icon: mdi:cast

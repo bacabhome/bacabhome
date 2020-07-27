@@ -1,0 +1,9 @@
+alias: 'Telegram Alarm'
+trigger:
+  platform: event
+  event_type: telegram_command
+  event_data:
+    command: '/alarm'
+action:
+  - service: script.turn_on
+    entity_id: script.alarm_manual_triggered_mode_telegram

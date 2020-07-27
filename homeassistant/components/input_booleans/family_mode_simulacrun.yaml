@@ -1,0 +1,4 @@
+family_mode_simulacrum:
+  name: Modo Simulacro
+  initial: off
+  icon: mdi:alpha-s-box-outline

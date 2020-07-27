@@ -6,10 +6,10 @@ trigger:
     to: 'on'
 condition:
   - condition: state
-    entity_id: alarm_control_panel.alarm_manual
+    entity_id: alarm_control_panel.seguridad_casa
     state: armed_away
 action:
   - service: alarm_control_panel.alarm_trigger
-    entity_id: alarm_control_panel.alarm_manual
+    entity_id: alarm_control_panel.seguridad_casa
   - service: script.turn_on
-    entity_id: script.alarm_manual_triggered
+    entity_id: script.alarm_manual_triggered_mode_away

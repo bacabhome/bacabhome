@@ -1,4 +1,4 @@
-title: Server
+title: Servidor
 icon: mdi:server
 path: server
 cards:
@@ -96,3 +96,5 @@ cards:
     entities:
       - entity: binary_sensor.ping_google_public_dns
         name: Google DNS Publico
+      - entity: hubitat.hub
+        name: Hubitat

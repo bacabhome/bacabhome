@@ -1,0 +1,16 @@
+camaras_fotos:
+  alias: Camaras Videos
+  mode: parallel
+  sequence:
+    - service: script.turn_on
+      entity_id: script.camara_calle_video
+    - service: script.turn_on
+      entity_id: script.camara_lavadero_video
+    - service: script.turn_on
+      entity_id: script.camara_toldo_video
+    - service: script.turn_on
+      entity_id: script.camara_azotea_video
+    - service: script.turn_on
+      entity_id: script.camara_cocheras_video
+    - service: script.turn_on
+      entity_id: script.camara_pasillo_video

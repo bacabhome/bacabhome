@@ -1,0 +1,7 @@
+camara_azotea_video:
+  alias: Camara Azotea Video
+  sequence:
+  - service: camera.record
+    data:
+      entity_id: camera.camara_azotea
+      filename: '/config/www/media/videos/azotea/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

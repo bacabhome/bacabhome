@@ -1,8 +1,9 @@
 # https://www.home-assistant.io/integrations/manual/
 
 platform: manual
-name: Alarm Manual
+name: Seguridad Casa
 code: !secret alarm_manual_code
+code_arm_required: false
 arming_time: 30
 delay_time: 20
 trigger_time: 4

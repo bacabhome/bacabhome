@@ -1,0 +1,9 @@
+alias: Night Street Light On
+initial_state: 'true'
+trigger:
+  - platform: sun
+    event: sunset
+    offset: '-00:05:00'
+action:
+   service: light.turn_on
+   entity_id: light.foco_calle

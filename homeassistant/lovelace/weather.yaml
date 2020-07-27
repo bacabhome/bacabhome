@@ -1,15 +1,34 @@
-title: Weather
+title: Clima
 icon: mdi:weather-cloudy
 path: weather
 id: Weather
 panel: false
 cards:
 
-  - type: weather-forecast
-    entity: weather.dark_sky
+  - type: entities
+    title: Exterior
+    show_header_toggle: false
+    entities:
+      - entity: sensor.xiaomi_temperature_humidity_sensor_01_battery
+        name: Bateria
+      - entity: sensor.xiaomi_temperature_humidity_sensor_01_humidity
+        name: Humedad
+      - entity: sensor.xiaomi_temperature_humidity_sensor_01_temperature
+        name: Temperatura
+
+  - type: entities
+    title: Interior
+    show_header_toggle: false
+    entities:
+      - entity: sensor.xiaomi_temperature_humidity_sensor_02_battery
+        name: Bateria
+      - entity: sensor.xiaomi_temperature_humidity_sensor_02_humidity
+        name: Humedad
+      - entity: sensor.xiaomi_temperature_humidity_sensor_02_temperature
+        name: Temperatura
 
   - type: custom:weather-card
-    entity: weather.dark_sky
+    entity: weather.clima
     current: true
     details: true
     forecast: true
@@ -17,78 +36,3 @@ cards:
   - type: iframe
     url: !secret services_windy_url
     aspect_ratio: 50%
-
-  - type: horizontal-stack
-    cards:
-      - type: custom:mini-graph-card
-        name: Temperature
-        align_state: center
-        icon: mdi:home-thermometer
-        show:
-          icon: true
-          extrema: true
-          labels: true
-          points: true
-        entities:
-          - entity: sensor.hue_motion_sensor_01_temperature
-            name: Downstairs
-            color: black
-          - entity: sensor.hue_motion_sensor_02_temperature
-            name: Upstairs
-            color: gray
-          - entity: sensor.hue_outdoor_motion_sensor_01_temperature
-            name: Front Yard
-            color: '#C0C0C0'
-          - entity: sensor.dark_sky_temperature
-            name: DarkSky
-            color: '#0080FF'
-        height: 100
-        hours_to_show: 36
-        points_per_hour: 0.25
-        hour24: true
-
-  - type: entities
-    title: Dark Sky More Details
-    show_header_toggle: false
-    entities:
-      - entity: weather.dark_sky
-        name: Dark Sky
-      - entity: sensor.dark_sky_precip_probability
-        name: Precipitation Probability
-      - entity: sensor.dark_sky_temperature
-        name: Temperature
-      - entity: sensor.dark_sky_wind_speed
-        name: Wind Speed
-      - entity: sensor.dark_sky_cloud_coverage
-        name: Cloud Coverage
-      - entity: sensor.dark_sky_humidity
-        name: Humidity
-      - entity: sensor.dark_sky_visibility
-        name: Visibility
-
-  - type: entities
-    title: World Air Quality Index
-    show_header_toggle: false
-    entities:
-      - entity: sensor.waqi_aguilas_jalisco_mexico
-        name: Las Aguilas Jalisco
-      - entity: sensor.waqi_guadalajara_i_jalisco_tlaquepaque_guadalajara_mexico
-        name: Tlaquepaque Jalisco
-      - entity: sensor.waqi_centro_jalisco_mexico
-        name: Centro Jalisco
-
-  - type: entities
-    title: OpenVU
-    show_header_toggle: false
-    entities:
-      - entity: binary_sensor.protection_window
-      - entity: sensor.current_ozone_level
-      - entity: sensor.current_uv_index
-      - entity: sensor.current_uv_level
-      - entity: sensor.max_uv_index
-      - entity: sensor.skin_type_1_safe_exposure_time
-      - entity: sensor.skin_type_2_safe_exposure_time
-      - entity: sensor.skin_type_3_safe_exposure_time
-      - entity: sensor.skin_type_4_safe_exposure_time
-      - entity: sensor.skin_type_5_safe_exposure_time
-      - entity: sensor.skin_type_6_safe_exposure_time

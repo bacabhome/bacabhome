@@ -1,0 +1,4 @@
+camara_cocheras_mina:
+  name: Camara Cocheras Mina
+  initial: off
+  icon: mdi:cast

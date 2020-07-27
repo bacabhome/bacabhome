@@ -1,30 +1,90 @@
-title: Cameras
+title: Camaras
 icon: mdi:cctv
 path: cameras
 id: Cameras
 panel: false
 cards:
 
+  - type: entities
+    title: Chromecast Mina
+    show_header_toggle: false
+    entities:
+
+      - entity: input_boolean.camara_calle_mina
+        name: Camara Calle
+      - entity: input_boolean.camara_lavadero_mina
+        name: Camara Lavadero
+      - entity: input_boolean.camara_toldo_mina
+        name: Camara Toldo
+      - entity: input_boolean.camara_azotea_mina
+        name: Camara Azotea
+      - entity: input_boolean.camara_cocheras_mina
+        name: Camara Cocheras
+      - entity: input_boolean.camara_pasillo_mina
+        name: Camara Pasillo
+
   - type: picture-entity
-    title: Camara Tendederos
-    entity: camera.camara_tendederos
+    title: Camara Calle
+    entity: camera.camara_calle
     show_state: false
     camera_view: live
     hold_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
-        entity_id: input_boolean.camara_tendederos_mina
+        entity_id: input_boolean.camara_calle_mina
 
-  - type: picture-glance
-    title: Ultima Imagen Camara Tendederos
-    camera_image: camera.camara_tendederos_imagen
+  - type: picture-entity
+    title: Camara Lavadero
+    entity: camera.camara_lavadero
     show_state: false
-    name: Camara Tendederos
-    entities:
-      - binary_sensor.camara_tendederos_estado
+    camera_view: live
     hold_action:
       action: call-service
-      service: script.turn_on
+      service: input_boolean.toggle
       service_data:
-        entity_id: script.camara_tendederos_grabacion
+        entity_id: input_boolean.camara_lavadero_mina
+
+  - type: picture-entity
+    title: Camara Toldo
+    entity: camera.camara_toldo
+    show_state: false
+    camera_view: live
+    hold_action:
+      action: call-service
+      service: input_boolean.toggle
+      service_data:
+        entity_id: input_boolean.camara_toldo_mina
+
+  - type: picture-entity
+    title: Camara Azotea
+    entity: camera.camara_azotea
+    show_state: false
+    camera_view: live
+    hold_action:
+      action: call-service
+      service: input_boolean.toggle
+      service_data:
+        entity_id: input_boolean.camara_azotea_mina
+
+  - type: picture-entity
+    title: Camara Cocheras
+    entity: camera.camara_cocheras
+    show_state: false
+    camera_view: live
+    hold_action:
+      action: call-service
+      service: input_boolean.toggle
+      service_data:
+        entity_id: input_boolean.camara_cocheras_mina
+
+  - type: picture-entity
+    title: Camara Pasillo
+    entity: camera.camara_pasillo
+    show_state: false
+    camera_view: live
+    hold_action:
+      action: call-service
+      service: input_boolean.toggle
+      service_data:
+        entity_id: input_boolean.camara_pasillo_mina

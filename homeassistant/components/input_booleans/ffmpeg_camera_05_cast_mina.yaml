@@ -1,0 +1,4 @@
+camara_pasillo_mina:
+  name: Camara Pasillo Mina
+  initial: off
+  icon: mdi:cast

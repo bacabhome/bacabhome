@@ -1,0 +1,5 @@
+# https://www.home-assistant.io/components/camera.ffmpeg/
+
+platform: ffmpeg
+name: Camara Toldo
+input: !secret ffmpeg_camera_02

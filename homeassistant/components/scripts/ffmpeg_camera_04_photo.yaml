@@ -1,0 +1,11 @@
+camara_cocheras_foto:
+  alias: Camara Cocheras Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_cocheras
+      filename: '/config/www/media/cameras/camara_cocheras.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_cocheras_imagen
+      filename: '/config/www/media/photos/cocheras/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

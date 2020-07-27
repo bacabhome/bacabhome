@@ -1,4 +1,16 @@
 camaras_notificacion:
+  alias: Camaras Notificacion
+  mode: parallel
   sequence:
-  - service: script.turn_on
-    entity_id: script.camara_tendederos_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_calle_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_lavadero_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_toldo_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_azotea_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_cocheras_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_pasillo_notificacion

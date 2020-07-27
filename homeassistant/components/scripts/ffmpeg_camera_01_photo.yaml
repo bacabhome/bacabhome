@@ -1,0 +1,11 @@
+camara_lavadero_foto:
+  alias: Camara Lavadero Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_lavadero
+      filename: '/config/www/media/cameras/camara_lavadero.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_lavadero_imagen
+      filename: '/config/www/media/photos/lavadero/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

@@ -1,0 +1,11 @@
+camara_azotea_foto:
+  alias: Camara Azotea Foto
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_azotea
+      filename: '/config/www/media/cameras/camara_azotea.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_azotea_imagen
+      filename: '/config/www/media/photos/azotea/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

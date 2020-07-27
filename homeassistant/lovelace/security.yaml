@@ -1,0 +1,49 @@
+title: Seguridad
+icon: mdi:security
+path: security
+id: security
+cards:
+
+  - type: glance
+    title: Movimiento
+    show_header_toggle: false
+    columns: 4
+    entities:
+     - entity: binary_sensor.hue_motion_sensor_one_motion
+       name: Entrada
+     - entity: binary_sensor.hue_motion_sensor_two_motion
+       name: Cocheras
+
+  - type: glance
+    title: Accesos
+    show_header_toggle: false
+    entities:
+     - entity: binary_sensor.xiaomi_door_window_sensor_one_contact
+       name: Porton Uno
+     - entity: binary_sensor.xiaomi_door_window_sensor_two_contact
+       name: Porton Dos
+     - entity: binary_sensor.xiaomi_door_window_sensor_three_contact
+       name: Calle
+     - entity: binary_sensor.xiaomi_door_window_sensor_four_contact
+       name: Casa
+
+  - type: entities
+    title: Familia
+    show_header_toggle: false
+    entities:
+
+      - type: section
+        label: Modo
+
+      - entity: input_boolean.family_mode_vacation
+        name: Vacaciones
+      - entity: input_boolean.family_mode_street
+        name: Paseo
+
+  - type: alarm-panel
+    name: Alarma
+    entity: alarm_control_panel.seguridad_casa
+    states:
+      - arm_home
+      - arm_away
+      - arm_night

@@ -36,7 +36,7 @@ services:
 #    build:
 #      context: ./config/homeassistant/
 #      dockerfile: Dockerfile.homeassistant
-    image: homeassistant/home-assistant
+    image: homeassistant/home-assistant:dev
     container_name: bacab-home-homeassistant
     privileged: true
     restart: on-failure
