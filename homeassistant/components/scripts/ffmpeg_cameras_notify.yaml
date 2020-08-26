@@ -1,6 +1,5 @@
 camaras_notificacion:
   alias: Camaras Notificacion
-  mode: parallel
   sequence:
     - service: script.turn_on
       entity_id: script.camara_calle_notificacion

@@ -5,8 +5,8 @@ views:
   - !include lovelace/home.yaml
   - !include lovelace/lights.yaml
   - !include lovelace/security.yaml
-  - !include lovelace/calendar.yaml
   - !include lovelace/cameras.yaml
+  - !include lovelace/perimetro.yaml
   - !include lovelace/cast.yaml
   - !include lovelace/weather.yaml
   - !include lovelace/server.yaml

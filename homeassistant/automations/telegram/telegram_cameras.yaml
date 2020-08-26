@@ -6,6 +6,6 @@ trigger:
     command: '/cameras'
 action:
   - service: script.turn_on
-    entity_id: script.camaras_grabacion
+    entity_id: script.camaras_fotos
   - service: script.turn_on
     entity_id: script.camaras_notificacion

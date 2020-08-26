@@ -1,6 +1,5 @@
-camaras_fotos:
+camaras_videos:
   alias: Camaras Videos
-  mode: parallel
   sequence:
     - service: script.turn_on
       entity_id: script.camara_calle_video

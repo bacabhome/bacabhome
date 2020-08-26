@@ -8,11 +8,11 @@ trigger:
 action:
   - service: camera.snapshot
     data:
-      entity_id: camera.camara_calle
+      entity_id: camera.camara_azotea
       filename: '/config/www/media/application/restricted_zone_notifier_python.jpg'
   - service: camera.record
     data_template:
-      entity_id: camera.camara_calle
+      entity_id: camera.camara_azotea
       filename: '/config/www/media/application/restricted/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 45
       lookback: 15
