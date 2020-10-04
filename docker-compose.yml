@@ -44,8 +44,6 @@ services:
       - "influxdb"
       - "mosquitto"
       - "glances"
-      - "doods"
-      - "deepstack"
     environment:
       - TZ=America/Mexico_City
     cap_add:
