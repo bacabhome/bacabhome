@@ -1,0 +1,39 @@
+title: Perimetro
+icon: mdi:security-network
+path: perimetro
+id: Perimetro
+panel: false
+cards:
+
+  - type: entities
+    title: Contador
+    show_header_toggle: false
+    entities:
+
+      - entity: sensor.alwaysai_simple_object_counter_bicycle
+        name: Bicicleta
+      - entity: sensor.alwaysai_simple_object_counter_car
+        name: Carro
+      - entity: sensor.alwaysai_simple_object_counter_dog
+        name: Perro
+      - entity: sensor.alwaysai_simple_object_counter_knife
+        name: Cuchillo
+      - entity: sensor.alwaysai_simple_object_counter_motorcycle
+        name: Motocicleta
+      - entity: sensor.alwaysai_simple_object_counter_person
+        name: Persona
+      - entity: sensor.alwaysai_simple_object_counter_truck
+        name: Camioneta
+
+
+  - type: picture-entity
+    title: Camara Calle
+    entity: camera.camara_calle
+    show_state: false
+    camera_view: live
+
+  - type: picture-entity
+    title: Camara Azotea
+    entity: camera.camara_azotea
+    show_state: false
+    camera_view: live
