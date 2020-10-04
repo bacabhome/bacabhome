@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+platform: mqtt
+name: alwaysAI Simple Object Counter Bicycle
+state_topic: "alwaysai/soc"
+value_template: "{{ value_json.bicycle }}"

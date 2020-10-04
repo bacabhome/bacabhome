@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+platform: mqtt
+name: alwaysAI Simple Object Counter Truck
+state_topic: "alwaysai/soc"
+value_template: "{{ value_json.truck }}"
