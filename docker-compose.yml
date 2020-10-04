@@ -89,7 +89,7 @@ services:
     build:
       context: ./config/nodered/
       dockerfile: Dockerfile.nodered
-    image: nodered/node-red-docker:v8
+    image: nodered/node-red:v8
     container_name: bacab-home-nodered
     restart: on-failure
     environment:
