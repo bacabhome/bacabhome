@@ -33,9 +33,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   homeassistant:
-#    build:
-#      context: ./config/homeassistant/
-#      dockerfile: Dockerfile.homeassistant
+    build:
+      context: ./config/homeassistant/
+      dockerfile: Dockerfile.homeassistant
     image: homeassistant/home-assistant
     container_name: bacab-home-homeassistant
     privileged: true
