@@ -3,3 +3,4 @@
 platform: ffmpeg
 name: Camara Lavadero
 input: !secret ffmpeg_camera_01
+extra_arguments: -vaapi_device /dev/dri/renderD128 -vcodec h264_vaapi -vf format='nv12|vaapi,hwupload'

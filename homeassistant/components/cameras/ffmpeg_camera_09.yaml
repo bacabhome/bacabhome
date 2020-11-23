@@ -4,5 +4,6 @@ platform: ffmpeg
 name: Camara Calle
 input: !secret ffmpeg_camera_09
 extra_arguments: '-rtsp_transport tcp'
+extra_arguments: -vaapi_device /dev/dri/renderD128 -vcodec h264_vaapi -vf format='nv12|vaapi,hwupload'
 #extra_arguments: '-vf "scale=384:216"'
 #extra_arguments: '-b:v 64k -bufsize 64k'

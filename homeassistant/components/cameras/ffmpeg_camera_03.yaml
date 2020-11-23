@@ -3,5 +3,4 @@
 platform: ffmpeg
 name: Camara Azotea
 input: !secret ffmpeg_camera_03
-#extra_arguments: '-vf "scale=384:216"'
-#extra_arguments: '-b:v 64k -bufsize 64k'
+extra_arguments: -vaapi_device /dev/dri/renderD128 -vcodec h264_vaapi -vf format='nv12|vaapi,hwupload'
