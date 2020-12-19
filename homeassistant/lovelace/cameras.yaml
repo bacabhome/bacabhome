@@ -5,18 +5,6 @@ id: Cameras
 panel: false
 cards:
 
-  - type: entities
-    title: Motion
-    show_header_toggle: false
-    entities:
-
-      - entity: binary_sensor.hue_outdoor_motion_sensor_01_motion
-        name: Hue Outdoor Motion Sensor 01
-      - entity: binary_sensor.amcrest_camera_01_motion_detected
-        name: Amcrest Camera 01 Motion
-      - entity: binary_sensor.application_restricted_zone_notifier_python
-        name: Application Restrictied Zone Notifier Python
-
   - type: picture-entity
     title: FFMPEG Camera 01
     entity: camera.ffmpeg_camera_01
@@ -34,46 +22,17 @@ cards:
         entity_id: input_boolean.ffmpeg_camera_01_cast
 
   - type: picture-entity
-    title: Amcrest Camera 01
-    entity: camera.amcrest_camera_01
+    title: FFMPEG Camera 02
+    entity: camera.ffmpeg_camera_02
     show_state: false
     camera_view: live
     double_tap_action:
       action: call-service
       service: script.turn_on
       service_data:
-        entity_id: script.amcrest_camera_01_capture
+        entity_id: script.ffmpeg_camera_02_capture
     hold_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
-        entity_id: input_boolean.amcrest_camera_01_cast
-
-  - type: picture-glance
-    title: Last Picture Ffmpeg Camera 01
-    camera_image: camera.local_file_ffmpeg_camera_01
-    show_state: false
-    name: Last Picture Ffmpeg Camera 01
-    entities:
-      - binary_sensor.ping_binary_sensor_ffmpeg_camera_01
-      - binary_sensor.hue_outdoor_motion_sensor_01_motion
-    hold_action:
-      action: call-service
-      service: script.turn_on
-      service_data:
-        entity_id: script.ffmpeg_camera_01_capture
-
-  - type: picture-glance
-    title: Last Picture Amcrest Camera 01
-    camera_image: camera.local_file_amcrest_camera_01
-    show_state: false
-    name: Last Picture Amcrest Camera 01
-    entities:
-      - binary_sensor.amcrest_camera_01_online
-      - binary_sensor.amcrest_camera_01_motion_detected
-      - binary_sensor.application_restricted_zone_notifier_python
-    hold_action:
-      action: call-service
-      service: script.turn_on
-      service_data:
-        entity_id: script.amcrest_camera_01_capture
+        entity_id: input_boolean.ffmpeg_camera_02_cast

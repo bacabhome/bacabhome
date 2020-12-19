@@ -13,5 +13,4 @@ action:
           - '/ping, /status'
           - '/weather, /speak'
           - '/notify, /alarm'
-          - '/ffmpeg, /amcrest'
-          - '/lastperson'
+          - '/ffmpeg, /lastperson'

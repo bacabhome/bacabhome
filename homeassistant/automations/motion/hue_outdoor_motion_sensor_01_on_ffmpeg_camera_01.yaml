@@ -7,5 +7,9 @@ trigger:
 action:
   - service: script.turn_on
     entity_id: script.ffmpeg_camera_01_capture
-  - service: script.turn_on
-    entity_id: script.ffmpeg_camera_01_processing
+  - service: camera.record
+    data_template:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/cameras/ffmpeg_camera_01_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 60
+      lookback: 10

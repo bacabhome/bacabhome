@@ -1,0 +1,5 @@
+iperf3:
+  hosts:
+    - host: 192.168.192.221 
+  scan_interval:
+    minutes: 120

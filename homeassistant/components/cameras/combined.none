@@ -1,0 +1,8 @@
+# https://github.com/custom-components/combined
+
+platform: combined
+base_address: !secret combined_base_address
+entities:
+  - camera.local_file_ffmepg_camera_01
+  - camera.local_file_ffmpeg_camera_02
+  - camera.local_file_amcrest_camera_01

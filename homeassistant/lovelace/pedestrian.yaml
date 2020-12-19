@@ -5,14 +5,6 @@ id: Pedestrian
 panel: false
 cards:
 
-  - type: entities
-    title: DeepStack
-    show_header_toggle: false
-    entities:
-
-      - entity: image_processing.deepstack_object_01
-        name: Object 01
-
   - type: vertical-stack
     cards:
 
@@ -23,32 +15,7 @@ cards:
         name: Last Detection Doods
 
       - type: picture-entity
-        title: Lastest Person DeepStack
-        entity: camera.local_file_deepstack_object_01
-        show_state: false
-        name: Last Detection DeepStack
-
-      - type: picture-entity
-        title: Application Restricted Zone Notifier Python
+        title: Applications Restricted Zone Notifier Python
         entity: camera.local_file_restricted_zone_notifier_python
         show_state: false
         name: Last Detection Restricted Zone Notifier Python
-
-  - type: vertical-stack
-    cards:
-
-      - type: picture-glance
-        title: DeepStack Latest Person
-        camera_image: camera.local_file_deepstack_object_01_person
-        show_state: false
-        name: DeepStack Object 01 Latest Person
-        entities:
-          - sensor.deepstack_object_01_person
-
-      - type: picture-glance
-        title: DeepStack Latest Dog
-        camera_image: camera.local_file_deepstack_object_01_dog
-        show_state: false
-        name: DeepStack Object 01 Latest Dog
-        entities:
-          - sensor.deepstack_object_01_dog

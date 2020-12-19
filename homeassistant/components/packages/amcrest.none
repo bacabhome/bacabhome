@@ -5,8 +5,8 @@ amcrest:
     username: !secret amcrest_01_username
     password: !secret amcrest_01_password
     name: Amcrest Camera 01
-    resolution: high
-    stream_source: rtsp
+    resolution: low
+    stream_source: mjpeg
     binary_sensors:
       - motion_detected
       - online

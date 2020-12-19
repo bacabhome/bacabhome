@@ -7,5 +7,3 @@ trigger:
 action:
   - service: script.turn_on
     entity_id: script.ffmpeg_camera_01_notify
-  - service: script.turn_on
-    entity_id: script.amcrest_camera_01_notify
