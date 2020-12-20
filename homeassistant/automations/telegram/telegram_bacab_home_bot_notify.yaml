@@ -1,9 +1,0 @@
-alias: 'Telegram Bacab Home Bot Notify'
-trigger:
-  platform: event
-  event_type: telegram_command
-  event_data:
-    command: '/notify'
-action:
-  - service: script.turn_on
-    entity_id: script.ffmpeg_camera_01_notify

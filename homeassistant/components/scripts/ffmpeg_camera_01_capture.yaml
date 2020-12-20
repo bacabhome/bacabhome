@@ -7,4 +7,4 @@ ffmpeg_camera_01_capture:
   - service: camera.snapshot
     data:
       entity_id: camera.local_file_ffmpeg_camera_01
-      filename: '/config/www/media/house/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/cameras/photos/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

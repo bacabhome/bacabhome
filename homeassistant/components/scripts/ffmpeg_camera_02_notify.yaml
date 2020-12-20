@@ -1,0 +1,10 @@
+ffmpeg_camera_02_notify:
+  sequence:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Picture'
+      message: "This was it..."
+      data:
+        photo:
+          - file: '/config/www/media/cameras/ffmpeg_camera_02.jpg'
+            caption: Who was there? Ffmpeg Camera 02

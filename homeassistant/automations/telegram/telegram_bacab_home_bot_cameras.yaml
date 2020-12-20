@@ -1,11 +1,15 @@
-alias: 'Telegram Bacab Home Bot Ffmepg'
+alias: 'Telegram Bacab Home Bot Cameras'
 trigger:
   platform: event
   event_type: telegram_command
   event_data:
-    command: '/ffmpeg'
+    command: '/cameras'
 action:
   - service: script.turn_on
     entity_id: script.ffmpeg_camera_01_capture
   - service: script.turn_on
+    entity_id: script.ffmpeg_camera_02_capture
+  - service: script.turn_on
     entity_id: script.ffmpeg_camera_01_notify
+  - service: script.turn_on
+    entity_id: script.ffmpeg_camera_02_notify

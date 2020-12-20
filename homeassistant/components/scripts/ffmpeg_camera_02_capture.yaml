@@ -1,0 +1,10 @@
+ffmpeg_camera_02_capture:
+  sequence:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_02
+      filename: '/config/www/media/cameras/ffmpeg_camera_02.jpg'
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_ffmpeg_camera_02
+      filename: '/config/www/media/cameras/photos/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'

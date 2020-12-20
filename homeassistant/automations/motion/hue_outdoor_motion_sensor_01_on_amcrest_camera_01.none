@@ -12,6 +12,6 @@ action:
   - service: camera.record
     data_template:
       entity_id: camera.amcrest_camera_01
-      filename: '/config/www/media/cameras/amcrest_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      filename: '/config/www/media/cameras/videos/amcrest_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
       lookback: 10

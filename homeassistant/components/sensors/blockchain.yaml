@@ -3,3 +3,4 @@
 platform: blockchain
 addresses:
   - !secret blockchain_bitcoin_address
+  - !secret blockchain_ether_address_bitso

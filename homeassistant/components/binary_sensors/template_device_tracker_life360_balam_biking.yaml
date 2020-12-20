@@ -5,6 +5,6 @@ sensors:
   template_device_tracker_life360_balam_biking:
     friendly_name: "Template Device Tracker Life360 Balam Biking"
     value_template: >
-                     {{ state_attr('device_tracker.life360_balam', 'speed') > 5 and
-                        state_attr('device_tracker.life360_balam', 'speed') < 35 }}
+                     {{ state_attr('device_tracker.life360_balam', 'speed') | int > 5 and
+                        state_attr('device_tracker.life360_balam', 'speed') | int < 35 }}
     device_class: moving
