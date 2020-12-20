@@ -20,13 +20,21 @@ homeassistant/home-assistant.log
 homeassistant/home-assistant_v2.db
 homeassistant/home-assistant_v2.db-shm
 homeassistant/home-assistant_v2.db-wal
+homeassistant/home-assistant_v2.db*
 homeassistant/known_devices.yaml
 homeassistant/ip_bans.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
+homeassistant/custom_components/
 
 # Media
 media/
 
 # Services
 services/
+
+# Iikim
+iikim/
+
+# Lak
+lak/
