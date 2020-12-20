@@ -129,7 +129,7 @@ services:
     volumes:
       - ./config/plex/database:/config
       - ./config/plex/transcode:/transcode
-      - ./media/:/data
+      - ./media/:/data:consistent
 
   hadockermon:
     image: philhawthorne/ha-dockermon
