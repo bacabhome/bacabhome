@@ -1,0 +1,33 @@
+alias: Applications alwaysAI Simple Object Counter Dog
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.applications_alwaysai_simple_object_counter_dog
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/applications/alwaysai/simple_object_counter_dog.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.ffmpeg_camera_01
+      filename: '/config/www/media/applications/alwaysai/socd_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 60
+      lookback: 10
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_applications_simple_object_counter_dog
+      filename: '/config/www/media/applications/alwaysai/socd_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Warning! Simple Object Counter Dog {{ states('sensor.date_time') }}"
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Simple Object Counter Dog'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/applications/alwaysai/simple_object_counter_dog.jpg'
+            caption: Person via Fffmpeg Camera 01

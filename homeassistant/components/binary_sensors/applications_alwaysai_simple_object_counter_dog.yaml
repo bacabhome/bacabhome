@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  applications_alwaysai_simple_object_counter_dog:
+    friendly_name: alwaysAI Simple Object Counter Dog
+    delay_on:
+      seconds: 1
+    delay_off:
+      seconds: 5
+    value_template: >-
+                       {{ states('sensor.alwaysai_simple_object_counter_dog')|int > 0 }}
+    device_class: presence
