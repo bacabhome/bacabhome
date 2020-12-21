@@ -142,9 +142,42 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./config/ha-dockermon/:/config
 
+  grafana:
+    image: grafana/grafana
+    container_name: lak-grafana
+    restart: on-failure
+    depends_on:
+      - "influxdb"
+    environment:
+      - TZ=America/Mexico_City
+      - GF_INSTALL_PLUGINS=grafana-clock-panel,briangann-gauge-panel,natel-plotly-panel,grafana-simple-json-datasource,yesoreyeram-boomtable-panel
+      - GF_RENDERING_SERVER_URL=http://renderer:8081/render
+      - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
+      - GF_LOG_FILTERS=rendering:debug
+      - GF_PATHS_PROVISIONING=/usr/share/grafana/conf/provisioning/
+    network_mode: host
+    ports:
+      - 3000:3000
+    volumes:
+      - bacabhome-grafana-volume:/var/lib/grafana
+      - ./grafana/provisioning/datasources:/usr/share/grafana/conf/provisioning/datasources:rw
+      - ./grafana/provisioning/notifiers:/usr/share/grafana/conf/provisioning/notifiers:rw
+      - ./grafana/provisioning/dashboards:/usr/share/grafana/conf/provisioning/dashboards:rw
+
+  renderer:
+    image: grafana/grafana-image-renderer:latest
+    container_name: lak-image-renderer
+    restart: on-failure
+    environment:
+      ENABLE_METRICS: "true"
+    network_mode: host
+    ports:
+      - 8081:8081
+
 volumes:
   bacabhome-mosquitto-storage:
   bacabhome-influxdb-storage:
   bacabhome-grafana-storage:
   bacabhome-portainer-storage:
   bacabhome-nodered-storage:
+  bacabhome-grafana-volume:
