@@ -1,0 +1,35 @@
+alias: Applications alwaysAI Simple Object Counter Person
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.applications_alwaysai_simple_object_counter_person
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.ffmpeg_camera_02
+      filename: '/config/www/media/applications/alwaysai/simple_object_counter_person.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.ffmpeg_camera_02
+      filename: '/config/www/media/applications/alwaysai/socp_{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 30
+      lookback: 2
+  - service: script.turn_on
+    entity_id: script.notification_light_person
+  - service: camera.snapshot
+    data:
+      entity_id: camera.local_file_applications_simple_object_counter_person
+      filename: '/config/www/media/applications/alwaysai/socp_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Warning! Simple Object Counter Person {{ states('sensor.date_time') }}"
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Simple Object Counter Person'
+      message: "This is it..."
+      data:
+        photo:
+          - file: '/config/www/media/applications/alwaysai/simple_object_counter_person.jpg'
+            caption: Person via Fffmpeg Camera 02
