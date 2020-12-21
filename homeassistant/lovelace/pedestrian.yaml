@@ -9,13 +9,13 @@ cards:
     cards:
 
       - type: picture-entity
-        title: Lastest Person Doods
-        entity: camera.local_file_ffmpeg_camera_01_doods
+        title: Application alwaysAI Latest Person
+        entity: camera.local_file_applications_simple_object_counter_person
         show_state: false
-        name: Last Detection Doods
+        name: Last Detection Person
 
       - type: picture-entity
-        title: Applications Restricted Zone Notifier Python
-        entity: camera.local_file_restricted_zone_notifier_python
+        title: Applications alwaysAI Latest Dog
+        entity: camera.local_file_applications_simple_object_counter_dog
         show_state: false
-        name: Last Detection Restricted Zone Notifier Python
+        name: Last Detection Dog
