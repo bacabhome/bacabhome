@@ -27,7 +27,11 @@ homeassistant:
 
   whitelist_external_dirs:
     - '/config/www/media/applications/'
+    - '/config/www/media/applications/alwaysai/'
+    - '/config/www/media/applications/openvino/'
     - '/config/www/media/cameras/'
+    - '/config/www/media/cameras/photos/'
+    - '/config/www/media/cameras/videos/'
 
   # Customizing entities
   customize: !include_dir_merge_named components/customize/
