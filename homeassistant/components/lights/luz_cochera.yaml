@@ -1,3 +1,3 @@
 platform: switch
 name: Luz Cochera
-entity_id: switch.luz_cochera
+entity_id: switch.enchufe_cochera
