@@ -3,62 +3,8 @@ icon: mdi:home-heart
 path: home
 cards:
 
-  - type: "custom:button-card"
-    color_type: card
-    entity: input_boolean.family_mode_simulacrum
-    name: Modo Simulacro
-    state:
-      - value: "on"
-        color: yellow
-        icon: mdi:alert
-        styles:
-          card:
-            - height: 150px
-            - animation: blink 2s ease infinite
-      - operator: default
-        color: green
-        icon: mdi:shield-check
-        styles:
-          card:
-            - height: 150px
-
   - type: horizontal-stack
     cards:
 
-      - type: "custom:button-card"
-        color_type: card
-        entity: input_boolean.family_mode_emergency
-        name: Modo Emergencia
-        state:
-          - value: "on"
-            color: red
-            icon: mdi:alert
-            styles:
-              card:
-                - height: 150px
-                - animation: blink 2s ease infinite
-          - operator: default
-            color: yellow
-            icon: mdi:shield-check
-            styles:
-              card:
-                - height: 150px
-
-      - type: "custom:button-card"
-        color_type: card
-        entity: input_boolean.family_mode_panic
-        name: Modo Panico
-        state:
-          - value: "on"
-            color: red
-            icon: mdi:alert
-            styles:
-              card:
-                - height: 150px
-                - animation: blink 2s ease infinite
-          - operator: default
-            color: yellow
-            icon: mdi:shield-check
-            styles:
-              card:
-                - height: 150px
+      - type: light
+        entity: light.luz_cochera
