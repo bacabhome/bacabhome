@@ -2,7 +2,7 @@ camaras_fotos:
   alias: Camaras Fotos
   sequence:
     - service: script.turn_on
-      entity_id: script.camara_calle_foto
+      entity_id: script.camara_exterior_foto
     - service: script.turn_on
       entity_id: script.camara_lavadero_foto
     - service: script.turn_on
@@ -12,4 +12,4 @@ camaras_fotos:
     - service: script.turn_on
       entity_id: script.camara_cocheras_foto
     - service: script.turn_on
-      entity_id: script.camara_pasillo_foto
+      entity_id: script.camara_entrada_foto

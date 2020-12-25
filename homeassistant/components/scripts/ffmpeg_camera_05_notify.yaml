@@ -1,5 +1,5 @@
-camara_pasillo_notificacion:
-  alias: Camara Pasillo Notificacion
+camara_entrada_notificacion:
+  alias: Camara Entrada Notificacion
   sequence:
   - service: notify.telegram_bacab_home_bot
     data:
@@ -7,5 +7,5 @@ camara_pasillo_notificacion:
       message: "Esta es..."
       data:
         photo:
-          - file: '/config/www/media/cameras/camara_pasillo.jpg'
-            caption: Notificacion! Quien esta? Camara Pasillo
+          - file: '/config/www/media/cameras/camara_entrada.jpg'
+            caption: Notificacion! Quien esta? Camara Entrada

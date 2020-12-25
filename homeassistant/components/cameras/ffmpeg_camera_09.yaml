@@ -1,7 +1,7 @@
 # https://www.home-assistant.io/components/camera.ffmpeg/
 
 platform: ffmpeg
-name: Camara Calle
+name: Camara Exterior
 input: !secret ffmpeg_camera_09
 extra_arguments: '-rtsp_transport tcp'
 extra_arguments: -vaapi_device /dev/dri/renderD128 -vcodec h264_vaapi -vf format='nv12|vaapi,hwupload'

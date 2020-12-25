@@ -1,6 +1,6 @@
 # https://www.home-assistant.io/components/camera.ffmpeg/
 
 platform: ffmpeg
-name: Camara Pasillo
+name: Camara Entrada
 input: !secret ffmpeg_camera_05
 extra_arguments: -vaapi_device /dev/dri/renderD128 -vcodec h264_vaapi -vf format='nv12|vaapi,hwupload'

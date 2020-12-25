@@ -2,7 +2,7 @@ alias: FFmpeg Camera 09 Cast Mina Play Off
 initial_state: 'true'
 trigger:
 - platform: state
-  entity_id: input_boolean.camara_calle_mina
+  entity_id: input_boolean.camara_exterior_mina
   from: 'on'
   to: 'off'
 action:

@@ -10,8 +10,8 @@ cards:
     show_header_toggle: false
     entities:
 
-      - entity: input_boolean.camara_calle_mina
-        name: Camara Calle
+      - entity: input_boolean.camara_exterior_mina
+        name: Camara Exterior
       - entity: input_boolean.camara_lavadero_mina
         name: Camara Lavadero
       - entity: input_boolean.camara_toldo_mina
@@ -20,19 +20,19 @@ cards:
         name: Camara Azotea
       - entity: input_boolean.camara_cocheras_mina
         name: Camara Cocheras
-      - entity: input_boolean.camara_pasillo_mina
-        name: Camara Pasillo
+      - entity: input_boolean.camara_entrada_mina
+        name: Camara Entrada
 
   - type: picture-entity
-    title: Camara Calle
-    entity: camera.camara_calle
+    title: Camara Exterior
+    entity: camera.camara_exterior
     show_state: false
     camera_view: live
     hold_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
-        entity_id: input_boolean.camara_calle_mina
+        entity_id: input_boolean.camara_exterior_mina
 
   - type: picture-entity
     title: Camara Lavadero
@@ -79,12 +79,12 @@ cards:
         entity_id: input_boolean.camara_cocheras_mina
 
   - type: picture-entity
-    title: Camara Pasillo
-    entity: camera.camara_pasillo
+    title: Camara Entrada
+    entity: camera.camara_entrada
     show_state: false
     camera_view: live
     hold_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
-        entity_id: input_boolean.camara_pasillo_mina
+        entity_id: input_boolean.camara_entrada_mina

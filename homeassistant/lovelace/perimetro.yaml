@@ -27,8 +27,8 @@ cards:
 
 
   - type: picture-entity
-    title: Camara Calle
-    entity: camera.camara_calle
+    title: Camara Exterior
+    entity: camera.camara_exterior
     show_state: false
     camera_view: live
 

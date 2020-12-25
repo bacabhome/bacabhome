@@ -1,7 +1,7 @@
-camara_calle_video:
-  alias: Camara Calle Video
+camara_exterior_video:
+  alias: Camara Exterior Video
   sequence:
   - service: camera.record
     data:
-      entity_id: camera.camara_calle
-      filename: '/config/www/media/videos/calle/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/videos/exterior/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'

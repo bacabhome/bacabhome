@@ -1,4 +1,4 @@
-camara_calle_mina:
-  name: Camara Calle Mina
+camara_exterior_mina:
+  name: Camara Exterior Mina
   initial: off
   icon: mdi:cast

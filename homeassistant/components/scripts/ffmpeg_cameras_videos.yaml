@@ -2,7 +2,7 @@ camaras_videos:
   alias: Camaras Videos
   sequence:
     - service: script.turn_on
-      entity_id: script.camara_calle_video
+      entity_id: script.camara_exterior_video
     - service: script.turn_on
       entity_id: script.camara_lavadero_video
     - service: script.turn_on
@@ -12,4 +12,4 @@ camaras_videos:
     - service: script.turn_on
       entity_id: script.camara_cocheras_video
     - service: script.turn_on
-      entity_id: script.camara_pasillo_video
+      entity_id: script.camara_entrada_video

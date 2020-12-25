@@ -1,4 +1,4 @@
-camara_pasillo_mina:
-  name: Camara Pasillo Mina
+camara_entrada_mina:
+  name: Camara Entrada Mina
   initial: off
   icon: mdi:cast

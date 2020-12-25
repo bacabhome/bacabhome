@@ -3,9 +3,8 @@ title: Bacab Home Life
 views:
 
   - !include lovelace/home.yaml
-  - !include lovelace/lights.yaml
-  - !include lovelace/security.yaml
   - !include lovelace/cameras.yaml
+  - !include lovelace/security.yaml
   - !include lovelace/perimetro.yaml
   - !include lovelace/cast.yaml
   - !include lovelace/weather.yaml

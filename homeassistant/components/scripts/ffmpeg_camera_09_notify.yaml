@@ -1,5 +1,5 @@
-camara_calle_notificacion:
-  alias: Camara Calle Notificacion
+camara_exterior_notificacion:
+  alias: Camara Exterior Notificacion
   sequence:
   - service: notify.telegram_bacab_home_bot
     data:
@@ -7,5 +7,5 @@ camara_calle_notificacion:
       message: "Esta es..."
       data:
         photo:
-          - file: '/config/www/media/cameras/camara_calle.jpg'
-            caption: Notificacion! Quien esta? Camara Calle
+          - file: '/config/www/media/cameras/camara_exterior.jpg'
+            caption: Notificacion! Quien esta? Camara Exterior

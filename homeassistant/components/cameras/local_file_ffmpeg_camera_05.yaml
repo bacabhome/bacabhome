@@ -1,3 +1,3 @@
 platform: local_file
-name: Camara Pasillo Imagen
-file_path: /config/www/media/cameras/camara_pasillo.jpg
+name: Camara Entrada Imagen
+file_path: /config/www/media/cameras/camara_entrada.jpg
