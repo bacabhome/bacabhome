@@ -28,7 +28,7 @@ cards:
     entity: camera.camara_exterior
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
@@ -39,7 +39,7 @@ cards:
     entity: camera.camara_lavadero
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
@@ -50,7 +50,7 @@ cards:
     entity: camera.camara_toldo
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
@@ -61,7 +61,7 @@ cards:
     entity: camera.camara_azotea
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
@@ -72,7 +72,7 @@ cards:
     entity: camera.camara_cocheras
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
@@ -83,7 +83,7 @@ cards:
     entity: camera.camara_entrada
     show_state: false
     camera_view: live
-    hold_action:
+    double_tap_action:
       action: call-service
       service: input_boolean.toggle
       service_data:
