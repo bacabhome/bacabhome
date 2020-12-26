@@ -6,6 +6,17 @@ trigger:
   from: 'off'
   to: 'on'
 action:
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.camara_lavadero_mina
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.camara_azotea_mina
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.camara_cocheras_mina
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.camara_entrada_mina
+  - service: homeassistant.turn_off
+    entity_id: input_boolean.camara_exterior_mina
+  - delay: '00:00:01'
   - service: camera.play_stream
     data:
       entity_id: camera.camara_toldo
