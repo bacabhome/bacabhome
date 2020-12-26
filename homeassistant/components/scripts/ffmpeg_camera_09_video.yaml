@@ -5,3 +5,5 @@ camara_exterior_video:
     data:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/videos/exterior/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 60
+      lookback: 10
