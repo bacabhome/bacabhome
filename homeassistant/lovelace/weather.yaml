@@ -28,7 +28,7 @@ cards:
         name: Temperatura
 
   - type: custom:weather-card
-    entity: weather.clima
+    entity: weather.life
     current: true
     details: true
     forecast: true
