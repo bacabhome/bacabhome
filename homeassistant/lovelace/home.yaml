@@ -8,3 +8,13 @@ cards:
 
       - type: light
         entity: light.luz_cochera
+
+  - type: entities
+    title: Chromecast Mina
+    show_header_toggle: false
+    entities:
+
+      - entity: input_boolean.camara_exterior_mina
+        name: Camara Exterior
+      - entity: input_boolean.camara_azotea_mina
+        name: Camara Azotea

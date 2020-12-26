@@ -12,6 +12,8 @@ homeassistant:
   # metric for Metric, imperial for Imperial
   unit_system: metric
 
+  external_url: !secret external_url
+
   # Pick yours from here:
   # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Mexico_City
@@ -26,7 +28,19 @@ homeassistant:
     - type: homeassistant
 
   whitelist_external_dirs:
-    - '/config/www/media/'
+    - '/config/www/media/cameras'
+    - '/config/www/media/photos/azotea'
+    - '/config/www/media/photos/cocheras'
+    - '/config/www/media/photos/entrada'
+    - '/config/www/media/photos/exterior'
+    - '/config/www/media/photos/lavadero'
+    - '/config/www/media/photos/toldo'
+    - '/config/www/media/videos/azotea'
+    - '/config/www/media/videos/cocheras'
+    - '/config/www/media/videos/entrada'
+    - '/config/www/media/videos/exterior'
+    - '/config/www/media/videos/lavadero'
+    - '/config/www/media/videos/toldo'
 
   # Customizing entities
   customize: !include_dir_merge_named components/customize/
