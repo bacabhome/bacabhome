@@ -2,5 +2,5 @@
 
 platform: mqtt
 name: alwaysAI Simple Object Counter Motorcycle
-state_topic: "alwaysai/soc"
+state_topic: "alwaysai/simple_object_counter/objects"
 value_template: "{{ value_json.motorcycle }}"

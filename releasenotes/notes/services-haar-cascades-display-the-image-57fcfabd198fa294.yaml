@@ -1,5 +1,0 @@
----
-features:
-  - |
-    Use the function cv2.imshow() to display an image in a window. The window
-    automatically fits to the image size.

@@ -1,5 +1,0 @@
----
-features:
-  - |
-    Experimentation using GPU Hardware Acceleration Frameworks (LIBDRM,
-    Video Acceleration API, the Mesa project and Wayland).

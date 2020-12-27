@@ -1,5 +1,0 @@
----
-other:
-  - |
-    Updated Glances sensor platform resources to include process_total,
-    process_thread and process_sleeping

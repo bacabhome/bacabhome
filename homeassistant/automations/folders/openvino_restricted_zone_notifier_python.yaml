@@ -1,0 +1,12 @@
+alias: OpenVINO Restricted Zone Notifier Python
+initial_state: 'true'
+trigger:
+- platform: event
+  event_type: folder_watcher
+  event_data:
+    event_type: modified
+action:
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.openvino_restricted_zone_notifier_python
+      file_path: /config/www/media/applications/openvino_restricted_zone_notifier_python.jpg

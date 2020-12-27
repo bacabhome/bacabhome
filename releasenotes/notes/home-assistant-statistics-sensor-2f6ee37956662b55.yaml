@@ -1,9 +1,0 @@
----
-features:
-  - |
-    List new features here, or remove this section.  All of the list items in
-    The statistics sensor platform consumes the state from other sensors. It
-    exports the mean value as state and the following values as attributes:
-    count, mean, median, stdev, variance, total, min, max, min_age, max_age,
-    change, average_change and change_rate. If it’s a binary sensor then only
-    state changes are counted.

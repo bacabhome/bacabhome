@@ -1,7 +1,0 @@
----
-features:
-  - |
-    Lovelace is a new approach to define your user interface for
-    Home Assistant. We offer a lot of built-in cards, but you're not
-    just limited to the ones that we decided to include in the
-    Lovelace UI. You can build and use your own!

@@ -1,5 +1,0 @@
----
-features:
-  - |
-    When launching YOLO, you specify the service name, the video capture, the
-    server sink host IP address and port.

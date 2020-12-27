@@ -1,5 +1,0 @@
----
-features:
-  - |
-    The time and date (time_date) sensor platform simple displays the time in
-    various formats, the date, or both.

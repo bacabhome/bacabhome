@@ -1,5 +1,0 @@
----
-upgrade:
-  - |
-    Enable Intel® OpenVINO™ Toolkit components to utilize Processor Graphics (GPU) on
-    the system.

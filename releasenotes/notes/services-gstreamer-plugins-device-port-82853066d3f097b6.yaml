@@ -1,5 +1,0 @@
----
-features:
-  - |
-    When launching gstreamer, you specify the video device as source and the
-    server sink host port.

@@ -1,5 +1,0 @@
----
-features:
-  - |
-    The speedtestdotnet component uses the Speedtest.net web service to
-    measure network bandwidth performance.

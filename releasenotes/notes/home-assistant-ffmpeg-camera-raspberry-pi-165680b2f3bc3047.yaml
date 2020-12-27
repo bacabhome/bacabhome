@@ -1,6 +1,0 @@
----
-features:
-  - |
-    The Raspberry Pi is a small and affordable computer that you can use to
-    learn programming. Enable the ffmpeg platform to use video feed from
-    Raspberry Pi served by Gstreamer.

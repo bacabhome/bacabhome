@@ -1,6 +1,0 @@
----
-features:
-  - |
-    Mjpeg streamer is a fork of http://sourceforge.net/projects/mjpg-streamer/
-    with added support for the Raspberry Pi camera via the input_raspicam
-    plugin.

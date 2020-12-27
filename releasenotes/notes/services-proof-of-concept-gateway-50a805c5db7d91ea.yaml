@@ -1,5 +1,0 @@
----
-other:
-  - |
-    Proof of concept, gateway service looks to reduce bandwidth when
-    more than 2 services need access to the same stream.

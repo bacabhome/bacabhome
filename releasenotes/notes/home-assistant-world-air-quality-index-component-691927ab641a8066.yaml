@@ -1,6 +1,0 @@
----
-features:
-  - |
-    The waqi sensor platform will query World Air Quality Index service to
-    check AQI value for a specific set of locations. The resulting indexes
-    will be added to the Home Assistant as sensor outputs.

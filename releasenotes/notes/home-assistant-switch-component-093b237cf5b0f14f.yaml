@@ -1,5 +1,0 @@
----
-features:
-  - |
-    Keeps track which switches are in your environment, their state and allows
-    you to control them.

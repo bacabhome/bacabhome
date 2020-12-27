@@ -1,9 +1,0 @@
----
-features:
-  - |
-    List new features here, or remove this section.  All of the list items in
-    Home Assistant can get information from your wireless router or third
-    party services like iCloud or OwnTracks to track which devices are
-    connected and considered “in home”. There are also trackers available
-    which use different technologies like MQTT or Nmap to scan the network
-    for devices.

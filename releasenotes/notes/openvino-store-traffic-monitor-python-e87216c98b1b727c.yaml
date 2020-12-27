@@ -1,9 +1,0 @@
----
-features:
-  - |
-    Store Traffic Monitor is one of a series of IoT reference implementations
-    aimed at instructing users on how to develop a working solution for a
-    particular problem. It demonstrates how to create a smart video IoT
-    solution using Intel® hardware and software tools. This reference
-    implementation monitors people activity inside and outside a facility as
-    well as counts product inventory.

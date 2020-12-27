@@ -29,7 +29,7 @@ cards:
         name: Last Detection DeepStack
 
       - type: picture-entity
-        title: Application Restricted Zone Notifier Python
+        title: OpenVINO Restricted Zone Notifier Python
         entity: camera.local_file_restricted_zone_notifier_python
         show_state: false
         name: Last Detection Restricted Zone Notifier Python

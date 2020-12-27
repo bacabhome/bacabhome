@@ -1,6 +1,0 @@
----
-features:
-  - |
-    The google_translate text-to-speech platform uses unofficial Google
-    Translate Text-to-Speech engine to read a text with natural sounding
-    voices.
