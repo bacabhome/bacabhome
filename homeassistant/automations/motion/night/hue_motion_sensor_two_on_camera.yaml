@@ -1,0 +1,21 @@
+alias: Hue Motion Sensor Two On Camera
+initial_state: true
+trigger:
+  - platform: state
+    entity_id: binary_sensor.hue_motion_sensor_two_motion
+    to: 'on'
+condition:
+  condition: time
+  after: '00:00:00'
+  before: '06:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+action:
+  - service: script.turn_on
+    entity_id: script.camara_cocheras_notificacion
