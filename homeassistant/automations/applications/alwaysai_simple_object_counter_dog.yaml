@@ -15,7 +15,7 @@ action:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/applications/alwaysai/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15
   - service: camera.snapshot
     data:
       entity_id: camera.alwaysai_simple_object_counter_dog

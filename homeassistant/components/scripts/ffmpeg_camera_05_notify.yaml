@@ -10,7 +10,7 @@ camara_entrada_notificacion:
         entity_id: camera.camara_entrada
         filename: '/config/www/media/videos/entrada/camara_entrada.mp4'
         duration: 60
-        lookback: 10
+        lookback: 15
     - delay: '00:02:00'
     - service: notify.telegram_bacab_home_bot
       data:

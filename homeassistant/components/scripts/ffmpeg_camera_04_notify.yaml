@@ -10,7 +10,7 @@ camara_cocheras_notificacion:
         entity_id: camera.camara_cocheras
         filename: '/config/www/media/videos/cocheras/camara_cocheras.mp4'
         duration: 60
-        lookback: 10
+        lookback: 15
     - delay: '00:02:00'
     - service: notify.telegram_bacab_home_bot
       data:

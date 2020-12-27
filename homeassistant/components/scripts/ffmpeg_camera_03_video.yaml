@@ -6,10 +6,10 @@ camara_azotea_video:
       entity_id: camera.camara_azotea
       filename: '/config/www/media/videos/azotea/camara_azotea.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15
   - service: camera.record
     data:
       entity_id: camera.camara_azotea
       filename: '/config/www/media/videos/azotea/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15

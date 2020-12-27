@@ -6,10 +6,10 @@ camara_exterior_video:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/videos/exterior/camara_exterior.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15
   - service: camera.record
     data:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/videos/exterior/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15

@@ -10,7 +10,7 @@ camara_lavadero_notificacion:
         entity_id: camera.camara_lavadero
         filename: '/config/www/media/videos/lavadero/camara_lavadero.mp4'
         duration: 60
-        lookback: 10
+        lookback: 15
     - delay: '00:02:00'
     - service: notify.telegram_bacab_home_bot
       data:

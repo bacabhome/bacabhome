@@ -6,10 +6,10 @@ camara_cocheras_video:
       entity_id: camera.camara_cocheras
       filename: '/config/www/media/videos/cocheras/camara_cocheras.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15
   - service: camera.record
     data:
       entity_id: camera.camara_cocheras
       filename: '/config/www/media/videos/cocheras/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
-      lookback: 10
+      lookback: 15
