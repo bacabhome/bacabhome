@@ -5,5 +5,6 @@ sensors:
   template_all_motion_on:
     friendly_name: Total de Movimiento
     value_template: >
-                     {{ is_state('binary_sensor.hue_motion_sensor_one_motion', 'on') }}
+                     {{ is_state('binary_sensor.hue_motion_sensor_one_motion', 'on') or
+                        is_state('binary_sensor.hue_motion_sensor_two_motion', 'on') }}
     device_class: motion
