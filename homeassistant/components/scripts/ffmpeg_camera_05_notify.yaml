@@ -1,11 +1,23 @@
 camara_entrada_notificacion:
   alias: Camara Entrada Notificacion
   sequence:
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'Notificaciones'
-      message: "Esta es..."
+    - service: notify.telegram_bacab_home_bot
       data:
-        photo:
-          - file: '/config/www/media/cameras/camara_entrada.jpg'
-            caption: Notificacion! Quien esta? Camara Entrada
+        title: Camara Entrada Notificacion
+        message: "Obteniendo video! 2 minutos de espera..."
+    - service: camera.record
+      data:
+        entity_id: camera.camara_entrada
+        filename: '/config/www/media/videos/entrada/camara_entrada.mp4'
+        duration: 60
+        lookback: 10
+    - delay: '00:02:00'
+    - service: notify.telegram_bacab_home_bot
+      data:
+        title: 'Camara Notificacion'
+        message: "Quien esta?"
+        data:
+          video:
+            - file: '/config/www/media/videos/entrada/camara_entrada.mp4'
+              caption: Camara Entrada
+              timeout: 180

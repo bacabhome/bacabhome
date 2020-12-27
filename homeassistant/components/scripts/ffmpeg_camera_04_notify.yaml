@@ -1,11 +1,23 @@
 camara_cocheras_notificacion:
-  alias: Camara cocheras Notificacion
+  alias: Camara Cocheras Notificacion
   sequence:
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'Notificaciones'
-      message: "Esta es..."
+    - service: notify.telegram_bacab_home_bot
       data:
-        photo:
-          - file: '/config/www/media/cameras/camara_cocheras.jpg'
-            caption: Notificacion! Quien esta? Camara Cocheras
+        title: Camara Cocheras Notificacion
+        message: "Obteniendo video! 2 minutos de espera..."
+    - service: camera.record
+      data:
+        entity_id: camera.camara_cocheras
+        filename: '/config/www/media/videos/cocheras/camara_cocheras.mp4'
+        duration: 60
+        lookback: 10
+    - delay: '00:02:00'
+    - service: notify.telegram_bacab_home_bot
+      data:
+        title: 'Camara Notificacion'
+        message: "Quien esta?"
+        data:
+          video:
+            - file: '/config/www/media/videos/cocheras/camara_cocheras.mp4'
+              caption: Camara Cocheras
+              timeout: 180

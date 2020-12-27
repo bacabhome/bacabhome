@@ -4,6 +4,12 @@ camara_toldo_video:
   - service: camera.record
     data:
       entity_id: camera.camara_toldo
+      filename: '/config/www/media/videos/toldo/camara_toldo.mp4'
+      duration: 60
+      lookback: 10
+  - service: camera.record
+    data:
+      entity_id: camera.camara_toldo
       filename: '/config/www/media/videos/toldo/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
       lookback: 10

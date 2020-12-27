@@ -4,6 +4,12 @@ camara_lavadero_video:
   - service: camera.record
     data:
       entity_id: camera.camara_lavadero
+      filename: '/config/www/media/videos/lavadero/camara_lavadero.mp4'
+      duration: 60
+      lookback: 10
+  - service: camera.record
+    data:
+      entity_id: camera.camara_lavadero
       filename: '/config/www/media/videos/lavadero/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 60
       lookback: 10

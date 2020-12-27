@@ -1,11 +1,23 @@
 camara_azotea_notificacion:
   alias: Camara Azotea Notificacion
   sequence:
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'Notificaciones'
-      message: "Esta es..."
+    - service: notify.telegram_bacab_home_bot
       data:
-        photo:
-          - file: '/config/www/media/cameras/camara_azotea.jpg'
-            caption: Notificacion! Quien esta? Camara Azotea
+        title: Camara Azotea Notificacion
+        message: "Obteniendo video! 2 minutos de espera..."
+    - service: camera.record
+      data:
+        entity_id: camera.camara_azotea
+        filename: '/config/www/media/videos/azotea/camara_azotea.mp4'
+        duration: 60
+        lookback: 10
+    - delay: '00:02:00'
+    - service: notify.telegram_bacab_home_bot
+      data:
+        title: 'Camara Notificacion'
+        message: "Quien esta?"
+        data:
+          video:
+            - file: '/config/www/media/videos/azotea/camara_azotea.mp4'
+              caption: Camara Azotea
+              timeout: 180

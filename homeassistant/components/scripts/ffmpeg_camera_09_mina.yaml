@@ -1,0 +1,18 @@
+camara_exterior_mina:
+  alias: Camara Exterior Mina
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.camara_lavadero_mina
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.camara_toldo_mina
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.camara_azotea_mina
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.camara_cocheras_mina
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.camara_entrada_mina
+    - delay: '00:00:01'
+    - service: camera.play_stream
+      data:
+        entity_id: camera.camara_exterior
+        media_player: media_player.mina

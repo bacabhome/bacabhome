@@ -1,11 +1,23 @@
 camara_lavadero_notificacion:
   alias: Camara Lavadero Notificacion
   sequence:
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'Notificaciones'
-      message: "Esta es..."
+    - service: notify.telegram_bacab_home_bot
       data:
-        photo:
-          - file: '/config/www/media/cameras/camara_lavadero.jpg'
-            caption: Notificacion! Quien esta? Camara Lavadero
+        title: Camara Lavadero Notificacion
+        message: "Obteniendo video! 2 minutos de espera..."
+    - service: camera.record
+      data:
+        entity_id: camera.camara_lavadero
+        filename: '/config/www/media/videos/lavadero/camara_lavadero.mp4'
+        duration: 60
+        lookback: 10
+    - delay: '00:02:00'
+    - service: notify.telegram_bacab_home_bot
+      data:
+        title: 'Camara Notificacion'
+        message: "Quien esta?"
+        data:
+          video:
+            - file: '/config/www/media/videos/lavadero/camara_lavadero.mp4'
+              caption: Camara Lavadero
+              timeout: 180

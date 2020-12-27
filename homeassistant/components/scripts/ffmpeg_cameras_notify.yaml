@@ -2,8 +2,6 @@ camaras_notificacion:
   alias: Camaras Notificacion
   sequence:
     - service: script.turn_on
-      entity_id: script.camara_exterior_notificacion
-    - service: script.turn_on
       entity_id: script.camara_lavadero_notificacion
     - service: script.turn_on
       entity_id: script.camara_toldo_notificacion
@@ -13,3 +11,5 @@ camaras_notificacion:
       entity_id: script.camara_cocheras_notificacion
     - service: script.turn_on
       entity_id: script.camara_entrada_notificacion
+    - service: script.turn_on
+      entity_id: script.camara_exterior_notificacion
