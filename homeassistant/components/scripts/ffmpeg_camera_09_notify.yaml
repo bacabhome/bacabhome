@@ -9,8 +9,8 @@ camara_exterior_notificacion:
       data:
         entity_id: camera.camara_exterior
         filename: '/config/www/media/videos/exterior/camara_exterior.mp4'
-        duration: 60
-        lookback: 15
+        duration: 30
+        lookback: 20
     - delay: '00:02:00'
     - service: notify.telegram_bacab_home_bot
       data:

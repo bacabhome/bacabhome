@@ -9,8 +9,8 @@ camara_toldo_notificacion:
       data:
         entity_id: camera.camara_toldo
         filename: '/config/www/media/videos/toldo/camara_lavadero.mp4'
-        duration: 60
-        lookback: 15
+        duration: 30
+        lookback: 20
     - delay: '00:02:00'
     - service: notify.telegram_bacab_home_bot
       data:

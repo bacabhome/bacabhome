@@ -1,0 +1,12 @@
+alias: alwaysAI Simple Object Counter Bicycle
+initial_state: 'true'
+trigger:
+- platform: event
+  event_type: folder_watcher
+  event_data:
+    event_type: modified
+action:
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.alwaysai_simple_object_counter_bicycle
+      file_path: /config/www/media/applications/alwaysai_simple_object_counter_bicycle.jpg

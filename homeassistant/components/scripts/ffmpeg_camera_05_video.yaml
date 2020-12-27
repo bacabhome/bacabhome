@@ -5,11 +5,11 @@ camara_entrada_video:
     data:
       entity_id: camera.camara_entrada
       filename: '/config/www/media/videos/entrada/camara_entrada.mp4'
-      duration: 60
-      lookback: 15
+      duration: 30
+      lookback: 20
   - service: camera.record
     data:
       entity_id: camera.camara_entrada
       filename: '/config/www/media/videos/entrada/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
-      duration: 60
-      lookback: 15
+      duration: 30
+      lookback: 20

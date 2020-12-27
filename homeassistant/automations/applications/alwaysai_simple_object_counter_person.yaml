@@ -3,8 +3,9 @@ initial_state: true
 trigger:
   platform: state
   entity_id: binary_sensor.alwaysai_simple_object_counter_person
-  from: 'off'
   to: 'on'
+  for:
+    seconds: 2
 action:
   - service: camera.snapshot
     data:
@@ -13,13 +14,13 @@ action:
   - service: camera.record
     data_template:
       entity_id: camera.camara_exterior
-      filename: '/config/www/media/applications/alwaysai/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
-      duration: 60
-      lookback: 15
+      filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 20
+      lookback: 10
   - service: camera.snapshot
     data:
       entity_id: camera.alwaysai_simple_object_counter_person
-      filename: '/config/www/media/applications/alwaysai/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+      filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: notify.telegram_bacab_home_bot
     data_template:
       message: "Warning! Simple Object Counter Person {{ states('sensor.date_time') }}"

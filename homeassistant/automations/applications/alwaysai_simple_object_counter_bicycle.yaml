@@ -1,0 +1,33 @@
+alias: alwaysAI Simple Object Counter Bicycle
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.alwaysai_simple_object_counter_bicycle
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/alwaysai_simple_object_counter_bicycle.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/alwaysai/bicycle/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 15
+      lookback: 15
+  - service: camera.snapshot
+    data:
+      entity_id: camera.alwaysai_simple_object_counter_bicycle
+      filename: '/config/www/media/applications/alwaysai/bicycle/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data_template:
+      message: "Warning! Simple Object Counter Bicycle {{ states('sensor.date_time') }}"
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'alwaysAI Simple Object Counter'
+      message: "Bicycle"
+      data:
+        photo:
+          - file: '/config/www/media/applications/alwaysai_simple_object_counter_bicycle.jpg'
+            caption: Bicycle
