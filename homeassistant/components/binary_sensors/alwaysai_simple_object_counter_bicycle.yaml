@@ -4,8 +4,6 @@ platform: template
 sensors:
   alwaysai_simple_object_counter_bicycle:
     friendly_name: alwaysAI Simple Object Counter Bicycle
-    delay_off:
-      seconds: 5
     value_template: >-
                        {{ states('sensor.alwaysai_simple_object_counter_bicycle')|int > 0 }}
     device_class: presence
