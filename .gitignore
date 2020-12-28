@@ -26,9 +26,7 @@ homeassistant/ip_bans.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
 homeassistant/blueprints/
-homeassistant/custom_components/__pycache__/
-homeassistant/custom_components/hacs/
-homeassistant/custom_components/hubitat/
+homeassistant/custom_components/
 
 # Baaxal
 baaxal/
