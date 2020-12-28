@@ -1,4 +1,4 @@
-alias: Simple Object Counter Person On Camera
+alias: alwaysAI Simple Object Counter Person On Camera
 initial_state: true
 trigger:
   - platform: state
