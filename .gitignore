@@ -1,4 +1,5 @@
 .tox
+diff
 
 # Config
 config/plex/
@@ -24,9 +25,22 @@ homeassistant/known_devices.yaml
 homeassistant/ip_bans.yaml
 homeassistant/secrets.yaml
 homeassistant/www/
+homeassistant/blueprints/
+homeassistant/custom_components/__pycache__/
+homeassistant/custom_components/hacs/
+homeassistant/custom_components/hubitat/
+
+# Baaxal
+baaxal/
 
 # Media
 media/
 
 # Services
 services/
+
+# Iikim
+iikim/
+
+# Lak
+lak/

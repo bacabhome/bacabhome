@@ -1,11 +1,9 @@
 alias: Simple Object Counter Person On Camera
-initial_state: true
+initial_state: false
 trigger:
   - platform: state
     entity_id: binary_sensor.alwaysai_simple_object_counter_person
     to: 'on'
-    for:
-      seconds: 1
 condition:
   condition: time
   after: '22:00:00'
