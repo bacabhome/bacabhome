@@ -4,8 +4,6 @@ platform: template
 sensors:
   alwaysai_simple_object_counter_motorcycle:
     friendly_name: alwaysAI Simple Object Counter Motorcycle
-    delay_on:
-      seconds: 1
     delay_off:
       seconds: 5
     value_template: >-
