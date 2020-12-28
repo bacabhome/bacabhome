@@ -1,8 +1,9 @@
-alias: Simple Object Counter Person On Camera
+alias: Simple Object Counter Motorcycle On Camera
 initial_state: true
 trigger:
   - platform: state
-    entity_id: binary_sensor.alwaysai_simple_object_counter_person
+    entity_id: binary_sensor.alwaysai_simple_object_counter_motorcycle
+    from: 'off'
     to: 'on'
 condition:
   condition: time
@@ -20,6 +21,6 @@ action:
   - service: notify.telegram_bacab_home_bot
     data:
       title: alwaysAI Simple Object Counter
-      message: "Person"
+      message: "Motorcycle"
   - service: script.turn_on
     entity_id: script.camara_exterior_notificacion

@@ -3,9 +3,8 @@ initial_state: true
 trigger:
   platform: state
   entity_id: binary_sensor.alwaysai_simple_object_counter_person
+  from: 'off'
   to: 'on'
-  for:
-    seconds: 1
 action:
   - service: camera.snapshot
     data:
