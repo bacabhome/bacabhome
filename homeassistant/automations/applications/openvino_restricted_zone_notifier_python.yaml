@@ -21,9 +21,6 @@ action:
       entity_id: camera.openvino_restricted_zone_notifier_python
       filename: '/config/www/media/applications/openvino/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: notify.telegram_bacab_home_bot
-    data_template:
-      message: "Warning! Restricted Zone Notifier {{ states('sensor.date_time') }}"
-  - service: notify.telegram_bacab_home_bot
     data:
       title: 'OpenVINO Restricted Zone Notifier'
       message: "Person"
