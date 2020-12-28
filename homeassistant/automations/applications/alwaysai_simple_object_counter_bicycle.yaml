@@ -14,8 +14,8 @@ action:
     data_template:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/applications/alwaysai/bicycle/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
-      duration: 15
-      lookback: 15
+      duration: 30
+      lookback: 20
   - service: camera.snapshot
     data:
       entity_id: camera.alwaysai_simple_object_counter_bicycle

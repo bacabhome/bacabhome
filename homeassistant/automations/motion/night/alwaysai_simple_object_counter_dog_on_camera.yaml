@@ -1,5 +1,5 @@
 alias: Simple Object Counter Dog On Camera
-initial_state: false
+initial_state: true
 trigger:
   - platform: state
     entity_id: binary_sensor.alwaysai_simple_object_counter_dog
