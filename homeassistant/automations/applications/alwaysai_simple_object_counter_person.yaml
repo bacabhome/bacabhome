@@ -21,9 +21,6 @@ action:
       entity_id: camera.alwaysai_simple_object_counter_person
       filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: notify.telegram_bacab_home_bot
-    data_template:
-      message: "Warning! Simple Object Counter Person {{ states('sensor.date_time') }}"
-  - service: notify.telegram_bacab_home_bot
     data:
       title: 'alwaysAI Simple Object Counter'
       message: "Person"

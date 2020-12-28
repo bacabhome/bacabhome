@@ -21,9 +21,6 @@ action:
       entity_id: camera.alwaysai_simple_object_counter_bicycle
       filename: '/config/www/media/applications/alwaysai/motorcycle/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: notify.telegram_bacab_home_bot
-    data_template:
-      message: "Warning! Simple Object Counter Motorcycle {{ states('sensor.date_time') }}"
-  - service: notify.telegram_bacab_home_bot
     data:
       title: 'alwaysAI Simple Object Counter'
       message: "Motorcycle"
