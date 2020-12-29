@@ -1,0 +1,12 @@
+alias: Virtual Doorbell
+initial_state: 'true'
+trigger:
+- platform: event
+  event_type: folder_watcher
+  event_data:
+    event_type: modified
+action:
+  - service: local_file_update_file_path
+    data_template:
+      entity_id: camera.virtual_doorbell
+      file_path: /config/www/media/applications/virtual_doorbell.jpg

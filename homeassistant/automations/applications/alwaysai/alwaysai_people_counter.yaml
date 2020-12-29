@@ -1,15 +1,18 @@
-alias: alwaysAI Simple Object Counter Person
-initial_state: false
+alias: alwaysAI People Counter
+initial_state: true
+mode: queued
 trigger:
   platform: state
-  entity_id: binary_sensor.alwaysai_simple_object_counter_person
+  entity_id: binary_sensor.alwaysai_people_counter
   from: 'off'
   to: 'on'
+  for:
+    seconds: 1
 action:
   - service: camera.snapshot
     data:
       entity_id: camera.camara_exterior
-      filename: '/config/www/media/applications/alwaysai_simple_object_counter_person.jpg'
+      filename: '/config/www/media/applications/alwaysai_people_counter.jpg'
   - service: camera.record
     data_template:
       entity_id: camera.camara_exterior
@@ -18,13 +21,13 @@ action:
       lookback: 20
   - service: camera.snapshot
     data:
-      entity_id: camera.alwaysai_simple_object_counter_person
+      entity_id: camera.alwaysai_object_detector_and_classifier_face
       filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
   - service: notify.telegram_bacab_home_bot
     data:
-      title: 'alwaysAI Simple Object Counter'
-      message: "Person"
+      title: 'alwaysAI People Counter'
+      message: "People"
       data:
         photo:
-          - file: '/config/www/media/applications/alwaysai_simple_object_counter_person.jpg'
-            caption: Person
+          - file: '/config/www/media/applications/alwaysai_people_counter.jpg'
+            caption: People

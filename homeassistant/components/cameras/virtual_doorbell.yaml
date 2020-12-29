@@ -1,0 +1,3 @@
+platform: local_file
+name: Virtual Doorbell
+file_path: /config/www/media/applications/virtual_doorbell.jpg

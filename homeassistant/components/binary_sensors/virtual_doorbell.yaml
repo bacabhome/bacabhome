@@ -1,0 +1,13 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  virtual_doorbell:
+    friendly_name: Virtual Doorbell
+    delay_on:
+      seconds: 3
+    delay_off:
+      seconds: 5
+    value_template: >-
+                       {{ states('sensor.alwaysai_person')|int > 0 }}
+    device_class: presence

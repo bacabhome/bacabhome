@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  alwaysai_object_detector_and_classifier_face:
+    friendly_name: alwaysAI Object Detector And Classifier Face
+    value_template: >-
+                       {{ states('sensor.alwaysai_object_detector_and_classifier_face')|int > 1 }}
+    device_class: presence
