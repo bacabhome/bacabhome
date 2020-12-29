@@ -5,7 +5,7 @@ sensors:
   virtual_doorbell:
     friendly_name: Virtual Doorbell
     delay_on:
-      seconds: 3
+      seconds: 2
     delay_off:
       seconds: 5
     value_template: >-
