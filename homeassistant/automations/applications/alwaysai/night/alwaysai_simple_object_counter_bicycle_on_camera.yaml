@@ -1,5 +1,6 @@
 alias: alwaysAI Simple Object Counter Bicycle On Camera
 initial_state: true
+mode: queued
 trigger:
   - platform: state
     entity_id: binary_sensor.alwaysai_simple_object_counter_bicycle
@@ -22,5 +23,9 @@ action:
     data:
       title: alwaysAI Simple Object Counter
       message: "Bicycle"
-  - service: script.turn_on
-    entity_id: script.camara_exterior_notificacion
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/night/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 30
+      lookback: 20

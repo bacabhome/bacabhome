@@ -1,5 +1,6 @@
 alias: Hue Motion Sensor One On Camera
 initial_state: true
+mode: queued
 trigger:
   - platform: state
     entity_id: binary_sensor.hue_motion_sensor_one_motion
@@ -17,5 +18,13 @@ condition:
     - sat
     - sun
 action:
-  - service: script.turn_on
-    entity_id: script.camara_entrada_notificacion
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_entrada
+      filename: '/config/www/media/night/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 30
+      lookback: 20
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'Hue Motion Sensor One'
+      message: "Camera 05"
