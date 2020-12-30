@@ -7,6 +7,9 @@ ENV TIMEZONE America/Mexico_City
 RUN apk add --update \
     curl \
     iperf3 \
+    alsa-utils \
+    alsa-utils-doc \
+    alsa-lib alsaconf \
     && rm -rf /var/cache/apk/*
 
 RUN curl -sSL https://cli.openfaas.com | sh

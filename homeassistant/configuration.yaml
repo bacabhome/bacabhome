@@ -28,6 +28,7 @@ homeassistant:
     - type: homeassistant
 
   whitelist_external_dirs:
+    - '/config/www/media/audio/'
     - '/config/www/media/applications/'
     - '/config/www/media/applications/alwaysai/'
     - '/config/www/media/applications/alwaysai/bicycle/'

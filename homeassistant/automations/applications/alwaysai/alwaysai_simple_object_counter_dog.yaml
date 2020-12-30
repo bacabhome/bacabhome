@@ -6,25 +6,9 @@ trigger:
   from: 'off'
   to: 'on'
 action:
-  - service: camera.snapshot
-    data:
-      entity_id: camera.camara_exterior
-      filename: '/config/www/media/applications/alwaysai_simple_object_counter_dog.jpg'
   - service: camera.record
     data_template:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/applications/alwaysai/dog/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
       duration: 30
       lookback: 20
-  - service: camera.snapshot
-    data:
-      entity_id: camera.alwaysai_simple_object_counter_dog
-      filename: '/config/www/media/applications/alwaysai/dog/{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg'
-  - service: notify.telegram_bacab_home_bot
-    data:
-      title: 'alwaysAI Simple Object Counter'
-      message: "Dog"
-      data:
-        photo:
-          - file: '/config/www/media/applications/alwaysai_simple_object_counter_dog.jpg'
-            caption: Dog

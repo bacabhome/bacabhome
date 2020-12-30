@@ -1,0 +1,3 @@
+audio_arecord:
+  sequence:
+  - service: shell_command.audio_arecord

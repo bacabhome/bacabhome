@@ -10,27 +10,25 @@ cards:
     show_header_toggle: false
     entities:
 
+      - entity: binary_sensor.alwaysai_person
+        name: Persona
       - entity: sensor.alwaysai_simple_object_counter_bicycle
         name: Bicicleta
-      - entity: sensor.alwaysai_simple_object_counter_car
-        name: Carro
       - entity: sensor.alwaysai_simple_object_counter_dog
         name: Perro
-      - entity: sensor.alwaysai_simple_object_counter_knife
-        name: Cuchillo
       - entity: sensor.alwaysai_simple_object_counter_motorcycle
         name: Motocicleta
-      - entity: sensor.alwaysai_simple_object_counter_person
-        name: Persona
-      - entity: sensor.alwaysai_simple_object_counter_truck
-        name: Camioneta
-
 
   - type: picture-entity
     title: Camara Exterior
     entity: camera.camara_exterior
     show_state: false
     camera_view: live
+    hold_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.audio_arecord
 
   - type: picture-entity
     title: Camara Azotea

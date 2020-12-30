@@ -1,0 +1,12 @@
+alias: Virtual Doorbell Audio
+initial_state: 'true'
+mode: queued
+trigger:
+  platform: state
+  entity_id: binary_sensor.virtual_doorbell
+  from: 'off'
+  to: 'on'
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.audio_arecord
