@@ -1,12 +1,21 @@
 camara_azotea_video:
   alias: Camara Azotea Video
+  mode: queued
   sequence:
   - service: camera.record
     data:
       entity_id: camera.camara_azotea
       filename: '/config/www/media/videos/azotea/camara_azotea.mp4'
-      duration: 30
-      lookback: 20
+      duration: 5
+      lookback: 10
+  - delay: '00:00:15'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: "Camara Azotea Video"
+      data:
+        video:
+          - file: '/config/www/media/videos/azotea/camara_azotea.mp4'
+            caption: Camara Azotea Video
   - service: camera.record
     data:
       entity_id: camera.camara_azotea

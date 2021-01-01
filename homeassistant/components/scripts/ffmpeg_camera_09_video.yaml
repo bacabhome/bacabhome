@@ -1,12 +1,21 @@
 camara_exterior_video:
   alias: Camara Exterior Video
+  mode: queued
   sequence:
   - service: camera.record
     data:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/videos/exterior/camara_exterior.mp4'
-      duration: 30
-      lookback: 20
+      duration: 5
+      lookback: 10
+  - delay: '00:00:15'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: "Camara Exterior Video"
+      data:
+        video:
+          - file: '/config/www/media/videos/exterior/camara_exterior.mp4'
+            caption: Camara Exterior Video
   - service: camera.record
     data:
       entity_id: camera.camara_exterior
