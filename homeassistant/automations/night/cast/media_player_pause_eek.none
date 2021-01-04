@@ -1,4 +1,4 @@
-alias: Media Player Eek Paused
+alias: Media Player Pause Eek
 initial_state: true
 trigger:
   - platform: state

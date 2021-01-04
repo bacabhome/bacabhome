@@ -2,7 +2,7 @@
 
 platform: template
 sensors: 
-  doors_opened:
+  template_doors_opened:
     friendly_name: Entrada
     value_template: >-
       {{ is_state('binary_sensor.xiaomi_door_window_sensor_three_contact', 'on') or

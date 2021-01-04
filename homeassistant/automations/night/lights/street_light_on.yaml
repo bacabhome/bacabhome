@@ -1,4 +1,4 @@
-alias: Night Street Light On
+alias: Street Light On
 initial_state: 'true'
 trigger:
   - platform: sun

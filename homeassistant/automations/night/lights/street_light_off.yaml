@@ -1,4 +1,4 @@
-alias: Night Street Light Off
+alias: Street Light Off
 initial_state: 'true'
 trigger:
   - platform: time

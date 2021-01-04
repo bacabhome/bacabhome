@@ -10,7 +10,7 @@ family_mode_emergency_on:
       data:
         volume_level: 0.50
     - service: media_player.play_media
-      entity_id: media_player.amigo
+      entity_id: media_player.guardian
       data:
         media_content_id: "http://smrtho.us/storage/startup.mp3"
         media_content_type: "audio/mp3"
