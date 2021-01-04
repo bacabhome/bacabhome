@@ -1,0 +1,24 @@
+alias: alwaysAI Simple Object Counter Person On Audio
+initial_state: true
+mode: queued
+trigger:
+  - platform: state
+    entity_id: binary_sensor.alwaysai_simple_object_counter_person
+    from: 'off'
+    to: 'on'
+condition:
+  condition: time
+  after: '22:00:00'
+  before: '06:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+action:
+  - service: script.turn_on
+    data:
+      entity_id: script.audio_arecord_night

@@ -1,0 +1,1 @@
+audio_arecord_night: arecord -f S16_LE -r44100 --device="hw:2,0" -d 120 --use-strftime /config/www/media/night/audio/%Y%m%d-%H%M%v.wav

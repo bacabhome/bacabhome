@@ -6,18 +6,12 @@ panel: false
 cards:
 
   - type: entities
-    title: Contador
+    title: Aplicaciones
     show_header_toggle: false
     entities:
 
-      - entity: binary_sensor.alwaysai_person
-        name: Persona
-      - entity: sensor.alwaysai_simple_object_counter_bicycle
-        name: Bicicleta
-      - entity: sensor.alwaysai_simple_object_counter_dog
-        name: Perro
-      - entity: sensor.alwaysai_simple_object_counter_motorcycle
-        name: Motocicleta
+      - entity: binary_sensor.virtual_doorbell
+        name: Persona en Timbre
 
   - type: picture-entity
     title: Camara Exterior

@@ -1,0 +1,39 @@
+alias: Virtual Doorbell Video
+initial_state: 'true'
+mode: queued
+trigger:
+  platform: state
+  entity_id: binary_sensor.virtual_doorbell
+  from: 'off'
+  to: 'on'
+action:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: "Virtual Doorbell"
+  - service: camera.record
+    data:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/virtual/virtual_doorbell.mp4'
+      duration: 5
+      lookback: 5
+  - delay: '00:00:05'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: "Virtual Doorbell"
+      data:
+        photo:
+          - file: '/config/www/media/applications/virtual/virtual_doorbell.mp4'
+            caption: Person Photo
+  - service: notify.telegram_bacab_home_bot
+    data:
+      message: "Virtual Doorbell"
+      data:
+        video:
+          - file: '/config/www/media/applications/virtual/virtual_doorbell.mp4'
+            caption: Person Video
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/virtual/doorbell/{{ now().strftime("%Y%m%d-%H%M%S") }}.mp4'
+      duration: 10
+      lookback: 20

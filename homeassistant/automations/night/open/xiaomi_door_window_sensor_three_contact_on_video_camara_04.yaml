@@ -1,0 +1,26 @@
+alias: Xiaomi Door Window Sensor Three Contact On Video Camara 04
+initial_state: true
+mode: queued
+trigger:
+  - platform: state
+    entity_id: binary_sensor.xiaomi_door_window_sensor_three_contact
+    to: 'on'
+condition:
+  condition: time
+  after: '22:00:00'
+  before: '08:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+action:
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_cocheras
+      filename: '/config/www/media/night/open/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.mp4'
+      duration: 30
+      lookback: 20

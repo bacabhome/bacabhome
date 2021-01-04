@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  alwaysai_simple_object_counter_truck:
+    friendly_name: alwaysAI Simple Object Counter Truck
+    value_template: >-
+                       {{ states('sensor.alwaysai_simple_object_counter_truck')|int > 0 }}
+    device_class: presence

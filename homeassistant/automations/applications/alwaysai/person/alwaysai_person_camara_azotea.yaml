@@ -1,0 +1,31 @@
+alias: alwaysAI Person Camara Azotea
+initial_state: true
+mode: queued
+trigger:
+  platform: state
+  entity_id: binary_sensor.alwaysai_person
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_azotea
+      filename: '/config/www/media/applications/alwaysai_person.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_azotea
+      filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.mp4'
+      duration: 30
+      lookback: 20
+  - service: camera.snapshot
+    data:
+      entity_id: camera.alwaysai_person
+      filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'alwaysAI Person'
+      message: "Person"
+      data:
+        photo:
+          - file: '/config/www/media/applications/alwaysai_person.jpg'
+            caption: Person

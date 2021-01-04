@@ -1,0 +1,25 @@
+alias: alwaysAI Simple Object Counter Knife On Telegram
+initial_state: false
+mode: queued
+trigger:
+  - platform: state
+    entity_id: binary_sensor.alwaysai_simple_object_counter_knife
+    from: 'off'
+    to: 'on'
+condition:
+  condition: time
+  after: '22:00:00'
+  before: '06:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+action:
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: alwaysAI Simple Object Counter
+      message: "Knife"

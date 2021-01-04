@@ -1,0 +1,27 @@
+alias: alwaysAI Simple Object Counter Person On Video
+initial_state: true
+mode: queued
+trigger:
+  - platform: state
+    entity_id: binary_sensor.alwaysai_simple_object_counter_person
+    from: 'off'
+    to: 'on'
+condition:
+  condition: time
+  after: '22:00:00'
+  before: '06:00:00'
+  weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+action:
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/night/person/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.mp4'
+      duration: 30
+      lookback: 20

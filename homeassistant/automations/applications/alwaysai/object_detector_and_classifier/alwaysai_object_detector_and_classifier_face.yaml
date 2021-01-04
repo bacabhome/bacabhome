@@ -1,0 +1,31 @@
+alias: alwaysAI Object Detector And Classifier Face
+initial_state: true
+mode: queued
+trigger:
+  platform: state
+  entity_id: binary_sensor.alwaysai_object_detector_and_classifier_face
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/alwaysai_object_detector_and_classifier_face.jpg'
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/alwaysai/face/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.mp4'
+      duration: 30
+      lookback: 20
+  - service: camera.snapshot
+    data:
+      entity_id: camera.alwaysai_object_detector_and_classifier_face
+      filename: '/config/www/media/applications/alwaysai/face/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.jpg'
+  - service: notify.telegram_bacab_home_bot
+    data:
+      title: 'alwaysAI Object Detector And Classifier'
+      message: "Face"
+      data:
+        photo:
+          - file: '/config/www/media/applications/alwaysai_object_detector_and_classifier_face.jpg'
+            caption: Face

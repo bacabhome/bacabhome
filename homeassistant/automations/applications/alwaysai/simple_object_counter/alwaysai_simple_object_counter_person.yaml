@@ -1,0 +1,14 @@
+alias: alwaysAI Simple Object Counter Person
+initial_state: true
+trigger:
+  platform: state
+  entity_id: binary_sensor.alwaysai_simple_object_counter_person
+  from: 'off'
+  to: 'on'
+action:
+  - service: camera.record
+    data_template:
+      entity_id: camera.camara_exterior
+      filename: '/config/www/media/applications/alwaysai/person/{{ now().strftime("%Y%m%d-%H%M%S-%f") }}.mp4'
+      duration: 30
+      lookback: 20

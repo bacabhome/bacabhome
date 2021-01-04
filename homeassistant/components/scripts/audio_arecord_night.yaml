@@ -1,0 +1,3 @@
+audio_arecord_night:
+  sequence:
+  - service: shell_command.audio_arecord_night

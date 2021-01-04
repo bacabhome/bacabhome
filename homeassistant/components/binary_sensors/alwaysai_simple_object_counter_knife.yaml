@@ -1,0 +1,9 @@
+# https://www.home-assistant.io/integrations/binary_sensor.template/
+
+platform: template
+sensors:
+  alwaysai_simple_object_counter_knife:
+    friendly_name: alwaysAI Simple Object Counter Knife
+    value_template: >-
+                       {{ states('sensor.alwaysai_simple_object_counter_knife')|int > 0 }}
+    device_class: presence
