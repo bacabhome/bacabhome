@@ -1,0 +1,25 @@
+alias: Night Xiaomi Door/Window Sensor One Contact On Light
+initial_state: 'true'
+trigger:
+  - platform: state
+    entity_id: binary_sensor.xiaomi_door_window_sensor_one_contact
+    to: 'on'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: light.luz_cochera
+      state: 'off'
+    - condition: or
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+action:
+  - service: light.turn_on
+    entity_id: light.luz_cochera
+  - delay:
+      seconds: 45
+  - service: light.turn_off
+    entity_id: light.luz_cochera

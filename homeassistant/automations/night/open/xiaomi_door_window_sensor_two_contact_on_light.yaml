@@ -1,8 +1,8 @@
-alias: Night Xiaomi Door/Window Sensor One On Off
+alias: Night Xiaomi Door/Window Sensor Two Contact On Light
 initial_state: 'true'
 trigger:
   - platform: state
-    entity_id: binary_sensor.xiaomi_door_window_sensor_one_contact
+    entity_id: binary_sensor.xiaomi_door_window_sensor_two_contact
     to: 'on'
 condition:
   condition: and
