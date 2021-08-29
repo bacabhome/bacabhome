@@ -33,8 +33,18 @@ cards:
       service: input_boolean.toggle
       service_data:
         entity_id: input_boolean.camara_exterior_mina
+    hold_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: script.audio_arecord
     entities:
       - light.foco_calle
+      - binary_sensor.virtual_doorbell
+      - binary_sensor.hue_motion_sensor_three_motion
+      - sensor.hue_motion_sensor_three_battery
+      - sensor.hue_motion_sensor_three_illuminance
+      - sensor.hue_motion_sensor_three_temperature
 
   - type: picture-entity
     title: Camara Lavadero
@@ -81,10 +91,14 @@ cards:
         entity_id: input_boolean.camara_cocheras_mina
     entities:
       - light.luz_cochera
+      - binary_sensor.hue_motion_sensor_two_motion
+      - sensor.hue_motion_sensor_two_battery
+      - sensor.hue_motion_sensor_two_illuminance
+      - sensor.hue_motion_sensor_two_temperature
 
-  - type: picture-entity
+  - type: picture-glance
     title: Camara Entrada
-    entity: camera.camara_entrada
+    camera_image: camera.camara_entrada
     show_state: false
     camera_view: live
     double_tap_action:
@@ -92,3 +106,8 @@ cards:
       service: input_boolean.toggle
       service_data:
         entity_id: input_boolean.camara_entrada_mina
+    entities:
+      - binary_sensor.hue_motion_sensor_one_motion
+      - sensor.hue_motion_sensor_one_battery
+      - sensor.hue_motion_sensor_one_illuminance
+      - sensor.hue_motion_sensor_one_temperature

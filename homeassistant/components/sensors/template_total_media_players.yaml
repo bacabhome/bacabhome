@@ -3,7 +3,6 @@
 platform: template
 sensors:
   template_total_media_players:
-    entity_id: []
     friendly_name: Template Total Media Players
     value_template: >
       {%- set domains = ['media_player'] -%}

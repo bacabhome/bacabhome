@@ -1,6 +1,7 @@
 # https://www.home-assistant.io/components/influxdb/
 
 influxdb:
-  host: localhost
+  host: 192.168.1.141
   port: 8086
   database: home_assistant
+  verify_ssl: false

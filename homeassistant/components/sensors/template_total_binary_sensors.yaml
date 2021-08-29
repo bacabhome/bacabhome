@@ -3,7 +3,6 @@
 platform: template
 sensors:
   template_total_binary_sensors:
-    entity_id: []
     friendly_name: Template Total Binary Sensors
     value_template: >
       {%- set domains = ['binary_sensor'] -%}

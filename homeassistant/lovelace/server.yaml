@@ -48,12 +48,18 @@ cards:
       labels: true
       points: true
     entities:
-      - entity: sensor.glances_core_0_temp
+      - entity: sensor.glances_core_0_temperature
         name: Core 0
         color: black
-      - entity: sensor.glances_core_1_temp
+      - entity: sensor.glances_core_1_temperature
         name: Core 1
         color: grey
+      - entity: sensor.glances_core_2_temperature
+        name: Core 2
+        color: blue
+      - entity: sensor.glances_core_3_temperature
+        name: Core 3
+        color: yellow
     hours_to_show: 36
     points_per_hour: 0.25
 

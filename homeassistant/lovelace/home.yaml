@@ -8,6 +8,8 @@ cards:
 
       - type: light
         entity: light.luz_cochera
+      - type: light
+        entity: light.foco_calle
 
   - type: entities
     title: Chromecast Mina

@@ -13,7 +13,7 @@ services:
     user: "1000:1000"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - bacabhome-mosquitto-storage:/mosquitto/config:ro
+      - ./config/mosquitto/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
       - bacabhome-mosquitto-storage:/mosquitto/data:rw
       - bacabhome-mosquitto-storage:/mosquitto/log:rw
 
@@ -71,7 +71,7 @@ services:
       - ~/.config/pulse/cookie:/root/.config/pulse/cookie:consistent
 
   influxdb:
-    image: influxdb
+    image: influxdb:1.8
     container_name: bacab-home-influxdb
     restart: on-failure
     environment:

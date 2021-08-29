@@ -13,6 +13,8 @@ cards:
        name: Entrada
      - entity: binary_sensor.hue_motion_sensor_two_motion
        name: Cocheras
+     - entity: binary_sensor.hue_motion_sensor_three_motion
+       name: Calle
 
   - type: glance
     title: Accesos
