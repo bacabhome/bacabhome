@@ -14,8 +14,8 @@ action:
     data:
       entity_id: camera.camara_exterior
       filename: '/config/www/media/applications/virtual/virtual_doorbell.mp4'
-      duration: 5
-      lookback: 5
+      duration: 20
+      lookback: 10
   - delay: '00:00:05'
   - service: notify.telegram_bacab_home_bot
     data:
