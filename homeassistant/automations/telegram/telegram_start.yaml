@@ -11,3 +11,4 @@ action:
       data:
         keyboard:
           - '/ping, /cameras'
+          - '/audio'
