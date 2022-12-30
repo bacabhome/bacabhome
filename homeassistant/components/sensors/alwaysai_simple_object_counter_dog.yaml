@@ -1,6 +1,0 @@
-# https://www.home-assistant.io/components/sensor.mqtt/
-
-platform: mqtt
-name: alwaysAI Simple Object Counter Dog
-state_topic: "alwaysai/simple_object_counter/objects"
-value_template: "{{ value_json.dog }}"

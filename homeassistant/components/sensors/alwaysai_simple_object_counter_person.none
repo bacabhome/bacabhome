@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: alwaysAI Simple Object Counter Person
+      state_topic: "alwaysai/simple_object_counter/objects"
+      value_template: "{{ value_json.person }}"

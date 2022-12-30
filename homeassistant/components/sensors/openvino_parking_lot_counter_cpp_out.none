@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: OpenVINO Parking Lot Counter CPP Out
+      state_topic: "parking/counter"
+      value_template: "{{ value_json.TOTAL_OUT }}"
+      unit_of_measurement: 'Count'

@@ -1,0 +1,7 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: Virtual Doorbell
+      state_topic: "virtual_doorbell/detection"
+      value_template: "{{ value_json.person }}"

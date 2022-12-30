@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: OpenVINO Shopper Mood Monitor CPP Sad
+      state_topic: "retail/traffic"
+      value_template: "{{ value_json.sad }}"
+      unit_of_measurement: 'Count'

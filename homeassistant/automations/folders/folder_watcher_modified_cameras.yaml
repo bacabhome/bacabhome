@@ -6,27 +6,27 @@ trigger:
   event_data:
     event_type: modified
 action:
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_01
       file_path: /config/www/media/cameras/ffmpeg_camera_01.jpg
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_02
       file_path: /config/www/media/cameras/ffmpeg_camera_02.jpg
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_03
       file_path: /config/www/media/cameras/ffmpeg_camera_03.jpg
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_04
       file_path: /config/www/media/cameras/ffmpeg_camera_04.jpg
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_05
       file_path: /config/www/media/cameras/ffmpeg_camera_05.jpg
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.local_file_camera_09
       file_path: /config/www/media/cameras/ffmpeg_camera_09.jpg

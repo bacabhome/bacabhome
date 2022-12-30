@@ -1,5 +1,6 @@
 # https://www.home-assistant.io/components/sensor.mqtt/
 
-platform: mqtt
-state_topic: "sensors/mqtt/state_topic"
-unit_of_measurement: '%'
+mqtt:
+  sensor:
+    - state_topic: "sensors/mqtt/state_topic"
+      unit_of_measurement: '%'

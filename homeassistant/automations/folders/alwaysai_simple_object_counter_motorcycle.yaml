@@ -6,7 +6,7 @@ trigger:
   event_data:
     event_type: modified
 action:
-  - service: local_file_update_file_path
+  - service: local_file.update_file_path
     data_template:
       entity_id: camera.alwaysai_simple_object_counter_motorcycle
       file_path: /config/www/media/applications/alwaysai_simple_object_counter_motorcycle.jpg

@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/mqtt/ 
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: homeassistant

@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: alwaysAI People Counter
+      state_topic: "alwaysai/people_counter/detection"
+      value_template: "{{ value_json.count }}"
+      device_class: none

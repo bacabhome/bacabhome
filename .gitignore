@@ -18,6 +18,7 @@ homeassistant/.cloud/
 homeassistant/.google.token
 homeassistant/deps/
 homeassistant/home-assistant.log
+homeassistant/home-assistant.log.*
 homeassistant/home-assistant_v2.db
 homeassistant/home-assistant_v2.db-shm
 homeassistant/home-assistant_v2.db-wal
@@ -42,3 +43,6 @@ iikim/
 
 # Lak
 lak/
+
+# Trash
+trash/

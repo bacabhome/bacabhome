@@ -6,6 +6,9 @@ homeassistant:
   latitude: !secret home_latitude
   longitude: !secret home_longitude
 
+  currency: MXN
+  country: MX
+
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: !secret home_altitude
 

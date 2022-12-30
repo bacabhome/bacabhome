@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/components/sensor.mqtt/
+
+mqtt:
+  sensor:
+    - name: OpenVINO Shopper Gaze Monitor CPP Shoppers
+      state_topic: "retail/traffic"
+      value_template: "{{ value_json.shoppers }}"
+      unit_of_measurement: 'Count'

@@ -1,4 +1,5 @@
 # https://www.home-assistant.io/components/binary_sensor.mqtt/
 
-platform: mqtt
-state_topic: "binary_sensors/mqtt/state_topic"
+mqtt:
+  binary_sensors:
+    - state_topic: "binary_sensors/mqtt/state_topic"
